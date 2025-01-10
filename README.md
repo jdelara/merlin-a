@@ -8,3 +8,5 @@ Merlin-a is a workbench for adaptive languages, built as an Eclipse plugin. It r
 triggers, and recommenders of language variants.
 
 The tool website is at: https://miso.es/tools/merlin-adaptive/, and that website includes an update site, installation instructions and examples.
+
+Demonstration video: https://youtu.be/fy171c7Afzk
