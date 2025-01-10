@@ -1,0 +1,26 @@
+<%@ jet package="adaptiveLang.gentree.templates.editor" imports="org.eclipse.emf.codegen.ecore.genmodel.* adaptiveLang.gentree.generation.*" class="VariantRecommender"%>
+<%@ include file="../Header.javajetinc"%>
+<%GenLanguageVariants genclass = (GenLanguageVariants)argument;%>
+package <%=genclass.getRootPackageName()%>.variants;
+
+import java.util.Map;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.resource.Resource;
+
+public abstract class VariantRecommender {
+	private EPackage langPackage;
+	
+	public VariantRecommender(EPackage p) {
+		this.langPackage = p;
+	}
+	
+	/**
+	 * Returns a ranked list of valid language variants for the current model, ordered by a score between 0 
+	 * and 1 (where 1 is better)
+	 * @param current
+	 * @param model
+	 * @return
+	 */
+	public abstract Map<LanguageVariants, Double> recommend(LanguageVariants current, Resource model);
+}

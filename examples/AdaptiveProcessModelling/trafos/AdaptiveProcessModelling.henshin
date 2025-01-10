@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_V7ZewItEEe2caJbmKr4fIw">
+  <imports href="../AdaptiveProcessModelling.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_X3L2AItEEe2caJbmKr4fIw" name="createInitialTask">
+    <parameters xmi:id="_RSQcgItcEe2QDMK1dJVD9A" name="A">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_X3-gMItEEe2caJbmKr4fIw" name="Lhs">
+      <nodes xmi:id="_gIDgAItEEe2caJbmKr4fIw" name="task" incoming="_A13vIItHEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+        <attributes xmi:id="_PXG-cItcEe2QDMK1dJVD9A" value="A">
+          <type href="../AdaptiveProcessModelling.ecore#//Task/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_-7QckItGEe2caJbmKr4fIw" name="pm" outgoing="_A13vIItHEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <edges xmi:id="_A13vIItHEe2caJbmKr4fIw" source="_-7QckItGEe2caJbmKr4fIw" target="_gIDgAItEEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <formula xsi:type="henshin:And" xmi:id="_uCGHEItGEe2caJbmKr4fIw">
+        <left xsi:type="henshin:And" xmi:id="_zB23kItEEe2caJbmKr4fIw">
+          <left xsi:type="henshin:Not" xmi:id="_pIUmoItEEe2caJbmKr4fIw">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_pIUmoYtEEe2caJbmKr4fIw">
+              <conclusion xmi:id="_pIUmootEEe2caJbmKr4fIw" name="1">
+                <nodes xmi:id="_pIUmo4tEEe2caJbmKr4fIw" name="task" incoming="_A13vIotHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+                  <attributes xmi:id="_PXG-cotcEe2QDMK1dJVD9A" value="A">
+                    <type href="../AdaptiveProcessModelling.ecore#//Task/name"/>
+                  </attributes>
+                </nodes>
+                <nodes xmi:id="_n0FXkItEEe2caJbmKr4fIw" name="eit" incoming="_elLZMIteEe2QDMK1dJVD9A">
+                  <type href="../AdaptiveProcessModelling.ecore#//InitialTask"/>
+                </nodes>
+                <nodes xmi:id="_-7Qck4tGEe2caJbmKr4fIw" outgoing="_A13vIotHEe2caJbmKr4fIw _elLZMIteEe2QDMK1dJVD9A">
+                  <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+                </nodes>
+                <edges xmi:id="_A13vIotHEe2caJbmKr4fIw" source="_-7Qck4tGEe2caJbmKr4fIw" target="_pIUmo4tEEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+                </edges>
+                <edges xmi:id="_elLZMIteEe2QDMK1dJVD9A" source="_-7Qck4tGEe2caJbmKr4fIw" target="_n0FXkItEEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_pIUmpItEEe2caJbmKr4fIw" origin="_gIDgAItEEe2caJbmKr4fIw" image="_pIUmo4tEEe2caJbmKr4fIw"/>
+              <mappings xmi:id="_-7QclItGEe2caJbmKr4fIw" origin="_-7QckItGEe2caJbmKr4fIw" image="_-7Qck4tGEe2caJbmKr4fIw"/>
+            </child>
+          </left>
+          <right xsi:type="henshin:Not" xmi:id="_zB23kYtEEe2caJbmKr4fIw">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_zB23kotEEe2caJbmKr4fIw">
+              <conclusion xmi:id="_zB23k4tEEe2caJbmKr4fIw" name="2">
+                <nodes xmi:id="_zB23lItEEe2caJbmKr4fIw" name="task" incoming="_z5V5MItEEe2caJbmKr4fIw _A13vI4tHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+                  <attributes xmi:id="_PXG-c4tcEe2QDMK1dJVD9A" value="A">
+                    <type href="../AdaptiveProcessModelling.ecore#//Task/name"/>
+                  </attributes>
+                </nodes>
+                <nodes xmi:id="_xsMsMItEEe2caJbmKr4fIw" name="efe" outgoing="_z5V5MItEEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+                </nodes>
+                <nodes xmi:id="_-7QclYtGEe2caJbmKr4fIw" outgoing="_A13vI4tHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+                </nodes>
+                <edges xmi:id="_z5V5MItEEe2caJbmKr4fIw" source="_xsMsMItEEe2caJbmKr4fIw" target="_zB23lItEEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+                </edges>
+                <edges xmi:id="_A13vI4tHEe2caJbmKr4fIw" source="_-7QclYtGEe2caJbmKr4fIw" target="_zB23lItEEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_zB23lYtEEe2caJbmKr4fIw" origin="_gIDgAItEEe2caJbmKr4fIw" image="_zB23lItEEe2caJbmKr4fIw"/>
+              <mappings xmi:id="_-7QclotGEe2caJbmKr4fIw" origin="_-7QckItGEe2caJbmKr4fIw" image="_-7QclYtGEe2caJbmKr4fIw"/>
+            </child>
+          </right>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_uCGHEYtGEe2caJbmKr4fIw">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_uCGHEotGEe2caJbmKr4fIw">
+            <conclusion xmi:id="_uCGHE4tGEe2caJbmKr4fIw" name="3">
+              <nodes xmi:id="_uCGHFItGEe2caJbmKr4fIw" name="task" incoming="_q4TroItGEe2caJbmKr4fIw _A13vJItHEe2caJbmKr4fIw">
+                <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+                <attributes xmi:id="_PXG-dItcEe2QDMK1dJVD9A" value="A">
+                  <type href="../AdaptiveProcessModelling.ecore#//Task/name"/>
+                </attributes>
+              </nodes>
+              <nodes xmi:id="_pJmHEItGEe2caJbmKr4fIw" name="n" outgoing="_q4TroItGEe2caJbmKr4fIw">
+                <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+              </nodes>
+              <nodes xmi:id="_-7Qcl4tGEe2caJbmKr4fIw" outgoing="_A13vJItHEe2caJbmKr4fIw">
+                <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+              </nodes>
+              <edges xmi:id="_q4TroItGEe2caJbmKr4fIw" source="_pJmHEItGEe2caJbmKr4fIw" target="_uCGHFItGEe2caJbmKr4fIw">
+                <type href="../AdaptiveProcessModelling.ecore#//Node/next"/>
+              </edges>
+              <edges xmi:id="_A13vJItHEe2caJbmKr4fIw" source="_-7Qcl4tGEe2caJbmKr4fIw" target="_uCGHFItGEe2caJbmKr4fIw">
+                <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_uCGHFYtGEe2caJbmKr4fIw" origin="_gIDgAItEEe2caJbmKr4fIw" image="_uCGHFItGEe2caJbmKr4fIw"/>
+            <mappings xmi:id="_-7QcmItGEe2caJbmKr4fIw" origin="_-7QckItGEe2caJbmKr4fIw" image="_-7Qcl4tGEe2caJbmKr4fIw"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_X3_HQItEEe2caJbmKr4fIw" name="Rhs">
+      <nodes xmi:id="_d96jsItEEe2caJbmKr4fIw" name="initial" incoming="_jL2oMItEEe2caJbmKr4fIw _uhi70ItJEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//InitialTask"/>
+        <attributes xmi:id="_BOQ0cItcEe2QDMK1dJVD9A" value="&quot;init&quot;.concat(A)">
+          <type href="../AdaptiveProcessModelling.ecore#//Task/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_gIFVMItEEe2caJbmKr4fIw" name="task" incoming="_joKJsItEEe2caJbmKr4fIw _A13vIYtHEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+        <attributes xmi:id="_PXG-cYtcEe2QDMK1dJVD9A" value="A">
+          <type href="../AdaptiveProcessModelling.ecore#//Task/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_h8y0EItEEe2caJbmKr4fIw" name="fe" incoming="_rTymYItJEe2QDMK1dJVD9A" outgoing="_joKJsItEEe2caJbmKr4fIw _jL2oMItEEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <nodes xmi:id="_-7QckYtGEe2caJbmKr4fIw" name="pm" outgoing="_A13vIYtHEe2caJbmKr4fIw _rTymYItJEe2QDMK1dJVD9A _uhi70ItJEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <edges xmi:id="_jL2oMItEEe2caJbmKr4fIw" source="_h8y0EItEEe2caJbmKr4fIw" target="_d96jsItEEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+      <edges xmi:id="_joKJsItEEe2caJbmKr4fIw" source="_h8y0EItEEe2caJbmKr4fIw" target="_gIFVMItEEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+      <edges xmi:id="_A13vIYtHEe2caJbmKr4fIw" source="_-7QckYtGEe2caJbmKr4fIw" target="_gIFVMItEEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges xmi:id="_rTymYItJEe2QDMK1dJVD9A" source="_-7QckYtGEe2caJbmKr4fIw" target="_h8y0EItEEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/edges"/>
+      </edges>
+      <edges xmi:id="_uhi70ItJEe2QDMK1dJVD9A" source="_-7QckYtGEe2caJbmKr4fIw" target="_d96jsItEEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_gIFVMYtEEe2caJbmKr4fIw" origin="_gIDgAItEEe2caJbmKr4fIw" image="_gIFVMItEEe2caJbmKr4fIw"/>
+    <mappings xmi:id="_-7QckotGEe2caJbmKr4fIw" origin="_-7QckItGEe2caJbmKr4fIw" image="_-7QckYtGEe2caJbmKr4fIw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_2qguYItGEe2caJbmKr4fIw" name="createFinalTask">
+    <lhs xmi:id="_2qguZYtGEe2caJbmKr4fIw" name="Lhs">
+      <nodes xmi:id="_5tKAAItGEe2caJbmKr4fIw" name="t" incoming="_QSOIYItHEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes xmi:id="_Oc9P4ItHEe2caJbmKr4fIw" name="pm" outgoing="_QSOIYItHEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <edges xmi:id="_QSOIYItHEe2caJbmKr4fIw" source="_Oc9P4ItHEe2caJbmKr4fIw" target="_5tKAAItGEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <formula xsi:type="henshin:And" xmi:id="_ox7_kItHEe2caJbmKr4fIw">
+        <left xsi:type="henshin:And" xmi:id="_lgljkItHEe2caJbmKr4fIw">
+          <left xsi:type="henshin:Not" xmi:id="_U3N9kItHEe2caJbmKr4fIw">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_U3N9kYtHEe2caJbmKr4fIw">
+              <conclusion xmi:id="_U3N9kotHEe2caJbmKr4fIw" name="1">
+                <nodes xmi:id="_U3N9k4tHEe2caJbmKr4fIw" name="t" incoming="_U3N9l4tHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+                </nodes>
+                <nodes xmi:id="_U3N9lYtHEe2caJbmKr4fIw" name="pm" outgoing="_U3N9l4tHEe2caJbmKr4fIw _VxbjEItHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+                </nodes>
+                <nodes xmi:id="_7kfVEItGEe2caJbmKr4fIw" name="final" incoming="_VxbjEItHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//FinalTask"/>
+                </nodes>
+                <edges xmi:id="_U3N9l4tHEe2caJbmKr4fIw" source="_U3N9lYtHEe2caJbmKr4fIw" target="_U3N9k4tHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+                </edges>
+                <edges xmi:id="_VxbjEItHEe2caJbmKr4fIw" source="_U3N9lYtHEe2caJbmKr4fIw" target="_7kfVEItGEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_U3N9lItHEe2caJbmKr4fIw" origin="_5tKAAItGEe2caJbmKr4fIw" image="_U3N9k4tHEe2caJbmKr4fIw"/>
+              <mappings xmi:id="_U3N9lotHEe2caJbmKr4fIw" origin="_Oc9P4ItHEe2caJbmKr4fIw" image="_U3N9lYtHEe2caJbmKr4fIw"/>
+            </child>
+          </left>
+          <right xsi:type="henshin:Not" xmi:id="_lgljkYtHEe2caJbmKr4fIw">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_lgljkotHEe2caJbmKr4fIw">
+              <conclusion xmi:id="_lgljk4tHEe2caJbmKr4fIw" name="2">
+                <nodes xmi:id="_lgljlItHEe2caJbmKr4fIw" name="t" incoming="_lgljmItHEe2caJbmKr4fIw _ju15IItHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+                </nodes>
+                <nodes xmi:id="_lgljlotHEe2caJbmKr4fIw" name="pm" outgoing="_lgljmItHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+                </nodes>
+                <nodes xmi:id="_idvdoItHEe2caJbmKr4fIw" name="fe" outgoing="_ju15IItHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+                </nodes>
+                <edges xmi:id="_lgljmItHEe2caJbmKr4fIw" source="_lgljlotHEe2caJbmKr4fIw" target="_lgljlItHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+                </edges>
+                <edges xmi:id="_ju15IItHEe2caJbmKr4fIw" source="_idvdoItHEe2caJbmKr4fIw" target="_lgljlItHEe2caJbmKr4fIw">
+                  <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_lgljlYtHEe2caJbmKr4fIw" origin="_5tKAAItGEe2caJbmKr4fIw" image="_lgljlItHEe2caJbmKr4fIw"/>
+              <mappings xmi:id="_lgljl4tHEe2caJbmKr4fIw" origin="_Oc9P4ItHEe2caJbmKr4fIw" image="_lgljlotHEe2caJbmKr4fIw"/>
+            </child>
+          </right>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_ox7_kYtHEe2caJbmKr4fIw">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_ox7_kotHEe2caJbmKr4fIw">
+            <conclusion xmi:id="_ox7_k4tHEe2caJbmKr4fIw" name="3">
+              <nodes xmi:id="_ox7_lItHEe2caJbmKr4fIw" name="t" incoming="_ox7_mItHEe2caJbmKr4fIw" outgoing="_NaqtoIthEe2QDMK1dJVD9A">
+                <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+              </nodes>
+              <nodes xmi:id="_ox7_lotHEe2caJbmKr4fIw" name="pm" outgoing="_ox7_mItHEe2caJbmKr4fIw">
+                <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+              </nodes>
+              <nodes xmi:id="_nYk_8ItHEe2caJbmKr4fIw" name="n" incoming="_NaqtoIthEe2QDMK1dJVD9A">
+                <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+              </nodes>
+              <edges xmi:id="_ox7_mItHEe2caJbmKr4fIw" source="_ox7_lotHEe2caJbmKr4fIw" target="_ox7_lItHEe2caJbmKr4fIw">
+                <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+              </edges>
+              <edges xmi:id="_NaqtoIthEe2QDMK1dJVD9A" source="_ox7_lItHEe2caJbmKr4fIw" target="_nYk_8ItHEe2caJbmKr4fIw">
+                <type href="../AdaptiveProcessModelling.ecore#//Node/next"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_ox7_lYtHEe2caJbmKr4fIw" origin="_5tKAAItGEe2caJbmKr4fIw" image="_ox7_lItHEe2caJbmKr4fIw"/>
+            <mappings xmi:id="_ox7_l4tHEe2caJbmKr4fIw" origin="_Oc9P4ItHEe2caJbmKr4fIw" image="_ox7_lotHEe2caJbmKr4fIw"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_2qguZotGEe2caJbmKr4fIw" name="Rhs">
+      <nodes xmi:id="_5tQGoItGEe2caJbmKr4fIw" name="t" incoming="_QSOIYYtHEe2caJbmKr4fIw _eWVjYItHEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes xmi:id="_Oc9P4YtHEe2caJbmKr4fIw" name="pm" outgoing="_QSOIYYtHEe2caJbmKr4fIw _ylrfoItJEe2QDMK1dJVD9A _z3OAAItJEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes xmi:id="_Xwi7IItHEe2caJbmKr4fIw" name="nft" incoming="_e8AcQItHEe2caJbmKr4fIw _ylrfoItJEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//FinalTask"/>
+      </nodes>
+      <nodes xmi:id="_ZYctEItHEe2caJbmKr4fIw" name="fe" incoming="_z3OAAItJEe2QDMK1dJVD9A" outgoing="_eWVjYItHEe2caJbmKr4fIw _e8AcQItHEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <edges xmi:id="_QSOIYYtHEe2caJbmKr4fIw" source="_Oc9P4YtHEe2caJbmKr4fIw" target="_5tQGoItGEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges xmi:id="_eWVjYItHEe2caJbmKr4fIw" source="_ZYctEItHEe2caJbmKr4fIw" target="_5tQGoItGEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+      <edges xmi:id="_e8AcQItHEe2caJbmKr4fIw" source="_ZYctEItHEe2caJbmKr4fIw" target="_Xwi7IItHEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+      <edges xmi:id="_ylrfoItJEe2QDMK1dJVD9A" source="_Oc9P4YtHEe2caJbmKr4fIw" target="_Xwi7IItHEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges xmi:id="_z3OAAItJEe2QDMK1dJVD9A" source="_Oc9P4YtHEe2caJbmKr4fIw" target="_ZYctEItHEe2caJbmKr4fIw">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/edges"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_5tQGoYtGEe2caJbmKr4fIw" origin="_5tKAAItGEe2caJbmKr4fIw" image="_5tQGoItGEe2caJbmKr4fIw"/>
+    <mappings xmi:id="_Oc9P4otHEe2caJbmKr4fIw" origin="_Oc9P4ItHEe2caJbmKr4fIw" image="_Oc9P4YtHEe2caJbmKr4fIw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_hVT3IIthEe2QDMK1dJVD9A" name="SimpleToObject">
+    <lhs xmi:id="_hVZ9xIthEe2QDMK1dJVD9A" name="Lhs">
+      <nodes xmi:id="_jVNSUIthEe2QDMK1dJVD9A" name="n1" incoming="_5KQ6EIthEe2QDMK1dJVD9A" outgoing="_oGLuAIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="_kOnmkIthEe2QDMK1dJVD9A" name="n2" incoming="_oGLuAIthEe2QDMK1dJVD9A _32gzMIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="_wdxEAIthEe2QDMK1dJVD9A" name="pm" outgoing="_32gzMIthEe2QDMK1dJVD9A _5KQ6EIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <edges xmi:id="_oGLuAIthEe2QDMK1dJVD9A" source="_jVNSUIthEe2QDMK1dJVD9A" target="_kOnmkIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//Node/next"/>
+      </edges>
+      <edges xmi:id="_32gzMIthEe2QDMK1dJVD9A" source="_wdxEAIthEe2QDMK1dJVD9A" target="_kOnmkIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges xmi:id="_5KQ6EIthEe2QDMK1dJVD9A" source="_wdxEAIthEe2QDMK1dJVD9A" target="_jVNSUIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_hVZ9xYthEe2QDMK1dJVD9A" name="Rhs">
+      <nodes xmi:id="_jVNSUYthEe2QDMK1dJVD9A" name="n1" incoming="_se7P4IthEe2QDMK1dJVD9A _5KQ6EYthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="_kOnmkYthEe2QDMK1dJVD9A" name="n2" incoming="_uNEMsIthEe2QDMK1dJVD9A _32gzMYthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="_qc8xEIthEe2QDMK1dJVD9A" name="fe" incoming="_yfXvYIthEe2QDMK1dJVD9A" outgoing="_se7P4IthEe2QDMK1dJVD9A _uNEMsIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <nodes xmi:id="_wdxEAYthEe2QDMK1dJVD9A" name="pm" outgoing="_yfXvYIthEe2QDMK1dJVD9A _32gzMYthEe2QDMK1dJVD9A _5KQ6EYthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <edges xmi:id="_se7P4IthEe2QDMK1dJVD9A" source="_qc8xEIthEe2QDMK1dJVD9A" target="_jVNSUYthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+      <edges xmi:id="_uNEMsIthEe2QDMK1dJVD9A" source="_qc8xEIthEe2QDMK1dJVD9A" target="_kOnmkYthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+      <edges xmi:id="_yfXvYIthEe2QDMK1dJVD9A" source="_wdxEAYthEe2QDMK1dJVD9A" target="_qc8xEIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/edges"/>
+      </edges>
+      <edges xmi:id="_32gzMYthEe2QDMK1dJVD9A" source="_wdxEAYthEe2QDMK1dJVD9A" target="_kOnmkYthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges xmi:id="_5KQ6EYthEe2QDMK1dJVD9A" source="_wdxEAYthEe2QDMK1dJVD9A" target="_jVNSUYthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_jVNSUothEe2QDMK1dJVD9A" origin="_jVNSUIthEe2QDMK1dJVD9A" image="_jVNSUYthEe2QDMK1dJVD9A"/>
+    <mappings xmi:id="_kOnmkothEe2QDMK1dJVD9A" origin="_kOnmkIthEe2QDMK1dJVD9A" image="_kOnmkYthEe2QDMK1dJVD9A"/>
+    <mappings xmi:id="_wdxEAothEe2QDMK1dJVD9A" origin="_wdxEAIthEe2QDMK1dJVD9A" image="_wdxEAYthEe2QDMK1dJVD9A"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_764nkIthEe2QDMK1dJVD9A" name="ObjectToSimple">
+    <lhs xmi:id="_7685AIthEe2QDMK1dJVD9A" name="Lhs">
+      <nodes xmi:id="_9kebkIthEe2QDMK1dJVD9A" name="n1" incoming="_BADKkItiEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="_-NgKcIthEe2QDMK1dJVD9A" name="n2" incoming="_CZrP8ItiEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="__dFjAIthEe2QDMK1dJVD9A" name="fe" incoming="_GfbkYItiEe2QDMK1dJVD9A" outgoing="_BADKkItiEe2QDMK1dJVD9A _CZrP8ItiEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <nodes xmi:id="_FrEIMItiEe2QDMK1dJVD9A" name="pm" outgoing="_GfbkYItiEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <edges xmi:id="_BADKkItiEe2QDMK1dJVD9A" source="__dFjAIthEe2QDMK1dJVD9A" target="_9kebkIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+      <edges xmi:id="_CZrP8ItiEe2QDMK1dJVD9A" source="__dFjAIthEe2QDMK1dJVD9A" target="_-NgKcIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+      <edges xmi:id="_GfbkYItiEe2QDMK1dJVD9A" source="_FrEIMItiEe2QDMK1dJVD9A" target="__dFjAIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/edges"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_7685AYthEe2QDMK1dJVD9A" name="Rhs">
+      <nodes xmi:id="_9kfCoIthEe2QDMK1dJVD9A" name="n1" outgoing="_K8Q8EItiEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="_-NgxgIthEe2QDMK1dJVD9A" name="n2" incoming="_K8Q8EItiEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="_FrEIMYtiEe2QDMK1dJVD9A" name="pm">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <edges xmi:id="_K8Q8EItiEe2QDMK1dJVD9A" source="_9kfCoIthEe2QDMK1dJVD9A" target="_-NgxgIthEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//Node/next"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_9kfCoYthEe2QDMK1dJVD9A" origin="_9kebkIthEe2QDMK1dJVD9A" image="_9kfCoIthEe2QDMK1dJVD9A"/>
+    <mappings xmi:id="_-NgxgYthEe2QDMK1dJVD9A" origin="_-NgKcIthEe2QDMK1dJVD9A" image="_-NgxgIthEe2QDMK1dJVD9A"/>
+    <mappings xmi:id="_FrEIMotiEe2QDMK1dJVD9A" origin="_FrEIMItiEe2QDMK1dJVD9A" image="_FrEIMYtiEe2QDMK1dJVD9A"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_V4LL0ItpEe2QDMK1dJVD9A" name="CreateParallelSplitShadow">
+    <lhs xmi:id="_V4SgkItpEe2QDMK1dJVD9A" name="Lhs">
+      <nodes xmi:id="_YRRKIItpEe2QDMK1dJVD9A" name="pm" outgoing="_dWpvkItpEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes xmi:id="_cYsSgItpEe2QDMK1dJVD9A" name="ps" incoming="_dWpvkItpEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ParallelSplit"/>
+      </nodes>
+      <edges xmi:id="_dWpvkItpEe2QDMK1dJVD9A" source="_YRRKIItpEe2QDMK1dJVD9A" target="_cYsSgItpEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <formula xsi:type="henshin:Not">
+        <child xsi:type="henshin:NestedCondition">
+          <conclusion>
+            <nodes name="pm" outgoing="//@units.4/@lhs/@formula/@child/@conclusion/@edges.0">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+            </nodes>
+            <nodes name="ps" incoming="//@units.4/@lhs/@formula/@child/@conclusion/@edges.0" outgoing="//@units.4/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//ParallelSplit"/>
+            </nodes>
+            <nodes name="t2" incoming="//@units.4/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+            </nodes>
+            <edges source="//@units.4/@lhs/@formula/@child/@conclusion/@nodes.0" target="//@units.4/@lhs/@formula/@child/@conclusion/@nodes.1">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+            </edges>
+            <edges source="//@units.4/@lhs/@formula/@child/@conclusion/@nodes.1" target="//@units.4/@lhs/@formula/@child/@conclusion/@nodes.2">
+              <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+            </edges>
+          </conclusion>
+          <mappings origin="_YRRKIItpEe2QDMK1dJVD9A" image="//@units.4/@lhs/@formula/@child/@conclusion/@nodes.0"/>
+          <mappings origin="_cYsSgItpEe2QDMK1dJVD9A" image="//@units.4/@lhs/@formula/@child/@conclusion/@nodes.1"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_V4THoItpEe2QDMK1dJVD9A" name="Rhs">
+      <nodes xmi:id="_YRRxMItpEe2QDMK1dJVD9A" name="pm" outgoing="_dWpvkYtpEe2QDMK1dJVD9A //@units.4/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes xmi:id="_cYs5kItpEe2QDMK1dJVD9A" name="ps" incoming="_dWpvkYtpEe2QDMK1dJVD9A" outgoing="//@units.4/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ParallelSplit"/>
+      </nodes>
+      <nodes xmi:id="_sSKsoItpEe2QDMK1dJVD9A" name="t" incoming="//@units.4/@rhs/@edges.1 //@units.4/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+        <attributes value="&quot;Parallel Split&quot;">
+          <type href="../AdaptiveProcessModelling.ecore#//Task/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_dWpvkYtpEe2QDMK1dJVD9A" source="_YRRxMItpEe2QDMK1dJVD9A" target="_cYs5kItpEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="_cYs5kItpEe2QDMK1dJVD9A" target="_sSKsoItpEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+      </edges>
+      <edges source="_YRRxMItpEe2QDMK1dJVD9A" target="_sSKsoItpEe2QDMK1dJVD9A">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_YRRxMYtpEe2QDMK1dJVD9A" origin="_YRRKIItpEe2QDMK1dJVD9A" image="_YRRxMItpEe2QDMK1dJVD9A"/>
+    <mappings xmi:id="_cYs5kYtpEe2QDMK1dJVD9A" origin="_cYsSgItpEe2QDMK1dJVD9A" image="_cYs5kItpEe2QDMK1dJVD9A"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="ConnectOutputsShadow">
+    <lhs name="Lhs">
+      <nodes name="ps" incoming="//@units.5/@lhs/@edges.1" outgoing="//@units.5/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.5/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes name="fe" outgoing="//@units.5/@lhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <edges source="//@units.5/@lhs/@nodes.0" target="//@units.5/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+      </edges>
+      <edges source="//@units.5/@lhs/@nodes.2" target="//@units.5/@lhs/@nodes.0">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="ps" outgoing="//@units.5/@rhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//ParallelSplit"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.5/@rhs/@edges.0 //@units.5/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes name="fe" outgoing="//@units.5/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <edges source="//@units.5/@rhs/@nodes.0" target="//@units.5/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+      </edges>
+      <edges source="//@units.5/@rhs/@nodes.2" target="//@units.5/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.5/@lhs/@nodes.0" image="//@units.5/@rhs/@nodes.0"/>
+    <mappings origin="//@units.5/@lhs/@nodes.1" image="//@units.5/@rhs/@nodes.1"/>
+    <mappings origin="//@units.5/@lhs/@nodes.2" image="//@units.5/@rhs/@nodes.2"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="ConnectInputsShadow">
+    <lhs name="Lhs">
+      <nodes name="ps" incoming="//@units.6/@lhs/@edges.1" outgoing="//@units.6/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.6/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes name="fe" outgoing="//@units.6/@lhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <edges source="//@units.6/@lhs/@nodes.0" target="//@units.6/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+      </edges>
+      <edges source="//@units.6/@lhs/@nodes.2" target="//@units.6/@lhs/@nodes.0">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="ps" outgoing="//@units.6/@rhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//ParallelSplit"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.6/@rhs/@edges.0 //@units.6/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes name="fe" outgoing="//@units.6/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <edges source="//@units.6/@rhs/@nodes.0" target="//@units.6/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+      </edges>
+      <edges source="//@units.6/@rhs/@nodes.2" target="//@units.6/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.6/@lhs/@nodes.0" image="//@units.6/@rhs/@nodes.0"/>
+    <mappings origin="//@units.6/@lhs/@nodes.1" image="//@units.6/@rhs/@nodes.1"/>
+    <mappings origin="//@units.6/@lhs/@nodes.2" image="//@units.6/@rhs/@nodes.2"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="CreateSynchronizationShadow">
+    <lhs name="Lhs">
+      <nodes name="pm" outgoing="//@units.7/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="s" incoming="//@units.7/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//Synchronization"/>
+      </nodes>
+      <edges source="//@units.7/@lhs/@nodes.0" target="//@units.7/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <formula xsi:type="henshin:Not">
+        <child xsi:type="henshin:NestedCondition">
+          <conclusion>
+            <nodes name="pm" outgoing="//@units.7/@lhs/@formula/@child/@conclusion/@edges.0">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+            </nodes>
+            <nodes name="s" incoming="//@units.7/@lhs/@formula/@child/@conclusion/@edges.0" outgoing="//@units.7/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//Synchronization"/>
+            </nodes>
+            <nodes name="t2" incoming="//@units.7/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+            </nodes>
+            <edges source="//@units.7/@lhs/@formula/@child/@conclusion/@nodes.0" target="//@units.7/@lhs/@formula/@child/@conclusion/@nodes.1">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+            </edges>
+            <edges source="//@units.7/@lhs/@formula/@child/@conclusion/@nodes.1" target="//@units.7/@lhs/@formula/@child/@conclusion/@nodes.2">
+              <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+            </edges>
+          </conclusion>
+          <mappings origin="//@units.7/@lhs/@nodes.0" image="//@units.7/@lhs/@formula/@child/@conclusion/@nodes.0"/>
+          <mappings origin="//@units.7/@lhs/@nodes.1" image="//@units.7/@lhs/@formula/@child/@conclusion/@nodes.1"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="pm" outgoing="//@units.7/@rhs/@edges.0 //@units.7/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="s" incoming="//@units.7/@rhs/@edges.0" outgoing="//@units.7/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Synchronization"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.7/@rhs/@edges.1 //@units.7/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+        <attributes value="&quot;Synchronization&quot;">
+          <type href="../AdaptiveProcessModelling.ecore#//Task/name"/>
+        </attributes>
+      </nodes>
+      <edges source="//@units.7/@rhs/@nodes.0" target="//@units.7/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.7/@rhs/@nodes.0" target="//@units.7/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.7/@rhs/@nodes.1" target="//@units.7/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.7/@lhs/@nodes.0" image="//@units.7/@rhs/@nodes.0"/>
+    <mappings origin="//@units.7/@lhs/@nodes.1" image="//@units.7/@rhs/@nodes.1"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="CreateSimpleMergeShadow">
+    <lhs name="Lhs">
+      <nodes name="pm" outgoing="//@units.8/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="sm" incoming="//@units.8/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//SimpleMerge"/>
+      </nodes>
+      <edges source="//@units.8/@lhs/@nodes.0" target="//@units.8/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <formula xsi:type="henshin:Not">
+        <child xsi:type="henshin:NestedCondition">
+          <conclusion>
+            <nodes name="pm" outgoing="//@units.8/@lhs/@formula/@child/@conclusion/@edges.0">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+            </nodes>
+            <nodes name="sm" incoming="//@units.8/@lhs/@formula/@child/@conclusion/@edges.0" outgoing="//@units.8/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//SimpleMerge"/>
+            </nodes>
+            <nodes name="t2" incoming="//@units.8/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+            </nodes>
+            <edges source="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.0" target="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.1">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+            </edges>
+            <edges source="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.1" target="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.2">
+              <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+            </edges>
+          </conclusion>
+          <mappings origin="//@units.8/@lhs/@nodes.0" image="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.0"/>
+          <mappings origin="//@units.8/@lhs/@nodes.1" image="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.1"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="pm" outgoing="//@units.8/@rhs/@edges.0 //@units.8/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="sm" incoming="//@units.8/@rhs/@edges.0" outgoing="//@units.8/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//SimpleMerge"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.8/@rhs/@edges.1 //@units.8/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+        <attributes value="&quot;SimpleMerge&quot;">
+          <type href="../AdaptiveProcessModelling.ecore#//Task/name"/>
+        </attributes>
+      </nodes>
+      <edges source="//@units.8/@rhs/@nodes.0" target="//@units.8/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.8/@rhs/@nodes.1" target="//@units.8/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+      </edges>
+      <edges source="//@units.8/@rhs/@nodes.0" target="//@units.8/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.8/@lhs/@nodes.0" image="//@units.8/@rhs/@nodes.0"/>
+    <mappings origin="//@units.8/@lhs/@nodes.1" image="//@units.8/@rhs/@nodes.1"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="CreateMultiChoiceShadow">
+    <lhs name="Lhs">
+      <nodes name="pm" outgoing="//@units.9/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="mc" incoming="//@units.9/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//MultiChoice"/>
+      </nodes>
+      <edges source="//@units.9/@lhs/@nodes.0" target="//@units.9/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <formula xsi:type="henshin:Not">
+        <child xsi:type="henshin:NestedCondition">
+          <conclusion>
+            <nodes name="pm" outgoing="//@units.9/@lhs/@formula/@child/@conclusion/@edges.0">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+            </nodes>
+            <nodes name="mc" incoming="//@units.9/@lhs/@formula/@child/@conclusion/@edges.0" outgoing="//@units.9/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//MultiChoice"/>
+            </nodes>
+            <nodes name="t2" incoming="//@units.9/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+            </nodes>
+            <edges source="//@units.9/@lhs/@formula/@child/@conclusion/@nodes.0" target="//@units.9/@lhs/@formula/@child/@conclusion/@nodes.1">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+            </edges>
+            <edges source="//@units.9/@lhs/@formula/@child/@conclusion/@nodes.1" target="//@units.9/@lhs/@formula/@child/@conclusion/@nodes.2">
+              <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+            </edges>
+          </conclusion>
+          <mappings origin="//@units.9/@lhs/@nodes.0" image="//@units.9/@lhs/@formula/@child/@conclusion/@nodes.0"/>
+          <mappings origin="//@units.9/@lhs/@nodes.1" image="//@units.9/@lhs/@formula/@child/@conclusion/@nodes.1"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="pm" outgoing="//@units.9/@rhs/@edges.0 //@units.9/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="mc" incoming="//@units.9/@rhs/@edges.0" outgoing="//@units.9/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//MultiChoice"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.9/@rhs/@edges.1 //@units.9/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+        <attributes value="&quot;MultiChoice&quot;">
+          <type href="../AdaptiveProcessModelling.ecore#//Task/name"/>
+        </attributes>
+      </nodes>
+      <edges source="//@units.9/@rhs/@nodes.0" target="//@units.9/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.9/@rhs/@nodes.0" target="//@units.9/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.9/@rhs/@nodes.1" target="//@units.9/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.9/@lhs/@nodes.0" image="//@units.9/@rhs/@nodes.0"/>
+    <mappings origin="//@units.9/@lhs/@nodes.1" image="//@units.9/@rhs/@nodes.1"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="CreateExclusiveChoiceShadow">
+    <lhs name="Lhs">
+      <nodes name="pm" outgoing="//@units.10/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="ec" incoming="//@units.10/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//ExclusiveChoice"/>
+      </nodes>
+      <edges source="//@units.10/@lhs/@nodes.0" target="//@units.10/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <formula xsi:type="henshin:Not">
+        <child xsi:type="henshin:NestedCondition">
+          <conclusion>
+            <nodes name="pm" outgoing="//@units.10/@lhs/@formula/@child/@conclusion/@edges.0">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+            </nodes>
+            <nodes name="ec" incoming="//@units.10/@lhs/@formula/@child/@conclusion/@edges.0" outgoing="//@units.10/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//ExclusiveChoice"/>
+            </nodes>
+            <nodes name="t2" incoming="//@units.10/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+            </nodes>
+            <edges source="//@units.10/@lhs/@formula/@child/@conclusion/@nodes.0" target="//@units.10/@lhs/@formula/@child/@conclusion/@nodes.1">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+            </edges>
+            <edges source="//@units.10/@lhs/@formula/@child/@conclusion/@nodes.1" target="//@units.10/@lhs/@formula/@child/@conclusion/@nodes.2">
+              <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+            </edges>
+          </conclusion>
+          <mappings origin="//@units.10/@lhs/@nodes.0" image="//@units.10/@lhs/@formula/@child/@conclusion/@nodes.0"/>
+          <mappings origin="//@units.10/@lhs/@nodes.1" image="//@units.10/@lhs/@formula/@child/@conclusion/@nodes.1"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="pm" outgoing="//@units.10/@rhs/@edges.0 //@units.10/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="ec" incoming="//@units.10/@rhs/@edges.0" outgoing="//@units.10/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ExclusiveChoice"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.10/@rhs/@edges.1 //@units.10/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+        <attributes value="&quot;ExclusiveChoice&quot;">
+          <type href="../AdaptiveProcessModelling.ecore#//Task/name"/>
+        </attributes>
+      </nodes>
+      <edges source="//@units.10/@rhs/@nodes.0" target="//@units.10/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.10/@rhs/@nodes.0" target="//@units.10/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.10/@rhs/@nodes.1" target="//@units.10/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Node/replacement"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.10/@lhs/@nodes.0" image="//@units.10/@rhs/@nodes.0"/>
+    <mappings origin="//@units.10/@lhs/@nodes.1" image="//@units.10/@rhs/@nodes.1"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="RemoveNodeFromHierarchical">
+    <lhs name="Lhs">
+      <nodes name="pm" outgoing="//@units.11/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.11/@lhs/@edges.0" outgoing="//@units.11/@lhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes name="sub" incoming="//@units.11/@lhs/@edges.1" outgoing="//@units.11/@lhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="n" incoming="//@units.11/@lhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <edges source="//@units.11/@lhs/@nodes.0" target="//@units.11/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.11/@lhs/@nodes.1" target="//@units.11/@lhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Task/subProcess"/>
+      </edges>
+      <edges source="//@units.11/@lhs/@nodes.2" target="//@units.11/@lhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="pm" outgoing="//@units.11/@rhs/@edges.0 //@units.11/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.11/@rhs/@edges.0" outgoing="//@units.11/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes name="sub" incoming="//@units.11/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="n" incoming="//@units.11/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <edges source="//@units.11/@rhs/@nodes.0" target="//@units.11/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.11/@rhs/@nodes.1" target="//@units.11/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Task/subProcess"/>
+      </edges>
+      <edges source="//@units.11/@rhs/@nodes.0" target="//@units.11/@rhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.11/@lhs/@nodes.0" image="//@units.11/@rhs/@nodes.0"/>
+    <mappings origin="//@units.11/@lhs/@nodes.1" image="//@units.11/@rhs/@nodes.1"/>
+    <mappings origin="//@units.11/@lhs/@nodes.2" image="//@units.11/@rhs/@nodes.2"/>
+    <mappings origin="//@units.11/@lhs/@nodes.3" image="//@units.11/@rhs/@nodes.3"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="RemoveHierarchical">
+    <lhs name="Lhs">
+      <nodes name="t" incoming="//@units.12/@lhs/@edges.1" outgoing="//@units.12/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes name="sub" incoming="//@units.12/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="pm" outgoing="//@units.12/@lhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <edges source="//@units.12/@lhs/@nodes.0" target="//@units.12/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Task/subProcess"/>
+      </edges>
+      <edges source="//@units.12/@lhs/@nodes.2" target="//@units.12/@lhs/@nodes.0">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <formula xsi:type="henshin:Not">
+        <child xsi:type="henshin:NestedCondition">
+          <conclusion>
+            <nodes name="t" outgoing="//@units.12/@lhs/@formula/@child/@conclusion/@edges.0">
+              <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+            </nodes>
+            <nodes name="sub" incoming="//@units.12/@lhs/@formula/@child/@conclusion/@edges.0" outgoing="//@units.12/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+            </nodes>
+            <nodes name="n" incoming="//@units.12/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+            </nodes>
+            <nodes>
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+            </nodes>
+            <edges source="//@units.12/@lhs/@formula/@child/@conclusion/@nodes.0" target="//@units.12/@lhs/@formula/@child/@conclusion/@nodes.1">
+              <type href="../AdaptiveProcessModelling.ecore#//Task/subProcess"/>
+            </edges>
+            <edges source="//@units.12/@lhs/@formula/@child/@conclusion/@nodes.1" target="//@units.12/@lhs/@formula/@child/@conclusion/@nodes.2">
+              <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+            </edges>
+          </conclusion>
+          <mappings origin="//@units.12/@lhs/@nodes.0" image="//@units.12/@lhs/@formula/@child/@conclusion/@nodes.0"/>
+          <mappings origin="//@units.12/@lhs/@nodes.1" image="//@units.12/@lhs/@formula/@child/@conclusion/@nodes.1"/>
+          <mappings origin="//@units.12/@lhs/@nodes.2" image="//@units.12/@lhs/@formula/@child/@conclusion/@nodes.3"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="pm">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+    </rhs>
+    <mappings origin="//@units.12/@lhs/@nodes.2" image="//@units.12/@rhs/@nodes.0"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="ConnectToInitial">
+    <lhs name="Lhs">
+      <nodes name="t" incoming="//@units.13/@lhs/@edges.2" outgoing="//@units.13/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes name="pm" incoming="//@units.13/@lhs/@edges.0" outgoing="//@units.13/@lhs/@edges.3 //@units.13/@lhs/@edges.4">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="it" incoming="//@units.13/@lhs/@edges.3 //@units.13/@lhs/@edges.5">
+        <type href="../AdaptiveProcessModelling.ecore#//InitialTask"/>
+      </nodes>
+      <nodes name="n" incoming="//@units.13/@lhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes name="fe" outgoing="//@units.13/@lhs/@edges.1 //@units.13/@lhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <nodes name="n2" incoming="//@units.13/@lhs/@edges.4 //@units.13/@lhs/@edges.6">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes name="e" outgoing="//@units.13/@lhs/@edges.5 //@units.13/@lhs/@edges.6">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <edges source="//@units.13/@lhs/@nodes.0" target="//@units.13/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Task/subProcess"/>
+      </edges>
+      <edges source="//@units.13/@lhs/@nodes.4" target="//@units.13/@lhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+      <edges source="//@units.13/@lhs/@nodes.4" target="//@units.13/@lhs/@nodes.0">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+      <edges source="//@units.13/@lhs/@nodes.1" target="//@units.13/@lhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.13/@lhs/@nodes.1" target="//@units.13/@lhs/@nodes.5">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.13/@lhs/@nodes.6" target="//@units.13/@lhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+      <edges source="//@units.13/@lhs/@nodes.6" target="//@units.13/@lhs/@nodes.5">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="t" outgoing="//@units.13/@rhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes name="pm" incoming="//@units.13/@rhs/@edges.0" outgoing="//@units.13/@rhs/@edges.2 //@units.13/@rhs/@edges.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="it" incoming="//@units.13/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//InitialTask"/>
+      </nodes>
+      <nodes name="n" incoming="//@units.13/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes name="fe" outgoing="//@units.13/@rhs/@edges.1 //@units.13/@rhs/@edges.4">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <nodes name="n2" incoming="//@units.13/@rhs/@edges.3 //@units.13/@rhs/@edges.4">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <edges source="//@units.13/@rhs/@nodes.0" target="//@units.13/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Task/subProcess"/>
+      </edges>
+      <edges source="//@units.13/@rhs/@nodes.4" target="//@units.13/@rhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+      <edges source="//@units.13/@rhs/@nodes.1" target="//@units.13/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.13/@rhs/@nodes.1" target="//@units.13/@rhs/@nodes.5">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.13/@rhs/@nodes.4" target="//@units.13/@rhs/@nodes.5">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.13/@lhs/@nodes.0" image="//@units.13/@rhs/@nodes.0"/>
+    <mappings origin="//@units.13/@lhs/@nodes.1" image="//@units.13/@rhs/@nodes.1"/>
+    <mappings origin="//@units.13/@lhs/@nodes.2" image="//@units.13/@rhs/@nodes.2"/>
+    <mappings origin="//@units.13/@lhs/@nodes.3" image="//@units.13/@rhs/@nodes.3"/>
+    <mappings origin="//@units.13/@lhs/@nodes.4" image="//@units.13/@rhs/@nodes.4"/>
+    <mappings origin="//@units.13/@lhs/@nodes.5" image="//@units.13/@rhs/@nodes.5"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="RemoveEdgeFromHierarchical">
+    <lhs name="Lhs">
+      <nodes name="pm" outgoing="//@units.14/@lhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="fe" incoming="//@units.14/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <nodes name="sub" incoming="//@units.14/@lhs/@edges.2" outgoing="//@units.14/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.14/@lhs/@edges.1" outgoing="//@units.14/@lhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <edges source="//@units.14/@lhs/@nodes.2" target="//@units.14/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/edges"/>
+      </edges>
+      <edges source="//@units.14/@lhs/@nodes.0" target="//@units.14/@lhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.14/@lhs/@nodes.3" target="//@units.14/@lhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Task/subProcess"/>
+      </edges>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="pm" outgoing="//@units.14/@rhs/@edges.0 //@units.14/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="fe" incoming="//@units.14/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <nodes name="sub" incoming="//@units.14/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="t" incoming="//@units.14/@rhs/@edges.0" outgoing="//@units.14/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <edges source="//@units.14/@rhs/@nodes.0" target="//@units.14/@rhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.14/@rhs/@nodes.3" target="//@units.14/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Task/subProcess"/>
+      </edges>
+      <edges source="//@units.14/@rhs/@nodes.0" target="//@units.14/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/edges"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.14/@lhs/@nodes.0" image="//@units.14/@rhs/@nodes.0"/>
+    <mappings origin="//@units.14/@lhs/@nodes.1" image="//@units.14/@rhs/@nodes.1"/>
+    <mappings origin="//@units.14/@lhs/@nodes.2" image="//@units.14/@rhs/@nodes.2"/>
+    <mappings origin="//@units.14/@lhs/@nodes.3" image="//@units.14/@rhs/@nodes.3"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="ConnectToFinal">
+    <lhs name="Lhs">
+      <nodes name="t" incoming="//@units.15/@lhs/@edges.2" outgoing="//@units.15/@lhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes name="pm" incoming="//@units.15/@lhs/@edges.0" outgoing="//@units.15/@lhs/@edges.1 //@units.15/@lhs/@edges.4">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="ft" incoming="//@units.15/@lhs/@edges.1 //@units.15/@lhs/@edges.6">
+        <type href="../AdaptiveProcessModelling.ecore#//FinalTask"/>
+      </nodes>
+      <nodes name="n2" incoming="//@units.15/@lhs/@edges.4 //@units.15/@lhs/@edges.5">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes name="n1" incoming="//@units.15/@lhs/@edges.3">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes name="fe" outgoing="//@units.15/@lhs/@edges.2 //@units.15/@lhs/@edges.3">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <nodes name="e" outgoing="//@units.15/@lhs/@edges.5 //@units.15/@lhs/@edges.6">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <edges source="//@units.15/@lhs/@nodes.0" target="//@units.15/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Task/subProcess"/>
+      </edges>
+      <edges source="//@units.15/@lhs/@nodes.1" target="//@units.15/@lhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.15/@lhs/@nodes.5" target="//@units.15/@lhs/@nodes.0">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+      <edges source="//@units.15/@lhs/@nodes.5" target="//@units.15/@lhs/@nodes.4">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+      <edges source="//@units.15/@lhs/@nodes.1" target="//@units.15/@lhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.15/@lhs/@nodes.6" target="//@units.15/@lhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+      <edges source="//@units.15/@lhs/@nodes.6" target="//@units.15/@lhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="t" outgoing="//@units.15/@rhs/@edges.0">
+        <type href="../AdaptiveProcessModelling.ecore#//Task"/>
+      </nodes>
+      <nodes name="pm" incoming="//@units.15/@rhs/@edges.0" outgoing="//@units.15/@rhs/@edges.1 //@units.15/@rhs/@edges.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="ft" incoming="//@units.15/@rhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//FinalTask"/>
+      </nodes>
+      <nodes name="n2" incoming="//@units.15/@rhs/@edges.3 //@units.15/@rhs/@edges.4">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes name="n1" incoming="//@units.15/@rhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes name="fe" outgoing="//@units.15/@rhs/@edges.2 //@units.15/@rhs/@edges.4">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <edges source="//@units.15/@rhs/@nodes.0" target="//@units.15/@rhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//Task/subProcess"/>
+      </edges>
+      <edges source="//@units.15/@rhs/@nodes.1" target="//@units.15/@rhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.15/@rhs/@nodes.5" target="//@units.15/@rhs/@nodes.4">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+      <edges source="//@units.15/@rhs/@nodes.1" target="//@units.15/@rhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.15/@rhs/@nodes.5" target="//@units.15/@rhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.15/@lhs/@nodes.0" image="//@units.15/@rhs/@nodes.0"/>
+    <mappings origin="//@units.15/@lhs/@nodes.1" image="//@units.15/@rhs/@nodes.1"/>
+    <mappings origin="//@units.15/@lhs/@nodes.2" image="//@units.15/@rhs/@nodes.2"/>
+    <mappings origin="//@units.15/@lhs/@nodes.3" image="//@units.15/@rhs/@nodes.3"/>
+    <mappings origin="//@units.15/@lhs/@nodes.4" image="//@units.15/@rhs/@nodes.4"/>
+    <mappings origin="//@units.15/@lhs/@nodes.5" image="//@units.15/@rhs/@nodes.5"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="DeleteInitial">
+    <lhs name="Lhs">
+      <nodes name="pm" outgoing="//@units.16/@lhs/@edges.0 //@units.16/@lhs/@edges.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="it" incoming="//@units.16/@lhs/@edges.0 //@units.16/@lhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//InitialTask"/>
+      </nodes>
+      <nodes name="n" incoming="//@units.16/@lhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes name="fe" incoming="//@units.16/@lhs/@edges.3" outgoing="//@units.16/@lhs/@edges.1 //@units.16/@lhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <edges source="//@units.16/@lhs/@nodes.0" target="//@units.16/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.16/@lhs/@nodes.3" target="//@units.16/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+      <edges source="//@units.16/@lhs/@nodes.3" target="//@units.16/@lhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+      <edges source="//@units.16/@lhs/@nodes.0" target="//@units.16/@lhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/edges"/>
+      </edges>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="pm">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="n">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+    </rhs>
+    <mappings origin="//@units.16/@lhs/@nodes.0" image="//@units.16/@rhs/@nodes.0"/>
+    <mappings origin="//@units.16/@lhs/@nodes.2" image="//@units.16/@rhs/@nodes.1"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="DeleteFinal">
+    <lhs name="Lhs">
+      <nodes name="pm" outgoing="//@units.17/@lhs/@edges.0 //@units.17/@lhs/@edges.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes incoming="//@units.17/@lhs/@edges.0 //@units.17/@lhs/@edges.1">
+        <type href="../AdaptiveProcessModelling.ecore#//FinalTask"/>
+      </nodes>
+      <nodes name="n" incoming="//@units.17/@lhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+      <nodes name="e" incoming="//@units.17/@lhs/@edges.3" outgoing="//@units.17/@lhs/@edges.1 //@units.17/@lhs/@edges.2">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge"/>
+      </nodes>
+      <edges source="//@units.17/@lhs/@nodes.0" target="//@units.17/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/nodes"/>
+      </edges>
+      <edges source="//@units.17/@lhs/@nodes.3" target="//@units.17/@lhs/@nodes.1">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/output"/>
+      </edges>
+      <edges source="//@units.17/@lhs/@nodes.3" target="//@units.17/@lhs/@nodes.2">
+        <type href="../AdaptiveProcessModelling.ecore#//FlowEdge/input"/>
+      </edges>
+      <edges source="//@units.17/@lhs/@nodes.0" target="//@units.17/@lhs/@nodes.3">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel/edges"/>
+      </edges>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="pm">
+        <type href="../AdaptiveProcessModelling.ecore#//ProcessModel"/>
+      </nodes>
+      <nodes name="n">
+        <type href="../AdaptiveProcessModelling.ecore#//Node"/>
+      </nodes>
+    </rhs>
+    <mappings origin="//@units.17/@lhs/@nodes.0" image="//@units.17/@rhs/@nodes.0"/>
+    <mappings origin="//@units.17/@lhs/@nodes.2" image="//@units.17/@rhs/@nodes.1"/>
+  </units>
+</henshin:Module>

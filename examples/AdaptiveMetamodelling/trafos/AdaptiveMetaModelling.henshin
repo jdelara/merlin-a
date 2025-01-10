@@ -1,0 +1,1448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_4Zx6MJaXEe2eAL1F2eyDPg">
+  <imports href="../AdaptiveMetamodelling.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_5Y84MJaXEe2eAL1F2eyDPg" name="AbstractToNo">
+    <parameters xmi:id="_GOEwgJaYEe2eAL1F2eyDPg" name="P">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_5ZttMJaXEe2eAL1F2eyDPg" name="Lhs">
+      <nodes xmi:id="_8SDMQJaXEe2eAL1F2eyDPg" name="cl" outgoing="__5soYJaXEe2eAL1F2eyDPg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_H5zSgJaYEe2eAL1F2eyDPg" value="true">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/isAbstract"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_-hVHQJaXEe2eAL1F2eyDPg" name="pot" incoming="__5soYJaXEe2eAL1F2eyDPg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_DFkHcJaYEe2eAL1F2eyDPg" value="P">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="__5soYJaXEe2eAL1F2eyDPg" source="_8SDMQJaXEe2eAL1F2eyDPg" target="_-hVHQJaXEe2eAL1F2eyDPg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_5ZttMZaXEe2eAL1F2eyDPg" name="Rhs">
+      <nodes xmi:id="_8SDzUJaXEe2eAL1F2eyDPg" name="cl" outgoing="__5soYZaXEe2eAL1F2eyDPg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_H51HsJaYEe2eAL1F2eyDPg" value="true">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/isAbstract"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_-hW8cJaXEe2eAL1F2eyDPg" name="pot" incoming="__5soYZaXEe2eAL1F2eyDPg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_DFkHcZaYEe2eAL1F2eyDPg" value="0">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="__5soYZaXEe2eAL1F2eyDPg" source="_8SDzUJaXEe2eAL1F2eyDPg" target="_-hW8cJaXEe2eAL1F2eyDPg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_MHpzAJaYEe2eAL1F2eyDPg" name="nonZero" conditionText="P!=0"/>
+    <mappings xmi:id="_8SEaYJaXEe2eAL1F2eyDPg" origin="_8SDMQJaXEe2eAL1F2eyDPg" image="_8SDzUJaXEe2eAL1F2eyDPg"/>
+    <mappings xmi:id="_-hW8cZaXEe2eAL1F2eyDPg" origin="_-hVHQJaXEe2eAL1F2eyDPg" image="_-hW8cJaXEe2eAL1F2eyDPg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_vkGrQJadEe2wAI8O9NFPqg" name="MultiToSingleClassifier">
+    <parameters xmi:id="_gdzgoJdEEe2TKK00JmThYg" name="N1">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_gdzgoZdEEe2TKK00JmThYg" name="N2">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_vkP1NJadEe2wAI8O9NFPqg" name="Lhs">
+      <nodes xmi:id="_gd0HsJdEEe2TKK00JmThYg" name="ch" outgoing="_gd0uw5dEEe2TKK00JmThYg _gd0uxJdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_gd0HsZdEEe2TKK00JmThYg" name="p1" incoming="_gd0uw5dEEe2TKK00JmThYg _gd0uxZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_gd0HspdEEe2TKK00JmThYg" value="N1">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_gd0uwJdEEe2TKK00JmThYg" name="p2" incoming="_gd0uxJdEEe2TKK00JmThYg _gd1V0JdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_gd0uwZdEEe2TKK00JmThYg" value="N2">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_gd0uwpdEEe2TKK00JmThYg" name="mm" outgoing="_gd0uxZdEEe2TKK00JmThYg _gd1V0JdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <edges xmi:id="_gd0uw5dEEe2TKK00JmThYg" source="_gd0HsJdEEe2TKK00JmThYg" target="_gd0HsZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_gd0uxJdEEe2TKK00JmThYg" source="_gd0HsJdEEe2TKK00JmThYg" target="_gd0uwJdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_gd0uxZdEEe2TKK00JmThYg" source="_gd0uwpdEEe2TKK00JmThYg" target="_gd0HsZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_gd1V0JdEEe2TKK00JmThYg" source="_gd0uwpdEEe2TKK00JmThYg" target="_gd0uwJdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_vkP1NZadEe2wAI8O9NFPqg" name="Rhs">
+      <nodes xmi:id="_gd1V0ZdEEe2TKK00JmThYg" name="ch" outgoing="_gd2j8pdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_gd1V0pdEEe2TKK00JmThYg" name="p1" incoming="_gd1845dEEe2TKK00JmThYg _gd2j8JdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_gd1V05dEEe2TKK00JmThYg" value="N1">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_gd1V1JdEEe2TKK00JmThYg" name="p2" incoming="_gd185JdEEe2TKK00JmThYg _gd2j8ZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_gd1V1ZdEEe2TKK00JmThYg" value="N2">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_gd184JdEEe2TKK00JmThYg" name="mm" outgoing="_gd1845dEEe2TKK00JmThYg _gd185JdEEe2TKK00JmThYg _gd185ZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_gd184ZdEEe2TKK00JmThYg" name="p12" incoming="_gd185ZdEEe2TKK00JmThYg _gd2j8pdEEe2TKK00JmThYg" outgoing="_gd2j8JdEEe2TKK00JmThYg _gd2j8ZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_gd184pdEEe2TKK00JmThYg" value="N1.concat(N2)">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_gd1845dEEe2TKK00JmThYg" source="_gd184JdEEe2TKK00JmThYg" target="_gd1V0pdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_gd185JdEEe2TKK00JmThYg" source="_gd184JdEEe2TKK00JmThYg" target="_gd1V1JdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_gd185ZdEEe2TKK00JmThYg" source="_gd184JdEEe2TKK00JmThYg" target="_gd184ZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_gd2j8JdEEe2TKK00JmThYg" source="_gd184ZdEEe2TKK00JmThYg" target="_gd1V0pdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject/parents"/>
+      </edges>
+      <edges xmi:id="_gd2j8ZdEEe2TKK00JmThYg" source="_gd184ZdEEe2TKK00JmThYg" target="_gd1V1JdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject/parents"/>
+      </edges>
+      <edges xmi:id="_gd2j8pdEEe2TKK00JmThYg" source="_gd1V0ZdEEe2TKK00JmThYg" target="_gd184ZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_gd2j85dEEe2TKK00JmThYg" origin="_gd0HsJdEEe2TKK00JmThYg" image="_gd1V0ZdEEe2TKK00JmThYg"/>
+    <mappings xmi:id="_gd2j9JdEEe2TKK00JmThYg" origin="_gd0HsZdEEe2TKK00JmThYg" image="_gd1V0pdEEe2TKK00JmThYg"/>
+    <mappings xmi:id="_gd2j9ZdEEe2TKK00JmThYg" origin="_gd0uwJdEEe2TKK00JmThYg" image="_gd1V1JdEEe2TKK00JmThYg"/>
+    <mappings xmi:id="_gd2j9pdEEe2TKK00JmThYg" origin="_gd0uwpdEEe2TKK00JmThYg" image="_gd184JdEEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_gd3LAJdEEe2TKK00JmThYg" name="AddPotencyToSub">
+    <parameters xmi:id="_gd3LAZdEEe2TKK00JmThYg" name="P">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_gd3LApdEEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_gd3LA5dEEe2TKK00JmThYg" name="c1" incoming="_gd3yEpdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_gd3LBJdEEe2TKK00JmThYg" name="c2" outgoing="_gd3yEZdEEe2TKK00JmThYg _gd3yEpdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_gd3LBZdEEe2TKK00JmThYg" name="p" incoming="_gd3yEZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_gd3yEJdEEe2TKK00JmThYg" value="P">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_gd3yEZdEEe2TKK00JmThYg" source="_gd3LBJdEEe2TKK00JmThYg" target="_gd3LBZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_gd3yEpdEEe2TKK00JmThYg" source="_gd3LBJdEEe2TKK00JmThYg" target="_gd3LA5dEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_gd6OUJdEEe2TKK00JmThYg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_gd7ccJdEEe2TKK00JmThYg">
+          <conclusion xmi:id="_gd7ccZdEEe2TKK00JmThYg">
+            <nodes xmi:id="_gd7ccpdEEe2TKK00JmThYg" name="c1" incoming="_gd8qkZdEEe2TKK00JmThYg" outgoing="_gd8qk5dEEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+            </nodes>
+            <nodes xmi:id="_gd8DgJdEEe2TKK00JmThYg" name="c2" outgoing="_gd8qkZdEEe2TKK00JmThYg _gd8qkpdEEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+            </nodes>
+            <nodes xmi:id="_gd8DgZdEEe2TKK00JmThYg" name="p" incoming="_gd8qkpdEEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+              <attributes xmi:id="_gd8DgpdEEe2TKK00JmThYg" value="P">
+                <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_gd8qkJdEEe2TKK00JmThYg" name="pp" incoming="_gd8qk5dEEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+            </nodes>
+            <edges xmi:id="_gd8qkZdEEe2TKK00JmThYg" source="_gd8DgJdEEe2TKK00JmThYg" target="_gd7ccpdEEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+            </edges>
+            <edges xmi:id="_gd8qkpdEEe2TKK00JmThYg" source="_gd8DgJdEEe2TKK00JmThYg" target="_gd8DgZdEEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+            </edges>
+            <edges xmi:id="_gd8qk5dEEe2TKK00JmThYg" source="_gd7ccpdEEe2TKK00JmThYg" target="_gd8qkJdEEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_gd8qlJdEEe2TKK00JmThYg" origin="_gd3LA5dEEe2TKK00JmThYg" image="_gd7ccpdEEe2TKK00JmThYg"/>
+          <mappings xmi:id="_gd8qlZdEEe2TKK00JmThYg" origin="_gd3LBJdEEe2TKK00JmThYg" image="_gd8DgJdEEe2TKK00JmThYg"/>
+          <mappings xmi:id="_gd8qlpdEEe2TKK00JmThYg" origin="_gd3LBZdEEe2TKK00JmThYg" image="_gd8DgZdEEe2TKK00JmThYg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_gd8ql5dEEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_gd8qmJdEEe2TKK00JmThYg" name="c1" incoming="_gd94spdEEe2TKK00JmThYg" outgoing="_gd94s5dEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_gd9RoJdEEe2TKK00JmThYg" name="c2" outgoing="_gd94sZdEEe2TKK00JmThYg _gd94spdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_gd9RoZdEEe2TKK00JmThYg" name="p" incoming="_gd94sZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_gd9RopdEEe2TKK00JmThYg" value="P">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_gd9Ro5dEEe2TKK00JmThYg" name="pc" incoming="_gd94s5dEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_gd94sJdEEe2TKK00JmThYg" value="P+1">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_gd94sZdEEe2TKK00JmThYg" source="_gd9RoJdEEe2TKK00JmThYg" target="_gd9RoZdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_gd94spdEEe2TKK00JmThYg" source="_gd9RoJdEEe2TKK00JmThYg" target="_gd8qmJdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_gd94s5dEEe2TKK00JmThYg" source="_gd8qmJdEEe2TKK00JmThYg" target="_gd9Ro5dEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_gd94tJdEEe2TKK00JmThYg" origin="_gd3LA5dEEe2TKK00JmThYg" image="_gd8qmJdEEe2TKK00JmThYg"/>
+    <mappings xmi:id="_gd94tZdEEe2TKK00JmThYg" origin="_gd3LBJdEEe2TKK00JmThYg" image="_gd9RoJdEEe2TKK00JmThYg"/>
+    <mappings xmi:id="_gd94tpdEEe2TKK00JmThYg" origin="_gd3LBZdEEe2TKK00JmThYg" image="_gd9RoZdEEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_ua01IJdEEe2TKK00JmThYg" name="addModelLevel_bottom">
+    <lhs xmi:id="_ubIXIJdEEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_x2C-0JdEEe2TKK00JmThYg" name="m" outgoing="_O0ww4JdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_NqG7oJdFEe2TKK00JmThYg" name="mt" incoming="_O0ww4JdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <edges xmi:id="_O0ww4JdFEe2TKK00JmThYg" source="_x2C-0JdEEe2TKK00JmThYg" target="_NqG7oJdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <formula xsi:type="henshin:And" xmi:id="_Vya0oJdHEe2TKK00JmThYg">
+        <left xsi:type="henshin:Not" xmi:id="_SbNBMZdHEe2TKK00JmThYg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_SbNBMpdHEe2TKK00JmThYg">
+            <conclusion xmi:id="_SbNBM5dHEe2TKK00JmThYg" name="1">
+              <nodes xmi:id="_SbNBNJdHEe2TKK00JmThYg" name="m" outgoing="_SbNoQZdHEe2TKK00JmThYg _1GbKcJdEEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+              </nodes>
+              <nodes xmi:id="_SbNBNpdHEe2TKK00JmThYg" name="mt" incoming="_SbNoQZdHEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+              </nodes>
+              <nodes xmi:id="_zKozMJdEEe2TKK00JmThYg" name="inst" incoming="_1GbKcJdEEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+              </nodes>
+              <edges xmi:id="_SbNoQZdHEe2TKK00JmThYg" source="_SbNBNJdHEe2TKK00JmThYg" target="_SbNBNpdHEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+              </edges>
+              <edges xmi:id="_1GbKcJdEEe2TKK00JmThYg" source="_SbNBNJdHEe2TKK00JmThYg" target="_zKozMJdEEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/instances"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_SbNBNZdHEe2TKK00JmThYg" origin="_x2C-0JdEEe2TKK00JmThYg" image="_SbNBNJdHEe2TKK00JmThYg"/>
+            <mappings xmi:id="_SbNoQJdHEe2TKK00JmThYg" origin="_NqG7oJdFEe2TKK00JmThYg" image="_SbNBNpdHEe2TKK00JmThYg"/>
+          </child>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_Vya0oZdHEe2TKK00JmThYg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_Vya0opdHEe2TKK00JmThYg">
+            <conclusion xmi:id="_Vya0o5dHEe2TKK00JmThYg" name="2">
+              <nodes xmi:id="_Vya0pJdHEe2TKK00JmThYg" name="m" outgoing="_Vya0qJdHEe2TKK00JmThYg _WfIJoJdHEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+              </nodes>
+              <nodes xmi:id="_Vya0ppdHEe2TKK00JmThYg" name="mt" incoming="_Vya0qJdHEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+              </nodes>
+              <nodes xmi:id="_UFeKoJdHEe2TKK00JmThYg" name="p3" incoming="_WfIJoJdHEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+              </nodes>
+              <edges xmi:id="_Vya0qJdHEe2TKK00JmThYg" source="_Vya0pJdHEe2TKK00JmThYg" target="_Vya0ppdHEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+              </edges>
+              <edges xmi:id="_WfIJoJdHEe2TKK00JmThYg" source="_Vya0pJdHEe2TKK00JmThYg" target="_UFeKoJdHEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_Vya0pZdHEe2TKK00JmThYg" origin="_x2C-0JdEEe2TKK00JmThYg" image="_Vya0pJdHEe2TKK00JmThYg"/>
+            <mappings xmi:id="_Vya0p5dHEe2TKK00JmThYg" origin="_NqG7oJdFEe2TKK00JmThYg" image="_Vya0ppdHEe2TKK00JmThYg"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_ubIXIZdEEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_x2C-0ZdEEe2TKK00JmThYg" name="m" outgoing="__yx_cJdEEe2TKK00JmThYg _O0ww4ZdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_-KXQIJdEEe2TKK00JmThYg" name="p" incoming="__yx_cJdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_EXeSoJdFEe2TKK00JmThYg" value="0">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_NqIJwJdFEe2TKK00JmThYg" name="mt" incoming="_O0ww4ZdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <edges xmi:id="__yx_cJdEEe2TKK00JmThYg" source="_x2C-0ZdEEe2TKK00JmThYg" target="_-KXQIJdEEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_O0ww4ZdFEe2TKK00JmThYg" source="_x2C-0ZdEEe2TKK00JmThYg" target="_NqIJwJdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_x2C-0pdEEe2TKK00JmThYg" origin="_x2C-0JdEEe2TKK00JmThYg" image="_x2C-0ZdEEe2TKK00JmThYg"/>
+    <mappings xmi:id="_NqIJwZdFEe2TKK00JmThYg" origin="_NqG7oJdFEe2TKK00JmThYg" image="_NqIJwJdFEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_XrDcIJdFEe2TKK00JmThYg" name="propagatePotency">
+    <parameters xmi:id="_w3DxkJdFEe2TKK00JmThYg" name="P">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_XrI7spdFEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_Z1JVIJdFEe2TKK00JmThYg" name="m" outgoing="_dtgGwJdFEe2TKK00JmThYg _fcvPwJdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_aXsokJdFEe2TKK00JmThYg" name="mt" incoming="_fcvPwJdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_bDcUQJdFEe2TKK00JmThYg" name="pt" incoming="_dtgGwJdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_tIlUsJdFEe2TKK00JmThYg" value="P">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_dtgGwJdFEe2TKK00JmThYg" source="_Z1JVIJdFEe2TKK00JmThYg" target="_bDcUQJdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_fcvPwJdFEe2TKK00JmThYg" source="_Z1JVIJdFEe2TKK00JmThYg" target="_aXsokJdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_cyqPIJdFEe2TKK00JmThYg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_cyqPIZdFEe2TKK00JmThYg">
+          <conclusion xmi:id="_cyqPIpdFEe2TKK00JmThYg">
+            <nodes xmi:id="_cyqPI5dFEe2TKK00JmThYg" name="m" outgoing="_dtgGwpdFEe2TKK00JmThYg _fcvPwpdFEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+            </nodes>
+            <nodes xmi:id="_cyqPJZdFEe2TKK00JmThYg" name="mt" incoming="_fcvPwpdFEe2TKK00JmThYg" outgoing="_dYp4IJdFEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+            </nodes>
+            <nodes xmi:id="_cyqPJ5dFEe2TKK00JmThYg" name="pt" incoming="_dtgGwpdFEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+              <attributes xmi:id="_tIlUspdFEe2TKK00JmThYg" value="P">
+                <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_bnzlkJdFEe2TKK00JmThYg" name="p" incoming="_dYp4IJdFEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+            </nodes>
+            <edges xmi:id="_dYp4IJdFEe2TKK00JmThYg" source="_cyqPJZdFEe2TKK00JmThYg" target="_bnzlkJdFEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+            </edges>
+            <edges xmi:id="_dtgGwpdFEe2TKK00JmThYg" source="_cyqPI5dFEe2TKK00JmThYg" target="_cyqPJ5dFEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+            </edges>
+            <edges xmi:id="_fcvPwpdFEe2TKK00JmThYg" source="_cyqPI5dFEe2TKK00JmThYg" target="_cyqPJZdFEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_cyqPJJdFEe2TKK00JmThYg" origin="_Z1JVIJdFEe2TKK00JmThYg" image="_cyqPI5dFEe2TKK00JmThYg"/>
+          <mappings xmi:id="_cyqPJpdFEe2TKK00JmThYg" origin="_aXsokJdFEe2TKK00JmThYg" image="_cyqPJZdFEe2TKK00JmThYg"/>
+          <mappings xmi:id="_cyqPKJdFEe2TKK00JmThYg" origin="_bDcUQJdFEe2TKK00JmThYg" image="_cyqPJ5dFEe2TKK00JmThYg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_XrI7s5dFEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_Z1JVIZdFEe2TKK00JmThYg" name="m" outgoing="_dtgGwZdFEe2TKK00JmThYg _fcvPwZdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_aXsokZdFEe2TKK00JmThYg" name="mt" incoming="_fcvPwZdFEe2TKK00JmThYg" outgoing="_oNodoJdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_bDcUQZdFEe2TKK00JmThYg" name="pt" incoming="_dtgGwZdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_tIlUsZdFEe2TKK00JmThYg" value="P">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_m4FnAJdFEe2TKK00JmThYg" name="p2" incoming="_oNodoJdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_uI1QwJdFEe2TKK00JmThYg" value="P+1">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_dtgGwZdFEe2TKK00JmThYg" source="_Z1JVIZdFEe2TKK00JmThYg" target="_bDcUQZdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_fcvPwZdFEe2TKK00JmThYg" source="_Z1JVIZdFEe2TKK00JmThYg" target="_aXsokZdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_oNodoJdFEe2TKK00JmThYg" source="_aXsokZdFEe2TKK00JmThYg" target="_m4FnAJdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Z1JVIpdFEe2TKK00JmThYg" origin="_Z1JVIJdFEe2TKK00JmThYg" image="_Z1JVIZdFEe2TKK00JmThYg"/>
+    <mappings xmi:id="_aXsokpdFEe2TKK00JmThYg" origin="_aXsokJdFEe2TKK00JmThYg" image="_aXsokZdFEe2TKK00JmThYg"/>
+    <mappings xmi:id="_bDcUQpdFEe2TKK00JmThYg" origin="_bDcUQJdFEe2TKK00JmThYg" image="_bDcUQZdFEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_0FI3IJdFEe2TKK00JmThYg" name="potencyForSingletonModel">
+    <lhs xmi:id="_0FNIkJdFEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_2ZwlIJdFEe2TKK00JmThYg" name="m">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <formula xsi:type="henshin:And" xmi:id="_n7T3MJdIEe2TKK00JmThYg">
+        <left xsi:type="henshin:And" xmi:id="_jHNEcJdHEe2TKK00JmThYg">
+          <left xsi:type="henshin:Not" xmi:id="_iMmdYZdHEe2TKK00JmThYg">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_iMmdYpdHEe2TKK00JmThYg">
+              <conclusion xmi:id="_iMmdY5dHEe2TKK00JmThYg" name="1">
+                <nodes xmi:id="_iMmdZJdHEe2TKK00JmThYg" name="m" outgoing="_1HUa8JdHEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+                </nodes>
+                <nodes xmi:id="_gz0FgJdHEe2TKK00JmThYg" name="p1" incoming="_1HUa8JdHEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+                </nodes>
+                <edges xmi:id="_1HUa8JdHEe2TKK00JmThYg" source="_iMmdZJdHEe2TKK00JmThYg" target="_gz0FgJdHEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_iMmdZZdHEe2TKK00JmThYg" origin="_2ZwlIJdFEe2TKK00JmThYg" image="_iMmdZJdHEe2TKK00JmThYg"/>
+            </child>
+          </left>
+          <right xsi:type="henshin:Not" xmi:id="_jHNEcZdHEe2TKK00JmThYg">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_jHNEcpdHEe2TKK00JmThYg">
+              <conclusion xmi:id="_jHNEc5dHEe2TKK00JmThYg" name="2">
+                <nodes xmi:id="_jHNEdJdHEe2TKK00JmThYg" name="m" outgoing="_7XY8wJdFEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+                </nodes>
+                <nodes xmi:id="_3v9jEJdFEe2TKK00JmThYg" name="mi" incoming="_7XY8wJdFEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+                </nodes>
+                <edges xmi:id="_7XY8wJdFEe2TKK00JmThYg" source="_jHNEdJdHEe2TKK00JmThYg" target="_3v9jEJdFEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/instances"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_jHNEdZdHEe2TKK00JmThYg" origin="_2ZwlIJdFEe2TKK00JmThYg" image="_jHNEdJdHEe2TKK00JmThYg"/>
+            </child>
+          </right>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_n7T3MZdIEe2TKK00JmThYg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_n7T3MpdIEe2TKK00JmThYg">
+            <conclusion xmi:id="_n7T3M5dIEe2TKK00JmThYg" name="3">
+              <nodes xmi:id="_n7T3NJdIEe2TKK00JmThYg" name="m" outgoing="_8nyNoJdFEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+              </nodes>
+              <nodes xmi:id="_4SrOkJdFEe2TKK00JmThYg" name="mt" description="" incoming="_8nyNoJdFEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+              </nodes>
+              <edges xmi:id="_8nyNoJdFEe2TKK00JmThYg" source="_n7T3NJdIEe2TKK00JmThYg" target="_4SrOkJdFEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_n7T3NZdIEe2TKK00JmThYg" origin="_2ZwlIJdFEe2TKK00JmThYg" image="_n7T3NJdIEe2TKK00JmThYg"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_0FNvoJdFEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_2ZxzQJdFEe2TKK00JmThYg" name="m" outgoing="_G8leQJdGEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="__cnswJdFEe2TKK00JmThYg" name="p" incoming="_G8leQJdGEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_F8LxMJdGEe2TKK00JmThYg" value="1">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_G8leQJdGEe2TKK00JmThYg" source="_2ZxzQJdFEe2TKK00JmThYg" target="__cnswJdFEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_2ZxzQZdFEe2TKK00JmThYg" origin="_2ZwlIJdFEe2TKK00JmThYg" image="_2ZxzQJdFEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_u80yIJdIEe2TKK00JmThYg" name="overridePotency">
+    <parameters xmi:id="_E5RbUJdJEe2TKK00JmThYg" name="P">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_E5RbUZdJEe2TKK00JmThYg" name="Q">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_u84cgJdIEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_yiJTAJdIEe2TKK00JmThYg" name="mi" outgoing="_0oYmwJdIEe2TKK00JmThYg _5qZIEJdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_zHFzIJdIEe2TKK00JmThYg" name="mt" incoming="_0oYmwJdIEe2TKK00JmThYg" outgoing="_6_14EJdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_4KEk0JdIEe2TKK00JmThYg" name="p" incoming="_5qZIEJdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_-3OZUJdIEe2TKK00JmThYg" value="P">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_40mvkJdIEe2TKK00JmThYg" name="p2" incoming="_6_14EJdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_ABraQJdJEe2TKK00JmThYg" value="Q">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_0oYmwJdIEe2TKK00JmThYg" source="_yiJTAJdIEe2TKK00JmThYg" target="_zHFzIJdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_5qZIEJdIEe2TKK00JmThYg" source="_yiJTAJdIEe2TKK00JmThYg" target="_4KEk0JdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_6_14EJdIEe2TKK00JmThYg" source="_zHFzIJdIEe2TKK00JmThYg" target="_40mvkJdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_u84cgZdIEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_yiJTAZdIEe2TKK00JmThYg" name="mi" outgoing="_0oYmwZdIEe2TKK00JmThYg _5qZIEZdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_zHFzIZdIEe2TKK00JmThYg" name="mt" incoming="_0oYmwZdIEe2TKK00JmThYg" outgoing="_6_14EZdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_4KEk0ZdIEe2TKK00JmThYg" name="p" incoming="_5qZIEZdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_-3OZUZdIEe2TKK00JmThYg" value="P">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_40mvkZdIEe2TKK00JmThYg" name="p2" incoming="_6_14EZdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_ABsBUJdJEe2TKK00JmThYg" value="P+1">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_0oYmwZdIEe2TKK00JmThYg" source="_yiJTAZdIEe2TKK00JmThYg" target="_zHFzIZdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_5qZIEZdIEe2TKK00JmThYg" source="_yiJTAZdIEe2TKK00JmThYg" target="_4KEk0ZdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_6_14EZdIEe2TKK00JmThYg" source="_zHFzIZdIEe2TKK00JmThYg" target="_40mvkZdIEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_F4-k0JdJEe2TKK00JmThYg" name="notBigger" conditionText="Q&lt;=P"/>
+    <mappings xmi:id="_yiJTApdIEe2TKK00JmThYg" origin="_yiJTAJdIEe2TKK00JmThYg" image="_yiJTAZdIEe2TKK00JmThYg"/>
+    <mappings xmi:id="_zHFzIpdIEe2TKK00JmThYg" origin="_zHFzIJdIEe2TKK00JmThYg" image="_zHFzIZdIEe2TKK00JmThYg"/>
+    <mappings xmi:id="_4KEk0pdIEe2TKK00JmThYg" origin="_4KEk0JdIEe2TKK00JmThYg" image="_4KEk0ZdIEe2TKK00JmThYg"/>
+    <mappings xmi:id="_40mvkpdIEe2TKK00JmThYg" origin="_40mvkJdIEe2TKK00JmThYg" image="_40mvkZdIEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="__6VmsJdJEe2TKK00JmThYg" name="backPropPotency">
+    <parameters xmi:id="_NIzzIJdKEe2TKK00JmThYg" name="P">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_NIzzIZdKEe2TKK00JmThYg" name="Q">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="__6YqAJdJEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_CQ9f0JdKEe2TKK00JmThYg" name="mi" outgoing="_DzwIQJdKEe2TKK00JmThYg _F-N0sJdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_CyvXMJdKEe2TKK00JmThYg" name="mt" incoming="_DzwIQJdKEe2TKK00JmThYg" outgoing="_Hn_O4JdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_ErnkYJdKEe2TKK00JmThYg" name="p2" incoming="_Hn_O4JdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_JtaqUJdKEe2TKK00JmThYg" value="Q">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_FOwGoJdKEe2TKK00JmThYg" name="p1" incoming="_F-N0sJdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_K5FzQJdKEe2TKK00JmThYg" value="P">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_DzwIQJdKEe2TKK00JmThYg" source="_CQ9f0JdKEe2TKK00JmThYg" target="_CyvXMJdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_F-N0sJdKEe2TKK00JmThYg" source="_CQ9f0JdKEe2TKK00JmThYg" target="_FOwGoJdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_Hn_O4JdKEe2TKK00JmThYg" source="_CyvXMJdKEe2TKK00JmThYg" target="_ErnkYJdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="__6ZREJdJEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_CQ-G4JdKEe2TKK00JmThYg" name="mi" outgoing="_DzwIQZdKEe2TKK00JmThYg _F-N0sZdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_CyvXMZdKEe2TKK00JmThYg" name="mt" incoming="_DzwIQZdKEe2TKK00JmThYg" outgoing="_Hn_O4ZdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_ErnkYZdKEe2TKK00JmThYg" name="p2" incoming="_Hn_O4ZdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_Jtb4cJdKEe2TKK00JmThYg" value="Q">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_FOwGoZdKEe2TKK00JmThYg" name="p1" incoming="_F-N0sZdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_K5FzQZdKEe2TKK00JmThYg" value="Q-1">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_DzwIQZdKEe2TKK00JmThYg" source="_CQ-G4JdKEe2TKK00JmThYg" target="_CyvXMZdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_F-N0sZdKEe2TKK00JmThYg" source="_CQ-G4JdKEe2TKK00JmThYg" target="_FOwGoZdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_Hn_O4ZdKEe2TKK00JmThYg" source="_CyvXMZdKEe2TKK00JmThYg" target="_ErnkYZdKEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_R-IjUJdKEe2TKK00JmThYg" name="notConsecutive" conditionText="Q>P+1"/>
+    <mappings xmi:id="_CQ-G4ZdKEe2TKK00JmThYg" origin="_CQ9f0JdKEe2TKK00JmThYg" image="_CQ-G4JdKEe2TKK00JmThYg"/>
+    <mappings xmi:id="_CyvXMpdKEe2TKK00JmThYg" origin="_CyvXMJdKEe2TKK00JmThYg" image="_CyvXMZdKEe2TKK00JmThYg"/>
+    <mappings xmi:id="_ErnkYpdKEe2TKK00JmThYg" origin="_ErnkYJdKEe2TKK00JmThYg" image="_ErnkYZdKEe2TKK00JmThYg"/>
+    <mappings xmi:id="_FOwtsJdKEe2TKK00JmThYg" origin="_FOwGoJdKEe2TKK00JmThYg" image="_FOwGoZdKEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_S2Sd4JdLEe2TKK00JmThYg" name="removeLevel">
+    <lhs xmi:id="_S2WvVJdLEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_UCpjUJdLEe2TKK00JmThYg" name="m" outgoing="_XJOSsJdLEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_UzlRAJdLEe2TKK00JmThYg" name="p" incoming="_XJOSsJdLEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+      </nodes>
+      <edges xmi:id="_XJOSsJdLEe2TKK00JmThYg" source="_UCpjUJdLEe2TKK00JmThYg" target="_UzlRAJdLEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_S2WvVZdLEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_UCpjUZdLEe2TKK00JmThYg" name="m">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_UCpjUpdLEe2TKK00JmThYg" origin="_UCpjUJdLEe2TKK00JmThYg" image="_UCpjUZdLEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_PtG0gJdNEe2TKK00JmThYg" name="reduceLeap">
+    <parameters xmi:id="_iOZlcJdNEe2TKK00JmThYg" name="P">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_HLotQJdOEe2TKK00JmThYg" name="N">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_PtG0hZdNEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_UqpFgJdNEe2TKK00JmThYg" name="m1" incoming="_nqnWgJdNEe2TKK00JmThYg" outgoing="_YMmwYJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_VQ7CYJdNEe2TKK00JmThYg" name="m0" outgoing="_tc7TYJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_VxxssJdNEe2TKK00JmThYg" name="mi" outgoing="_nqnWgJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_XCdRcJdNEe2TKK00JmThYg" name="cl1" incoming="_YMmwYJdNEe2TKK00JmThYg _vPv74JdNEe2TKK00JmThYg" outgoing="_i2ijgJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_AM8c0JdOEe2TKK00JmThYg" value="N">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_bnMA4JdNEe2TKK00JmThYg" name="p" incoming="_i2ijgJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_cuXEUJdNEe2TKK00JmThYg" value="true">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/isLeap"/>
+        </attributes>
+        <attributes xmi:id="_d7gz8JdNEe2TKK00JmThYg" value="P">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_sO0hgJdNEe2TKK00JmThYg" name="cl0" incoming="_tc7TYJdNEe2TKK00JmThYg" outgoing="_vPv74JdNEe2TKK00JmThYg _zEBewJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_wrCOIJdNEe2TKK00JmThYg" name="p2" incoming="_zEBewJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_x_EB0JdNEe2TKK00JmThYg" value="0">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_YMmwYJdNEe2TKK00JmThYg" source="_UqpFgJdNEe2TKK00JmThYg" target="_XCdRcJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_i2ijgJdNEe2TKK00JmThYg" source="_XCdRcJdNEe2TKK00JmThYg" target="_bnMA4JdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_nqnWgJdNEe2TKK00JmThYg" source="_VxxssJdNEe2TKK00JmThYg" target="_UqpFgJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_tc7TYJdNEe2TKK00JmThYg" source="_VQ7CYJdNEe2TKK00JmThYg" target="_sO0hgJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_vPv74JdNEe2TKK00JmThYg" source="_sO0hgJdNEe2TKK00JmThYg" target="_XCdRcJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_zEBewJdNEe2TKK00JmThYg" source="_sO0hgJdNEe2TKK00JmThYg" target="_wrCOIJdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_sg-zEJdOEe2TKK00JmThYg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_sg-zEZdOEe2TKK00JmThYg">
+          <conclusion xmi:id="_sg-zEpdOEe2TKK00JmThYg">
+            <nodes xmi:id="_sg-zE5dOEe2TKK00JmThYg" name="m1" incoming="_sg-zF5dOEe2TKK00JmThYg" outgoing="_sg-zG5dOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+            </nodes>
+            <nodes xmi:id="_sg-zFZdOEe2TKK00JmThYg" name="mi" outgoing="_sg-zF5dOEe2TKK00JmThYg _uh0pcJdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+            </nodes>
+            <nodes xmi:id="_sg-zGJdOEe2TKK00JmThYg" name="cl1" incoming="_sg-zG5dOEe2TKK00JmThYg _sg-zIZdOEe2TKK00JmThYg _wtDK4JdOEe2TKK00JmThYg" outgoing="_sg-zJpdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+              <attributes xmi:id="_sg-zGZdOEe2TKK00JmThYg" value="N">
+                <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_sg-zHJdOEe2TKK00JmThYg" name="m0" outgoing="_sg-zIJdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+            </nodes>
+            <nodes xmi:id="_sg-zHpdOEe2TKK00JmThYg" name="cl0" incoming="_sg-zIJdOEe2TKK00JmThYg" outgoing="_sg-zIZdOEe2TKK00JmThYg _sg-zKpdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+            </nodes>
+            <nodes xmi:id="_sg-zIpdOEe2TKK00JmThYg" name="p" incoming="_sg-zJpdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+              <attributes xmi:id="_sg-zI5dOEe2TKK00JmThYg" value="true">
+                <type href="../AdaptiveMetamodelling.ecore#//Potency/isLeap"/>
+              </attributes>
+              <attributes xmi:id="_sg-zJJdOEe2TKK00JmThYg" value="P">
+                <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_sg-zJ5dOEe2TKK00JmThYg" name="p2" incoming="_sg-zKpdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+              <attributes xmi:id="_sg-zKJdOEe2TKK00JmThYg" value="0">
+                <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_rBnSEJdOEe2TKK00JmThYg" name="cle" incoming="_uh0pcJdOEe2TKK00JmThYg" outgoing="_wtDK4JdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+            </nodes>
+            <edges xmi:id="_sg-zF5dOEe2TKK00JmThYg" source="_sg-zFZdOEe2TKK00JmThYg" target="_sg-zE5dOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+            </edges>
+            <edges xmi:id="_sg-zG5dOEe2TKK00JmThYg" source="_sg-zE5dOEe2TKK00JmThYg" target="_sg-zGJdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+            </edges>
+            <edges xmi:id="_sg-zIJdOEe2TKK00JmThYg" source="_sg-zHJdOEe2TKK00JmThYg" target="_sg-zHpdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+            </edges>
+            <edges xmi:id="_sg-zIZdOEe2TKK00JmThYg" source="_sg-zHpdOEe2TKK00JmThYg" target="_sg-zGJdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+            </edges>
+            <edges xmi:id="_sg-zJpdOEe2TKK00JmThYg" source="_sg-zGJdOEe2TKK00JmThYg" target="_sg-zIpdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+            </edges>
+            <edges xmi:id="_sg-zKpdOEe2TKK00JmThYg" source="_sg-zHpdOEe2TKK00JmThYg" target="_sg-zJ5dOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+            </edges>
+            <edges xmi:id="_uh0pcJdOEe2TKK00JmThYg" source="_sg-zFZdOEe2TKK00JmThYg" target="_rBnSEJdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+            </edges>
+            <edges xmi:id="_wtDK4JdOEe2TKK00JmThYg" source="_rBnSEJdOEe2TKK00JmThYg" target="_sg-zGJdOEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_sg-zFJdOEe2TKK00JmThYg" origin="_UqpFgJdNEe2TKK00JmThYg" image="_sg-zE5dOEe2TKK00JmThYg"/>
+          <mappings xmi:id="_sg-zFpdOEe2TKK00JmThYg" origin="_VxxssJdNEe2TKK00JmThYg" image="_sg-zFZdOEe2TKK00JmThYg"/>
+          <mappings xmi:id="_sg-zGpdOEe2TKK00JmThYg" origin="_XCdRcJdNEe2TKK00JmThYg" image="_sg-zGJdOEe2TKK00JmThYg"/>
+          <mappings xmi:id="_sg-zHZdOEe2TKK00JmThYg" origin="_VQ7CYJdNEe2TKK00JmThYg" image="_sg-zHJdOEe2TKK00JmThYg"/>
+          <mappings xmi:id="_sg-zH5dOEe2TKK00JmThYg" origin="_sO0hgJdNEe2TKK00JmThYg" image="_sg-zHpdOEe2TKK00JmThYg"/>
+          <mappings xmi:id="_sg-zJZdOEe2TKK00JmThYg" origin="_bnMA4JdNEe2TKK00JmThYg" image="_sg-zIpdOEe2TKK00JmThYg"/>
+          <mappings xmi:id="_sg-zKZdOEe2TKK00JmThYg" origin="_wrCOIJdNEe2TKK00JmThYg" image="_sg-zJ5dOEe2TKK00JmThYg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_PtG0hpdNEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_UqpFgZdNEe2TKK00JmThYg" name="m1" incoming="_nqnWgZdNEe2TKK00JmThYg" outgoing="_YMmwYZdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_VQ7CYZdNEe2TKK00JmThYg" name="m0" outgoing="_tc7TYZdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_VxxssZdNEe2TKK00JmThYg" name="mi" outgoing="_nqnWgZdNEe2TKK00JmThYg _JjZ14JdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_XCdRcZdNEe2TKK00JmThYg" name="cl1" incoming="_YMmwYZdNEe2TKK00JmThYg _LoZMcJdOEe2TKK00JmThYg" outgoing="_i2ijgZdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_AM8c0ZdOEe2TKK00JmThYg" value="N">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_bnMA4ZdNEe2TKK00JmThYg" name="p" incoming="_i2ijgZdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_cuXrYJdNEe2TKK00JmThYg" value="true">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/isLeap"/>
+        </attributes>
+        <attributes xmi:id="_d7gz8ZdNEe2TKK00JmThYg" value="P">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_sO0hgZdNEe2TKK00JmThYg" name="cl0" incoming="_tc7TYZdNEe2TKK00JmThYg" outgoing="_zEBewZdNEe2TKK00JmThYg _ZzQIoJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_wrCOIZdNEe2TKK00JmThYg" name="p2" incoming="_zEBewZdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_x_Eo4JdNEe2TKK00JmThYg" value="0">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_CExhIJdOEe2TKK00JmThYg" name="id" incoming="_JjZ14JdOEe2TKK00JmThYg _ZzQIoJdOEe2TKK00JmThYg" outgoing="_LoZMcJdOEe2TKK00JmThYg _R22SwJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_DMwc4JdOEe2TKK00JmThYg" value="N">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_NV5QEJdOEe2TKK00JmThYg" name="p2" incoming="_R22SwJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_Qy9z4JdOEe2TKK00JmThYg" value="P-1">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+        <attributes xmi:id="_TavHYJdOEe2TKK00JmThYg" value="true">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/isLeap"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_YMmwYZdNEe2TKK00JmThYg" source="_UqpFgZdNEe2TKK00JmThYg" target="_XCdRcZdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_i2ijgZdNEe2TKK00JmThYg" source="_XCdRcZdNEe2TKK00JmThYg" target="_bnMA4ZdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_nqnWgZdNEe2TKK00JmThYg" source="_VxxssZdNEe2TKK00JmThYg" target="_UqpFgZdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_tc7TYZdNEe2TKK00JmThYg" source="_VQ7CYZdNEe2TKK00JmThYg" target="_sO0hgZdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_zEBewZdNEe2TKK00JmThYg" source="_sO0hgZdNEe2TKK00JmThYg" target="_wrCOIZdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_JjZ14JdOEe2TKK00JmThYg" source="_VxxssZdNEe2TKK00JmThYg" target="_CExhIJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_LoZMcJdOEe2TKK00JmThYg" source="_CExhIJdOEe2TKK00JmThYg" target="_XCdRcZdNEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_R22SwJdOEe2TKK00JmThYg" source="_CExhIJdOEe2TKK00JmThYg" target="_NV5QEJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_ZzQIoJdOEe2TKK00JmThYg" source="_sO0hgZdNEe2TKK00JmThYg" target="_CExhIJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_5V00AJdNEe2TKK00JmThYg" name="bigPotency" conditionText="P>1"/>
+    <mappings xmi:id="_UqpFgpdNEe2TKK00JmThYg" origin="_UqpFgJdNEe2TKK00JmThYg" image="_UqpFgZdNEe2TKK00JmThYg"/>
+    <mappings xmi:id="_VQ7CYpdNEe2TKK00JmThYg" origin="_VQ7CYJdNEe2TKK00JmThYg" image="_VQ7CYZdNEe2TKK00JmThYg"/>
+    <mappings xmi:id="_VxxsspdNEe2TKK00JmThYg" origin="_VxxssJdNEe2TKK00JmThYg" image="_VxxssZdNEe2TKK00JmThYg"/>
+    <mappings xmi:id="_XCdRcpdNEe2TKK00JmThYg" origin="_XCdRcJdNEe2TKK00JmThYg" image="_XCdRcZdNEe2TKK00JmThYg"/>
+    <mappings xmi:id="_bnMA4pdNEe2TKK00JmThYg" origin="_bnMA4JdNEe2TKK00JmThYg" image="_bnMA4ZdNEe2TKK00JmThYg"/>
+    <mappings xmi:id="_sO0hgpdNEe2TKK00JmThYg" origin="_sO0hgJdNEe2TKK00JmThYg" image="_sO0hgZdNEe2TKK00JmThYg"/>
+    <mappings xmi:id="_wrCOIpdNEe2TKK00JmThYg" origin="_wrCOIJdNEe2TKK00JmThYg" image="_wrCOIZdNEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_z3cqUJdOEe2TKK00JmThYg" name="reduceLeapReuse">
+    <parameters xmi:id="_17tBEJdOEe2TKK00JmThYg" name="P">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_17tBEZdOEe2TKK00JmThYg" name="N">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_z3g7wJdOEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_4B2OMJdOEe2TKK00JmThYg" name="m0" outgoing="__rTS4JdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_5E_tQJdOEe2TKK00JmThYg" name="mi" outgoing="_-J3VUJdOEe2TKK00JmThYg _D0928JdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_5rS4QJdOEe2TKK00JmThYg" name="m1" incoming="_D0928JdPEe2TKK00JmThYg" outgoing="_8p2UEJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_6Zc-wJdOEe2TKK00JmThYg" name="cl1" incoming="_8p2UEJdOEe2TKK00JmThYg _HHc7YJdPEe2TKK00JmThYg _IWLYUJdPEe2TKK00JmThYg" outgoing="_LZTyIJdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_68KqQJdOEe2TKK00JmThYg" name="cl0" incoming="__rTS4JdOEe2TKK00JmThYg" outgoing="_IWLYUJdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_7lhJQJdOEe2TKK00JmThYg" name="id" incoming="_-J3VUJdOEe2TKK00JmThYg" outgoing="_HHc7YJdPEe2TKK00JmThYg _ShbEUJdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_J0UxUJdPEe2TKK00JmThYg" name="p" incoming="_LZTyIJdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_MuLTUJdPEe2TKK00JmThYg" value="true">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/isLeap"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Kl8bgJdPEe2TKK00JmThYg" name="p1" incoming="_ShbEUJdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_PEUrUJdPEe2TKK00JmThYg" value="true">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/isLeap"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_8p2UEJdOEe2TKK00JmThYg" source="_5rS4QJdOEe2TKK00JmThYg" target="_6Zc-wJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_-J3VUJdOEe2TKK00JmThYg" source="_5E_tQJdOEe2TKK00JmThYg" target="_7lhJQJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="__rTS4JdOEe2TKK00JmThYg" source="_4B2OMJdOEe2TKK00JmThYg" target="_68KqQJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_D0928JdPEe2TKK00JmThYg" source="_5E_tQJdOEe2TKK00JmThYg" target="_5rS4QJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_HHc7YJdPEe2TKK00JmThYg" source="_7lhJQJdOEe2TKK00JmThYg" target="_6Zc-wJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_IWLYUJdPEe2TKK00JmThYg" source="_68KqQJdOEe2TKK00JmThYg" target="_6Zc-wJdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_LZTyIJdPEe2TKK00JmThYg" source="_6Zc-wJdOEe2TKK00JmThYg" target="_J0UxUJdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_ShbEUJdPEe2TKK00JmThYg" source="_7lhJQJdOEe2TKK00JmThYg" target="_Kl8bgJdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_z3g7wZdOEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_4B2OMZdOEe2TKK00JmThYg" name="m0" outgoing="__rT58JdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_5E_tQZdOEe2TKK00JmThYg" name="mi" outgoing="_-J3VUZdOEe2TKK00JmThYg _D0928ZdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_5rS4QZdOEe2TKK00JmThYg" name="m1" incoming="_D0928ZdPEe2TKK00JmThYg" outgoing="_8p2UEZdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_6Zc-wZdOEe2TKK00JmThYg" name="cl1" incoming="_8p2UEZdOEe2TKK00JmThYg _HHc7YZdPEe2TKK00JmThYg" outgoing="_LZTyIZdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_68KqQZdOEe2TKK00JmThYg" name="cl0" incoming="__rT58JdOEe2TKK00JmThYg" outgoing="_XnMrUJdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_7lhJQZdOEe2TKK00JmThYg" name="id" incoming="_-J3VUZdOEe2TKK00JmThYg _XnMrUJdPEe2TKK00JmThYg" outgoing="_HHc7YZdPEe2TKK00JmThYg _ShbEUZdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_J0UxUZdPEe2TKK00JmThYg" name="p" incoming="_LZTyIZdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_MuL6YJdPEe2TKK00JmThYg" value="true">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/isLeap"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Kl8bgZdPEe2TKK00JmThYg" name="p1" incoming="_ShbEUZdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_PEUrUZdPEe2TKK00JmThYg" value="true">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/isLeap"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_8p2UEZdOEe2TKK00JmThYg" source="_5rS4QZdOEe2TKK00JmThYg" target="_6Zc-wZdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_-J3VUZdOEe2TKK00JmThYg" source="_5E_tQZdOEe2TKK00JmThYg" target="_7lhJQZdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="__rT58JdOEe2TKK00JmThYg" source="_4B2OMZdOEe2TKK00JmThYg" target="_68KqQZdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_D0928ZdPEe2TKK00JmThYg" source="_5E_tQZdOEe2TKK00JmThYg" target="_5rS4QZdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_HHc7YZdPEe2TKK00JmThYg" source="_7lhJQZdOEe2TKK00JmThYg" target="_6Zc-wZdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_LZTyIZdPEe2TKK00JmThYg" source="_6Zc-wZdOEe2TKK00JmThYg" target="_J0UxUZdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_ShbEUZdPEe2TKK00JmThYg" source="_7lhJQZdOEe2TKK00JmThYg" target="_Kl8bgZdPEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+      <edges xmi:id="_XnMrUJdPEe2TKK00JmThYg" source="_68KqQZdOEe2TKK00JmThYg" target="_7lhJQZdOEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_4B2OMpdOEe2TKK00JmThYg" origin="_4B2OMJdOEe2TKK00JmThYg" image="_4B2OMZdOEe2TKK00JmThYg"/>
+    <mappings xmi:id="_5E_tQpdOEe2TKK00JmThYg" origin="_5E_tQJdOEe2TKK00JmThYg" image="_5E_tQZdOEe2TKK00JmThYg"/>
+    <mappings xmi:id="_5rS4QpdOEe2TKK00JmThYg" origin="_5rS4QJdOEe2TKK00JmThYg" image="_5rS4QZdOEe2TKK00JmThYg"/>
+    <mappings xmi:id="_6Zc-wpdOEe2TKK00JmThYg" origin="_6Zc-wJdOEe2TKK00JmThYg" image="_6Zc-wZdOEe2TKK00JmThYg"/>
+    <mappings xmi:id="_68KqQpdOEe2TKK00JmThYg" origin="_68KqQJdOEe2TKK00JmThYg" image="_68KqQZdOEe2TKK00JmThYg"/>
+    <mappings xmi:id="_7lhJQpdOEe2TKK00JmThYg" origin="_7lhJQJdOEe2TKK00JmThYg" image="_7lhJQZdOEe2TKK00JmThYg"/>
+    <mappings xmi:id="_J0UxUpdPEe2TKK00JmThYg" origin="_J0UxUJdPEe2TKK00JmThYg" image="_J0UxUZdPEe2TKK00JmThYg"/>
+    <mappings xmi:id="_Kl8bgpdPEe2TKK00JmThYg" origin="_Kl8bgJdPEe2TKK00JmThYg" image="_Kl8bgZdPEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_IrMO8JdjEe2TKK00JmThYg" name="CreateClabjectType">
+    <parameters xmi:id="_Unoy0JdjEe2TKK00JmThYg" name="N">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_IrPSQJdjEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_Lg7F8JdjEe2TKK00JmThYg" name="m" incoming="_M5kT4JdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_L7oE8JdjEe2TKK00JmThYg" name="mi" outgoing="_M5kT4JdjEe2TKK00JmThYg _Rj5VAJdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_QbwBMJdjEe2TKK00JmThYg" name="cl" incoming="_Rj5VAJdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_VVLOQJdjEe2TKK00JmThYg" value="N">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_M5kT4JdjEe2TKK00JmThYg" source="_L7oE8JdjEe2TKK00JmThYg" target="_Lg7F8JdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_Rj5VAJdjEe2TKK00JmThYg" source="_L7oE8JdjEe2TKK00JmThYg" target="_QbwBMJdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_iQTA4JdjEe2TKK00JmThYg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_iQTA4ZdjEe2TKK00JmThYg">
+          <conclusion xmi:id="_iQTA4pdjEe2TKK00JmThYg">
+            <nodes xmi:id="_iQTA45djEe2TKK00JmThYg" name="m" incoming="_iQTA55djEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+            </nodes>
+            <nodes xmi:id="_iQTA5ZdjEe2TKK00JmThYg" name="mi" outgoing="_iQTA55djEe2TKK00JmThYg _iQTA65djEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+            </nodes>
+            <nodes xmi:id="_iQTA6JdjEe2TKK00JmThYg" name="cl" incoming="_iQTA65djEe2TKK00JmThYg" outgoing="_jGN8QJdjEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+              <attributes xmi:id="_iQTA6ZdjEe2TKK00JmThYg" value="N">
+                <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_hAzu8JdjEe2TKK00JmThYg" name="clt2" incoming="_jGN8QJdjEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+            </nodes>
+            <edges xmi:id="_iQTA55djEe2TKK00JmThYg" source="_iQTA5ZdjEe2TKK00JmThYg" target="_iQTA45djEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+            </edges>
+            <edges xmi:id="_iQTA65djEe2TKK00JmThYg" source="_iQTA5ZdjEe2TKK00JmThYg" target="_iQTA6JdjEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+            </edges>
+            <edges xmi:id="_jGN8QJdjEe2TKK00JmThYg" source="_iQTA6JdjEe2TKK00JmThYg" target="_hAzu8JdjEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_iQTA5JdjEe2TKK00JmThYg" origin="_Lg7F8JdjEe2TKK00JmThYg" image="_iQTA45djEe2TKK00JmThYg"/>
+          <mappings xmi:id="_iQTA5pdjEe2TKK00JmThYg" origin="_L7oE8JdjEe2TKK00JmThYg" image="_iQTA5ZdjEe2TKK00JmThYg"/>
+          <mappings xmi:id="_iQTA6pdjEe2TKK00JmThYg" origin="_QbwBMJdjEe2TKK00JmThYg" image="_iQTA6JdjEe2TKK00JmThYg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_IrPSQZdjEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_Lg7F8ZdjEe2TKK00JmThYg" name="m" incoming="_M5kT4ZdjEe2TKK00JmThYg" outgoing="_bMYSMJdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_L7oE8ZdjEe2TKK00JmThYg" name="mi" outgoing="_M5kT4ZdjEe2TKK00JmThYg _Rj5VAZdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_QbwBMZdjEe2TKK00JmThYg" name="cl" incoming="_Rj5VAZdjEe2TKK00JmThYg" outgoing="_dfkc0JdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_VVLOQZdjEe2TKK00JmThYg" value="N">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_XAkZEJdjEe2TKK00JmThYg" name="clt" incoming="_bMYSMJdjEe2TKK00JmThYg _dfkc0JdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+        <attributes xmi:id="_YSmosJdjEe2TKK00JmThYg" value="N.concat(&quot;Type&quot;)">
+          <type href="../AdaptiveMetamodelling.ecore#//Clabject/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_M5kT4ZdjEe2TKK00JmThYg" source="_L7oE8ZdjEe2TKK00JmThYg" target="_Lg7F8ZdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_Rj5VAZdjEe2TKK00JmThYg" source="_L7oE8ZdjEe2TKK00JmThYg" target="_QbwBMZdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_bMYSMJdjEe2TKK00JmThYg" source="_Lg7F8ZdjEe2TKK00JmThYg" target="_XAkZEJdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/clabjects"/>
+      </edges>
+      <edges xmi:id="_dfkc0JdjEe2TKK00JmThYg" source="_QbwBMZdjEe2TKK00JmThYg" target="_XAkZEJdjEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Lg7F8pdjEe2TKK00JmThYg" origin="_Lg7F8JdjEe2TKK00JmThYg" image="_Lg7F8ZdjEe2TKK00JmThYg"/>
+    <mappings xmi:id="_L7oE8pdjEe2TKK00JmThYg" origin="_L7oE8JdjEe2TKK00JmThYg" image="_L7oE8ZdjEe2TKK00JmThYg"/>
+    <mappings xmi:id="_QbwBMpdjEe2TKK00JmThYg" origin="_QbwBMJdjEe2TKK00JmThYg" image="_QbwBMZdjEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_875g0JdjEe2TKK00JmThYg" name="CreateFieldType">
+    <parameters xmi:id="_AoqtgJdkEe2TKK00JmThYg" name="N">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_87-ZUJdjEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_MB-IEJdkEe2TKK00JmThYg" name="c1" outgoing="_PbuSIJdkEe2TKK00JmThYg _hnDaIJdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_OKTtkJdkEe2TKK00JmThYg" name="c2" incoming="_PbuSIJdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_UYypEJdkEe2TKK00JmThYg" name="a" incoming="_hnDaIJdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Attribute"/>
+        <attributes xmi:id="_X-hZoJdkEe2TKK00JmThYg" value="N">
+          <type href="../AdaptiveMetamodelling.ecore#//Attribute/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_PbuSIJdkEe2TKK00JmThYg" source="_MB-IEJdkEe2TKK00JmThYg" target="_OKTtkJdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_hnDaIJdkEe2TKK00JmThYg" source="_MB-IEJdkEe2TKK00JmThYg" target="_UYypEJdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject/attributes"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_wqGikJdkEe2TKK00JmThYg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_wqGikZdkEe2TKK00JmThYg">
+          <conclusion xmi:id="_wqGikpdkEe2TKK00JmThYg">
+            <nodes xmi:id="_wqGik5dkEe2TKK00JmThYg" name="c1" outgoing="_wqGil5dkEe2TKK00JmThYg _wqGim5dkEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+            </nodes>
+            <nodes xmi:id="_wqGilZdkEe2TKK00JmThYg" name="c2" incoming="_wqGil5dkEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+            </nodes>
+            <nodes xmi:id="_wqGimJdkEe2TKK00JmThYg" name="a" incoming="_wqGim5dkEe2TKK00JmThYg" outgoing="_xq5RMJdkEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Attribute"/>
+              <attributes xmi:id="_wqGimZdkEe2TKK00JmThYg" value="N">
+                <type href="../AdaptiveMetamodelling.ecore#//Attribute/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_uYJuEJdkEe2TKK00JmThYg" name="at2" incoming="_xq5RMJdkEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Attribute"/>
+            </nodes>
+            <edges xmi:id="_wqGil5dkEe2TKK00JmThYg" source="_wqGik5dkEe2TKK00JmThYg" target="_wqGilZdkEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+            </edges>
+            <edges xmi:id="_wqGim5dkEe2TKK00JmThYg" source="_wqGik5dkEe2TKK00JmThYg" target="_wqGimJdkEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Clabject/attributes"/>
+            </edges>
+            <edges xmi:id="_xq5RMJdkEe2TKK00JmThYg" source="_wqGimJdkEe2TKK00JmThYg" target="_uYJuEJdkEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_wqGilJdkEe2TKK00JmThYg" origin="_MB-IEJdkEe2TKK00JmThYg" image="_wqGik5dkEe2TKK00JmThYg"/>
+          <mappings xmi:id="_wqGilpdkEe2TKK00JmThYg" origin="_OKTtkJdkEe2TKK00JmThYg" image="_wqGilZdkEe2TKK00JmThYg"/>
+          <mappings xmi:id="_wqGimpdkEe2TKK00JmThYg" origin="_UYypEJdkEe2TKK00JmThYg" image="_wqGimJdkEe2TKK00JmThYg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_87-ZUZdjEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_MB-IEZdkEe2TKK00JmThYg" name="c1" outgoing="_Pbu5MJdkEe2TKK00JmThYg _hnDaIZdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_OKTtkZdkEe2TKK00JmThYg" name="c2" incoming="_Pbu5MJdkEe2TKK00JmThYg" outgoing="_mUNFwJdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_UYz3MJdkEe2TKK00JmThYg" name="a" incoming="_hnDaIZdkEe2TKK00JmThYg" outgoing="_nHot0JdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Attribute"/>
+        <attributes xmi:id="_X-hZoZdkEe2TKK00JmThYg" value="N">
+          <type href="../AdaptiveMetamodelling.ecore#//Attribute/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_jDIWkJdkEe2TKK00JmThYg" name="at" incoming="_mUNFwJdkEe2TKK00JmThYg _nHot0JdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Attribute"/>
+        <attributes xmi:id="_prpisJdkEe2TKK00JmThYg" value="N">
+          <type href="../AdaptiveMetamodelling.ecore#//Attribute/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Pbu5MJdkEe2TKK00JmThYg" source="_MB-IEZdkEe2TKK00JmThYg" target="_OKTtkZdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_hnDaIZdkEe2TKK00JmThYg" source="_MB-IEZdkEe2TKK00JmThYg" target="_UYz3MJdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject/attributes"/>
+      </edges>
+      <edges xmi:id="_mUNFwJdkEe2TKK00JmThYg" source="_OKTtkZdkEe2TKK00JmThYg" target="_jDIWkJdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject/attributes"/>
+      </edges>
+      <edges xmi:id="_nHot0JdkEe2TKK00JmThYg" source="_UYz3MJdkEe2TKK00JmThYg" target="_jDIWkJdkEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_MB-IEpdkEe2TKK00JmThYg" origin="_MB-IEJdkEe2TKK00JmThYg" image="_MB-IEZdkEe2TKK00JmThYg"/>
+    <mappings xmi:id="_OKTtkpdkEe2TKK00JmThYg" origin="_OKTtkJdkEe2TKK00JmThYg" image="_OKTtkZdkEe2TKK00JmThYg"/>
+    <mappings xmi:id="_UYz3MZdkEe2TKK00JmThYg" origin="_UYypEJdkEe2TKK00JmThYg" image="_UYz3MJdkEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_UK4TcJdlEe2TKK00JmThYg" name="CreateAssocType">
+    <parameters xmi:id="_ymUiMJdlEe2TKK00JmThYg" name="AN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_ymUiMZdlEe2TKK00JmThYg" name="R1N">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_ymUiMpdlEe2TKK00JmThYg" name="R2N">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_UK9L8JdlEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_WoMqcJdlEe2TKK00JmThYg" name="mi" outgoing="_iZK-IJdlEe2TKK00JmThYg _ksRCIJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_XPyO4JdlEe2TKK00JmThYg" name="m" incoming="_iZK-IJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_awy3gJdlEe2TKK00JmThYg" name="ai" incoming="_ksRCIJdlEe2TKK00JmThYg" outgoing="_faSLIJdlEe2TKK00JmThYg _fy2cIJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Association"/>
+        <attributes xmi:id="__XCboJdlEe2TKK00JmThYg" value="AN">
+          <type href="../AdaptiveMetamodelling.ecore#//Association/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_byaskJdlEe2TKK00JmThYg" name="r1" incoming="_fy2cIJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Role"/>
+        <attributes xmi:id="_GeveIJdmEe2TKK00JmThYg" value="R1N">
+          <type href="../AdaptiveMetamodelling.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_clWlYJdlEe2TKK00JmThYg" name="r2" incoming="_faSLIJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Role"/>
+        <attributes xmi:id="_AY5hQJdmEe2TKK00JmThYg" value="R2N">
+          <type href="../AdaptiveMetamodelling.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_faSLIJdlEe2TKK00JmThYg" source="_awy3gJdlEe2TKK00JmThYg" target="_clWlYJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_fy2cIJdlEe2TKK00JmThYg" source="_awy3gJdlEe2TKK00JmThYg" target="_byaskJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_iZK-IJdlEe2TKK00JmThYg" source="_WoMqcJdlEe2TKK00JmThYg" target="_XPyO4JdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_ksRCIJdlEe2TKK00JmThYg" source="_WoMqcJdlEe2TKK00JmThYg" target="_awy3gJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/assocs"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_RY-XEJdmEe2TKK00JmThYg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_RY-XEZdmEe2TKK00JmThYg">
+          <conclusion xmi:id="_RY-XEpdmEe2TKK00JmThYg">
+            <nodes xmi:id="_RY-XE5dmEe2TKK00JmThYg" name="mi" outgoing="_RY--IJdmEe2TKK00JmThYg _RY--JJdmEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+            </nodes>
+            <nodes xmi:id="_RY-XFZdmEe2TKK00JmThYg" name="m" incoming="_RY--IJdmEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+            </nodes>
+            <nodes xmi:id="_RY--IZdmEe2TKK00JmThYg" name="ai" incoming="_RY--JJdmEe2TKK00JmThYg" outgoing="_RY--KJdmEe2TKK00JmThYg _RY--LJdmEe2TKK00JmThYg _SU5z0JdmEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Association"/>
+              <attributes xmi:id="_RY--IpdmEe2TKK00JmThYg" value="AN">
+                <type href="../AdaptiveMetamodelling.ecore#//Association/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_RY--JZdmEe2TKK00JmThYg" name="r2" incoming="_RY--KJdmEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Role"/>
+              <attributes xmi:id="_RY--JpdmEe2TKK00JmThYg" value="R2N">
+                <type href="../AdaptiveMetamodelling.ecore#//Role/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_RY--KZdmEe2TKK00JmThYg" name="r1" incoming="_RY--LJdmEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Role"/>
+              <attributes xmi:id="_RY--KpdmEe2TKK00JmThYg" value="R1N">
+                <type href="../AdaptiveMetamodelling.ecore#//Role/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_QntSMJdmEe2TKK00JmThYg" name="at" incoming="_SU5z0JdmEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Association"/>
+            </nodes>
+            <edges xmi:id="_RY--IJdmEe2TKK00JmThYg" source="_RY-XE5dmEe2TKK00JmThYg" target="_RY-XFZdmEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+            </edges>
+            <edges xmi:id="_RY--JJdmEe2TKK00JmThYg" source="_RY-XE5dmEe2TKK00JmThYg" target="_RY--IZdmEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Model/assocs"/>
+            </edges>
+            <edges xmi:id="_RY--KJdmEe2TKK00JmThYg" source="_RY--IZdmEe2TKK00JmThYg" target="_RY--JZdmEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Association/roles"/>
+            </edges>
+            <edges xmi:id="_RY--LJdmEe2TKK00JmThYg" source="_RY--IZdmEe2TKK00JmThYg" target="_RY--KZdmEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//Association/roles"/>
+            </edges>
+            <edges xmi:id="_SU5z0JdmEe2TKK00JmThYg" source="_RY--IZdmEe2TKK00JmThYg" target="_QntSMJdmEe2TKK00JmThYg">
+              <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_RY-XFJdmEe2TKK00JmThYg" origin="_WoMqcJdlEe2TKK00JmThYg" image="_RY-XE5dmEe2TKK00JmThYg"/>
+          <mappings xmi:id="_RY-XFpdmEe2TKK00JmThYg" origin="_XPyO4JdlEe2TKK00JmThYg" image="_RY-XFZdmEe2TKK00JmThYg"/>
+          <mappings xmi:id="_RY--I5dmEe2TKK00JmThYg" origin="_awy3gJdlEe2TKK00JmThYg" image="_RY--IZdmEe2TKK00JmThYg"/>
+          <mappings xmi:id="_RY--J5dmEe2TKK00JmThYg" origin="_clWlYJdlEe2TKK00JmThYg" image="_RY--JZdmEe2TKK00JmThYg"/>
+          <mappings xmi:id="_RY--K5dmEe2TKK00JmThYg" origin="_byaskJdlEe2TKK00JmThYg" image="_RY--KZdmEe2TKK00JmThYg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_UK9L8ZdlEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_WoMqcZdlEe2TKK00JmThYg" name="mi" outgoing="_iZK-IZdlEe2TKK00JmThYg _ksRCIZdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_XPyO4ZdlEe2TKK00JmThYg" name="m" incoming="_iZK-IZdlEe2TKK00JmThYg" outgoing="_uKNjQJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model"/>
+      </nodes>
+      <nodes xmi:id="_awy3gZdlEe2TKK00JmThYg" name="ai" incoming="_ksRCIZdlEe2TKK00JmThYg" outgoing="_faSLIZdlEe2TKK00JmThYg _fy2cIZdlEe2TKK00JmThYg _rsPE8JdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Association"/>
+        <attributes xmi:id="__XCboZdlEe2TKK00JmThYg" value="AN">
+          <type href="../AdaptiveMetamodelling.ecore#//Association/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_byaskZdlEe2TKK00JmThYg" name="r1" incoming="_fy2cIZdlEe2TKK00JmThYg" outgoing="_-L9voJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Role"/>
+        <attributes xmi:id="_GeveIZdmEe2TKK00JmThYg" value="R1N">
+          <type href="../AdaptiveMetamodelling.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_clWlYZdlEe2TKK00JmThYg" name="r2" incoming="_faSLIZdlEe2TKK00JmThYg" outgoing="_9mz0IJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Role"/>
+        <attributes xmi:id="_AY5hQZdmEe2TKK00JmThYg" value="R2N">
+          <type href="../AdaptiveMetamodelling.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_ogJjcJdlEe2TKK00JmThYg" name="at" incoming="_rsPE8JdlEe2TKK00JmThYg _uKNjQJdlEe2TKK00JmThYg" outgoing="_5EW8oJdlEe2TKK00JmThYg _8O17oJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Association"/>
+        <attributes xmi:id="_KzAIoJdmEe2TKK00JmThYg" value="AN">
+          <type href="../AdaptiveMetamodelling.ecore#//Association/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_3Sk18JdlEe2TKK00JmThYg" name="r2t" incoming="_5EW8oJdlEe2TKK00JmThYg _9mz0IJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Role"/>
+        <attributes xmi:id="_LlEewJdmEe2TKK00JmThYg" value="R2N">
+          <type href="../AdaptiveMetamodelling.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_6pThMJdlEe2TKK00JmThYg" name="r1t" incoming="_8O17oJdlEe2TKK00JmThYg _-L9voJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Role"/>
+        <attributes xmi:id="_IC6moJdmEe2TKK00JmThYg" value="R1N">
+          <type href="../AdaptiveMetamodelling.ecore#//Role/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_faSLIZdlEe2TKK00JmThYg" source="_awy3gZdlEe2TKK00JmThYg" target="_clWlYZdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_fy2cIZdlEe2TKK00JmThYg" source="_awy3gZdlEe2TKK00JmThYg" target="_byaskZdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_iZK-IZdlEe2TKK00JmThYg" source="_WoMqcZdlEe2TKK00JmThYg" target="_XPyO4ZdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_ksRCIZdlEe2TKK00JmThYg" source="_WoMqcZdlEe2TKK00JmThYg" target="_awy3gZdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/assocs"/>
+      </edges>
+      <edges xmi:id="_rsPE8JdlEe2TKK00JmThYg" source="_awy3gZdlEe2TKK00JmThYg" target="_ogJjcJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_uKNjQJdlEe2TKK00JmThYg" source="_XPyO4ZdlEe2TKK00JmThYg" target="_ogJjcJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Model/assocs"/>
+      </edges>
+      <edges xmi:id="_5EW8oJdlEe2TKK00JmThYg" source="_ogJjcJdlEe2TKK00JmThYg" target="_3Sk18JdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_8O17oJdlEe2TKK00JmThYg" source="_ogJjcJdlEe2TKK00JmThYg" target="_6pThMJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_9mz0IJdlEe2TKK00JmThYg" source="_clWlYZdlEe2TKK00JmThYg" target="_3Sk18JdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_-L9voJdlEe2TKK00JmThYg" source="_byaskZdlEe2TKK00JmThYg" target="_6pThMJdlEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_WoMqcpdlEe2TKK00JmThYg" origin="_WoMqcJdlEe2TKK00JmThYg" image="_WoMqcZdlEe2TKK00JmThYg"/>
+    <mappings xmi:id="_XPyO4pdlEe2TKK00JmThYg" origin="_XPyO4JdlEe2TKK00JmThYg" image="_XPyO4ZdlEe2TKK00JmThYg"/>
+    <mappings xmi:id="_awy3gpdlEe2TKK00JmThYg" origin="_awy3gJdlEe2TKK00JmThYg" image="_awy3gZdlEe2TKK00JmThYg"/>
+    <mappings xmi:id="_byaskpdlEe2TKK00JmThYg" origin="_byaskJdlEe2TKK00JmThYg" image="_byaskZdlEe2TKK00JmThYg"/>
+    <mappings xmi:id="_clWlYpdlEe2TKK00JmThYg" origin="_clWlYJdlEe2TKK00JmThYg" image="_clWlYZdlEe2TKK00JmThYg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_fG3qcJdmEe2TKK00JmThYg" name="createPotency">
+    <lhs xmi:id="_fG6twJdmEe2TKK00JmThYg" name="Lhs">
+      <nodes xmi:id="_lGN9wJdmEe2TKK00JmThYg" name="cl" outgoing="_m34vsJdmEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement"/>
+      </nodes>
+      <nodes xmi:id="_l096IJdmEe2TKK00JmThYg" name="clt" incoming="_m34vsJdmEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement"/>
+      </nodes>
+      <edges xmi:id="_m34vsJdmEe2TKK00JmThYg" source="_lGN9wJdmEe2TKK00JmThYg" target="_l096IJdmEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <formula xsi:type="henshin:And" xmi:id="_ICO0sJdnEe2TKK00JmThYg">
+        <left xsi:type="henshin:And" xmi:id="_F_3UUJdnEe2TKK00JmThYg">
+          <left xsi:type="henshin:Not" xmi:id="_qnl7oJdmEe2TKK00JmThYg">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_qnl7oZdmEe2TKK00JmThYg">
+              <conclusion xmi:id="_qnl7opdmEe2TKK00JmThYg">
+                <nodes xmi:id="_qnl7o5dmEe2TKK00JmThYg" name="cl" outgoing="_qnl7p5dmEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+                </nodes>
+                <nodes xmi:id="_qnl7pZdmEe2TKK00JmThYg" name="clt" incoming="_qnl7p5dmEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+                </nodes>
+                <edges xmi:id="_qnl7p5dmEe2TKK00JmThYg" source="_qnl7o5dmEe2TKK00JmThYg" target="_qnl7pZdmEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_qnl7pJdmEe2TKK00JmThYg" origin="_lGN9wJdmEe2TKK00JmThYg" image="_qnl7o5dmEe2TKK00JmThYg"/>
+              <mappings xmi:id="_qnl7ppdmEe2TKK00JmThYg" origin="_l096IJdmEe2TKK00JmThYg" image="_qnl7pZdmEe2TKK00JmThYg"/>
+            </child>
+          </left>
+          <right xsi:type="henshin:Not" xmi:id="_F_3UUZdnEe2TKK00JmThYg">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_F_3UUpdnEe2TKK00JmThYg">
+              <conclusion xmi:id="_F_3UU5dnEe2TKK00JmThYg" name="1">
+                <nodes xmi:id="_F_3UVJdnEe2TKK00JmThYg" name="cl" outgoing="_F_3UWJdnEe2TKK00JmThYg __WfzoJdmEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement"/>
+                </nodes>
+                <nodes xmi:id="_F_3UVpdnEe2TKK00JmThYg" name="clt" incoming="_F_3UWJdnEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement"/>
+                </nodes>
+                <nodes xmi:id="_ose50JdmEe2TKK00JmThYg" name="ci" incoming="__WfzoJdmEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement"/>
+                </nodes>
+                <edges xmi:id="_F_3UWJdnEe2TKK00JmThYg" source="_F_3UVJdnEe2TKK00JmThYg" target="_F_3UVpdnEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+                </edges>
+                <edges xmi:id="__WfzoJdmEe2TKK00JmThYg" source="_F_3UVJdnEe2TKK00JmThYg" target="_ose50JdmEe2TKK00JmThYg">
+                  <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/instances"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_F_3UVZdnEe2TKK00JmThYg" origin="_lGN9wJdmEe2TKK00JmThYg" image="_F_3UVJdnEe2TKK00JmThYg"/>
+              <mappings xmi:id="_F_3UV5dnEe2TKK00JmThYg" origin="_l096IJdmEe2TKK00JmThYg" image="_F_3UVpdnEe2TKK00JmThYg"/>
+            </child>
+          </right>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_ICO0sZdnEe2TKK00JmThYg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_ICO0spdnEe2TKK00JmThYg">
+            <conclusion xmi:id="_ICO0s5dnEe2TKK00JmThYg" name="2">
+              <nodes xmi:id="_ICO0tJdnEe2TKK00JmThYg" name="cl" outgoing="_ICO0uJdnEe2TKK00JmThYg _MjGX0JdnEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement"/>
+              </nodes>
+              <nodes xmi:id="_ICO0tpdnEe2TKK00JmThYg" name="clt" incoming="_ICO0uJdnEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement"/>
+              </nodes>
+              <nodes xmi:id="_G4IZEJdnEe2TKK00JmThYg" name="pt" incoming="_MjGX0JdnEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+              </nodes>
+              <edges xmi:id="_ICO0uJdnEe2TKK00JmThYg" source="_ICO0tJdnEe2TKK00JmThYg" target="_ICO0tpdnEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+              </edges>
+              <edges xmi:id="_MjGX0JdnEe2TKK00JmThYg" source="_ICO0tJdnEe2TKK00JmThYg" target="_G4IZEJdnEe2TKK00JmThYg">
+                <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_ICO0tZdnEe2TKK00JmThYg" origin="_lGN9wJdmEe2TKK00JmThYg" image="_ICO0tJdnEe2TKK00JmThYg"/>
+            <mappings xmi:id="_ICO0t5dnEe2TKK00JmThYg" origin="_l096IJdmEe2TKK00JmThYg" image="_ICO0tpdnEe2TKK00JmThYg"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_fG6twZdmEe2TKK00JmThYg" name="Rhs">
+      <nodes xmi:id="_lGN9wZdmEe2TKK00JmThYg" name="cl" outgoing="_m34vsZdmEe2TKK00JmThYg _9gtWsJdmEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_l096IZdmEe2TKK00JmThYg" name="clt" incoming="_m34vsZdmEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Clabject"/>
+      </nodes>
+      <nodes xmi:id="_8KWAsJdmEe2TKK00JmThYg" name="p" incoming="_9gtWsJdmEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//Potency"/>
+        <attributes xmi:id="_Ac_hoJdnEe2TKK00JmThYg" value="0">
+          <type href="../AdaptiveMetamodelling.ecore#//Potency/potency"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_m34vsZdmEe2TKK00JmThYg" source="_lGN9wZdmEe2TKK00JmThYg" target="_l096IZdmEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/conformsTo"/>
+      </edges>
+      <edges xmi:id="_9gtWsJdmEe2TKK00JmThYg" source="_lGN9wZdmEe2TKK00JmThYg" target="_8KWAsJdmEe2TKK00JmThYg">
+        <type href="../AdaptiveMetamodelling.ecore#//ClassifiedElement/potency"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_lGN9wpdmEe2TKK00JmThYg" origin="_lGN9wJdmEe2TKK00JmThYg" image="_lGN9wZdmEe2TKK00JmThYg"/>
+    <mappings xmi:id="_l096IpdmEe2TKK00JmThYg" origin="_l096IJdmEe2TKK00JmThYg" image="_l096IZdmEe2TKK00JmThYg"/>
+  </units>
+</henshin:Module>

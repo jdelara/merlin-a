@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_eddv8O97EeuDP-6MJGP7qA">
+  <imports href="../PetriNets.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_fp1ccO97EeuDP-6MJGP7qA" name="TokenObject2Int">
+    <parameters xmi:id="_O2P4kO99EeuDP-6MJGP7qA" name="tok">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_fqp70O97EeuDP-6MJGP7qA" name="Lhs">
+      <nodes xmi:id="_jy3HUO97EeuDP-6MJGP7qA" name="p" outgoing="_zguHUO97EeuDP-6MJGP7qA">
+        <type href="../PetriNets.ecore#//Place"/>
+        <attributes xmi:id="_Mm-aEO98EeuDP-6MJGP7qA" value="tok">
+          <type href="../PetriNets.ecore#//Place/itokens"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_lc6OUO97EeuDP-6MJGP7qA" name="t" description="" incoming="_zguHUO97EeuDP-6MJGP7qA">
+        <type href="../PetriNets.ecore#//Token"/>
+      </nodes>
+      <edges xmi:id="_zguHUO97EeuDP-6MJGP7qA" source="_jy3HUO97EeuDP-6MJGP7qA" target="_lc6OUO97EeuDP-6MJGP7qA">
+        <type href="../PetriNets.ecore#//Place/ctokens"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_fqp70e97EeuDP-6MJGP7qA" name="Rhs">
+      <nodes xmi:id="_jy3uYO97EeuDP-6MJGP7qA" name="p">
+        <type href="../PetriNets.ecore#//Place"/>
+        <attributes xmi:id="_Mm_BIO98EeuDP-6MJGP7qA" value="tok+1">
+          <type href="../PetriNets.ecore#//Place/itokens"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_jy4VcO97EeuDP-6MJGP7qA" origin="_jy3HUO97EeuDP-6MJGP7qA" image="_jy3uYO97EeuDP-6MJGP7qA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Bf4UYO99EeuDP-6MJGP7qA" name="TokenIntToObject">
+    <parameters xmi:id="_VBAKoO99EeuDP-6MJGP7qA" name="tok">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_Bf7-wO99EeuDP-6MJGP7qA" name="Lhs">
+      <nodes xmi:id="_DGpd4O99EeuDP-6MJGP7qA" name="p">
+        <type href="../PetriNets.ecore#//Place"/>
+        <attributes xmi:id="_IuyyIO99EeuDP-6MJGP7qA" value="tok">
+          <type href="../PetriNets.ecore#//Place/itokens"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Bf7-we99EeuDP-6MJGP7qA" name="Rhs">
+      <nodes xmi:id="_DGqE8O99EeuDP-6MJGP7qA" name="p" outgoing="_G-wX4O99EeuDP-6MJGP7qA">
+        <type href="../PetriNets.ecore#//Place"/>
+        <attributes xmi:id="_IuzZMO99EeuDP-6MJGP7qA" value="tok-1">
+          <type href="../PetriNets.ecore#//Place/itokens"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_E3UKQO99EeuDP-6MJGP7qA" name="t" incoming="_G-wX4O99EeuDP-6MJGP7qA">
+        <type href="../PetriNets.ecore#//Token"/>
+      </nodes>
+      <edges xmi:id="_G-wX4O99EeuDP-6MJGP7qA" source="_DGqE8O99EeuDP-6MJGP7qA" target="_E3UKQO99EeuDP-6MJGP7qA">
+        <type href="../PetriNets.ecore#//Place/ctokens"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_oI7XYA8yEeyXbtMWOCyUkQ" name="posTokens" conditionText="tok>0"/>
+    <mappings xmi:id="_DGqE8e99EeuDP-6MJGP7qA" origin="_DGpd4O99EeuDP-6MJGP7qA" image="_DGqE8O99EeuDP-6MJGP7qA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_oI7XYQ8yEeyXbtMWOCyUkQ" name="WeightToNormalIns">
+    <parameters xmi:id="_oI7XYg8yEeyXbtMWOCyUkQ" name="w">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_oI7XYw8yEeyXbtMWOCyUkQ" name="Lhs">
+      <nodes xmi:id="_oI7XZA8yEeyXbtMWOCyUkQ" name="p" incoming="_oI8lgA8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_oI7-cA8yEeyXbtMWOCyUkQ" name="t" incoming="_oI8lgQ8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_oI7-cQ8yEeyXbtMWOCyUkQ" name="arc" outgoing="_oI8lgA8yEeyXbtMWOCyUkQ _oI8lgQ8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcPT"/>
+        <attributes xmi:id="_oI7-cg8yEeyXbtMWOCyUkQ" value="w">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_oI8lgA8yEeyXbtMWOCyUkQ" source="_oI7-cQ8yEeyXbtMWOCyUkQ" target="_oI7XZA8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcPT/from"/>
+      </edges>
+      <edges xmi:id="_oI8lgQ8yEeyXbtMWOCyUkQ" source="_oI7-cQ8yEeyXbtMWOCyUkQ" target="_oI7-cA8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcPT/to"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_oI9MkA8yEeyXbtMWOCyUkQ" name="Rhs">
+      <nodes xmi:id="_oI9MkQ8yEeyXbtMWOCyUkQ" name="p" incoming="_oI-asA8yEeyXbtMWOCyUkQ _oI-asg8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_oI9zoA8yEeyXbtMWOCyUkQ" name="t" incoming="_oI-asQ8yEeyXbtMWOCyUkQ" outgoing="_oI-asg8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_oI9zoQ8yEeyXbtMWOCyUkQ" name="arc" outgoing="_oI-asA8yEeyXbtMWOCyUkQ _oI-asQ8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcPT"/>
+        <attributes xmi:id="_oI9zog8yEeyXbtMWOCyUkQ" value="w-1">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_oI-asA8yEeyXbtMWOCyUkQ" source="_oI9zoQ8yEeyXbtMWOCyUkQ" target="_oI9MkQ8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcPT/from"/>
+      </edges>
+      <edges xmi:id="_oI-asQ8yEeyXbtMWOCyUkQ" source="_oI9zoQ8yEeyXbtMWOCyUkQ" target="_oI9zoA8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcPT/to"/>
+      </edges>
+      <edges xmi:id="_oI-asg8yEeyXbtMWOCyUkQ" source="_oI9zoA8yEeyXbtMWOCyUkQ" target="_oI9MkQ8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition/ins"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_oI_BwA8yEeyXbtMWOCyUkQ" name="posWeight" conditionText="w>0"/>
+    <mappings xmi:id="_oI_BwQ8yEeyXbtMWOCyUkQ" origin="_oI7XZA8yEeyXbtMWOCyUkQ" image="_oI9MkQ8yEeyXbtMWOCyUkQ"/>
+    <mappings xmi:id="_oI_Bwg8yEeyXbtMWOCyUkQ" origin="_oI7-cA8yEeyXbtMWOCyUkQ" image="_oI9zoA8yEeyXbtMWOCyUkQ"/>
+    <mappings xmi:id="_oI_Bww8yEeyXbtMWOCyUkQ" origin="_oI7-cQ8yEeyXbtMWOCyUkQ" image="_oI9zoQ8yEeyXbtMWOCyUkQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_oI_BxA8yEeyXbtMWOCyUkQ" name="WeightToNormalOuts">
+    <parameters xmi:id="_oI_BxQ8yEeyXbtMWOCyUkQ" name="w">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_oI_o0A8yEeyXbtMWOCyUkQ" name="Lhs">
+      <nodes xmi:id="_oI_o0Q8yEeyXbtMWOCyUkQ" name="p" incoming="_oJAP4Q8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_oI_o0g8yEeyXbtMWOCyUkQ" name="t" incoming="_oJA28A8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_oI_o0w8yEeyXbtMWOCyUkQ" name="arc" outgoing="_oJAP4Q8yEeyXbtMWOCyUkQ _oJA28A8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcTP"/>
+        <attributes xmi:id="_oJAP4A8yEeyXbtMWOCyUkQ" value="w">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_oJAP4Q8yEeyXbtMWOCyUkQ" source="_oI_o0w8yEeyXbtMWOCyUkQ" target="_oI_o0Q8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcTP/to"/>
+      </edges>
+      <edges xmi:id="_oJA28A8yEeyXbtMWOCyUkQ" source="_oI_o0w8yEeyXbtMWOCyUkQ" target="_oI_o0g8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcTP/from"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_oJA28Q8yEeyXbtMWOCyUkQ" name="Rhs">
+      <nodes xmi:id="_oJA28g8yEeyXbtMWOCyUkQ" name="p" incoming="_oJCFEA8yEeyXbtMWOCyUkQ _oJCsIQ8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_oJA28w8yEeyXbtMWOCyUkQ" name="t" incoming="_oJCsIA8yEeyXbtMWOCyUkQ" outgoing="_oJCsIQ8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_oJBeAA8yEeyXbtMWOCyUkQ" name="arc" outgoing="_oJCFEA8yEeyXbtMWOCyUkQ _oJCsIA8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcTP"/>
+        <attributes xmi:id="_oJBeAQ8yEeyXbtMWOCyUkQ" value="w-1">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_oJCFEA8yEeyXbtMWOCyUkQ" source="_oJBeAA8yEeyXbtMWOCyUkQ" target="_oJA28g8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcTP/to"/>
+      </edges>
+      <edges xmi:id="_oJCsIA8yEeyXbtMWOCyUkQ" source="_oJBeAA8yEeyXbtMWOCyUkQ" target="_oJA28w8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcTP/from"/>
+      </edges>
+      <edges xmi:id="_oJCsIQ8yEeyXbtMWOCyUkQ" source="_oJA28w8yEeyXbtMWOCyUkQ" target="_oJA28g8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition/outs"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_oJDTMA8yEeyXbtMWOCyUkQ" name="posWeight" conditionText="w>0"/>
+    <mappings xmi:id="_oJDTMQ8yEeyXbtMWOCyUkQ" origin="_oI_o0Q8yEeyXbtMWOCyUkQ" image="_oJA28g8yEeyXbtMWOCyUkQ"/>
+    <mappings xmi:id="_oJDTMg8yEeyXbtMWOCyUkQ" origin="_oI_o0g8yEeyXbtMWOCyUkQ" image="_oJA28w8yEeyXbtMWOCyUkQ"/>
+    <mappings xmi:id="_oJDTMw8yEeyXbtMWOCyUkQ" origin="_oI_o0w8yEeyXbtMWOCyUkQ" image="_oJBeAA8yEeyXbtMWOCyUkQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_oJJZ0A8yEeyXbtMWOCyUkQ" name="NormalToWeightPT">
+    <lhs xmi:id="_oJJZ0Q8yEeyXbtMWOCyUkQ" name="Lhs">
+      <nodes xmi:id="_oJJZ0g8yEeyXbtMWOCyUkQ" name="p" incoming="_oJKA4A8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_oJJZ0w8yEeyXbtMWOCyUkQ" name="t" outgoing="_oJKA4A8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_MmRB0IqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <edges xmi:id="_oJKA4A8yEeyXbtMWOCyUkQ" source="_oJJZ0w8yEeyXbtMWOCyUkQ" target="_oJJZ0g8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition/ins"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_MmRB0YqIEe2Np7LFwkl_cw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_MmRo4IqIEe2Np7LFwkl_cw">
+          <conclusion xmi:id="_MmRo4YqIEe2Np7LFwkl_cw">
+            <nodes xmi:id="_MmRo4oqIEe2Np7LFwkl_cw" name="p" incoming="_MmRo5oqIEe2Np7LFwkl_cw _MmRo54qIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Place"/>
+            </nodes>
+            <nodes xmi:id="_MmRo44qIEe2Np7LFwkl_cw" name="t" incoming="_MmRo6IqIEe2Np7LFwkl_cw" outgoing="_MmRo5oqIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Transition"/>
+            </nodes>
+            <nodes xmi:id="_MmRo5IqIEe2Np7LFwkl_cw" name="arc2" outgoing="_MmRo54qIEe2Np7LFwkl_cw _MmRo6IqIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//ArcPT"/>
+            </nodes>
+            <nodes xmi:id="_MmRo5YqIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//PetriNet"/>
+            </nodes>
+            <edges xmi:id="_MmRo5oqIEe2Np7LFwkl_cw" source="_MmRo44qIEe2Np7LFwkl_cw" target="_MmRo4oqIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Transition/ins"/>
+            </edges>
+            <edges xmi:id="_MmRo54qIEe2Np7LFwkl_cw" source="_MmRo5IqIEe2Np7LFwkl_cw" target="_MmRo4oqIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//ArcPT/from"/>
+            </edges>
+            <edges xmi:id="_MmRo6IqIEe2Np7LFwkl_cw" source="_MmRo5IqIEe2Np7LFwkl_cw" target="_MmRo44qIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//ArcPT/to"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_MmRo6YqIEe2Np7LFwkl_cw" origin="_oJJZ0g8yEeyXbtMWOCyUkQ" image="_MmRo4oqIEe2Np7LFwkl_cw"/>
+          <mappings xmi:id="_MmRo6oqIEe2Np7LFwkl_cw" origin="_oJJZ0w8yEeyXbtMWOCyUkQ" image="_MmRo44qIEe2Np7LFwkl_cw"/>
+          <mappings xmi:id="_MmRo64qIEe2Np7LFwkl_cw" origin="_MmRB0IqIEe2Np7LFwkl_cw" image="_MmRo5YqIEe2Np7LFwkl_cw"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_oJKA4Q8yEeyXbtMWOCyUkQ" name="Rhs">
+      <nodes xmi:id="_oJKA4g8yEeyXbtMWOCyUkQ" name="p" incoming="_oJLPAQ8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_oJKn8A8yEeyXbtMWOCyUkQ" name="t" incoming="_oJL2EA8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_oJKn8Q8yEeyXbtMWOCyUkQ" name="arc" incoming="_MmSP8YqIEe2Np7LFwkl_cw" outgoing="_oJLPAQ8yEeyXbtMWOCyUkQ _oJL2EA8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcPT"/>
+        <attributes xmi:id="_oJLPAA8yEeyXbtMWOCyUkQ" value="1">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_MmSP8IqIEe2Np7LFwkl_cw" outgoing="_MmSP8YqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <edges xmi:id="_oJLPAQ8yEeyXbtMWOCyUkQ" source="_oJKn8Q8yEeyXbtMWOCyUkQ" target="_oJKA4g8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcPT/from"/>
+      </edges>
+      <edges xmi:id="_oJL2EA8yEeyXbtMWOCyUkQ" source="_oJKn8Q8yEeyXbtMWOCyUkQ" target="_oJKn8A8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcPT/to"/>
+      </edges>
+      <edges xmi:id="_MmSP8YqIEe2Np7LFwkl_cw" source="_MmSP8IqIEe2Np7LFwkl_cw" target="_oJKn8Q8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//PetriNet/arcs"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_oJL2EQ8yEeyXbtMWOCyUkQ" origin="_oJJZ0g8yEeyXbtMWOCyUkQ" image="_oJKA4g8yEeyXbtMWOCyUkQ"/>
+    <mappings xmi:id="_oJL2Eg8yEeyXbtMWOCyUkQ" origin="_oJJZ0w8yEeyXbtMWOCyUkQ" image="_oJKn8A8yEeyXbtMWOCyUkQ"/>
+    <mappings xmi:id="_MmSP8oqIEe2Np7LFwkl_cw" origin="_MmRB0IqIEe2Np7LFwkl_cw" image="_MmSP8IqIEe2Np7LFwkl_cw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_oJL2Ew8yEeyXbtMWOCyUkQ" name="NormalToWeightTP">
+    <lhs xmi:id="_oJL2FA8yEeyXbtMWOCyUkQ" name="Lhs">
+      <nodes xmi:id="_oJMdIA8yEeyXbtMWOCyUkQ" name="p" incoming="_oJMdIg8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_oJMdIQ8yEeyXbtMWOCyUkQ" name="t" outgoing="_oJMdIg8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_MmS3AIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <edges xmi:id="_oJMdIg8yEeyXbtMWOCyUkQ" source="_oJMdIQ8yEeyXbtMWOCyUkQ" target="_oJMdIA8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition/outs"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_MmS3AYqIEe2Np7LFwkl_cw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_MmS3AoqIEe2Np7LFwkl_cw">
+          <conclusion xmi:id="_MmS3A4qIEe2Np7LFwkl_cw">
+            <nodes xmi:id="_MmS3BIqIEe2Np7LFwkl_cw" name="p" incoming="_MmTeEIqIEe2Np7LFwkl_cw _MmTeEYqIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Place"/>
+            </nodes>
+            <nodes xmi:id="_MmS3BYqIEe2Np7LFwkl_cw" name="t" incoming="_MmTeEoqIEe2Np7LFwkl_cw" outgoing="_MmTeEIqIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Transition"/>
+            </nodes>
+            <nodes xmi:id="_MmS3BoqIEe2Np7LFwkl_cw" name="arc2" outgoing="_MmTeEYqIEe2Np7LFwkl_cw _MmTeEoqIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//ArcTP"/>
+            </nodes>
+            <nodes xmi:id="_MmS3B4qIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//PetriNet"/>
+            </nodes>
+            <edges xmi:id="_MmTeEIqIEe2Np7LFwkl_cw" source="_MmS3BYqIEe2Np7LFwkl_cw" target="_MmS3BIqIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Transition/outs"/>
+            </edges>
+            <edges xmi:id="_MmTeEYqIEe2Np7LFwkl_cw" source="_MmS3BoqIEe2Np7LFwkl_cw" target="_MmS3BIqIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//ArcTP/to"/>
+            </edges>
+            <edges xmi:id="_MmTeEoqIEe2Np7LFwkl_cw" source="_MmS3BoqIEe2Np7LFwkl_cw" target="_MmS3BYqIEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//ArcTP/from"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_MmTeE4qIEe2Np7LFwkl_cw" origin="_oJMdIA8yEeyXbtMWOCyUkQ" image="_MmS3BIqIEe2Np7LFwkl_cw"/>
+          <mappings xmi:id="_MmTeFIqIEe2Np7LFwkl_cw" origin="_oJMdIQ8yEeyXbtMWOCyUkQ" image="_MmS3BYqIEe2Np7LFwkl_cw"/>
+          <mappings xmi:id="_MmTeFYqIEe2Np7LFwkl_cw" origin="_MmS3AIqIEe2Np7LFwkl_cw" image="_MmS3B4qIEe2Np7LFwkl_cw"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_oJNEMA8yEeyXbtMWOCyUkQ" name="Rhs">
+      <nodes xmi:id="_oJNEMQ8yEeyXbtMWOCyUkQ" name="p" incoming="_oJOSUA8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_oJNEMg8yEeyXbtMWOCyUkQ" name="t" incoming="_oJOSUQ8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_oJNrQA8yEeyXbtMWOCyUkQ" name="arc" incoming="_MmUFIYqIEe2Np7LFwkl_cw" outgoing="_oJOSUA8yEeyXbtMWOCyUkQ _oJOSUQ8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcTP"/>
+        <attributes xmi:id="_oJNrQQ8yEeyXbtMWOCyUkQ" value="1">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_MmUFIIqIEe2Np7LFwkl_cw" outgoing="_MmUFIYqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <edges xmi:id="_oJOSUA8yEeyXbtMWOCyUkQ" source="_oJNrQA8yEeyXbtMWOCyUkQ" target="_oJNEMQ8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcTP/to"/>
+      </edges>
+      <edges xmi:id="_oJOSUQ8yEeyXbtMWOCyUkQ" source="_oJNrQA8yEeyXbtMWOCyUkQ" target="_oJNEMg8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//ArcTP/from"/>
+      </edges>
+      <edges xmi:id="_MmUFIYqIEe2Np7LFwkl_cw" source="_MmUFIIqIEe2Np7LFwkl_cw" target="_oJNrQA8yEeyXbtMWOCyUkQ">
+        <type href="../PetriNets.ecore#//PetriNet/arcs"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_oJOSUg8yEeyXbtMWOCyUkQ" origin="_oJMdIA8yEeyXbtMWOCyUkQ" image="_oJNEMQ8yEeyXbtMWOCyUkQ"/>
+    <mappings xmi:id="_oJO5YA8yEeyXbtMWOCyUkQ" origin="_oJMdIQ8yEeyXbtMWOCyUkQ" image="_oJNEMg8yEeyXbtMWOCyUkQ"/>
+    <mappings xmi:id="_MmUFIoqIEe2Np7LFwkl_cw" origin="_MmS3AIqIEe2Np7LFwkl_cw" image="_MmUFIIqIEe2Np7LFwkl_cw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_MmUFI4qIEe2Np7LFwkl_cw" name="NormalToWeightPTUpdate">
+    <parameters xmi:id="_MmUFJIqIEe2Np7LFwkl_cw" name="w">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_MmUFJYqIEe2Np7LFwkl_cw" name="Lhs">
+      <nodes xmi:id="_MmUFJoqIEe2Np7LFwkl_cw" name="p" incoming="_MmUsM4qIEe2Np7LFwkl_cw _MmUsNIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_MmUsMIqIEe2Np7LFwkl_cw" name="t" incoming="_MmUsNYqIEe2Np7LFwkl_cw" outgoing="_MmUsM4qIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_MmUsMYqIEe2Np7LFwkl_cw" name="arc" outgoing="_MmUsNIqIEe2Np7LFwkl_cw _MmUsNYqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcPT"/>
+        <attributes xmi:id="_MmUsMoqIEe2Np7LFwkl_cw" value="w">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_MmUsM4qIEe2Np7LFwkl_cw" source="_MmUsMIqIEe2Np7LFwkl_cw" target="_MmUFJoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/ins"/>
+      </edges>
+      <edges xmi:id="_MmUsNIqIEe2Np7LFwkl_cw" source="_MmUsMYqIEe2Np7LFwkl_cw" target="_MmUFJoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcPT/from"/>
+      </edges>
+      <edges xmi:id="_MmUsNYqIEe2Np7LFwkl_cw" source="_MmUsMYqIEe2Np7LFwkl_cw" target="_MmUsMIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcPT/to"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_MmUsNoqIEe2Np7LFwkl_cw" name="Rhs">
+      <nodes xmi:id="_MmUsN4qIEe2Np7LFwkl_cw" name="p" incoming="_MmVTQYqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_MmUsOIqIEe2Np7LFwkl_cw" name="t" incoming="_MmVTQoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_MmUsOYqIEe2Np7LFwkl_cw" name="arc" outgoing="_MmVTQYqIEe2Np7LFwkl_cw _MmVTQoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcPT"/>
+        <attributes xmi:id="_MmVTQIqIEe2Np7LFwkl_cw" value="w +1">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_MmVTQYqIEe2Np7LFwkl_cw" source="_MmUsOYqIEe2Np7LFwkl_cw" target="_MmUsN4qIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcPT/from"/>
+      </edges>
+      <edges xmi:id="_MmVTQoqIEe2Np7LFwkl_cw" source="_MmUsOYqIEe2Np7LFwkl_cw" target="_MmUsOIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcPT/to"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_MmVTQ4qIEe2Np7LFwkl_cw" origin="_MmUFJoqIEe2Np7LFwkl_cw" image="_MmUsN4qIEe2Np7LFwkl_cw"/>
+    <mappings xmi:id="_MmVTRIqIEe2Np7LFwkl_cw" origin="_MmUsMIqIEe2Np7LFwkl_cw" image="_MmUsOIqIEe2Np7LFwkl_cw"/>
+    <mappings xmi:id="_MmVTRYqIEe2Np7LFwkl_cw" origin="_MmUsMYqIEe2Np7LFwkl_cw" image="_MmUsOYqIEe2Np7LFwkl_cw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_MmVTRoqIEe2Np7LFwkl_cw" name="NormalToWeightTPUpdate">
+    <parameters xmi:id="_MmVTR4qIEe2Np7LFwkl_cw" name="w">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_MmV6UIqIEe2Np7LFwkl_cw" name="Lhs">
+      <nodes xmi:id="_MmV6UYqIEe2Np7LFwkl_cw" name="p" incoming="_MmV6VYqIEe2Np7LFwkl_cw _MmV6VoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_MmV6UoqIEe2Np7LFwkl_cw" name="t" incoming="_MmWhYIqIEe2Np7LFwkl_cw" outgoing="_MmV6VYqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_MmV6U4qIEe2Np7LFwkl_cw" name="arc" outgoing="_MmV6VoqIEe2Np7LFwkl_cw _MmWhYIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcTP"/>
+        <attributes xmi:id="_MmV6VIqIEe2Np7LFwkl_cw" value="w">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_MmV6VYqIEe2Np7LFwkl_cw" source="_MmV6UoqIEe2Np7LFwkl_cw" target="_MmV6UYqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/outs"/>
+      </edges>
+      <edges xmi:id="_MmV6VoqIEe2Np7LFwkl_cw" source="_MmV6U4qIEe2Np7LFwkl_cw" target="_MmV6UYqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcTP/to"/>
+      </edges>
+      <edges xmi:id="_MmWhYIqIEe2Np7LFwkl_cw" source="_MmV6U4qIEe2Np7LFwkl_cw" target="_MmV6UoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcTP/from"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_MmWhYYqIEe2Np7LFwkl_cw" name="Rhs">
+      <nodes xmi:id="_MmWhYoqIEe2Np7LFwkl_cw" name="p" incoming="_MmWhZoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_MmWhY4qIEe2Np7LFwkl_cw" name="t" incoming="_MmWhZ4qIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_MmWhZIqIEe2Np7LFwkl_cw" name="arc" outgoing="_MmWhZoqIEe2Np7LFwkl_cw _MmWhZ4qIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcTP"/>
+        <attributes xmi:id="_MmWhZYqIEe2Np7LFwkl_cw" value="w+1">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_MmWhZoqIEe2Np7LFwkl_cw" source="_MmWhZIqIEe2Np7LFwkl_cw" target="_MmWhYoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcTP/to"/>
+      </edges>
+      <edges xmi:id="_MmWhZ4qIEe2Np7LFwkl_cw" source="_MmWhZIqIEe2Np7LFwkl_cw" target="_MmWhY4qIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//ArcTP/from"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_MmWhaIqIEe2Np7LFwkl_cw" origin="_MmV6UYqIEe2Np7LFwkl_cw" image="_MmWhYoqIEe2Np7LFwkl_cw"/>
+    <mappings xmi:id="_MmWhaYqIEe2Np7LFwkl_cw" origin="_MmV6UoqIEe2Np7LFwkl_cw" image="_MmWhY4qIEe2Np7LFwkl_cw"/>
+    <mappings xmi:id="_MmWhaoqIEe2Np7LFwkl_cw" origin="_MmV6U4qIEe2Np7LFwkl_cw" image="_MmWhZIqIEe2Np7LFwkl_cw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_MmXIcIqIEe2Np7LFwkl_cw" name="RemoveRead">
+    <lhs xmi:id="_MmXIcYqIEe2Np7LFwkl_cw" name="Lhs">
+      <nodes xmi:id="_MmXIcoqIEe2Np7LFwkl_cw" name="tr" outgoing="_MmXIdIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_MmXIc4qIEe2Np7LFwkl_cw" name="p" incoming="_MmXIdIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <edges xmi:id="_MmXIdIqIEe2Np7LFwkl_cw" source="_MmXIcoqIEe2Np7LFwkl_cw" target="_MmXIc4qIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/read"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_MmXIdYqIEe2Np7LFwkl_cw" name="Rhs">
+      <nodes xmi:id="_MmXIdoqIEe2Np7LFwkl_cw" name="tr" outgoing="_MmXvgYqIEe2Np7LFwkl_cw _MmXvgoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_MmXvgIqIEe2Np7LFwkl_cw" name="p" incoming="_MmXvgYqIEe2Np7LFwkl_cw _MmXvgoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <edges xmi:id="_MmXvgYqIEe2Np7LFwkl_cw" source="_MmXIdoqIEe2Np7LFwkl_cw" target="_MmXvgIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/ins"/>
+      </edges>
+      <edges xmi:id="_MmXvgoqIEe2Np7LFwkl_cw" source="_MmXIdoqIEe2Np7LFwkl_cw" target="_MmXvgIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/outs"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_MmXvg4qIEe2Np7LFwkl_cw" origin="_MmXIcoqIEe2Np7LFwkl_cw" image="_MmXIdoqIEe2Np7LFwkl_cw"/>
+    <mappings xmi:id="_MmXvhIqIEe2Np7LFwkl_cw" origin="_MmXIc4qIEe2Np7LFwkl_cw" image="_MmXvgIqIEe2Np7LFwkl_cw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_MmXvhYqIEe2Np7LFwkl_cw" name="AddRead">
+    <lhs xmi:id="_MmXvhoqIEe2Np7LFwkl_cw" name="Lhs">
+      <nodes xmi:id="_MmXvh4qIEe2Np7LFwkl_cw" name="tr" outgoing="_MmXviYqIEe2Np7LFwkl_cw _MmXvioqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_MmXviIqIEe2Np7LFwkl_cw" name="p" incoming="_MmXviYqIEe2Np7LFwkl_cw _MmXvioqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <edges xmi:id="_MmXviYqIEe2Np7LFwkl_cw" source="_MmXvh4qIEe2Np7LFwkl_cw" target="_MmXviIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/ins"/>
+      </edges>
+      <edges xmi:id="_MmXvioqIEe2Np7LFwkl_cw" source="_MmXvh4qIEe2Np7LFwkl_cw" target="_MmXviIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/outs"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_MmXvi4qIEe2Np7LFwkl_cw" name="Rhs">
+      <nodes xmi:id="_MmXvjIqIEe2Np7LFwkl_cw" name="tr" outgoing="_MmXvjoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_MmXvjYqIEe2Np7LFwkl_cw" name="p" incoming="_MmXvjoqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <edges xmi:id="_MmXvjoqIEe2Np7LFwkl_cw" source="_MmXvjIqIEe2Np7LFwkl_cw" target="_MmXvjYqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/read"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_MmYWkIqIEe2Np7LFwkl_cw" origin="_MmXvh4qIEe2Np7LFwkl_cw" image="_MmXvjIqIEe2Np7LFwkl_cw"/>
+    <mappings xmi:id="_MmYWkYqIEe2Np7LFwkl_cw" origin="_MmXviIqIEe2Np7LFwkl_cw" image="_MmXvjYqIEe2Np7LFwkl_cw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Sj-WYIqIEe2Np7LFwkl_cw" name="RemoveBounded">
+    <parameters xmi:id="_cHU78IqIEe2Np7LFwkl_cw" name="b">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_xm1xgIqIEe2Np7LFwkl_cw" name="n">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_67i4QIqiEe227IHA00Smxg" name="t">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_SkNm9IqIEe2Np7LFwkl_cw" name="Lhs">
+      <nodes xmi:id="_XoSk0IqIEe2Np7LFwkl_cw" name="p" incoming="_U8yMkIqjEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+        <attributes xmi:id="_ZLT2wIqIEe2Np7LFwkl_cw" value="b">
+          <type href="../PetriNets.ecore#//Place/bound"/>
+        </attributes>
+        <attributes xmi:id="_vpmowIqIEe2Np7LFwkl_cw" value="n">
+          <type href="../PetriNets.ecore#//Place/name"/>
+        </attributes>
+        <attributes xmi:id="_14AF4IqiEe227IHA00Smxg" value="t">
+          <type href="../PetriNets.ecore#//Place/itokens"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_PRmycIqjEe227IHA00Smxg" name="pn" outgoing="_U8yMkIqjEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <edges xmi:id="_U8yMkIqjEe227IHA00Smxg" source="_PRmycIqjEe227IHA00Smxg" target="_XoSk0IqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//PetriNet/places"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_SkNm9YqIEe2Np7LFwkl_cw" name="Rhs">
+      <nodes xmi:id="_XoSk0YqIEe2Np7LFwkl_cw" name="p" incoming="_U8yMkYqjEe227IHA00Smxg" outgoing="_BYEsQIqiEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+        <attributes xmi:id="_ZLT2wYqIEe2Np7LFwkl_cw" value="-1">
+          <type href="../PetriNets.ecore#//Place/bound"/>
+        </attributes>
+        <attributes xmi:id="_vpnP0IqIEe2Np7LFwkl_cw" value="n">
+          <type href="../PetriNets.ecore#//Place/name"/>
+        </attributes>
+        <attributes xmi:id="_14AF4YqiEe227IHA00Smxg" value="t">
+          <type href="../PetriNets.ecore#//Place/itokens"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_zX11EIqIEe2Np7LFwkl_cw" name="cp" incoming="_BYEsQIqiEe227IHA00Smxg _QfmPkIqjEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+        <attributes xmi:id="_9rCjMIqIEe2Np7LFwkl_cw" value="-1">
+          <type href="../PetriNets.ecore#//Place/bound"/>
+        </attributes>
+        <attributes xmi:id="_ASJIUIqJEe2Np7LFwkl_cw" value="&quot;cap-&quot;.concat(n)">
+          <type href="../PetriNets.ecore#//Place/name"/>
+        </attributes>
+        <attributes xmi:id="_z5mfgIqiEe227IHA00Smxg" value="b-t">
+          <type href="../PetriNets.ecore#//Place/itokens"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_PRoAkIqjEe227IHA00Smxg" name="pn" outgoing="_QfmPkIqjEe227IHA00Smxg _U8yMkYqjEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <edges xmi:id="_BYEsQIqiEe227IHA00Smxg" source="_XoSk0YqIEe2Np7LFwkl_cw" target="_zX11EIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place/boundPlace"/>
+      </edges>
+      <edges xmi:id="_QfmPkIqjEe227IHA00Smxg" source="_PRoAkIqjEe227IHA00Smxg" target="_zX11EIqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//PetriNet/places"/>
+      </edges>
+      <edges xmi:id="_U8yMkYqjEe227IHA00Smxg" source="_PRoAkIqjEe227IHA00Smxg" target="_XoSk0YqIEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//PetriNet/places"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_ijwz4IqIEe2Np7LFwkl_cw" name="bounded" conditionText="b >= 0"/>
+    <mappings xmi:id="_XoSk0oqIEe2Np7LFwkl_cw" origin="_XoSk0IqIEe2Np7LFwkl_cw" image="_XoSk0YqIEe2Np7LFwkl_cw"/>
+    <mappings xmi:id="_PRoAkYqjEe227IHA00Smxg" origin="_PRmycIqjEe227IHA00Smxg" image="_PRoAkIqjEe227IHA00Smxg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_FaQ4sIqJEe2Np7LFwkl_cw" name="ConnectIncomingBounded">
+    <lhs xmi:id="_FaQ4tYqJEe2Np7LFwkl_cw" name="Lhs">
+      <nodes xmi:id="_Hg1joIqJEe2Np7LFwkl_cw" name="p" incoming="_S4YDoIqJEe2Np7LFwkl_cw" outgoing="_BYEsQYqiEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_IH_DMIqJEe2Np7LFwkl_cw" name="cp" incoming="_BYEsQYqiEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_QOWGUIqJEe2Np7LFwkl_cw" name="tr" outgoing="_S4YDoIqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <edges xmi:id="_S4YDoIqJEe2Np7LFwkl_cw" source="_QOWGUIqJEe2Np7LFwkl_cw" target="_Hg1joIqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/ins"/>
+      </edges>
+      <edges xmi:id="_BYEsQYqiEe227IHA00Smxg" source="_Hg1joIqJEe2Np7LFwkl_cw" target="_IH_DMIqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place/boundPlace"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_X1YwMYqJEe2Np7LFwkl_cw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_X1YwMoqJEe2Np7LFwkl_cw">
+          <conclusion xmi:id="_X1YwM4qJEe2Np7LFwkl_cw">
+            <nodes xmi:id="_X1YwNIqJEe2Np7LFwkl_cw" name="tr" outgoing="_X1YwMIqJEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Transition"/>
+            </nodes>
+            <nodes xmi:id="_X1YwNoqJEe2Np7LFwkl_cw" name="cp" incoming="_X1YwMIqJEe2Np7LFwkl_cw _BYEsQ4qiEe227IHA00Smxg">
+              <type href="../PetriNets.ecore#//Place"/>
+            </nodes>
+            <nodes xmi:id="_BYEsQoqiEe227IHA00Smxg" name="p" outgoing="_BYEsQ4qiEe227IHA00Smxg">
+              <type href="../PetriNets.ecore#//Place"/>
+            </nodes>
+            <edges xmi:id="_X1YwMIqJEe2Np7LFwkl_cw" source="_X1YwNIqJEe2Np7LFwkl_cw" target="_X1YwNoqJEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Transition/outs"/>
+            </edges>
+            <edges xmi:id="_BYEsQ4qiEe227IHA00Smxg" source="_BYEsQoqiEe227IHA00Smxg" target="_X1YwNoqJEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Place/boundPlace"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_X1YwNYqJEe2Np7LFwkl_cw" origin="_QOWGUIqJEe2Np7LFwkl_cw" image="_X1YwNIqJEe2Np7LFwkl_cw"/>
+          <mappings xmi:id="_X1YwOIqJEe2Np7LFwkl_cw" origin="_IH_DMIqJEe2Np7LFwkl_cw" image="_X1YwNoqJEe2Np7LFwkl_cw"/>
+          <mappings xmi:id="_BYEsRIqiEe227IHA00Smxg" origin="_Hg1joIqJEe2Np7LFwkl_cw" image="_BYEsQoqiEe227IHA00Smxg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_FaQ4toqJEe2Np7LFwkl_cw" name="Rhs">
+      <nodes xmi:id="_Hg1joYqJEe2Np7LFwkl_cw" name="p" incoming="_S4YDoYqJEe2Np7LFwkl_cw" outgoing="_BYKy4IqiEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_IH_DMYqJEe2Np7LFwkl_cw" name="cp" incoming="_X1YwOYqJEe2Np7LFwkl_cw _BYKy4IqiEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_QOWGUYqJEe2Np7LFwkl_cw" name="tr" outgoing="_S4YDoYqJEe2Np7LFwkl_cw _X1YwOYqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <edges xmi:id="_S4YDoYqJEe2Np7LFwkl_cw" source="_QOWGUYqJEe2Np7LFwkl_cw" target="_Hg1joYqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/ins"/>
+      </edges>
+      <edges xmi:id="_X1YwOYqJEe2Np7LFwkl_cw" source="_QOWGUYqJEe2Np7LFwkl_cw" target="_IH_DMYqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/outs"/>
+      </edges>
+      <edges xmi:id="_BYKy4IqiEe227IHA00Smxg" source="_Hg1joYqJEe2Np7LFwkl_cw" target="_IH_DMYqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place/boundPlace"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Hg1jooqJEe2Np7LFwkl_cw" origin="_Hg1joIqJEe2Np7LFwkl_cw" image="_Hg1joYqJEe2Np7LFwkl_cw"/>
+    <mappings xmi:id="_IH_DMoqJEe2Np7LFwkl_cw" origin="_IH_DMIqJEe2Np7LFwkl_cw" image="_IH_DMYqJEe2Np7LFwkl_cw"/>
+    <mappings xmi:id="_QOWGUoqJEe2Np7LFwkl_cw" origin="_QOWGUIqJEe2Np7LFwkl_cw" image="_QOWGUYqJEe2Np7LFwkl_cw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_a9Fg8IqJEe2Np7LFwkl_cw" name="ConnectOutgoingBounded">
+    <lhs xmi:id="_a9GvFIqJEe2Np7LFwkl_cw" name="Lhs">
+      <nodes xmi:id="_eRMWAIqJEe2Np7LFwkl_cw" name="tr" outgoing="_oxPNUIqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_fD8ooIqJEe2Np7LFwkl_cw" name="p" incoming="_oxPNUIqJEe2Np7LFwkl_cw" outgoing="_BYKy4YqiEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_hdX-IIqJEe2Np7LFwkl_cw" name="cp" incoming="_BYKy4YqiEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <edges xmi:id="_oxPNUIqJEe2Np7LFwkl_cw" source="_eRMWAIqJEe2Np7LFwkl_cw" target="_fD8ooIqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/outs"/>
+      </edges>
+      <edges xmi:id="_BYKy4YqiEe227IHA00Smxg" source="_fD8ooIqJEe2Np7LFwkl_cw" target="_hdX-IIqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place/boundPlace"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_vOp8sYqJEe2Np7LFwkl_cw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_vOp8soqJEe2Np7LFwkl_cw">
+          <conclusion xmi:id="_vOp8s4qJEe2Np7LFwkl_cw">
+            <nodes xmi:id="_vOp8tIqJEe2Np7LFwkl_cw" name="tr" outgoing="_vOp8sIqJEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Transition"/>
+            </nodes>
+            <nodes xmi:id="_vOp8toqJEe2Np7LFwkl_cw" name="cp" incoming="_vOp8sIqJEe2Np7LFwkl_cw _BYKy44qiEe227IHA00Smxg">
+              <type href="../PetriNets.ecore#//Place"/>
+            </nodes>
+            <nodes xmi:id="_BYKy4oqiEe227IHA00Smxg" name="p" outgoing="_BYKy44qiEe227IHA00Smxg">
+              <type href="../PetriNets.ecore#//Place"/>
+            </nodes>
+            <edges xmi:id="_vOp8sIqJEe2Np7LFwkl_cw" source="_vOp8tIqJEe2Np7LFwkl_cw" target="_vOp8toqJEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Transition/ins"/>
+            </edges>
+            <edges xmi:id="_BYKy44qiEe227IHA00Smxg" source="_BYKy4oqiEe227IHA00Smxg" target="_vOp8toqJEe2Np7LFwkl_cw">
+              <type href="../PetriNets.ecore#//Place/boundPlace"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_vOp8tYqJEe2Np7LFwkl_cw" origin="_eRMWAIqJEe2Np7LFwkl_cw" image="_vOp8tIqJEe2Np7LFwkl_cw"/>
+          <mappings xmi:id="_vOp8uIqJEe2Np7LFwkl_cw" origin="_hdX-IIqJEe2Np7LFwkl_cw" image="_vOp8toqJEe2Np7LFwkl_cw"/>
+          <mappings xmi:id="_BYMBAIqiEe227IHA00Smxg" origin="_fD8ooIqJEe2Np7LFwkl_cw" image="_BYKy4oqiEe227IHA00Smxg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_a9GvFYqJEe2Np7LFwkl_cw" name="Rhs">
+      <nodes xmi:id="_eRMWAYqJEe2Np7LFwkl_cw" name="tr" outgoing="_oxPNUYqJEe2Np7LFwkl_cw _vOp8uYqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_fD9PsIqJEe2Np7LFwkl_cw" name="p" incoming="_oxPNUYqJEe2Np7LFwkl_cw" outgoing="_BYMBAYqiEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <nodes xmi:id="_hdYlMIqJEe2Np7LFwkl_cw" name="cp" incoming="_vOp8uYqJEe2Np7LFwkl_cw _BYMBAYqiEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <edges xmi:id="_oxPNUYqJEe2Np7LFwkl_cw" source="_eRMWAYqJEe2Np7LFwkl_cw" target="_fD9PsIqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/outs"/>
+      </edges>
+      <edges xmi:id="_vOp8uYqJEe2Np7LFwkl_cw" source="_eRMWAYqJEe2Np7LFwkl_cw" target="_hdYlMIqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Transition/ins"/>
+      </edges>
+      <edges xmi:id="_BYMBAYqiEe227IHA00Smxg" source="_fD9PsIqJEe2Np7LFwkl_cw" target="_hdYlMIqJEe2Np7LFwkl_cw">
+        <type href="../PetriNets.ecore#//Place/boundPlace"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_eRMWAoqJEe2Np7LFwkl_cw" origin="_eRMWAIqJEe2Np7LFwkl_cw" image="_eRMWAYqJEe2Np7LFwkl_cw"/>
+    <mappings xmi:id="_fD9PsYqJEe2Np7LFwkl_cw" origin="_fD8ooIqJEe2Np7LFwkl_cw" image="_fD9PsIqJEe2Np7LFwkl_cw"/>
+    <mappings xmi:id="_hdYlMYqJEe2Np7LFwkl_cw" origin="_hdX-IIqJEe2Np7LFwkl_cw" image="_hdYlMIqJEe2Np7LFwkl_cw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_EaAr4IqlEe227IHA00Smxg" name="removeInhibitorWithBoundAndWeight">
+    <parameters xmi:id="_pomCYIqlEe227IHA00Smxg" name="t1">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_pomCYYqlEe227IHA00Smxg" name="t2">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_EaDIJIqlEe227IHA00Smxg" name="Lhs">
+      <nodes xmi:id="_Ik9CUIqlEe227IHA00Smxg" name="p" incoming="_PABoUIqlEe227IHA00Smxg" outgoing="_KYk8EIqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+        <attributes xmi:id="_lOaWEIqlEe227IHA00Smxg" value="t1">
+          <type href="../PetriNets.ecore#//Place/itokens"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_JOaPAIqlEe227IHA00Smxg" name="cp" incoming="_KYk8EIqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+        <attributes xmi:id="_mK1iEIqlEe227IHA00Smxg" value="t2">
+          <type href="../PetriNets.ecore#//Place/itokens"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_N501QIqlEe227IHA00Smxg" name="tr" outgoing="_PABoUIqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_dz8voIqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <edges xmi:id="_KYk8EIqlEe227IHA00Smxg" source="_Ik9CUIqlEe227IHA00Smxg" target="_JOaPAIqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place/boundPlace"/>
+      </edges>
+      <edges xmi:id="_PABoUIqlEe227IHA00Smxg" source="_N501QIqlEe227IHA00Smxg" target="_Ik9CUIqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition/inh"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_EaDIJYqlEe227IHA00Smxg" name="Rhs">
+      <nodes xmi:id="_Ik9CUYqlEe227IHA00Smxg" name="p" outgoing="_KYk8EYqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+        <attributes xmi:id="_lOa9IIqlEe227IHA00Smxg" value="t1">
+          <type href="../PetriNets.ecore#//Place/itokens"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_JOaPAYqlEe227IHA00Smxg" name="cp" incoming="_KYk8EYqlEe227IHA00Smxg _ywpzEIqlEe227IHA00Smxg _7FR7sIqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+        <attributes xmi:id="_mK1iEYqlEe227IHA00Smxg" value="t2">
+          <type href="../PetriNets.ecore#//Place/itokens"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_N501QYqlEe227IHA00Smxg" name="tr" incoming="_0HdN8IqlEe227IHA00Smxg _6DqtsIqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_YHT88IqlEe227IHA00Smxg" incoming="_he7MkIqlEe227IHA00Smxg" outgoing="_ywpzEIqlEe227IHA00Smxg _0HdN8IqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//ArcPT"/>
+        <attributes xmi:id="_s5AqQIqlEe227IHA00Smxg" value="t1+t2">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_aGV1cIqlEe227IHA00Smxg" incoming="_jjnoMIqlEe227IHA00Smxg" outgoing="_6DqtsIqlEe227IHA00Smxg _7FR7sIqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//ArcTP"/>
+        <attributes xmi:id="_wsSHkIqlEe227IHA00Smxg" value="t1+t2">
+          <type href="../PetriNets.ecore#//Arc/weight"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_dz8voYqlEe227IHA00Smxg" outgoing="_he7MkIqlEe227IHA00Smxg _jjnoMIqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <edges xmi:id="_KYk8EYqlEe227IHA00Smxg" source="_Ik9CUYqlEe227IHA00Smxg" target="_JOaPAYqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place/boundPlace"/>
+      </edges>
+      <edges xmi:id="_he7MkIqlEe227IHA00Smxg" source="_dz8voYqlEe227IHA00Smxg" target="_YHT88IqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/arcs"/>
+      </edges>
+      <edges xmi:id="_jjnoMIqlEe227IHA00Smxg" source="_dz8voYqlEe227IHA00Smxg" target="_aGV1cIqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/arcs"/>
+      </edges>
+      <edges xmi:id="_ywpzEIqlEe227IHA00Smxg" source="_YHT88IqlEe227IHA00Smxg" target="_JOaPAYqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//ArcPT/from"/>
+      </edges>
+      <edges xmi:id="_0HdN8IqlEe227IHA00Smxg" source="_YHT88IqlEe227IHA00Smxg" target="_N501QYqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//ArcPT/to"/>
+      </edges>
+      <edges xmi:id="_6DqtsIqlEe227IHA00Smxg" source="_aGV1cIqlEe227IHA00Smxg" target="_N501QYqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//ArcTP/from"/>
+      </edges>
+      <edges xmi:id="_7FR7sIqlEe227IHA00Smxg" source="_aGV1cIqlEe227IHA00Smxg" target="_JOaPAYqlEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//ArcTP/to"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Ik9CUoqlEe227IHA00Smxg" origin="_Ik9CUIqlEe227IHA00Smxg" image="_Ik9CUYqlEe227IHA00Smxg"/>
+    <mappings xmi:id="_JOaPAoqlEe227IHA00Smxg" origin="_JOaPAIqlEe227IHA00Smxg" image="_JOaPAYqlEe227IHA00Smxg"/>
+    <mappings xmi:id="_N501QoqlEe227IHA00Smxg" origin="_N501QIqlEe227IHA00Smxg" image="_N501QYqlEe227IHA00Smxg"/>
+    <mappings xmi:id="_dz8vooqlEe227IHA00Smxg" origin="_dz8voIqlEe227IHA00Smxg" image="_dz8voYqlEe227IHA00Smxg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_tE2b8IqnEe227IHA00Smxg" name="removeHierarchyPlace">
+    <lhs xmi:id="_tE44MIqnEe227IHA00Smxg" name="Lhs">
+      <nodes xmi:id="_zDK0gIqnEe227IHA00Smxg" incoming="_2uAukIqnEe227IHA00Smxg" outgoing="_4UGioIqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_0S2TsIqnEe227IHA00Smxg" name="pn" incoming="_4UGioIqnEe227IHA00Smxg" outgoing="_9PuIEIqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_1PsWcIqnEe227IHA00Smxg" outgoing="_2uAukIqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_8XLWgIqnEe227IHA00Smxg" name="p" incoming="_9PuIEIqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <edges xmi:id="_2uAukIqnEe227IHA00Smxg" source="_1PsWcIqnEe227IHA00Smxg" target="_zDK0gIqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/trans"/>
+      </edges>
+      <edges xmi:id="_4UGioIqnEe227IHA00Smxg" source="_zDK0gIqnEe227IHA00Smxg" target="_0S2TsIqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition/contents"/>
+      </edges>
+      <edges xmi:id="_9PuIEIqnEe227IHA00Smxg" source="_0S2TsIqnEe227IHA00Smxg" target="_8XLWgIqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/places"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_tE44MYqnEe227IHA00Smxg" name="Rhs">
+      <nodes xmi:id="_zDK0gYqnEe227IHA00Smxg" incoming="_2uAukYqnEe227IHA00Smxg" outgoing="_4UGioYqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_0S2TsYqnEe227IHA00Smxg" name="pn" incoming="_4UGioYqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_1PsWcYqnEe227IHA00Smxg" outgoing="_2uAukYqnEe227IHA00Smxg _BAK64IqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_8XLWgYqnEe227IHA00Smxg" name="p" incoming="_BAK64IqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Place"/>
+      </nodes>
+      <edges xmi:id="_2uAukYqnEe227IHA00Smxg" source="_1PsWcYqnEe227IHA00Smxg" target="_zDK0gYqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/trans"/>
+      </edges>
+      <edges xmi:id="_4UGioYqnEe227IHA00Smxg" source="_zDK0gYqnEe227IHA00Smxg" target="_0S2TsYqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition/contents"/>
+      </edges>
+      <edges xmi:id="_BAK64IqoEe227IHA00Smxg" source="_1PsWcYqnEe227IHA00Smxg" target="_8XLWgYqnEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/places"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_zDK0goqnEe227IHA00Smxg" origin="_zDK0gIqnEe227IHA00Smxg" image="_zDK0gYqnEe227IHA00Smxg"/>
+    <mappings xmi:id="_0S2TsoqnEe227IHA00Smxg" origin="_0S2TsIqnEe227IHA00Smxg" image="_0S2TsYqnEe227IHA00Smxg"/>
+    <mappings xmi:id="_1PsWcoqnEe227IHA00Smxg" origin="_1PsWcIqnEe227IHA00Smxg" image="_1PsWcYqnEe227IHA00Smxg"/>
+    <mappings xmi:id="_8XLWgoqnEe227IHA00Smxg" origin="_8XLWgIqnEe227IHA00Smxg" image="_8XLWgYqnEe227IHA00Smxg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_JCo8gIqoEe227IHA00Smxg" name="removeHierarchyTransition">
+    <lhs xmi:id="_JCr_0IqoEe227IHA00Smxg" name="Lhs">
+      <nodes xmi:id="_SD4TgIqoEe227IHA00Smxg" outgoing="_UYgBgIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_ShT2YIqoEe227IHA00Smxg" name="pn" incoming="_XkNvkIqoEe227IHA00Smxg" outgoing="_aqlDkIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_TjP0gIqoEe227IHA00Smxg" incoming="_UYgBgIqoEe227IHA00Smxg" outgoing="_XkNvkIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ZR29IIqoEe227IHA00Smxg" incoming="_aqlDkIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <edges xmi:id="_UYgBgIqoEe227IHA00Smxg" source="_SD4TgIqoEe227IHA00Smxg" target="_TjP0gIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/trans"/>
+      </edges>
+      <edges xmi:id="_XkNvkIqoEe227IHA00Smxg" source="_TjP0gIqoEe227IHA00Smxg" target="_ShT2YIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition/contents"/>
+      </edges>
+      <edges xmi:id="_aqlDkIqoEe227IHA00Smxg" source="_ShT2YIqoEe227IHA00Smxg" target="_ZR29IIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/trans"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_JCr_0YqoEe227IHA00Smxg" name="Rhs">
+      <nodes xmi:id="_SD4TgYqoEe227IHA00Smxg" outgoing="_UYgBgYqoEe227IHA00Smxg _eMK7AIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_ShT2YYqoEe227IHA00Smxg" name="pn" incoming="_XkNvkYqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_TjP0gYqoEe227IHA00Smxg" incoming="_UYgBgYqoEe227IHA00Smxg" outgoing="_XkNvkYqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_ZR29IYqoEe227IHA00Smxg" incoming="_eMK7AIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <edges xmi:id="_UYgBgYqoEe227IHA00Smxg" source="_SD4TgYqoEe227IHA00Smxg" target="_TjP0gYqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/trans"/>
+      </edges>
+      <edges xmi:id="_XkNvkYqoEe227IHA00Smxg" source="_TjP0gYqoEe227IHA00Smxg" target="_ShT2YYqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition/contents"/>
+      </edges>
+      <edges xmi:id="_eMK7AIqoEe227IHA00Smxg" source="_SD4TgYqoEe227IHA00Smxg" target="_ZR29IYqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/trans"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_SD4TgoqoEe227IHA00Smxg" origin="_SD4TgIqoEe227IHA00Smxg" image="_SD4TgYqoEe227IHA00Smxg"/>
+    <mappings xmi:id="_ShT2YoqoEe227IHA00Smxg" origin="_ShT2YIqoEe227IHA00Smxg" image="_ShT2YYqoEe227IHA00Smxg"/>
+    <mappings xmi:id="_TjP0goqoEe227IHA00Smxg" origin="_TjP0gIqoEe227IHA00Smxg" image="_TjP0gYqoEe227IHA00Smxg"/>
+    <mappings xmi:id="_ZR29IoqoEe227IHA00Smxg" origin="_ZR29IIqoEe227IHA00Smxg" image="_ZR29IYqoEe227IHA00Smxg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_hvt6QIqoEe227IHA00Smxg" name="removeHierarchyArc">
+    <lhs xmi:id="_hv0A4IqoEe227IHA00Smxg" name="Lhs">
+      <nodes xmi:id="_ltQt4IqoEe227IHA00Smxg" outgoing="_og-ysIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_mGYYgIqoEe227IHA00Smxg" name="pn" incoming="_rKfLkIqoEe227IHA00Smxg" outgoing="_tuh1oIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_m0pMsIqoEe227IHA00Smxg" incoming="_og-ysIqoEe227IHA00Smxg" outgoing="_rKfLkIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_qXJqIIqoEe227IHA00Smxg" incoming="_tuh1oIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Arc"/>
+      </nodes>
+      <edges xmi:id="_og-ysIqoEe227IHA00Smxg" source="_ltQt4IqoEe227IHA00Smxg" target="_m0pMsIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/trans"/>
+      </edges>
+      <edges xmi:id="_rKfLkIqoEe227IHA00Smxg" source="_m0pMsIqoEe227IHA00Smxg" target="_mGYYgIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition/contents"/>
+      </edges>
+      <edges xmi:id="_tuh1oIqoEe227IHA00Smxg" source="_mGYYgIqoEe227IHA00Smxg" target="_qXJqIIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/arcs"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_hv0A4YqoEe227IHA00Smxg" name="Rhs">
+      <nodes xmi:id="_ltQt4YqoEe227IHA00Smxg" outgoing="_og-ysYqoEe227IHA00Smxg _w0yb8IqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_mGYYgYqoEe227IHA00Smxg" name="pn" incoming="_rKfLkYqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <nodes xmi:id="_m0pMsYqoEe227IHA00Smxg" incoming="_og-ysYqoEe227IHA00Smxg" outgoing="_rKfLkYqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_qXJqIYqoEe227IHA00Smxg" incoming="_w0yb8IqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Arc"/>
+      </nodes>
+      <edges xmi:id="_og-ysYqoEe227IHA00Smxg" source="_ltQt4YqoEe227IHA00Smxg" target="_m0pMsYqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/trans"/>
+      </edges>
+      <edges xmi:id="_rKfLkYqoEe227IHA00Smxg" source="_m0pMsYqoEe227IHA00Smxg" target="_mGYYgYqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition/contents"/>
+      </edges>
+      <edges xmi:id="_w0yb8IqoEe227IHA00Smxg" source="_ltQt4YqoEe227IHA00Smxg" target="_qXJqIYqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet/arcs"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_ltQt4oqoEe227IHA00Smxg" origin="_ltQt4IqoEe227IHA00Smxg" image="_ltQt4YqoEe227IHA00Smxg"/>
+    <mappings xmi:id="_mGYYgoqoEe227IHA00Smxg" origin="_mGYYgIqoEe227IHA00Smxg" image="_mGYYgYqoEe227IHA00Smxg"/>
+    <mappings xmi:id="_m0pMsoqoEe227IHA00Smxg" origin="_m0pMsIqoEe227IHA00Smxg" image="_m0pMsYqoEe227IHA00Smxg"/>
+    <mappings xmi:id="_qXJqIoqoEe227IHA00Smxg" origin="_qXJqIIqoEe227IHA00Smxg" image="_qXJqIYqoEe227IHA00Smxg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_07MQoIqoEe227IHA00Smxg" name="removeHierarchy">
+    <lhs xmi:id="_07PT8IqoEe227IHA00Smxg" name="Lhs">
+      <nodes xmi:id="_4b4JIIqoEe227IHA00Smxg" outgoing="_5xeqIIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_5BeJgIqoEe227IHA00Smxg" incoming="_5xeqIIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+      <edges xmi:id="_5xeqIIqoEe227IHA00Smxg" source="_4b4JIIqoEe227IHA00Smxg" target="_5BeJgIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition/contents"/>
+      </edges>
+      <formula xsi:type="henshin:And" xmi:id="_iLmvkIqpEe227IHA00Smxg">
+        <left xsi:type="henshin:And" xmi:id="_dCzCsIqpEe227IHA00Smxg">
+          <left xsi:type="henshin:Not" xmi:id="_aOV-EIqpEe227IHA00Smxg">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_aOV-EYqpEe227IHA00Smxg">
+              <conclusion xmi:id="_aOV-EoqpEe227IHA00Smxg" name="1">
+                <nodes xmi:id="_aOV-E4qpEe227IHA00Smxg" outgoing="_aObdo4qpEe227IHA00Smxg">
+                  <type href="../PetriNets.ecore#//Transition"/>
+                </nodes>
+                <nodes xmi:id="_aObdoYqpEe227IHA00Smxg" incoming="_aObdo4qpEe227IHA00Smxg" outgoing="_azD0sIqpEe227IHA00Smxg">
+                  <type href="../PetriNets.ecore#//PetriNet"/>
+                </nodes>
+                <nodes xmi:id="_Yie5MIqpEe227IHA00Smxg" name="p" incoming="_azD0sIqpEe227IHA00Smxg">
+                  <type href="../PetriNets.ecore#//Place"/>
+                </nodes>
+                <edges xmi:id="_aObdo4qpEe227IHA00Smxg" source="_aOV-E4qpEe227IHA00Smxg" target="_aObdoYqpEe227IHA00Smxg">
+                  <type href="../PetriNets.ecore#//Transition/contents"/>
+                </edges>
+                <edges xmi:id="_azD0sIqpEe227IHA00Smxg" source="_aObdoYqpEe227IHA00Smxg" target="_Yie5MIqpEe227IHA00Smxg">
+                  <type href="../PetriNets.ecore#//PetriNet/places"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_aObdoIqpEe227IHA00Smxg" origin="_4b4JIIqoEe227IHA00Smxg" image="_aOV-E4qpEe227IHA00Smxg"/>
+              <mappings xmi:id="_aObdooqpEe227IHA00Smxg" origin="_5BeJgIqoEe227IHA00Smxg" image="_aObdoYqpEe227IHA00Smxg"/>
+            </child>
+          </left>
+          <right xsi:type="henshin:Not" xmi:id="_dCzCsYqpEe227IHA00Smxg">
+            <child xsi:type="henshin:NestedCondition" xmi:id="_dCzCsoqpEe227IHA00Smxg">
+              <conclusion xmi:id="_dCzCs4qpEe227IHA00Smxg" name="2">
+                <nodes xmi:id="_dCzCtIqpEe227IHA00Smxg" outgoing="_dCzpwoqpEe227IHA00Smxg">
+                  <type href="../PetriNets.ecore#//Transition"/>
+                </nodes>
+                <nodes xmi:id="_dCzpwIqpEe227IHA00Smxg" incoming="_dCzpwoqpEe227IHA00Smxg" outgoing="_doKZkIqpEe227IHA00Smxg">
+                  <type href="../PetriNets.ecore#//PetriNet"/>
+                </nodes>
+                <nodes xmi:id="_cAM9QIqpEe227IHA00Smxg" name="tr" incoming="_doKZkIqpEe227IHA00Smxg">
+                  <type href="../PetriNets.ecore#//Transition"/>
+                </nodes>
+                <edges xmi:id="_dCzpwoqpEe227IHA00Smxg" source="_dCzCtIqpEe227IHA00Smxg" target="_dCzpwIqpEe227IHA00Smxg">
+                  <type href="../PetriNets.ecore#//Transition/contents"/>
+                </edges>
+                <edges xmi:id="_doKZkIqpEe227IHA00Smxg" source="_dCzpwIqpEe227IHA00Smxg" target="_cAM9QIqpEe227IHA00Smxg">
+                  <type href="../PetriNets.ecore#//PetriNet/trans"/>
+                </edges>
+              </conclusion>
+              <mappings xmi:id="_dCzCtYqpEe227IHA00Smxg" origin="_4b4JIIqoEe227IHA00Smxg" image="_dCzCtIqpEe227IHA00Smxg"/>
+              <mappings xmi:id="_dCzpwYqpEe227IHA00Smxg" origin="_5BeJgIqoEe227IHA00Smxg" image="_dCzpwIqpEe227IHA00Smxg"/>
+            </child>
+          </right>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_iLmvkYqpEe227IHA00Smxg">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_iLmvkoqpEe227IHA00Smxg">
+            <conclusion xmi:id="_iLmvk4qpEe227IHA00Smxg" name="3">
+              <nodes xmi:id="_iLmvlIqpEe227IHA00Smxg" outgoing="_iLmvmIqpEe227IHA00Smxg">
+                <type href="../PetriNets.ecore#//Transition"/>
+              </nodes>
+              <nodes xmi:id="_iLmvloqpEe227IHA00Smxg" incoming="_iLmvmIqpEe227IHA00Smxg" outgoing="_iwnhIIqpEe227IHA00Smxg">
+                <type href="../PetriNets.ecore#//PetriNet"/>
+              </nodes>
+              <nodes xmi:id="_gsCaQIqpEe227IHA00Smxg" incoming="_iwnhIIqpEe227IHA00Smxg">
+                <type href="../PetriNets.ecore#//Arc"/>
+              </nodes>
+              <edges xmi:id="_iLmvmIqpEe227IHA00Smxg" source="_iLmvlIqpEe227IHA00Smxg" target="_iLmvloqpEe227IHA00Smxg">
+                <type href="../PetriNets.ecore#//Transition/contents"/>
+              </edges>
+              <edges xmi:id="_iwnhIIqpEe227IHA00Smxg" source="_iLmvloqpEe227IHA00Smxg" target="_gsCaQIqpEe227IHA00Smxg">
+                <type href="../PetriNets.ecore#//PetriNet/arcs"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_iLmvlYqpEe227IHA00Smxg" origin="_4b4JIIqoEe227IHA00Smxg" image="_iLmvlIqpEe227IHA00Smxg"/>
+            <mappings xmi:id="_iLmvl4qpEe227IHA00Smxg" origin="_5BeJgIqoEe227IHA00Smxg" image="_iLmvloqpEe227IHA00Smxg"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_07PT8YqoEe227IHA00Smxg" name="Rhs">
+      <nodes xmi:id="_4b4JIYqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//Transition"/>
+      </nodes>
+      <nodes xmi:id="_5BewkIqoEe227IHA00Smxg">
+        <type href="../PetriNets.ecore#//PetriNet"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_4b4wMIqoEe227IHA00Smxg" origin="_4b4JIIqoEe227IHA00Smxg" image="_4b4JIYqoEe227IHA00Smxg"/>
+    <mappings xmi:id="_5BewkYqoEe227IHA00Smxg" origin="_5BeJgIqoEe227IHA00Smxg" image="_5BewkIqoEe227IHA00Smxg"/>
+  </units>
+</henshin:Module>

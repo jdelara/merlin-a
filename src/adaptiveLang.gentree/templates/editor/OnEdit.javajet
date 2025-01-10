@@ -1,0 +1,33 @@
+<%@ jet package="adaptiveLang.gentree.templates.editor" imports="org.eclipse.emf.codegen.ecore.genmodel.* adaptiveLang.gentree.generation.*" class="OnSave"%>
+<%@ include file="../Header.javajetinc"%>
+<%GenLanguageVariants genclass = (GenLanguageVariants)argument;%>
+package <%=genclass.getRootPackageName()%>.hooks;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
+
+import <%=genclass.getRootPackageName()%>.variants.LanguageVariants;
+
+public class OnEdit implements IHook {
+	/**
+	 * This method is called after editing the model in the active editor,
+	 * and permits changing the language variant of the model. The method 
+	 * returns the new language variant, or null to keep the current variant.
+	 * @param currentLanguageVariant current language variant of the model   
+	 * @param model model 
+	 * @param context modified object 
+	 * @param feature modified feature 
+	 * @return new language variant of the model, null to keep the current one
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LanguageVariants nextLanguageVariant (LanguageVariants currentLanguageVariant, Resource model, EObject context, EStructuralFeature feature) {
+		// Object result = executeOCLQuery(model, "2 > 1");
+		// if (result == Boolean.TRUE) { /*...*/ }
+
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="StateMachines"/>
+	<feature name="Executable"/>
+	<feature automatic="selected" name="Transitions"/>
+	<feature automatic="selected" name="Trigger"/>
+	<feature name="Timed"/>
+	<feature manual="selected" name="Events"/>
+	<feature name="Immediate"/>
+	<feature name="Guard"/>
+	<feature name="Actions"/>
+	<feature automatic="selected" name="States"/>
+	<feature name="Hierarchical"/>
+	<feature name="Concurrent"/>
+	<feature name="StateActions"/>
+	<feature name="ExitAction"/>
+	<feature name="DoAction"/>
+	<feature name="EntryAction"/>
+	<feature automatic="selected" name="Pseudostates"/>
+	<feature name="Condition"/>
+	<feature name="History"/>
+	<feature name="DeepHistory"/>
+	<feature name="ForkJoin"/>
+</configuration>

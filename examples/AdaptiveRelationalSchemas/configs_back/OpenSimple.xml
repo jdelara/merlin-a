@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="DDBBSchema"/>
+	<feature automatic="selected" name="Data"/>
+	<feature name="Content"/>
+	<feature automatic="selected" name="Keys"/>
+	<feature name="Foreign"/>
+	<feature name="Primary"/>
+	<feature name="Indices"/>
+	<feature automatic="selected" name="Columns"/>
+	<feature name="NotNullSupport"/>
+	<feature automatic="selected" name="Types"/>
+	<feature automatic="unselected" name="Closed"/>
+	<feature manual="selected" name="OpenSimple"/>
+	<feature automatic="unselected" name="OpenObject"/>
+	<feature name="DefaultValueSupport"/>
+	<feature name="UniqueSupport"/>
+	<feature name="AutoIncrementSupport"/>
+</configuration>

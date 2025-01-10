@@ -1,0 +1,99 @@
+<%@ jet package="adaptiveLang.gentree.templates.edit" imports="org.eclipse.emf.codegen.ecore.genmodel.* adaptiveLang.gentree.generation.* java.util.*" class="LanguageVariants"%>
+<%@ include file="../Header.javajetinc"%>
+<%GenLanguageVariants genclass = (GenLanguageVariants)argument;%>
+package <%=genclass.getRootPackageName()%>.variants;
+
+import java.io.File;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Platform;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.XMIResource;
+import org.eclipse.emf.henshin.interpreter.EGraph;
+import org.eclipse.emf.henshin.interpreter.Engine;
+import org.eclipse.emf.henshin.interpreter.UnitApplication;
+import org.eclipse.emf.henshin.interpreter.impl.EGraphImpl;
+import org.eclipse.emf.henshin.interpreter.impl.EngineImpl;
+import org.eclipse.emf.henshin.interpreter.impl.UnitApplicationImpl;
+import org.eclipse.emf.henshin.model.Unit;
+import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
+import org.osgi.framework.Bundle;
+
+public class ModelMigration {
+
+	protected static ModelMigration instance = new ModelMigration();
+	
+	protected ModelMigration () {}
+	
+	public static ModelMigration instance() {
+		return instance;
+	}
+
+	/**
+	 * This migrates a model between two language variants.
+	 * @param sourceVariant
+	 * @param targetVariant
+	 * @param model
+	 * @return
+	 */
+	public static void executeMigration (LanguageVariants sourceVariant, LanguageVariants targetVariant, XMIResource model) {
+		String BUNDLE       = "<%=genclass.getModelPluginID()%>";
+		String TRAFO_FOLDER = "trafos";
+		String UNIT_NAME    = "main";
+		String error  = null;
+		try {
+			// Get the name of the appropriate migration transformation 
+			Bundle bundle = Platform.getBundle(BUNDLE);
+			URL url = FileLocator.find(bundle, new Path(TRAFO_FOLDER), null);
+			url = FileLocator.toFileURL(url); 
+			String trafoname = sourceVariant + "-" + targetVariant + ".henshin";
+			if (url==null || (!new File(url.getPath().toString() + trafoname).exists()))
+				error = "Folder "+ url + " does not contain the migration transformation " + trafoname;
+			else {
+				// Load the transformation into a Module
+				HenshinResourceSet resourceSet = new HenshinResourceSet(url.getPath());
+				org.eclipse.emf.henshin.model.Module module = resourceSet.getModule(trafoname, true);
+
+				// Load the source model into an Egraph
+				EGraph graph = new EGraphImpl(model);
+
+				// Create an engine and a rule application
+				Engine engine = new EngineImpl();
+				Unit unit = module.getUnit(UNIT_NAME);
+				UnitApplication app = new UnitApplicationImpl(engine, graph, unit, null);
+
+				// Execute the transformation
+				app.execute(null);
+
+				// Delete objects of types not included in the new variant
+				Iterator<EObject>   iterator = model.getAllContents();
+				Collection<EObject> toDelete = new ArrayList<EObject>();
+				Collection<EObject> all      = new ArrayList<EObject>();
+				iterator.forEachRemaining(eobject -> all.add(eobject));
+				for (EObject eobject : all)
+					if (!LanguageVariants.isValid(eobject.eClass().getName(), targetVariant))
+						toDelete.add(eobject);
+				// Unset features not included in the new variant
+					else
+						for (EStructuralFeature efeature : eobject.eClass().getEAllStructuralFeatures())
+							if (!LanguageVariants.isValid(eobject.eClass().getName() + "." + efeature.getName(), targetVariant))
+								eobject.eUnset(efeature);
+				boolean pullback = !toDelete.isEmpty();
+				if (pullback)
+					EcoreUtil.deleteAll(toDelete, false);
+			}
+		}
+		catch (Exception e) {
+			error = e.getMessage()!=null? e.getMessage() : e.toString();
+		}
+
+		if (error!=null) throw new RuntimeException("The model was not migrated.\n" + error);
+	}
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<apm:ProcessModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:apm="http://AdaptiveProcessModelling/PL" xsi:schemaLocation="http://AdaptiveProcessModelling/PL ../AdaptiveProcessModelling.ecore">
+  <nodes xsi:type="apm:Task" name="t1"/>
+  <nodes xsi:type="apm:Task" name="t2"/>
+  <nodes xsi:type="apm:InitialTask" name="initt1"/>
+  <nodes xsi:type="apm:InitialTask" name="initinitt1"/>
+  <edges input="//@nodes.0" output="//@nodes.1"/>
+  <edges input="//@nodes.2" output="//@nodes.0"/>
+  <edges input="//@nodes.3" output="//@nodes.2"/>
+</apm:ProcessModel>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metamodelling:ModellingSystem
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:metamodelling="http://metamodelling/amml"
+    name="test">
+  <models instances="//@models.1"
+      name="ECommerce">
+    <potency/>
+  </models>
+  <models conformsTo="//@models.0"
+      name="Shop">
+    <potency
+        potency="0"/>
+  </models>
+</metamodelling:ModellingSystem>

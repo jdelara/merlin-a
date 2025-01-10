@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<calculations key="tautology" value="true"/>
+		<calculations key="auto" value="true"/>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<calculations key="redundant" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<calculations key="constraints" value="true"/>
+		<graphics key="layoutalgorithm" value="1"/>
+		<calculations key="features" value="true"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="ProcessModelling">
+			<and mandatory="true" name="GatewayKinds">
+				<graphics key="collapsed" value="false"/>
+				<feature name="ParallelSplit"/>
+				<feature name="Synchronization"/>
+				<feature name="SimpleMerge"/>
+				<feature name="ExclusiveChoice"/>
+				<feature name="MultiChoice"/>
+			</and>
+			<and mandatory="true" name="TaskKinds">
+				<graphics key="collapsed" value="false"/>
+				<and name="FinalTasks">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Terminating"/>
+					<alt mandatory="true" name="FTCardinality">
+						<graphics key="collapsed" value="false"/>
+						<feature name="FTMandatory"/>
+						<feature name="FTOptional"/>
+					</alt>
+				</and>
+				<feature name="Hierarchical"/>
+				<and name="InitialTasks">
+					<graphics key="collapsed" value="false"/>
+					<alt mandatory="true" name="ITCardinality">
+						<graphics key="collapsed" value="false"/>
+						<feature name="ITMandatory"/>
+						<feature name="ITOptional"/>
+					</alt>
+				</and>
+			</and>
+			<alt mandatory="true" name="Flows">
+				<feature name="Simple"/>
+				<feature name="Object"/>
+			</alt>
+		</and>
+	</struct>
+</featureModel>

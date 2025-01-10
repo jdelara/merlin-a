@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<calculations key="tautology" value="true"/>
+		<calculations key="auto" value="true"/>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<calculations key="redundant" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<calculations key="constraints" value="true"/>
+		<graphics key="layoutalgorithm" value="1"/>
+		<calculations key="features" value="true"/>
+	</properties>
+	<struct>
+		<and mandatory="true" name="StateMachines">
+			<feature name="Executable"/>
+			<and mandatory="true" name="Transitions">
+				<or name="Trigger">
+					<feature name="Timed"/>
+					<feature name="Events"/>
+					<feature name="Immediate"/>
+				</or>
+				<feature name="Guard"/>
+				<feature name="Actions"/>
+			</and>
+			<and mandatory="true" name="States">
+				<feature name="Hierarchical"/>
+				<feature name="Concurrent"/>
+				<or name="StateActions">
+					<feature name="ExitAction"/>
+					<feature name="DoAction"/>
+					<feature name="EntryAction"/>
+				</or>
+			</and>
+			<and mandatory="true" name="Pseudostates">
+				<feature name="Condition"/>
+				<and name="History">
+					<feature name="DeepHistory"/>
+				</and>
+				<feature name="ForkJoin"/>
+			</and>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>ForkJoin</var>
+				<var>Concurrent</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Concurrent</var>
+				<var>Hierarchical</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

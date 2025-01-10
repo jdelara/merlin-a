@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adp:AdapterModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:adp="http://adapters.org/0.1" name="Adaptive class Diagrams" ecore="ClassDiagram.ecore" transformation="myTrafo.henshin">
+  <adapters name="InhByDelegation">
+    <cfgDiff>
+      <delta>
+        <posSet>Multi</posSet>
+        <negSet>Single</negSet>
+      </delta>
+      <context>
+        <posSet>Ref</posSet>
+      </context>
+    </cfgDiff>
+    <rules>rule1</rules>
+  </adapters>
+</adp:AdapterModel>

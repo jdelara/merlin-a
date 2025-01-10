@@ -1,0 +1,41 @@
+language AdaptivePetriNets
+on 'PetriNets.ecore' 
+transformation 'trafos/PetriNets.henshin'
+adapters {
+	Simple2Object = ( delta (+-{Simple}, -+{Object}), 
+		              context(++{},--{}), 
+		              rules{TokenIntToObject} ),
+	Object2Simple = ( delta (+-{Object}, -+{Simple}), 
+		              context(++{},--{}), 
+		              rules{TokenObject2Int} ),
+	RemoveWeight  = ( delta (+-{Weight}, -+{}), 
+					  context(++{},--{}), 
+		              rules{WeightToNormalIns,WeightToNormalOuts}),
+	AddWeight = ( 	  delta (+-{}, -+{Weight}), 
+					  context(++{},--{}), 
+					  rules{NormalToWeightPT,NormalToWeightPTUpdate,
+					  	    NormalToWeightTP,NormalToWeightTPUpdate
+					  }),
+	RemoveRead = ( 	  delta (+-{Read}, -+{}),
+					  context(++{}, --{Weight}),
+					  rules {RemoveRead}),
+	AddRead = ( 	  delta (+-{}, -+{Read}),
+					  context(++{}, --{Weight}),
+					  rules {AddRead}),
+	RemoveBounded = ( delta (+-{Bounded}, -+{}),
+					  context(++{Simple}, --{Weight}),
+					  rules {RemoveBounded, ConnectOutgoingBounded, ConnectIncomingBounded}
+	),
+	
+	RemoveInhibitors = ( delta (+-{Inhibitor, Bounded}, -+{}),
+						 context (++{Weight}, --{}),
+						 rules {removeInhibitorWithBoundAndWeight} ),
+						 
+	RemoveHierarchy = (delta (+-{Hierarchy}, -+{}),
+						context (++{}, --{}),
+						rules {removeHierarchy,removeHierarchyPlace, removeHierarchyTransition}),
+						
+	RemoveHierarchyWithWeights = (delta (+-{Hierarchy}, -+{}),
+						context (++{Weight}, --{}),
+						rules {removeHierarchyArc})
+}

@@ -1,0 +1,93 @@
+<%@ jet package="adaptiveLang.gentree.templates.editor" imports="org.eclipse.emf.codegen.ecore.genmodel.* adaptiveLang.gentree.generation.*" class="SmallestVariantHandler"%>
+<%@ include file="../Header.javajetinc"%>
+<%GenLanguageVariants genclass = (GenLanguageVariants)argument;%>
+package <%=genclass.getRootPackageName()%>.presentation;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.core.commands.AbstractHandler;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.domain.IEditingDomainProvider;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.handlers.HandlerUtil;
+
+import <%=genclass.getRootPackageName()%>.<%=genclass.getRootPackageName().substring(0,1).toUpperCase()+genclass.getRootPackageName().substring(1)%>Package;
+import <%=genclass.getRootPackageName()%>.variants.LanguageVariants;
+import <%=genclass.getRootPackageName()%>.variants.LanguageVariantsManager;
+import <%=genclass.getRootPackageName()%>.variants.SmallestVariantRecommender;
+
+public class SmallestVariantHandler extends AbstractHandler {
+	
+	@Override
+	public Object execute(ExecutionEvent event) throws ExecutionException {
+		// Action to execute when the button is clicked
+		// Create and display a dialog
+		Shell shell = HandlerUtil.getActiveShell(event);
+		Resource model = this.getResourceFromEditor(event);
+		
+		SmallestVariantRecommender svr = new SmallestVariantRecommender(<%=genclass.getRootPackageName().substring(0,1).toUpperCase()+genclass.getRootPackageName().substring(1)%>Package.eINSTANCE);
+		LanguageVariants current = LanguageVariantsManager.instance().getLanguageVariant();
+		Map<LanguageVariants, Double> recommend = svr.recommend(current, model);
+		
+		List<String> variants = new ArrayList<>();
+		for (LanguageVariants lvs: recommend.keySet()) 
+			variants.add(lvs.name());		
+		
+		
+		SelectVariantDialog dialog = 
+				new SelectVariantDialog(shell, 
+										LanguageVariantsManager.instance().getLanguageVariant(), 
+										model,
+										variants);
+		dialog.open();
+		return null;
+	}
+
+	public Resource getResourceFromEditor(ExecutionEvent event) {
+        IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindow(event);
+        IEditorPart activeEditor = window.getActivePage().getActiveEditor();
+        
+        if (activeEditor != null && activeEditor instanceof IEditingDomainProvider) {
+            // Step 2: Get the EditingDomain from the active editor
+        	
+        	//ClassdiagActionBarContributor ab = (ClassdiagActionBarContributor) activeEditor.getAdapter(ClassdiagActionBarContributor.class);
+            //EditingDomain editingDomain = 
+            		//((IEditingDomainProvider)ab.activeEditorPart).getEditingDomain();
+            
+        	EditingDomain editingDomain = ((IEditingDomainProvider)activeEditor).getEditingDomain();
+        	
+            if (editingDomain != null) {
+                // Step 3: Get the resource set and find the model resource
+                Resource resource = getResourceFromEditingDomain(editingDomain);
+                if (resource != null) {
+                    // Do something with the resource (e.g., print the URI or manipulate the model)
+                    System.out.println("Model Resource URI: " + resource.getURI());
+                    return resource;
+                } else {
+                    System.out.println("No resource found in the editing domain.");
+                }
+            }
+        }
+        return null;
+    }
+
+    private Resource getResourceFromEditingDomain(EditingDomain editingDomain) {
+        // Get the ResourceSet from the EditingDomain
+        ResourceSet resourceSet = editingDomain.getResourceSet();
+        
+        // Iterate over the resources in the set and return the first one (typically there is one resource for the model)
+        for (Resource resource : resourceSet.getResources()) {
+            return resource; // Return the first resource
+        }
+        return null; // Return null if no resources found    
+	}
+	
+}

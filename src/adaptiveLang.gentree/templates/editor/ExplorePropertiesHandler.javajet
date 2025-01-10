@@ -1,0 +1,161 @@
+<%@ jet package="adaptiveLang.gentree.templates.editor" imports="org.eclipse.emf.codegen.ecore.genmodel.* adaptiveLang.gentree.generation.*" class="ExplorePropertiesHandler"%>
+<%@ include file="../Header.javajetinc"%>
+<%GenLanguageVariants genclass = (GenLanguageVariants)argument;%>
+package <%=genclass.getRootPackageName()%>.presentation;
+
+import java.lang.reflect.Field;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.eclipse.core.commands.AbstractHandler;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.runtime.Platform;
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.domain.IEditingDomainProvider;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.TreeSelection;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IViewPart;
+import org.eclipse.ui.IWorkbench;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.handlers.HandlerUtil;
+import org.eclipse.ui.part.ISetSelectionTarget;
+import org.eclipse.ui.views.properties.PropertySheet;
+
+public class ExplorePropertiesHandler extends AbstractHandler {
+	
+	private String selectedClass;
+
+	@Override
+	public Object execute(ExecutionEvent event) throws ExecutionException {
+		// Action to execute when the button is clicked
+		// Create and display a dialog
+		Shell shell = HandlerUtil.getActiveShell(event);
+
+		IViewPart propertiesView = this.listAndFocusPropertiesView();
+		Map<String, String> properties = this.fetchPropertiesFromPropertiesView();
+
+		ExplorePropertiesDialog dialog = 
+				new ExplorePropertiesDialog(shell, properties, this.selectedClass, this.getResourceFromEditor(event));
+		dialog.open();
+		return null;
+	}
+
+	public Resource getResourceFromEditor(ExecutionEvent event) {
+        IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindow(event);
+        IEditorPart activeEditor = window.getActivePage().getActiveEditor();
+        
+        if (activeEditor != null && activeEditor instanceof IEditingDomainProvider) {
+            // Step 2: Get the EditingDomain from the active editor
+        	
+        	//ClassdiagActionBarContributor ab = (ClassdiagActionBarContributor) activeEditor.getAdapter(ClassdiagActionBarContributor.class);
+            //EditingDomain editingDomain = 
+            		//((IEditingDomainProvider)ab.activeEditorPart).getEditingDomain();
+            
+        	EditingDomain editingDomain = ((IEditingDomainProvider)activeEditor).getEditingDomain();
+        	
+            if (editingDomain != null) {
+                // Step 3: Get the resource set and find the model resource
+                Resource resource = getResourceFromEditingDomain(editingDomain);
+                if (resource != null) {
+                    // Do something with the resource (e.g., print the URI or manipulate the model)
+                    System.out.println("Model Resource URI: " + resource.getURI());
+                } else {
+                    System.out.println("No resource found in the editing domain.");
+                }
+            }
+        }
+        return null;
+    }
+
+    private Resource getResourceFromEditingDomain(EditingDomain editingDomain) {
+        // Get the ResourceSet from the EditingDomain
+        ResourceSet resourceSet = editingDomain.getResourceSet();
+        
+        // Iterate over the resources in the set and return the first one (typically there is one resource for the model)
+        for (Resource resource : resourceSet.getResources()) {
+            return resource; // Return the first resource
+        }
+        return null; // Return null if no resources found    
+	}
+	
+	public Map<String, String> fetchPropertiesFromPropertiesView() {
+		// Step 1: Get the active workbench window and page
+		IWorkbench workbench = PlatformUI.getWorkbench();
+		IWorkbenchWindow window = workbench.getActiveWorkbenchWindow();
+		IWorkbenchPage page = window.getActivePage();
+
+		// Step 2: Get the Properties View (its ID is "org.eclipse.ui.views.PropertySheet")
+		String propertiesViewId = "org.eclipse.ui.views.PropertySheet";
+		Map<String, String> properties = new LinkedHashMap<>();
+		try {
+			IViewPart propertiesView = page.showView(propertiesViewId);
+
+			if (propertiesView != null) {
+				// Step 3: Get the current selection in the Properties View
+				//ISelection selection = window.getSelectionService().getSelection();
+				Field f = PropertySheet.class.getDeclaredField("currentSelection");
+				//Field f = propertiesView.getClass().getField("currentSelection");
+				f.setAccessible(true);
+				IStructuredSelection structuredSelection = (IStructuredSelection) f.get(propertiesView);
+
+				Object selectedObject = structuredSelection.getFirstElement();
+
+				if (selectedObject != null) {
+					// Step 4: Adapt the selected object to IPropertySource
+					EObject eobj = (EObject) selectedObject;
+					this.selectedClass = eobj.eClass().getName();
+					System.out.println("Properties for the selected object: ("+selectedClass+")");					
+					for (EStructuralFeature esf: eobj.eClass().getEAllStructuralFeatures()) {
+						System.out.println("Feature: "+esf.getName()+" Type: "+esf.getEType().getName());
+						properties.put(esf.getName(), esf.getEType().getName());
+					}
+				}               
+			} else {
+				System.out.println("Properties View is not available.");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return properties;
+	}
+
+	private IViewPart listAndFocusPropertiesView() {
+		IWorkbench workbench = PlatformUI.getWorkbench();
+		IWorkbenchWindow window = workbench.getActiveWorkbenchWindow();
+		IWorkbenchPage page = window.getActivePage();
+
+		// List all open views
+		IViewPart[] openViews = page.getViews();
+		System.out.println("Open views:");
+		for (IViewPart view : openViews) {
+			System.out.println("View ID: " + view.getSite().getId() + ", View Name: " + view.getTitle());
+		}
+
+		// Focus the Properties View if it's open
+		String propertiesViewId = "org.eclipse.ui.views.PropertySheet";
+		try {
+			IViewPart propertiesView = page.showView(propertiesViewId);
+			if (propertiesView != null) {
+				System.out.println("Properties View activated.");
+			} else {
+				System.out.println("Properties View is not available.");
+			}
+			return propertiesView;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+}
+

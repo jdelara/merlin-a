@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="ProcessModelling"/>
+	<feature automatic="selected" name="GatewayKinds"/>
+	<feature name="ParallelSplit"/>
+	<feature name="Synchronization"/>
+	<feature name="SimpleMerge"/>
+	<feature name="ExclusiveChoice"/>
+	<feature name="MultiChoice"/>
+	<feature automatic="selected" name="TaskKinds"/>
+	<feature name="FinalTasks"/>
+	<feature name="Terminating"/>
+	<feature name="FTCardinality"/>
+	<feature name="FTMandatory"/>
+	<feature name="FTOptional"/>
+	<feature name="Hierarchical"/>
+	<feature automatic="selected" manual="selected" name="InitialTasks"/>
+	<feature automatic="selected" name="ITCardinality"/>
+	<feature manual="selected" name="ITMandatory"/>
+	<feature automatic="unselected" name="ITOptional"/>
+	<feature automatic="selected" name="Flows"/>
+	<feature automatic="unselected" name="Simple"/>
+	<feature manual="selected" name="Object"/>
+</configuration>

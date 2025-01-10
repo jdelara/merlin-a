@@ -1,0 +1,199 @@
+<%@ jet package="adaptiveLang.gentree.templates.editor" imports="org.eclipse.emf.codegen.ecore.genmodel.* adaptiveLang.gentree.generation.*" class="ExplorePropertiesDialog"%>
+<%@ include file="../Header.javajetinc"%>
+<%GenLanguageVariants genclass = (GenLanguageVariants)argument;%>
+package <%=genclass.getRootPackageName()%>.presentation;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.jface.dialogs.Dialog;
+import org.eclipse.jface.dialogs.IDialogConstants;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Table;
+import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.swt.widgets.TableItem;
+
+import <%=genclass.getRootPackageName()%>.variants.LanguageVariants;
+import <%=genclass.getRootPackageName()%>.variants.LanguageVariantsManager;
+
+public class ExplorePropertiesDialog extends Dialog {
+
+    private Map<String, String> properties;
+	private LanguageVariants languageVariant;
+	private String className;
+	private Table table;
+	private Resource model;
+
+	public ExplorePropertiesDialog(Shell parentShell, Map<String, String> properties, String className, Resource model) {
+        super(parentShell);
+        languageVariant = LanguageVariantsManager.instance().getLanguageVariant();
+        this.properties = properties;
+        this.className = className;
+        this.model = model;
+    }
+
+    @Override
+    protected void configureShell(Shell shell) {
+        super.configureShell(shell);
+        shell.setText("Explore possible properties");
+    }
+
+    @Override
+    protected int getShellStyle() {
+        // Add SWT.RESIZE to enable resizing
+        return super.getShellStyle() | SWT.RESIZE;
+    }
+    
+    @Override
+    protected Composite createDialogArea(Composite parent) {
+        Composite composite = (Composite) super.createDialogArea(parent);
+        composite.setLayout(new GridLayout(1, false));
+
+        // Create the table
+        this.table = new Table(composite, SWT.BORDER | SWT.CHECK| SWT.FULL_SELECTION);
+        this.table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+        this.table.setHeaderVisible(true);
+        this.table.setLinesVisible(true);
+
+        // Define table columns
+        String[] columnHeaders = { "Select?", "Attribute", "Type", "Variants" };
+        for (String header : columnHeaders) {
+            TableColumn column = new TableColumn(table, SWT.NONE);
+            column.setText(header);           
+        }
+        
+        Display display = Display.getCurrent();
+        
+        Color grayColor = display.getSystemColor(SWT.COLOR_GRAY);
+        
+        // Populate table rows
+        for (String propName : this.properties.keySet()) {
+            TableItem item = new TableItem(this.table, SWT.NONE);
+            String variants = this.getStringVariants(propName);
+            item.setText(new String[] { "", propName, this.properties.get(propName), variants });
+            if (variants.equals("")) 
+            	item.setForeground(grayColor);
+            if (LanguageVariants.isValid(this.className+"."+propName, this.languageVariant))
+            	item.setChecked(true);
+            else
+            	item.setChecked(false);
+        }
+        
+        table.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                if (e.detail == SWT.CHECK) { // Only process checkbox clicks
+                    TableItem item = (TableItem) e.item;
+                    boolean checked = item.getChecked();
+
+                    String variants = item.getText(3);
+                    //List<String> variantList = List.of(variants.split(", "));
+                    //System.out.println("Variants parsed: "+variantList);
+                    if (variants.equals("[all]") || variants.equals("")) {
+                    	item.setChecked(!checked);
+                    	System.out.println("Cannot be toggled: "+variants);
+                    }
+                }
+            }                        
+        });
+        
+        for (TableColumn tc: table.getColumns()) 
+        	tc.pack();	// resize based on contents        
+
+        return composite;
+    }
+    
+    private String getStringVariants(String propName) {
+		String variants = "";
+		List<String> suppVariants = this.getVariants(propName);
+		if (suppVariants.size() == LanguageVariants.values().length)
+			return "[all]";		
+		for (String variant: suppVariants) {
+				if (variants.length() > 0)
+					variants += ", ";
+				variants += variant;
+			}
+		return variants;		
+	}
+    
+    private List<String> getVariants(String propName) {
+    	List<String> variants = new ArrayList<>();
+		for (LanguageVariants lv: LanguageVariants.values()) {
+			if (LanguageVariants.isValid(this.className+"."+propName, lv)) 
+				variants.add(lv.name());			
+		}
+		return variants;
+	}
+
+	@Override
+    protected void okPressed() {
+        // Perform any actions needed on OK button click
+		boolean okPressed = this.suggestNewVariant();
+		if (okPressed)
+			super.okPressed();		
+    }
+
+	private boolean suggestNewVariant() {
+		List<String> selectedProperties = new ArrayList<>();
+		List<String> unselectedProperties = new ArrayList<>();
+		for (TableItem ti: this.table.getItems()) {
+			if (ti.getChecked())
+				selectedProperties.add(ti.getText(1));
+			else
+				unselectedProperties.add(ti.getText(1));
+		}
+		System.out.println("Selected properties: "+selectedProperties);
+		System.out.println("Un-selected properties: "+unselectedProperties);
+		return this.offerVariants(selectedProperties, unselectedProperties);
+	}
+
+	private boolean offerVariants(List<String> selectedProperties, List<String> unselectedProperties) {
+		if (selectedProperties.isEmpty() && unselectedProperties.isEmpty()) {
+			return true;
+		}
+		List<String> availableVariants = new ArrayList<>();
+		if (selectedProperties.size()>0) {
+			availableVariants.addAll(this.getVariants(selectedProperties.get(0)));
+			for (String prop: selectedProperties) 
+				availableVariants.retainAll(this.getVariants(prop));
+		}
+		else
+		{
+			for (LanguageVariants lv: LanguageVariants.values()) 
+				availableVariants.add(lv.toString());			
+		}
+		
+		// now remove all those that have some feature in unselectedProperties
+		for (String prop: unselectedProperties) 
+			availableVariants.removeAll(this.getVariants(prop));			
+		
+		System.out.println("Possible variants: "+availableVariants);
+		if (availableVariants.isEmpty()) {
+			 MessageDialog.openWarning(this.getShell(), "Warning", "No variant satisfies the chosen features");
+			 return false;
+		}
+		if (availableVariants.size() == 1 && availableVariants.get(0).equals(this.languageVariant.toString())) {
+			 MessageDialog.openWarning(this.getShell(), "Warning", "Only the current variant satisfies the chosen features");
+			 return false;
+		}
+		SelectVariantDialog dialog = 
+				new SelectVariantDialog(this.getShell(), this.languageVariant, this.model, availableVariants);
+		int returnCode = dialog.open();
+		if (returnCode == IDialogConstants.CANCEL_ID)
+			return false;
+		return true;
+	}	
+	
+}
+

@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_ZwrKwIuSEe2KeNrCCJ-3kA">
+  <imports href="../AdaptiveRelationalDDBB.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_rvJigIuSEe2KeNrCCJ-3kA" name="ClosedToOpenSimple">
+    <parameters xmi:id="_y7YfsIuSEe2KeNrCCJ-3kA" name="CT">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_dLYhoIuTEe2KeNrCCJ-3kA" name="ST">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_rv-B4IuSEe2KeNrCCJ-3kA" name="Lhs">
+      <nodes xmi:id="_uMyCkIuSEe2KeNrCCJ-3kA" name="col">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_wvQmYIuSEe2KeNrCCJ-3kA" value="CT">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/ctype"/>
+        </attributes>
+        <attributes xmi:id="_3m2JQIuSEe2KeNrCCJ-3kA" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_rv-B4YuSEe2KeNrCCJ-3kA" name="Rhs">
+      <nodes xmi:id="_uMyCkYuSEe2KeNrCCJ-3kA" name="col">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_wvSbkIuSEe2KeNrCCJ-3kA" value="CT">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/ctype"/>
+        </attributes>
+        <attributes xmi:id="_3m3-cIuSEe2KeNrCCJ-3kA" value="CT.toString()">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <attributeConditions xmi:id="_F3oOMIwKEe2K35cW-pPxcw" name="notApplied" conditionText="ST!=CT.toString()"/>
+    <mappings xmi:id="_uMyCkouSEe2KeNrCCJ-3kA" origin="_uMyCkIuSEe2KeNrCCJ-3kA" image="_uMyCkYuSEe2KeNrCCJ-3kA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_F3oOMYwKEe2K35cW-pPxcw" name="SimpleToObjectUpdate">
+    <parameters xmi:id="_F3oOMowKEe2K35cW-pPxcw" name="ST">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_F3o1QIwKEe2K35cW-pPxcw" name="Lhs">
+      <nodes xmi:id="_F3o1QYwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3o1QowKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_F3o1Q4wKEe2K35cW-pPxcw" name="t">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Type"/>
+        <attributes xmi:id="_F3o1RIwKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Type/name"/>
+        </attributes>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_F3o1RYwKEe2K35cW-pPxcw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_F3o1RowKEe2K35cW-pPxcw">
+          <conclusion xmi:id="_F3o1R4wKEe2K35cW-pPxcw">
+            <nodes xmi:id="_F3o1SIwKEe2K35cW-pPxcw" outgoing="_F3pcUowKEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+              <attributes xmi:id="_F3o1SYwKEe2K35cW-pPxcw" value="ST">
+                <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_F3pcUIwKEe2K35cW-pPxcw" name="t" incoming="_F3pcUowKEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//Type"/>
+              <attributes xmi:id="_F3pcUYwKEe2K35cW-pPxcw" value="ST">
+                <type href="../AdaptiveRelationalDDBB.ecore#//Type/name"/>
+              </attributes>
+            </nodes>
+            <edges xmi:id="_F3pcUowKEe2K35cW-pPxcw" source="_F3o1SIwKEe2K35cW-pPxcw" target="_F3pcUIwKEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//Column/type"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_F3pcU4wKEe2K35cW-pPxcw" origin="_F3o1QYwKEe2K35cW-pPxcw" image="_F3o1SIwKEe2K35cW-pPxcw"/>
+          <mappings xmi:id="_F3qDYIwKEe2K35cW-pPxcw" origin="_F3o1Q4wKEe2K35cW-pPxcw" image="_F3pcUIwKEe2K35cW-pPxcw"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_F3qDYYwKEe2K35cW-pPxcw" name="Rhs">
+      <nodes xmi:id="_F3qDYowKEe2K35cW-pPxcw" outgoing="_F3qqcIwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3qDY4wKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_F3qDZIwKEe2K35cW-pPxcw" name="t" incoming="_F3qqcIwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Type"/>
+        <attributes xmi:id="_F3qDZYwKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Type/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_F3qqcIwKEe2K35cW-pPxcw" source="_F3qDYowKEe2K35cW-pPxcw" target="_F3qDZIwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column/type"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_F3qqcYwKEe2K35cW-pPxcw" name="non-empty type" conditionText="ST!=&quot;&quot; &amp;&amp; ST!=null"/>
+    <mappings xmi:id="_F3qqcowKEe2K35cW-pPxcw" origin="_F3o1QYwKEe2K35cW-pPxcw" image="_F3qDYowKEe2K35cW-pPxcw"/>
+    <mappings xmi:id="_F3qqc4wKEe2K35cW-pPxcw" origin="_F3o1Q4wKEe2K35cW-pPxcw" image="_F3qDZIwKEe2K35cW-pPxcw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_F3qqdIwKEe2K35cW-pPxcw" name="SimpleToObjectCreate">
+    <parameters xmi:id="_F3qqdYwKEe2K35cW-pPxcw" name="ST">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_F3qqdowKEe2K35cW-pPxcw" name="Lhs">
+      <nodes xmi:id="_F3rRgIwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3rRgYwKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_F3rRgowKEe2K35cW-pPxcw" name="s">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Schema"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_F3rRg4wKEe2K35cW-pPxcw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_F3rRhIwKEe2K35cW-pPxcw">
+          <conclusion xmi:id="_F3rRhYwKEe2K35cW-pPxcw">
+            <nodes xmi:id="_F3rRhowKEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+              <attributes xmi:id="_F3r4kIwKEe2K35cW-pPxcw" value="ST">
+                <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_F3r4kYwKEe2K35cW-pPxcw" name="s" outgoing="_F3r4lIwKEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//Schema"/>
+            </nodes>
+            <nodes xmi:id="_F3r4kowKEe2K35cW-pPxcw" name="et" incoming="_F3r4lIwKEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//Type"/>
+              <attributes xmi:id="_F3r4k4wKEe2K35cW-pPxcw" value="ST">
+                <type href="../AdaptiveRelationalDDBB.ecore#//Type/name"/>
+              </attributes>
+            </nodes>
+            <edges xmi:id="_F3r4lIwKEe2K35cW-pPxcw" source="_F3r4kYwKEe2K35cW-pPxcw" target="_F3r4kowKEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//Schema/types"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_F3sfoIwKEe2K35cW-pPxcw" origin="_F3rRgIwKEe2K35cW-pPxcw" image="_F3rRhowKEe2K35cW-pPxcw"/>
+          <mappings xmi:id="_F3sfoYwKEe2K35cW-pPxcw" origin="_F3rRgowKEe2K35cW-pPxcw" image="_F3r4kYwKEe2K35cW-pPxcw"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_F3sfoowKEe2K35cW-pPxcw" name="Rhs">
+      <nodes xmi:id="_F3sfo4wKEe2K35cW-pPxcw" outgoing="_F3tGsYwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3sfpIwKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_F3sfpYwKEe2K35cW-pPxcw" name="t" incoming="_F3tGsYwKEe2K35cW-pPxcw _F3tGsowKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Type"/>
+        <attributes xmi:id="_F3sfpowKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Type/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_F3tGsIwKEe2K35cW-pPxcw" name="s" outgoing="_F3tGsowKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Schema"/>
+      </nodes>
+      <edges xmi:id="_F3tGsYwKEe2K35cW-pPxcw" source="_F3sfo4wKEe2K35cW-pPxcw" target="_F3sfpYwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column/type"/>
+      </edges>
+      <edges xmi:id="_F3tGsowKEe2K35cW-pPxcw" source="_F3tGsIwKEe2K35cW-pPxcw" target="_F3sfpYwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Schema/types"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_F3tGs4wKEe2K35cW-pPxcw" name="non-empty type" conditionText="ST!=&quot;&quot; &amp;&amp; ST!=null"/>
+    <mappings xmi:id="_F3tGtIwKEe2K35cW-pPxcw" origin="_F3rRgIwKEe2K35cW-pPxcw" image="_F3sfo4wKEe2K35cW-pPxcw"/>
+    <mappings xmi:id="_F3tGtYwKEe2K35cW-pPxcw" origin="_F3rRgowKEe2K35cW-pPxcw" image="_F3tGsIwKEe2K35cW-pPxcw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_F3tGtowKEe2K35cW-pPxcw" name="ObjectToSimple">
+    <parameters xmi:id="_F3tGt4wKEe2K35cW-pPxcw" name="ST">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_F3tGuIwKEe2K35cW-pPxcw" name="TN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_F3tGuYwKEe2K35cW-pPxcw" name="Lhs">
+      <nodes xmi:id="_F3tGuowKEe2K35cW-pPxcw" name="t" incoming="_F3ttwowKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Type"/>
+        <attributes xmi:id="_F3tGu4wKEe2K35cW-pPxcw" value="TN">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Type/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_F3ttwIwKEe2K35cW-pPxcw" name="c" outgoing="_F3ttwowKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3ttwYwKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_F3ttwowKEe2K35cW-pPxcw" source="_F3ttwIwKEe2K35cW-pPxcw" target="_F3tGuowKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column/type"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_F3ttw4wKEe2K35cW-pPxcw" name="Rhs">
+      <nodes xmi:id="_F3ttxIwKEe2K35cW-pPxcw" name="t">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Type"/>
+        <attributes xmi:id="_F3ttxYwKEe2K35cW-pPxcw" value="TN">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Type/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_F3ttxowKEe2K35cW-pPxcw" name="c">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3ttx4wKEe2K35cW-pPxcw" value="TN.toString()">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_F3ttyIwKEe2K35cW-pPxcw" origin="_F3tGuowKEe2K35cW-pPxcw" image="_F3ttxIwKEe2K35cW-pPxcw"/>
+    <mappings xmi:id="_F3ttyYwKEe2K35cW-pPxcw" origin="_F3ttwIwKEe2K35cW-pPxcw" image="_F3ttxowKEe2K35cW-pPxcw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_F3ttyowKEe2K35cW-pPxcw" name="SimpleToClosedINT">
+    <parameters xmi:id="_F3tty4wKEe2K35cW-pPxcw" name="ST">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_F3ttzIwKEe2K35cW-pPxcw" name="X">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_F3ttzYwKEe2K35cW-pPxcw" name="Lhs">
+      <nodes xmi:id="_F3ttzowKEe2K35cW-pPxcw" name="c">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3ttz4wKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+        <attributes xmi:id="_F3tt0IwKEe2K35cW-pPxcw" value="X">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/ctype"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_F3uU0IwKEe2K35cW-pPxcw" name="Rhs">
+      <nodes xmi:id="_F3uU0YwKEe2K35cW-pPxcw" name="c">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3uU0owKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+        <attributes xmi:id="_F3uU04wKEe2K35cW-pPxcw" value="'INT'">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/ctype"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <attributeConditions xmi:id="_F3uU1IwKEe2K35cW-pPxcw" name="changes" conditionText="X!='INT' &amp;&amp; ST !=null &amp;&amp; (ST.toLowerCase()==&quot;int&quot; || ST.toLowerCase()==&quot;integer&quot; || ST.toLowerCase()==&quot;number&quot;)"/>
+    <mappings xmi:id="_F3uU1YwKEe2K35cW-pPxcw" origin="_F3ttzowKEe2K35cW-pPxcw" image="_F3uU0YwKEe2K35cW-pPxcw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_F3uU1owKEe2K35cW-pPxcw" name="SimpleToClosedCHAR">
+    <parameters xmi:id="_F3uU14wKEe2K35cW-pPxcw" name="ST">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_F3uU2IwKEe2K35cW-pPxcw" name="X">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_F3u74IwKEe2K35cW-pPxcw" name="Lhs">
+      <nodes xmi:id="_F3u74YwKEe2K35cW-pPxcw" name="c">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3u74owKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+        <attributes xmi:id="_F3u744wKEe2K35cW-pPxcw" value="X">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/ctype"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_F3u75IwKEe2K35cW-pPxcw" name="Rhs">
+      <nodes xmi:id="_F3u75YwKEe2K35cW-pPxcw" name="c">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3u75owKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+        <attributes xmi:id="_F3u754wKEe2K35cW-pPxcw" value="'CHAR'">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/ctype"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <attributeConditions xmi:id="_F3u76IwKEe2K35cW-pPxcw" name="changes" conditionText="X!='CHAR' &amp;&amp; ST!=null &amp;&amp; (ST.toLowerCase()=='char')"/>
+    <mappings xmi:id="_F3vi8IwKEe2K35cW-pPxcw" origin="_F3u74YwKEe2K35cW-pPxcw" image="_F3u75YwKEe2K35cW-pPxcw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_F3vi8YwKEe2K35cW-pPxcw" name="SimpleToClosedREAL">
+    <parameters xmi:id="_F3vi8owKEe2K35cW-pPxcw" name="ST">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_F3vi84wKEe2K35cW-pPxcw" name="X">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_F3vi9IwKEe2K35cW-pPxcw" name="Lhs">
+      <nodes xmi:id="_F3vi9YwKEe2K35cW-pPxcw" name="c">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3vi9owKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+        <attributes xmi:id="_F3vi94wKEe2K35cW-pPxcw" value="X">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/ctype"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_F3vi-IwKEe2K35cW-pPxcw" name="Rhs">
+      <nodes xmi:id="_F3vi-YwKEe2K35cW-pPxcw" name="c">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3vi-owKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+        <attributes xmi:id="_F3vi-4wKEe2K35cW-pPxcw" value="'REAL'">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/ctype"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <attributeConditions xmi:id="_F3vi_IwKEe2K35cW-pPxcw" name="changes" conditionText="X!='REAL' &amp;&amp; ST!=null &amp;&amp; (ST.toLowerCase()=='real' || ST.toLowerCase()=='float' || ST.toLowerCase()=='double')"/>
+    <mappings xmi:id="_F3vi_YwKEe2K35cW-pPxcw" origin="_F3vi9YwKEe2K35cW-pPxcw" image="_F3vi-YwKEe2K35cW-pPxcw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_F3vi_owKEe2K35cW-pPxcw" name="SimpleToClosedBOOL">
+    <parameters xmi:id="_F3vi_4wKEe2K35cW-pPxcw" name="ST">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_F3wKAIwKEe2K35cW-pPxcw" name="X">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_F3wKAYwKEe2K35cW-pPxcw" name="Lhs">
+      <nodes xmi:id="_F3wKAowKEe2K35cW-pPxcw" name="c">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3wKA4wKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+        <attributes xmi:id="_F3wKBIwKEe2K35cW-pPxcw" value="X">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/ctype"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_F3wKBYwKEe2K35cW-pPxcw" name="Rhs">
+      <nodes xmi:id="_F3wKBowKEe2K35cW-pPxcw" name="c">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_F3wKB4wKEe2K35cW-pPxcw" value="ST">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/stype"/>
+        </attributes>
+        <attributes xmi:id="_F3wKCIwKEe2K35cW-pPxcw" value="'BOOL'">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/ctype"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <attributeConditions xmi:id="_F3wKCYwKEe2K35cW-pPxcw" name="changes" conditionText="X!='BOOL' &amp;&amp; ST!=null &amp;&amp; (ST.toLowerCase()=='bool' || ST.toLowerCase()=='boolean')"/>
+    <mappings xmi:id="_F3wKCowKEe2K35cW-pPxcw" origin="_F3wKAowKEe2K35cW-pPxcw" image="_F3wKBowKEe2K35cW-pPxcw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_GlJbgIwKEe2K35cW-pPxcw" name="inferNull">
+    <lhs xmi:id="_GlcWcIwKEe2K35cW-pPxcw" name="Lhs">
+      <nodes xmi:id="_IZJvwIwKEe2K35cW-pPxcw" name="re" outgoing="_LmQk8IwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement"/>
+        <attributes xmi:id="_YPUXMIwKEe2K35cW-pPxcw" value="null">
+          <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/value"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_J0V7YIwKEe2K35cW-pPxcw" name="col" incoming="_LmQk8IwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_RU7_AIwKEe2K35cW-pPxcw" value="false">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/canBeNull"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_LmQk8IwKEe2K35cW-pPxcw" source="_IZJvwIwKEe2K35cW-pPxcw" target="_J0V7YIwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/type"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Glc9gIwKEe2K35cW-pPxcw" name="Rhs">
+      <nodes xmi:id="_IZJvwYwKEe2K35cW-pPxcw" name="re" outgoing="_LmQk8YwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement"/>
+        <attributes xmi:id="_YPUXMYwKEe2K35cW-pPxcw" value="null">
+          <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/value"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_J0V7YYwKEe2K35cW-pPxcw" name="col" incoming="_LmQk8YwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_RU7_AYwKEe2K35cW-pPxcw" value="true">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/canBeNull"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_LmQk8YwKEe2K35cW-pPxcw" source="_IZJvwYwKEe2K35cW-pPxcw" target="_J0V7YYwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/type"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_IZJvwowKEe2K35cW-pPxcw" origin="_IZJvwIwKEe2K35cW-pPxcw" image="_IZJvwYwKEe2K35cW-pPxcw"/>
+    <mappings xmi:id="_J0V7YowKEe2K35cW-pPxcw" origin="_J0V7YIwKEe2K35cW-pPxcw" image="_J0V7YYwKEe2K35cW-pPxcw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_yO8h8IwKEe2K35cW-pPxcw" name="inferNotUnique">
+    <parameters xmi:id="_O8fEcIwLEe2K35cW-pPxcw" name="X">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_yPBacIwKEe2K35cW-pPxcw" name="Lhs">
+      <nodes xmi:id="_6wQbsIwKEe2K35cW-pPxcw" name="col" incoming="_DxImUIwLEe2K35cW-pPxcw _JXhnEIwLEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_87m48IwKEe2K35cW-pPxcw" value="true">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/isUnique"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_B8NsEIwLEe2K35cW-pPxcw" name="re1" outgoing="_DxImUIwLEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement"/>
+        <attributes xmi:id="_LLA98IwLEe2K35cW-pPxcw" value="X">
+          <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/value"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Coj0sIwLEe2K35cW-pPxcw" name="re2" outgoing="_JXhnEIwLEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement"/>
+        <attributes xmi:id="_My9zMIwLEe2K35cW-pPxcw" value="X">
+          <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/value"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_DxImUIwLEe2K35cW-pPxcw" source="_B8NsEIwLEe2K35cW-pPxcw" target="_6wQbsIwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/type"/>
+      </edges>
+      <edges xmi:id="_JXhnEIwLEe2K35cW-pPxcw" source="_Coj0sIwLEe2K35cW-pPxcw" target="_6wQbsIwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/type"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_yPBacYwKEe2K35cW-pPxcw" name="Rhs">
+      <nodes xmi:id="_6wQbsYwKEe2K35cW-pPxcw" name="col" incoming="_DxImUYwLEe2K35cW-pPxcw _JXhnEYwLEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_87ngAIwKEe2K35cW-pPxcw" value="false">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/isUnique"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_B8NsEYwLEe2K35cW-pPxcw" name="re1" outgoing="_DxImUYwLEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement"/>
+        <attributes xmi:id="_LLA98YwLEe2K35cW-pPxcw" value="X">
+          <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/value"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Coj0sYwLEe2K35cW-pPxcw" name="re2" outgoing="_JXhnEYwLEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement"/>
+        <attributes xmi:id="_My9zMYwLEe2K35cW-pPxcw" value="X">
+          <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/value"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_DxImUYwLEe2K35cW-pPxcw" source="_B8NsEYwLEe2K35cW-pPxcw" target="_6wQbsYwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/type"/>
+      </edges>
+      <edges xmi:id="_JXhnEYwLEe2K35cW-pPxcw" source="_Coj0sYwLEe2K35cW-pPxcw" target="_6wQbsYwKEe2K35cW-pPxcw">
+        <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/type"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_RGGcUIwLEe2K35cW-pPxcw" name="condition" conditionText="X!=null"/>
+    <mappings xmi:id="_6wQbsowKEe2K35cW-pPxcw" origin="_6wQbsIwKEe2K35cW-pPxcw" image="_6wQbsYwKEe2K35cW-pPxcw"/>
+    <mappings xmi:id="_B8NsEowLEe2K35cW-pPxcw" origin="_B8NsEIwLEe2K35cW-pPxcw" image="_B8NsEYwLEe2K35cW-pPxcw"/>
+    <mappings xmi:id="_Coj0sowLEe2K35cW-pPxcw" origin="_Coj0sIwLEe2K35cW-pPxcw" image="_Coj0sYwLEe2K35cW-pPxcw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_ZLP-gIwLEe2K35cW-pPxcw" name="inferUnique">
+    <parameters xmi:id="_bFT3cIwLEe2K35cW-pPxcw" name="X">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_ZLTB0IwLEe2K35cW-pPxcw" name="Lhs">
+      <nodes xmi:id="_dMDhgIwLEe2K35cW-pPxcw" name="col">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_s3AXcIwLEe2K35cW-pPxcw" value="false">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/isUnique"/>
+        </attributes>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_po5csIwLEe2K35cW-pPxcw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_po5csYwLEe2K35cW-pPxcw">
+          <conclusion xmi:id="_po5csowLEe2K35cW-pPxcw">
+            <nodes xmi:id="_po5cs4wLEe2K35cW-pPxcw" name="col" incoming="_kCGzUIwLEe2K35cW-pPxcw _lsVggIwLEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+              <attributes xmi:id="_s3CMoYwLEe2K35cW-pPxcw" value="false">
+                <type href="../AdaptiveRelationalDDBB.ecore#//Column/isUnique"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_ekX_UIwLEe2K35cW-pPxcw" name="re1" outgoing="_kCGzUIwLEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement"/>
+              <attributes xmi:id="_nq6GAIwLEe2K35cW-pPxcw" value="X">
+                <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/value"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_hDJH0IwLEe2K35cW-pPxcw" name="re2" outgoing="_lsVggIwLEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement"/>
+              <attributes xmi:id="_oISlkIwLEe2K35cW-pPxcw" value="X">
+                <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/value"/>
+              </attributes>
+            </nodes>
+            <edges xmi:id="_kCGzUIwLEe2K35cW-pPxcw" source="_ekX_UIwLEe2K35cW-pPxcw" target="_po5cs4wLEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/type"/>
+            </edges>
+            <edges xmi:id="_lsVggIwLEe2K35cW-pPxcw" source="_hDJH0IwLEe2K35cW-pPxcw" target="_po5cs4wLEe2K35cW-pPxcw">
+              <type href="../AdaptiveRelationalDDBB.ecore#//RecordElement/type"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_po5ctIwLEe2K35cW-pPxcw" origin="_dMDhgIwLEe2K35cW-pPxcw" image="_po5cs4wLEe2K35cW-pPxcw"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_ZLTB0YwLEe2K35cW-pPxcw" name="Rhs">
+      <nodes xmi:id="_dMEIkIwLEe2K35cW-pPxcw" name="col">
+        <type href="../AdaptiveRelationalDDBB.ecore#//Column"/>
+        <attributes xmi:id="_s3CMoIwLEe2K35cW-pPxcw" value="true">
+          <type href="../AdaptiveRelationalDDBB.ecore#//Column/isUnique"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_dMEIkYwLEe2K35cW-pPxcw" origin="_dMDhgIwLEe2K35cW-pPxcw" image="_dMEIkIwLEe2K35cW-pPxcw"/>
+  </units>
+</henshin:Module>

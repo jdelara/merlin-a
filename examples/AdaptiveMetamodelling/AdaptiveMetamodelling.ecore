@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="metamodelling" nsURI="http://metamodelling/amml" nsPrefix="metamodelling">
+  <eAnnotations source="features">
+    <details key="file" value="model.xml"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ModellingSystem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="models" ordered="false"
+        upperBound="-1" eType="#//Model" containment="true">
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassifiedElement" abstract="true">
+    <eAnnotations source="presence">
+      <details key="condition" value="SingleC"/>
+      <details key="constraint" value="single_classif"/>
+    </eAnnotations>
+    <eAnnotations source="presence">
+      <details key="condition" value="InstancesNo"/>
+      <details key="constraint" value="check_instances"/>
+    </eAnnotations>
+    <eAnnotations source="presence">
+      <details key="condition" value="Potency"/>
+      <details key="constraint" value="check_potency"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="single_classif check_instances check_potency"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="single_classif" value="self.conformsTo->size()&lt;2"/>
+      <details key="check_instances" value="(self.instances->size()>=self.instancesMin)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   and (self.instancesMax=-1 or self.instances->size()&lt;=self.instancesMax)"/>
+      <details key="check_potency" value="self.conformsTo->forAll(c|c.potency.potency=-1 or &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; c.potency.potency=self.potency.potency+1&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; )"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instancesMin" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0">
+      <eAnnotations source="presence">
+        <details key="condition" value="InstancesNo"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instancesMax" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="-1">
+      <eAnnotations source="presence">
+        <details key="condition" value="InstancesNo"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conformsTo" ordered="false"
+        upperBound="-1" eType="#//ClassifiedElement" eOpposite="#//ClassifiedElement/instances">
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instances" ordered="false"
+        upperBound="-1" eType="#//ClassifiedElement" eOpposite="#//ClassifiedElement/conformsTo">
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="potency" eType="#//Potency"
+        containment="true">
+      <eAnnotations source="presence">
+        <details key="condition" value="Potency"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Potency">
+    <eAnnotations source="presence">
+      <details key="condition" value="Potency"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="potency" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isLeap" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false">
+      <eAnnotations source="presence">
+        <details key="condition" value="Leap"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxPotency" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="-1">
+      <eAnnotations source="presence">
+        <details key="condition" value="Range"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//ClassifiedElement">
+    <eAnnotations source="presence">
+      <details key="condition" value="Potency and not Level"/>
+      <details key="constraint" value="noLevel"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="noLevel"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="noLevel" value="self.potency=null"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clabjects" upperBound="-1"
+        eType="#//Clabject" containment="true" eOpposite="#//Clabject/model"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assocs" upperBound="-1"
+        eType="#//Association" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Clabject" eSuperTypes="#//ClassifiedElement">
+    <eAnnotations source="presence">
+      <details key="condition" value="UntypedObjects"/>
+      <details key="constraint" value="hasType"/>
+    </eAnnotations>
+    <eAnnotations source="presence">
+      <details key="condition" value="ObjectGeneralization"/>
+      <details key="constraint" value="objectInheritance"/>
+    </eAnnotations>
+    <eAnnotations source="presence">
+      <details key="condition" value="AbstractInstances"/>
+      <details key="constraint" value="notAbstractType"/>
+    </eAnnotations>
+    <eAnnotations source="presence">
+      <details key="condition" value="Potency"/>
+      <details key="constraint" value="hasPotency"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="clabjectType hasType objectInheritance notAbstractType hasPotency"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="clabjectType" value="self.conformsTo->forAll(c|c.oclIsTypeOf(Clabject))"/>
+      <details key="hasType" value="self.model.conformsTo->isEmpty() or not self.conformsTo->isEmpty()"/>
+      <details key="objectInheritance" value="not self.conformsTo->isEmpty() implies self.parents->isEmpty()"/>
+      <details key="notAbstractType" value="self.conformsTo->notEmpty() implies &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   self.conformsTo->forAll(c|not c.oclAsType(Clabject).isAbstract)"/>
+      <details key="hasPotency" value="self.potency&lt;>null"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="presence">
+        <details key="condition" value="AbstractClassifiers"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="model" lowerBound="1" eType="#//Model"
+        eOpposite="#//Model/clabjects"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parents" ordered="false"
+        upperBound="-1" eType="#//Clabject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//Attribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//ClassifiedElement">
+    <eAnnotations source="presence">
+      <details key="condition" value="Potency"/>
+      <details key="constraint" value="hasPotency"/>
+    </eAnnotations>
+    <eAnnotations source="presence">
+      <details key="condition" value="not DualField"/>
+      <details key="constraint" value="dualFields"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="attributeType dualFields hasPotency"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="attributeType" value="self.conformsTo->forAll(c|c.oclIsTypeOf(Attribute))"/>
+      <details key="dualFields" value="self.type=null or self.value=null"/>
+      <details key="hasPotency" value="self.potency&lt;>null"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//ClassifiedElement">
+    <eAnnotations source="presence">
+      <details key="condition" value="Potency"/>
+      <details key="constraint" value="hasPotency"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="assocType hasPotency"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="assocType" value="self.conformsTo->forAll(c|c.oclIsTypeOf(Association))"/>
+      <details key="hasPotency" value="self.potency&lt;>null"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roles" lowerBound="2" upperBound="2"
+        eType="#//Role" containment="true">
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="#//ClassifiedElement">
+    <eAnnotations source="presence">
+      <details key="condition" value="Potency"/>
+      <details key="constraint" value="hasPotency"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="roleType hasPotency"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="roleType" value="self.conformsTo->forAll(c|c.oclIsTypeOf(Role))"/>
+      <details key="hasPotency" value="self.potency&lt;>null"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playedBy" eType="#//Clabject"/>
+  </eClassifiers>
+</ecore:EPackage>

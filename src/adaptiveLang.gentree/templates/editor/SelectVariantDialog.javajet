@@ -1,0 +1,73 @@
+<%@ jet package="adaptiveLang.gentree.templates.editor" imports="org.eclipse.emf.codegen.ecore.genmodel.* adaptiveLang.gentree.generation.*" class="SelectVariantDialog"%>
+<%@ include file="../Header.javajetinc"%>
+<%GenLanguageVariants genclass = (GenLanguageVariants)argument;%>
+package <%=genclass.getRootPackageName()%>.presentation;
+
+import java.util.*;
+
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.xmi.XMIResource;
+import org.eclipse.jface.dialogs.Dialog;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Shell;
+
+import <%=genclass.getRootPackageName()%>.variants.LanguageVariants;
+import <%=genclass.getRootPackageName()%>.variants.LanguageVariantsManager;
+import <%=genclass.getRootPackageName()%>.variants.ModelMigration;
+
+public class SelectVariantDialog extends Dialog {
+	private String selectedItem;
+    private List<String> items = new ArrayList<>();
+    private org.eclipse.swt.widgets.List list;
+	private LanguageVariants sourceVariant;
+	private Resource model;
+
+	protected SelectVariantDialog(Shell parentShell, LanguageVariants sourceVariant, Resource model, List<String> variants) {
+		super(parentShell);		
+		this.items.addAll(variants);		
+		this.sourceVariant = sourceVariant;
+		this.model = model;
+	}
+	
+	@Override
+	protected void configureShell(Shell shell) {
+	      super.configureShell(shell);
+	      shell.setText("Select a language configuration:");
+	}
+	
+	@Override
+    protected Composite createDialogArea(Composite parent) {
+        Composite composite = (Composite) super.createDialogArea(parent);
+        
+        composite.setLayout(new GridLayout(1, false));
+        
+        this.list = new org.eclipse.swt.widgets.List(composite, SWT.BORDER | SWT.V_SCROLL);
+        list.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+
+        // Populate the list with items
+        for (String item : items)
+        	this.list.add(item);           
+                
+        return composite;
+	}
+	
+	@Override
+    protected void okPressed() {
+        // Perform any actions needed on OK button click
+		if (this.list.getSelectionCount() > 0) {
+            this.selectedItem = list.getSelection()[0];
+            System.out.println("Selected variant: "+this.selectedItem);        
+			LanguageVariants targetVariant = LanguageVariants.valueof(selectedItem);
+			
+			if (this.model!=null)
+				ModelMigration.executeMigration(sourceVariant, targetVariant, (XMIResource)model); // migrate current model into target language variant
+			//if (saveModel) activeEditorPart.doSave(null);                                      // save migrated model
+			LanguageVariantsManager.instance().setLanguageVariant(targetVariant);              // change language variant
+		}
+        super.okPressed();
+    }
+
+}

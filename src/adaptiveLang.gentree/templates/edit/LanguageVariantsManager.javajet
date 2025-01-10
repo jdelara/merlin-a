@@ -1,0 +1,143 @@
+<%@ jet package="adaptiveLang.gentree.templates.edit" imports="org.eclipse.emf.codegen.ecore.genmodel.* adaptiveLang.gentree.generation.*" class="LanguageVariantsManager"%>
+<%@ include file="../Header.javajetinc"%>
+<%GenLanguageVariants genclass = (GenLanguageVariants)argument;%>
+package <%=genclass.getRootPackageName()%>.variants;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.ui.IEditorInput;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.ide.ResourceUtil;
+
+public class LanguageVariantsManager {
+
+	protected static LanguageVariantsManager instance = new LanguageVariantsManager();
+	
+	protected LanguageVariantsManager () {}
+	
+	public static LanguageVariantsManager instance() {
+		return instance;
+	}
+	
+	/**
+	 * This returns whether the received metamodel element belongs to the current language variant. 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */	
+	public boolean isValid (String element) {
+		return LanguageVariants.isValid(element, getLanguageVariant());
+	}
+
+	/**
+	 * This returns the language variant of the model in the active editor.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */	
+	public LanguageVariants getLanguageVariant () {
+		return getLanguageVariant(null);
+	}
+
+	/**
+	 * This returns the language variant of the model in the received editor. 
+	 * @param IEditorInput 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */	
+	public LanguageVariants getLanguageVariant (IEditorInput editor) {
+		String variant = null;
+		try {
+			IResource configRsc = configurationResource(editor);
+			if (configRsc != null) {
+				File         configFile = configRsc.getLocation().toFile();
+				FileInputStream fis     = new FileInputStream(configFile);
+				BufferedReader  br      = new BufferedReader(new InputStreamReader(fis));
+				variant = br.readLine();
+				br.close();
+			}
+		} 
+		catch (IOException e) {}
+		return LanguageVariants.valueof(variant);
+	}
+
+	/**
+	 * This changes the language variant of the model in the active editor.
+	 * @param newVariant 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */	
+	public void setLanguageVariant (LanguageVariants newVariant) {
+		setLanguageVariant(newVariant, null);
+	}
+	
+	/**
+	 * This changes the language variant of the model in the received editor.
+	 * @param newVariant 
+	 * @param IEditorInput
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */	
+	public void setLanguageVariant (LanguageVariants newVariant, IEditorInput editor) {
+		try {
+			IResource configRsc = configurationResource(editor);
+			if (configRsc != null) {
+				File         configFile = configRsc.getLocation().toFile();
+				FileOutputStream fos    = new FileOutputStream(configFile);
+				BufferedWriter  bw      = new BufferedWriter(new OutputStreamWriter(fos));
+				bw.write(newVariant.toString());
+				bw.close();
+			}
+		} 
+		catch (IOException e) {}
+	}
+	
+	/**
+	 * This obtains the resource containing the language variant of the model in the received editor (same name as model + "cfg").
+	 * @param IEditorInput
+	 */
+	protected IResource configurationResource (IEditorInput editor) {
+		IEditorInput input = editor;
+		
+		// if editor is null, obtain active editor
+		if (input == null) {
+			IWorkbenchPage activePage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+			IEditorPart    editorPart = activePage.getActiveEditor();
+			input = editorPart.getEditorInput();
+		}
+		
+		// obtain resource containing the language variant of the model in the editor  
+		String         inputname  = input.getName();
+		String         cfgname    = inputname+"cfg";
+		IProject       project    = ResourceUtil.getFile(input).getProject();
+		IResource      resource   = project.findMember(cfgname);
+		if (resource==null) {
+			try {
+				// create resource if it does not exist
+				IFile file = project.getFile(cfgname);
+				file.create(new ByteArrayInputStream(new byte[0]), true, null);
+				resource   = project.findMember(cfgname);
+			}
+			catch (CoreException e) {}
+		}
+		
+		return resource;
+	}	
+}

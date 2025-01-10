@@ -1,0 +1,46 @@
+language AdaptiveMetamodelling on
+'AdaptiveMetamodelling.ecore'
+transformation 'trafos/AdaptiveMetaModelling.henshin'
+adapters {
+	DeselectAbstract = ( delta(+-{AbstractClassifiers}, -+{}),
+						context(++{Potency}, --{}),
+						rules{AbstractToNo}),
+						
+	MultiToSingleClassifier = (delta(+-{MultipleC}, -+{SingleC}),
+							   context(++{}, --{}),
+							   rules{MultiToSingleClassifier}),
+							   
+	MultiToSingleClassifierWhenPotency = (delta(+-{MultipleC}, -+{SingleC}),
+							   context(++{Potency}, --{}),
+							   rules{AddPotencyToSub}),
+							   
+	ActivateLevels = (delta(+-{}, -+{Level}),
+					  context(++{}, --{}),
+					  rules{addModelLevel_bottom, potencyForSingletonModel, 
+					  		propagatePotency, overridePotency, backPropPotency
+					  }),
+	
+	DeactivateLevels = (delta(+-{Level}, -+{}),
+					  context(++{}, --{}),
+					  rules{removeLevel}),
+					  
+	RemoveLeap = (delta(+-{Leap}, -+{}),
+					  context(++{}, --{}),
+					  rules{reduceLeap,reduceLeapReuse}),
+					  
+	CreateClabjectTypes = (delta(+-{UntypedObjects}, -+{}),
+					  		context(++{}, --{}),
+					  		rules{CreateClabjectType}),
+					  		
+	CreateFieldTypes = (delta(+-{UntypedFields}, -+{}),
+					  		context(++{}, --{}),
+					  		rules{CreateFieldType}),
+					  		
+	CreateAssocTypes = (delta(+-{UntypedAssociations}, -+{}),
+					  		context(++{}, --{}),
+					  		rules{CreateAssocType}),
+					  		
+	CreatePotency =  (delta(+-{}, -+{Potency}),
+					  		context(++{}, --{}),
+					  		rules{createPotency}) // TO-DO: build the other rules, just like those for models
+}

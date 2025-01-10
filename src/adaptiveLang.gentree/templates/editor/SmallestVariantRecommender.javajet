@@ -1,0 +1,92 @@
+<%@ jet package="adaptiveLang.gentree.templates.editor" imports="org.eclipse.emf.codegen.ecore.genmodel.* adaptiveLang.gentree.generation.*" class="SmallestVariantRecommender"%>
+<%@ include file="../Header.javajetinc"%>
+<%GenLanguageVariants genclass = (GenLanguageVariants)argument;%>
+package <%=genclass.getRootPackageName()%>.variants;
+
+import java.util.*;
+
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
+
+import <%=genclass.getRootPackageName()%>.variants.LanguageVariants;
+
+public class SmallestVariantRecommender extends VariantRecommender {
+	public SmallestVariantRecommender(EPackage p) {
+		super(p);		
+	}
+
+	@Override
+	public Map<LanguageVariants, Double> recommend(LanguageVariants current, Resource model) {	
+		// calculate the model's footprint
+		Set<String> elements = getModelFootPrint(model);
+		Map<String, List<LanguageVariants>> variantFeatures = LanguageVariants.languageVariants();
+		
+		TreeMap<Integer, List<LanguageVariants>> variantSize = new TreeMap<>();
+		
+		if (elements.isEmpty()) return Map.of(current, 1.0);
+		List<LanguageVariants> candidates = new ArrayList<>();
+		
+		candidates.addAll(variantFeatures.get(elements.toArray()[0]));
+		
+		for (String cl: elements) {
+			if (!LanguageVariants.isValid(cl, current)) continue;
+			List<LanguageVariants> admissible = variantFeatures.get(cl);
+			candidates.retainAll(admissible);
+		}
+		
+		for (LanguageVariants c: candidates) {
+			int mmSize = c.size(); 
+			variantSize.putIfAbsent(mmSize, new ArrayList<>());
+			variantSize.get(mmSize).add(c);
+		}
+		
+		System.out.println("SIZES: "+variantSize);
+				
+		Map<LanguageVariants, Double> ranking = new LinkedHashMap<>();
+		if (variantSize.size()==0) return ranking;
+		int min = variantSize.firstKey(),
+			max = variantSize.lastKey();
+		for (Integer size: variantSize.keySet()) {
+			double rank = (double) (max - size) / (max - min);
+			for (LanguageVariants lv: variantSize.get(size))
+				ranking.put(lv, rank);
+		}
+		
+		ranking.remove(current);
+				
+		return ranking;
+	}
+
+	private Set<String> getModelFootPrint(Resource model) {
+		Set<String> elements = new TreeSet<>();
+		TreeIterator<EObject> content = model.getAllContents();
+		EObject eobj = content.next();
+		
+		while (eobj != null) {			
+			elements.add(eobj.eClass().getName());
+			this.addFeatures(eobj, elements);
+			if (content.hasNext())
+				eobj = content.next();
+			else
+				eobj = null;			
+		}
+		System.out.println("Footprint:\n  - elements: "+elements);
+		return elements;
+	}
+
+	private void addFeatures(EObject eobj, Set<String> features) {
+		for (EStructuralFeature ef: eobj.eClass().getEAllStructuralFeatures()) {
+			String featureName = ef.getName();
+			if (eobj.eGet(ef)!=null) {
+				if (eobj.eGet(ef) instanceof Collection) {
+					Collection<?> col = (Collection<?>) eobj.eGet(ef);
+					if (col.isEmpty()) continue;
+				}
+				features.add(eobj.eClass().getName()+"."+featureName);
+			}
+		}
+	}
+}

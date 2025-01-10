@@ -1,0 +1,32 @@
+language AdaptiveClassDiagrams on
+'AdaptiveClassDiagrams.ecore'
+transformation 'trafos/AdaptiveClassDiagrams.henshin'
+adapters {
+	InhByDelegation = ( delta(+-{Multi}, -+{Single}),
+						context(++{Ref}, --{}),
+						rules{multiBySingle,inhByRef}),
+
+	InhByDelegationInterface = (delta(+-{Multi}, -+{Single}),
+								context(++{Interfaces,Methods},--{}),
+								rules{createInterface,copyMethods}),	
+
+	AssocByRef = (delta(+-{FullAssoc}, -+{Ref}),
+				  context(++{}, --{}),
+				  rules{addNavigRole, removeNonNavigRole}),
+
+	SingleToMultiInh = (delta(+-{Single}, -+{Multi}),
+						context(++{}, --{}),
+						rules{singleToMulti}),
+						
+	SingleToNo = (delta(+-{Single}, -+{No}),
+				  context(++{Ref}, --{}),
+				  rules{SingleToNo}),							
+				  
+	RefByAssoc = (delta(+-{Ref}, -+{FullAssoc}),
+				  context(++{}, --{}),
+				  rules{oppositeRoles2Assoc, singleRole2Assoc}),
+				 
+	InterfaceToNo = (delta(+-{Interfaces}, -+{}),
+					 context(++{Multi,Methods}, --{}),
+					 rules{interfaceByAbstractClass,copyInterfaceMethods})
+}

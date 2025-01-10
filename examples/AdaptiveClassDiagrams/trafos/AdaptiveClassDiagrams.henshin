@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_mfnocHbfEe2l0JqqODr3aw">
+  <imports href="../AdaptiveClassDiagrams.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_zPM5cHbfEe2l0JqqODr3aw" name="inhByRef">
+    <parameters xmi:id="_8sCdAHiwEe2mVZn_WbX1CQ" name="B">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zPzWYHbfEe2l0JqqODr3aw" name="Lhs">
+      <nodes xmi:id="_1_sEEHbfEe2l0JqqODr3aw" name="b" incoming="_5mgZwHbfEe2l0JqqODr3aw _8sMOAHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+        <attributes xmi:id="_G9H1kHbgEe2l0JqqODr3aw" value="B">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_3b3HIHbfEe2l0JqqODr3aw" name="c" incoming="_8sMOAXiwEe2mVZn_WbX1CQ" outgoing="_5mgZwHbfEe2l0JqqODr3aw _P8rnQHixEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sDrIHiwEe2mVZn_WbX1CQ" name="cd" outgoing="_8sMOAHiwEe2mVZn_WbX1CQ _8sMOAXiwEe2mVZn_WbX1CQ _KdMfwHixEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <nodes xmi:id="_D9IFAHixEe2mVZn_WbX1CQ" name="a" incoming="_KdMfwHixEe2mVZn_WbX1CQ _P8rnQHixEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <edges xmi:id="_5mgZwHbfEe2l0JqqODr3aw" source="_3b3HIHbfEe2l0JqqODr3aw" target="_1_sEEHbfEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/parents"/>
+      </edges>
+      <edges xmi:id="_8sMOAHiwEe2mVZn_WbX1CQ" source="_8sDrIHiwEe2mVZn_WbX1CQ" target="_1_sEEHbfEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_8sMOAXiwEe2mVZn_WbX1CQ" source="_8sDrIHiwEe2mVZn_WbX1CQ" target="_3b3HIHbfEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_KdMfwHixEe2mVZn_WbX1CQ" source="_8sDrIHiwEe2mVZn_WbX1CQ" target="_D9IFAHixEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_P8rnQHixEe2mVZn_WbX1CQ" source="_3b3HIHbfEe2l0JqqODr3aw" target="_D9IFAHixEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/parent"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_pQMdMHbgEe2l0JqqODr3aw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_pQMdMXbgEe2l0JqqODr3aw">
+          <conclusion xmi:id="_pQMdMnbgEe2l0JqqODr3aw">
+            <nodes xmi:id="_pQNEQHbgEe2l0JqqODr3aw" name="c" incoming="_8sMOBHiwEe2mVZn_WbX1CQ" outgoing="_niXCYHbgEe2l0JqqODr3aw _P8rnQnixEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <nodes xmi:id="_pQNEQnbgEe2l0JqqODr3aw" name="b" incoming="_niXCYHbgEe2l0JqqODr3aw _8sMOA3iwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+              <attributes xmi:id="_pQNEQ3bgEe2l0JqqODr3aw" value="B">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_8sMOAniwEe2mVZn_WbX1CQ" outgoing="_8sMOA3iwEe2mVZn_WbX1CQ _8sMOBHiwEe2mVZn_WbX1CQ _KdMfwnixEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+            </nodes>
+            <nodes xmi:id="_D9NkkHixEe2mVZn_WbX1CQ" incoming="_KdMfwnixEe2mVZn_WbX1CQ _P8rnQnixEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <edges xmi:id="_niXCYHbgEe2l0JqqODr3aw" source="_pQNEQHbgEe2l0JqqODr3aw" target="_pQNEQnbgEe2l0JqqODr3aw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/parent"/>
+            </edges>
+            <edges xmi:id="_8sMOA3iwEe2mVZn_WbX1CQ" source="_8sMOAniwEe2mVZn_WbX1CQ" target="_pQNEQnbgEe2l0JqqODr3aw">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+            </edges>
+            <edges xmi:id="_8sMOBHiwEe2mVZn_WbX1CQ" source="_8sMOAniwEe2mVZn_WbX1CQ" target="_pQNEQHbgEe2l0JqqODr3aw">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+            </edges>
+            <edges xmi:id="_KdMfwnixEe2mVZn_WbX1CQ" source="_8sMOAniwEe2mVZn_WbX1CQ" target="_D9NkkHixEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+            </edges>
+            <edges xmi:id="_P8rnQnixEe2mVZn_WbX1CQ" source="_pQNEQHbgEe2l0JqqODr3aw" target="_D9NkkHixEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/parent"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_pQNEQXbgEe2l0JqqODr3aw" origin="_3b3HIHbfEe2l0JqqODr3aw" image="_pQNEQHbgEe2l0JqqODr3aw"/>
+          <mappings xmi:id="_pQNERHbgEe2l0JqqODr3aw" origin="_1_sEEHbfEe2l0JqqODr3aw" image="_pQNEQnbgEe2l0JqqODr3aw"/>
+          <mappings xmi:id="_8sMOBXiwEe2mVZn_WbX1CQ" origin="_8sDrIHiwEe2mVZn_WbX1CQ" image="_8sMOAniwEe2mVZn_WbX1CQ"/>
+          <mappings xmi:id="_D9NkkXixEe2mVZn_WbX1CQ" origin="_D9IFAHixEe2mVZn_WbX1CQ" image="_D9NkkHixEe2mVZn_WbX1CQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zPzWYXbfEe2l0JqqODr3aw" name="Rhs">
+      <nodes xmi:id="_1_srIHbfEe2l0JqqODr3aw" name="b" incoming="_c5MEQHbgEe2l0JqqODr3aw _hOq2wHbgEe2l0JqqODr3aw _8sMOB3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+        <attributes xmi:id="_G9H1kXbgEe2l0JqqODr3aw" value="B">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_3b3HIXbfEe2l0JqqODr3aw" name="c" incoming="_8sMOCHiwEe2mVZn_WbX1CQ" outgoing="_VyEQkHbgEe2l0JqqODr3aw _c5MEQHbgEe2l0JqqODr3aw _P8rnQXixEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_LrykIHbgEe2l0JqqODr3aw" name="tar" incoming="_VyEQkHbgEe2l0JqqODr3aw _8sMOCXiwEe2mVZn_WbX1CQ" outgoing="_hOq2wHbgEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+        <attributes xmi:id="_Oa5OsHbgEe2l0JqqODr3aw" value="B">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/name"/>
+        </attributes>
+        <attributes xmi:id="_PrYmMHbgEe2l0JqqODr3aw" value="true">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/navig"/>
+        </attributes>
+        <attributes xmi:id="_QzF1IHbgEe2l0JqqODr3aw" value="1">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/min"/>
+        </attributes>
+        <attributes xmi:id="_Rqy5MHbgEe2l0JqqODr3aw" value="1">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/max"/>
+        </attributes>
+        <attributes xmi:id="_S2LHMHbgEe2l0JqqODr3aw" value="true">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/isComp"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_8sMOBniwEe2mVZn_WbX1CQ" name="cd" outgoing="_8sMOB3iwEe2mVZn_WbX1CQ _8sMOCHiwEe2mVZn_WbX1CQ _8sMOCXiwEe2mVZn_WbX1CQ _KdMfwXixEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <nodes xmi:id="_D9M9gHixEe2mVZn_WbX1CQ" name="a" incoming="_KdMfwXixEe2mVZn_WbX1CQ _P8rnQXixEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <edges xmi:id="_VyEQkHbgEe2l0JqqODr3aw" source="_3b3HIXbfEe2l0JqqODr3aw" target="_LrykIHbgEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/references"/>
+      </edges>
+      <edges xmi:id="_c5MEQHbgEe2l0JqqODr3aw" source="_3b3HIXbfEe2l0JqqODr3aw" target="_1_srIHbfEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/iface"/>
+      </edges>
+      <edges xmi:id="_hOq2wHbgEe2l0JqqODr3aw" source="_LrykIHbgEe2l0JqqODr3aw" target="_1_srIHbfEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_8sMOB3iwEe2mVZn_WbX1CQ" source="_8sMOBniwEe2mVZn_WbX1CQ" target="_1_srIHbfEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_8sMOCHiwEe2mVZn_WbX1CQ" source="_8sMOBniwEe2mVZn_WbX1CQ" target="_3b3HIXbfEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_8sMOCXiwEe2mVZn_WbX1CQ" source="_8sMOBniwEe2mVZn_WbX1CQ" target="_LrykIHbgEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/roles"/>
+      </edges>
+      <edges xmi:id="_KdMfwXixEe2mVZn_WbX1CQ" source="_8sMOBniwEe2mVZn_WbX1CQ" target="_D9M9gHixEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_P8rnQXixEe2mVZn_WbX1CQ" source="_3b3HIXbfEe2l0JqqODr3aw" target="_D9M9gHixEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/parent"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_1_srIXbfEe2l0JqqODr3aw" origin="_1_sEEHbfEe2l0JqqODr3aw" image="_1_srIHbfEe2l0JqqODr3aw"/>
+    <mappings xmi:id="_3b3HInbfEe2l0JqqODr3aw" origin="_3b3HIHbfEe2l0JqqODr3aw" image="_3b3HIXbfEe2l0JqqODr3aw"/>
+    <mappings xmi:id="_8sMOCniwEe2mVZn_WbX1CQ" origin="_8sDrIHiwEe2mVZn_WbX1CQ" image="_8sMOBniwEe2mVZn_WbX1CQ"/>
+    <mappings xmi:id="_D9M9gXixEe2mVZn_WbX1CQ" origin="_D9IFAHixEe2mVZn_WbX1CQ" image="_D9M9gHixEe2mVZn_WbX1CQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_7tGgkHbkEe2l0JqqODr3aw" name="addNavigRole">
+    <lhs xmi:id="_7tHutHbkEe2l0JqqODr3aw" name="Lhs">
+      <nodes xmi:id="_DslfoHblEe2l0JqqODr3aw" name="a" incoming="_U2j4UHblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_EJe3AHblEe2l0JqqODr3aw" name="b" incoming="_WjGSoHblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_HCx_YHblEe2l0JqqODr3aw" name="r1" incoming="_Yfd4sHblEe2l0JqqODr3aw" outgoing="_U2j4UHblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+        <attributes xmi:id="_LuIUMHblEe2l0JqqODr3aw" value="true">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/navig"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_IlAnIHblEe2l0JqqODr3aw" name="r2" incoming="_aQKaQHblEe2l0JqqODr3aw" outgoing="_WjGSoHblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+      </nodes>
+      <nodes xmi:id="_M3VX8HblEe2l0JqqODr3aw" name="assoc" outgoing="_Yfd4sHblEe2l0JqqODr3aw _aQKaQHblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association"/>
+      </nodes>
+      <edges xmi:id="_U2j4UHblEe2l0JqqODr3aw" source="_HCx_YHblEe2l0JqqODr3aw" target="_DslfoHblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_WjGSoHblEe2l0JqqODr3aw" source="_IlAnIHblEe2l0JqqODr3aw" target="_EJe3AHblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_Yfd4sHblEe2l0JqqODr3aw" source="_M3VX8HblEe2l0JqqODr3aw" target="_HCx_YHblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_aQKaQHblEe2l0JqqODr3aw" source="_M3VX8HblEe2l0JqqODr3aw" target="_IlAnIHblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="__fNDwXblEe2l0JqqODr3aw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="__fNDwnblEe2l0JqqODr3aw">
+          <conclusion xmi:id="__fNDw3blEe2l0JqqODr3aw">
+            <nodes xmi:id="__fNDxHblEe2l0JqqODr3aw" name="b" outgoing="__fNDwHblEe2l0JqqODr3aw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <nodes xmi:id="__fNDxnblEe2l0JqqODr3aw" name="r1" incoming="__fNDwHblEe2l0JqqODr3aw _ZImFsncbEe208I-ok8EQGQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+              <attributes xmi:id="__fNDx3blEe2l0JqqODr3aw" value="true">
+                <type href="../AdaptiveClassDiagrams.ecore#//Role/navig"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_ZImFsHcbEe208I-ok8EQGQ" name="assoc" outgoing="_ZImFsncbEe208I-ok8EQGQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Association"/>
+            </nodes>
+            <edges xmi:id="__fNDwHblEe2l0JqqODr3aw" source="__fNDxHblEe2l0JqqODr3aw" target="__fNDxnblEe2l0JqqODr3aw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/references"/>
+            </edges>
+            <edges xmi:id="_ZImFsncbEe208I-ok8EQGQ" source="_ZImFsHcbEe208I-ok8EQGQ" target="__fNDxnblEe2l0JqqODr3aw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="__fNDxXblEe2l0JqqODr3aw" origin="_EJe3AHblEe2l0JqqODr3aw" image="__fNDxHblEe2l0JqqODr3aw"/>
+          <mappings xmi:id="__fNDyHblEe2l0JqqODr3aw" origin="_HCx_YHblEe2l0JqqODr3aw" image="__fNDxnblEe2l0JqqODr3aw"/>
+          <mappings xmi:id="_ZImFsXcbEe208I-ok8EQGQ" origin="_M3VX8HblEe2l0JqqODr3aw" image="_ZImFsHcbEe208I-ok8EQGQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_7tHutXbkEe2l0JqqODr3aw" name="Rhs">
+      <nodes xmi:id="_DslfoXblEe2l0JqqODr3aw" name="a" incoming="_U2kfYHblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_EJe3AXblEe2l0JqqODr3aw" name="b" incoming="_WjGSoXblEe2l0JqqODr3aw" outgoing="__fNDyXblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_HCx_YXblEe2l0JqqODr3aw" name="r1" incoming="__fNDyXblEe2l0JqqODr3aw _ZIkQgHcbEe208I-ok8EQGQ" outgoing="_U2kfYHblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+        <attributes xmi:id="_LuI7QHblEe2l0JqqODr3aw" value="true">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/navig"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_IlAnIXblEe2l0JqqODr3aw" name="r2" incoming="_aQKaQXblEe2l0JqqODr3aw" outgoing="_WjGSoXblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+      </nodes>
+      <nodes xmi:id="_M3YbQHblEe2l0JqqODr3aw" name="assoc" outgoing="_aQKaQXblEe2l0JqqODr3aw _ZIkQgHcbEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association"/>
+      </nodes>
+      <edges xmi:id="_U2kfYHblEe2l0JqqODr3aw" source="_HCx_YXblEe2l0JqqODr3aw" target="_DslfoXblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_WjGSoXblEe2l0JqqODr3aw" source="_IlAnIXblEe2l0JqqODr3aw" target="_EJe3AXblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_aQKaQXblEe2l0JqqODr3aw" source="_M3YbQHblEe2l0JqqODr3aw" target="_IlAnIXblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="__fNDyXblEe2l0JqqODr3aw" source="_EJe3AXblEe2l0JqqODr3aw" target="_HCx_YXblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/references"/>
+      </edges>
+      <edges xmi:id="_ZIkQgHcbEe208I-ok8EQGQ" source="_M3YbQHblEe2l0JqqODr3aw" target="_HCx_YXblEe2l0JqqODr3aw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_DslfonblEe2l0JqqODr3aw" origin="_DslfoHblEe2l0JqqODr3aw" image="_DslfoXblEe2l0JqqODr3aw"/>
+    <mappings xmi:id="_EJe3AnblEe2l0JqqODr3aw" origin="_EJe3AHblEe2l0JqqODr3aw" image="_EJe3AXblEe2l0JqqODr3aw"/>
+    <mappings xmi:id="_HCx_YnblEe2l0JqqODr3aw" origin="_HCx_YHblEe2l0JqqODr3aw" image="_HCx_YXblEe2l0JqqODr3aw"/>
+    <mappings xmi:id="_IlAnInblEe2l0JqqODr3aw" origin="_IlAnIHblEe2l0JqqODr3aw" image="_IlAnIXblEe2l0JqqODr3aw"/>
+    <mappings xmi:id="_M3YbQXblEe2l0JqqODr3aw" origin="_M3VX8HblEe2l0JqqODr3aw" image="_M3YbQHblEe2l0JqqODr3aw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_a-wWEHcbEe208I-ok8EQGQ" name="removeNonNavigRole">
+    <lhs xmi:id="_a-11pHcbEe208I-ok8EQGQ" name="Lhs">
+      <nodes xmi:id="_envO8HcbEe208I-ok8EQGQ" name="cd" outgoing="_gUivAHcbEe208I-ok8EQGQ _CW72UHccEe208I-ok8EQGQ _KtvwQHccEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <nodes xmi:id="_fS-kUHcbEe208I-ok8EQGQ" name="a" incoming="_gUivAHcbEe208I-ok8EQGQ _lPjQcHcbEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_jo1xUHcbEe208I-ok8EQGQ" name="r" incoming="_AEWIoHccEe208I-ok8EQGQ _CW72UHccEe208I-ok8EQGQ" outgoing="_lPjQcHcbEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+        <attributes xmi:id="_OZ1AcHccEe208I-ok8EQGQ" value="false">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/navig"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_5IgX4HcbEe208I-ok8EQGQ" name="assoc" incoming="_KtvwQHccEe208I-ok8EQGQ" outgoing="_AEWIoHccEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association"/>
+      </nodes>
+      <edges xmi:id="_gUivAHcbEe208I-ok8EQGQ" source="_envO8HcbEe208I-ok8EQGQ" target="_fS-kUHcbEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_lPjQcHcbEe208I-ok8EQGQ" source="_jo1xUHcbEe208I-ok8EQGQ" target="_fS-kUHcbEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_AEWIoHccEe208I-ok8EQGQ" source="_5IgX4HcbEe208I-ok8EQGQ" target="_jo1xUHcbEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_CW72UHccEe208I-ok8EQGQ" source="_envO8HcbEe208I-ok8EQGQ" target="_jo1xUHcbEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/roles"/>
+      </edges>
+      <edges xmi:id="_KtvwQHccEe208I-ok8EQGQ" source="_envO8HcbEe208I-ok8EQGQ" target="_5IgX4HcbEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/assocs"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_a-11pXcbEe208I-ok8EQGQ" name="Rhs">
+      <nodes xmi:id="_envO8XcbEe208I-ok8EQGQ" name="cd" outgoing="_gUivAXcbEe208I-ok8EQGQ _KtvwQXccEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <nodes xmi:id="_fS-kUXcbEe208I-ok8EQGQ" name="a" incoming="_gUivAXcbEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_5IhmAHcbEe208I-ok8EQGQ" name="assoc" incoming="_KtvwQXccEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association"/>
+      </nodes>
+      <edges xmi:id="_gUivAXcbEe208I-ok8EQGQ" source="_envO8XcbEe208I-ok8EQGQ" target="_fS-kUXcbEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_KtvwQXccEe208I-ok8EQGQ" source="_envO8XcbEe208I-ok8EQGQ" target="_5IhmAHcbEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/assocs"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_envO8ncbEe208I-ok8EQGQ" origin="_envO8HcbEe208I-ok8EQGQ" image="_envO8XcbEe208I-ok8EQGQ"/>
+    <mappings xmi:id="_fS-kUncbEe208I-ok8EQGQ" origin="_fS-kUHcbEe208I-ok8EQGQ" image="_fS-kUXcbEe208I-ok8EQGQ"/>
+    <mappings xmi:id="_5IhmAXcbEe208I-ok8EQGQ" origin="_5IgX4HcbEe208I-ok8EQGQ" image="_5IhmAHcbEe208I-ok8EQGQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_zAbw8HccEe208I-ok8EQGQ" name="createInterface">
+    <parameters xmi:id="_8sMOC3iwEe2mVZn_WbX1CQ" name="X">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_zAfbUHccEe208I-ok8EQGQ" name="Lhs">
+      <nodes xmi:id="_14N2YHccEe208I-ok8EQGQ" name="b" incoming="__uq-IHccEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+        <attributes xmi:id="_3EuFwHccEe208I-ok8EQGQ" value="X">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_-ORiYHccEe208I-ok8EQGQ" name="c" incoming="_8sMODXiwEe2mVZn_WbX1CQ" outgoing="__uq-IHccEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sMODHiwEe2mVZn_WbX1CQ" name="cd" outgoing="_8sMODXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <edges xmi:id="__uq-IHccEe208I-ok8EQGQ" source="_-ORiYHccEe208I-ok8EQGQ" target="_14N2YHccEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/iface"/>
+      </edges>
+      <edges xmi:id="_8sMODXiwEe2mVZn_WbX1CQ" source="_8sMODHiwEe2mVZn_WbX1CQ" target="_-ORiYHccEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_8sMODniwEe2mVZn_WbX1CQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_8sMOD3iwEe2mVZn_WbX1CQ">
+          <conclusion xmi:id="_8sMOEHiwEe2mVZn_WbX1CQ">
+            <nodes xmi:id="_8sMOEXiwEe2mVZn_WbX1CQ" name="b" incoming="_8sMOFniwEe2mVZn_WbX1CQ" outgoing="_8sMOGHiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+              <attributes xmi:id="_8sMOEniwEe2mVZn_WbX1CQ" value="X">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_8sMOE3iwEe2mVZn_WbX1CQ" name="c" incoming="_8sMOF3iwEe2mVZn_WbX1CQ" outgoing="_8sMOFniwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <nodes xmi:id="_8sMOFHiwEe2mVZn_WbX1CQ" name="in" incoming="_8sMOGHiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Interface"/>
+            </nodes>
+            <nodes xmi:id="_8sMOFXiwEe2mVZn_WbX1CQ" name="cd" outgoing="_8sMOF3iwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+            </nodes>
+            <edges xmi:id="_8sMOFniwEe2mVZn_WbX1CQ" source="_8sMOE3iwEe2mVZn_WbX1CQ" target="_8sMOEXiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/iface"/>
+            </edges>
+            <edges xmi:id="_8sMOF3iwEe2mVZn_WbX1CQ" source="_8sMOFXiwEe2mVZn_WbX1CQ" target="_8sMOE3iwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+            </edges>
+            <edges xmi:id="_8sMOGHiwEe2mVZn_WbX1CQ" source="_8sMOEXiwEe2mVZn_WbX1CQ" target="_8sMOFHiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_8sMOGniwEe2mVZn_WbX1CQ" origin="_14N2YHccEe208I-ok8EQGQ" image="_8sMOEXiwEe2mVZn_WbX1CQ"/>
+          <mappings xmi:id="_8sMOG3iwEe2mVZn_WbX1CQ" origin="_-ORiYHccEe208I-ok8EQGQ" image="_8sMOE3iwEe2mVZn_WbX1CQ"/>
+          <mappings xmi:id="_8sMOHHiwEe2mVZn_WbX1CQ" origin="_8sMODHiwEe2mVZn_WbX1CQ" image="_8sMOFXiwEe2mVZn_WbX1CQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_zAfbUXccEe208I-ok8EQGQ" name="Rhs">
+      <nodes xmi:id="_14PrkHccEe208I-ok8EQGQ" name="b" incoming="__uq-IXccEe208I-ok8EQGQ" outgoing="_PPEJ4HcdEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+        <attributes xmi:id="_3EuFwXccEe208I-ok8EQGQ" value="X">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_-OSwgHccEe208I-ok8EQGQ" name="c" incoming="_8sMOHniwEe2mVZn_WbX1CQ" outgoing="__uq-IXccEe208I-ok8EQGQ _l8uNkHcdEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_HoO7YHcdEe208I-ok8EQGQ" name="i" incoming="_PPEJ4HcdEe208I-ok8EQGQ _l8uNkHcdEe208I-ok8EQGQ _8sMOH3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Interface"/>
+        <attributes xmi:id="_J7sLwHcdEe208I-ok8EQGQ" value="&quot;i&quot;.concat(X)">
+          <type href="../AdaptiveClassDiagrams.ecore#//Interface/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_8sMOHXiwEe2mVZn_WbX1CQ" name="cd" outgoing="_8sMOHniwEe2mVZn_WbX1CQ _8sMOH3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <edges xmi:id="__uq-IXccEe208I-ok8EQGQ" source="_-OSwgHccEe208I-ok8EQGQ" target="_14PrkHccEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/iface"/>
+      </edges>
+      <edges xmi:id="_PPEJ4HcdEe208I-ok8EQGQ" source="_14PrkHccEe208I-ok8EQGQ" target="_HoO7YHcdEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+      </edges>
+      <edges xmi:id="_l8uNkHcdEe208I-ok8EQGQ" source="_-OSwgHccEe208I-ok8EQGQ" target="_HoO7YHcdEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+      </edges>
+      <edges xmi:id="_8sMOHniwEe2mVZn_WbX1CQ" source="_8sMOHXiwEe2mVZn_WbX1CQ" target="_-OSwgHccEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_8sMOH3iwEe2mVZn_WbX1CQ" source="_8sMOHXiwEe2mVZn_WbX1CQ" target="_HoO7YHcdEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/interfaces"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_14PrkXccEe208I-ok8EQGQ" origin="_14N2YHccEe208I-ok8EQGQ" image="_14PrkHccEe208I-ok8EQGQ"/>
+    <mappings xmi:id="_-OTXkHccEe208I-ok8EQGQ" origin="_-ORiYHccEe208I-ok8EQGQ" image="_-OSwgHccEe208I-ok8EQGQ"/>
+    <mappings xmi:id="_8sMOIHiwEe2mVZn_WbX1CQ" origin="_8sMODHiwEe2mVZn_WbX1CQ" image="_8sMOHXiwEe2mVZn_WbX1CQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_tVfVcHceEe208I-ok8EQGQ" name="copyMethods">
+    <parameters xmi:id="_8sMOIXiwEe2mVZn_WbX1CQ" name="MN">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_tVfVdXceEe208I-ok8EQGQ" name="Lhs">
+      <nodes xmi:id="_vyj00HceEe208I-ok8EQGQ" name="m" incoming="_4A_O0HceEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Method"/>
+        <attributes xmi:id="_xCw4cHceEe208I-ok8EQGQ" value="MN">
+          <type href="../AdaptiveClassDiagrams.ecore#//Method/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_2eSF8HceEe208I-ok8EQGQ" name="b" incoming="_b_HDAHcfEe208I-ok8EQGQ" outgoing="_4A_O0HceEe208I-ok8EQGQ _fKTMoHcfEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_a6NQcHcfEe208I-ok8EQGQ" name="c" outgoing="_b_HDAHcfEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_eVXIsHcfEe208I-ok8EQGQ" name="i" incoming="_fKTMoHcfEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Interface"/>
+      </nodes>
+      <edges xmi:id="_4A_O0HceEe208I-ok8EQGQ" source="_2eSF8HceEe208I-ok8EQGQ" target="_vyj00HceEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/methods"/>
+      </edges>
+      <edges xmi:id="_b_HDAHcfEe208I-ok8EQGQ" source="_a6NQcHcfEe208I-ok8EQGQ" target="_2eSF8HceEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/iface"/>
+      </edges>
+      <edges xmi:id="_fKTMoHcfEe208I-ok8EQGQ" source="_2eSF8HceEe208I-ok8EQGQ" target="_eVXIsHcfEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_g4bxsHn5Ee2ZK85yGG-IBw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_g4bxsXn5Ee2ZK85yGG-IBw">
+          <conclusion xmi:id="_g4bxsnn5Ee2ZK85yGG-IBw">
+            <nodes xmi:id="_g4c_0Hn5Ee2ZK85yGG-IBw" name="m" incoming="_g4dm4Xn5Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Method"/>
+              <attributes xmi:id="_g4c_0Xn5Ee2ZK85yGG-IBw" value="MN">
+                <type href="../AdaptiveClassDiagrams.ecore#//Method/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_g4c_03n5Ee2ZK85yGG-IBw" name="b" incoming="_g4dm5Hn5Ee2ZK85yGG-IBw" outgoing="_g4dm4Xn5Ee2ZK85yGG-IBw _g4dm53n5Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <nodes xmi:id="_g4dm4nn5Ee2ZK85yGG-IBw" name="c" outgoing="_g4dm5Hn5Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <nodes xmi:id="_g4dm5Xn5Ee2ZK85yGG-IBw" name="i" incoming="_g4dm53n5Ee2ZK85yGG-IBw" outgoing="_h1sEIHn5Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Interface"/>
+            </nodes>
+            <nodes xmi:id="_dxjgUHn5Ee2ZK85yGG-IBw" name="mif" incoming="_h1sEIHn5Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Method"/>
+              <attributes xmi:id="_jEZS8Hn5Ee2ZK85yGG-IBw" value="MN">
+                <type href="../AdaptiveClassDiagrams.ecore#//Method/name"/>
+              </attributes>
+            </nodes>
+            <edges xmi:id="_g4dm4Xn5Ee2ZK85yGG-IBw" source="_g4c_03n5Ee2ZK85yGG-IBw" target="_g4c_0Hn5Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/methods"/>
+            </edges>
+            <edges xmi:id="_g4dm5Hn5Ee2ZK85yGG-IBw" source="_g4dm4nn5Ee2ZK85yGG-IBw" target="_g4c_03n5Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/iface"/>
+            </edges>
+            <edges xmi:id="_g4dm53n5Ee2ZK85yGG-IBw" source="_g4c_03n5Ee2ZK85yGG-IBw" target="_g4dm5Xn5Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+            </edges>
+            <edges xmi:id="_h1sEIHn5Ee2ZK85yGG-IBw" source="_g4dm5Xn5Ee2ZK85yGG-IBw" target="_dxjgUHn5Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Interface/methods"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_g4c_0nn5Ee2ZK85yGG-IBw" origin="_vyj00HceEe208I-ok8EQGQ" image="_g4c_0Hn5Ee2ZK85yGG-IBw"/>
+          <mappings xmi:id="_g4dm4Hn5Ee2ZK85yGG-IBw" origin="_2eSF8HceEe208I-ok8EQGQ" image="_g4c_03n5Ee2ZK85yGG-IBw"/>
+          <mappings xmi:id="_g4dm43n5Ee2ZK85yGG-IBw" origin="_a6NQcHcfEe208I-ok8EQGQ" image="_g4dm4nn5Ee2ZK85yGG-IBw"/>
+          <mappings xmi:id="_g4dm5nn5Ee2ZK85yGG-IBw" origin="_eVXIsHcfEe208I-ok8EQGQ" image="_g4dm5Xn5Ee2ZK85yGG-IBw"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_tVfVdnceEe208I-ok8EQGQ" name="Rhs">
+      <nodes xmi:id="_vyp7cHceEe208I-ok8EQGQ" name="m" incoming="_4A_O0XceEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Method"/>
+        <attributes xmi:id="_xCw4cXceEe208I-ok8EQGQ" value="MN">
+          <type href="../AdaptiveClassDiagrams.ecore#//Method/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_2eSF8XceEe208I-ok8EQGQ" name="b" incoming="_b_HDAXcfEe208I-ok8EQGQ" outgoing="_4A_O0XceEe208I-ok8EQGQ _fKTMoXcfEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_a6NQcXcfEe208I-ok8EQGQ" name="c" outgoing="_b_HDAXcfEe208I-ok8EQGQ _nxP0UHcfEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_eVXIsXcfEe208I-ok8EQGQ" name="i" incoming="_fKTMoXcfEe208I-ok8EQGQ" outgoing="_BURioHcgEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Interface"/>
+      </nodes>
+      <nodes xmi:id="_i1Li8HcfEe208I-ok8EQGQ" name="mi" incoming="_BURioHcgEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Method"/>
+        <attributes xmi:id="_8sMOIniwEe2mVZn_WbX1CQ" value="MN">
+          <type href="../AdaptiveClassDiagrams.ecore#//Method/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_mtJTAHcfEe208I-ok8EQGQ" name="mc" incoming="_nxP0UHcfEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Method"/>
+        <attributes xmi:id="_8sMOI3iwEe2mVZn_WbX1CQ" value="MN">
+          <type href="../AdaptiveClassDiagrams.ecore#//Method/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_4A_O0XceEe208I-ok8EQGQ" source="_2eSF8XceEe208I-ok8EQGQ" target="_vyp7cHceEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/methods"/>
+      </edges>
+      <edges xmi:id="_b_HDAXcfEe208I-ok8EQGQ" source="_a6NQcXcfEe208I-ok8EQGQ" target="_2eSF8XceEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/iface"/>
+      </edges>
+      <edges xmi:id="_fKTMoXcfEe208I-ok8EQGQ" source="_2eSF8XceEe208I-ok8EQGQ" target="_eVXIsXcfEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+      </edges>
+      <edges xmi:id="_nxP0UHcfEe208I-ok8EQGQ" source="_a6NQcXcfEe208I-ok8EQGQ" target="_mtJTAHcfEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/methods"/>
+      </edges>
+      <edges xmi:id="_BURioHcgEe208I-ok8EQGQ" source="_eVXIsXcfEe208I-ok8EQGQ" target="_i1Li8HcfEe208I-ok8EQGQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Interface/methods"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_vyp7cXceEe208I-ok8EQGQ" origin="_vyj00HceEe208I-ok8EQGQ" image="_vyp7cHceEe208I-ok8EQGQ"/>
+    <mappings xmi:id="_2eSF8nceEe208I-ok8EQGQ" origin="_2eSF8HceEe208I-ok8EQGQ" image="_2eSF8XceEe208I-ok8EQGQ"/>
+    <mappings xmi:id="_a6NQcncfEe208I-ok8EQGQ" origin="_a6NQcHcfEe208I-ok8EQGQ" image="_a6NQcXcfEe208I-ok8EQGQ"/>
+    <mappings xmi:id="_eVXIsncfEe208I-ok8EQGQ" origin="_eVXIsHcfEe208I-ok8EQGQ" image="_eVXIsXcfEe208I-ok8EQGQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_8sMOJHiwEe2mVZn_WbX1CQ" name="multiBySingle">
+    <lhs xmi:id="_8sMOJXiwEe2mVZn_WbX1CQ" name="Lhs">
+      <nodes xmi:id="_8sMOJniwEe2mVZn_WbX1CQ" name="child" outgoing="_8sMOKHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sMOJ3iwEe2mVZn_WbX1CQ" name="parent" incoming="_8sMOKHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <edges xmi:id="_8sMOKHiwEe2mVZn_WbX1CQ" source="_8sMOJniwEe2mVZn_WbX1CQ" target="_8sMOJ3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/parents"/>
+      </edges>
+      <formula xsi:type="henshin:And" xmi:id="_8sMOKXiwEe2mVZn_WbX1CQ">
+        <left xsi:type="henshin:Not" xmi:id="_8sMOKniwEe2mVZn_WbX1CQ">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_8sMOK3iwEe2mVZn_WbX1CQ">
+            <conclusion xmi:id="_8sMOLHiwEe2mVZn_WbX1CQ" name="1">
+              <nodes xmi:id="_8sMOLXiwEe2mVZn_WbX1CQ" name="child" outgoing="_8sMOL3iwEe2mVZn_WbX1CQ">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+              </nodes>
+              <nodes xmi:id="_8sMOLniwEe2mVZn_WbX1CQ" name="parent" incoming="_8sMOL3iwEe2mVZn_WbX1CQ">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+              </nodes>
+              <edges xmi:id="_8sMOL3iwEe2mVZn_WbX1CQ" source="_8sMOLXiwEe2mVZn_WbX1CQ" target="_8sMOLniwEe2mVZn_WbX1CQ">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class/parent"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_8sMOMHiwEe2mVZn_WbX1CQ" origin="_8sMOJniwEe2mVZn_WbX1CQ" image="_8sMOLXiwEe2mVZn_WbX1CQ"/>
+            <mappings xmi:id="_8sMOMXiwEe2mVZn_WbX1CQ" origin="_8sMOJ3iwEe2mVZn_WbX1CQ" image="_8sMOLniwEe2mVZn_WbX1CQ"/>
+          </child>
+        </left>
+        <right xsi:type="henshin:Not" xmi:id="_8sMOMniwEe2mVZn_WbX1CQ">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_8sMOM3iwEe2mVZn_WbX1CQ">
+            <conclusion xmi:id="_8sMONHiwEe2mVZn_WbX1CQ" name="2">
+              <nodes xmi:id="_8sMONXiwEe2mVZn_WbX1CQ" name="child" outgoing="_8sMOOHiwEe2mVZn_WbX1CQ _8sMOOXiwEe2mVZn_WbX1CQ">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+              </nodes>
+              <nodes xmi:id="_8sMONniwEe2mVZn_WbX1CQ" name="parent" incoming="_8sMOOHiwEe2mVZn_WbX1CQ">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+              </nodes>
+              <nodes xmi:id="_8sMON3iwEe2mVZn_WbX1CQ" name="other" incoming="_8sMOOXiwEe2mVZn_WbX1CQ">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+              </nodes>
+              <edges xmi:id="_8sMOOHiwEe2mVZn_WbX1CQ" source="_8sMONXiwEe2mVZn_WbX1CQ" target="_8sMONniwEe2mVZn_WbX1CQ">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class/parents"/>
+              </edges>
+              <edges xmi:id="_8sMOOXiwEe2mVZn_WbX1CQ" source="_8sMONXiwEe2mVZn_WbX1CQ" target="_8sMON3iwEe2mVZn_WbX1CQ">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class/parent"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_8sMOOniwEe2mVZn_WbX1CQ" origin="_8sMOJniwEe2mVZn_WbX1CQ" image="_8sMONXiwEe2mVZn_WbX1CQ"/>
+            <mappings xmi:id="_8sMOO3iwEe2mVZn_WbX1CQ" origin="_8sMOJ3iwEe2mVZn_WbX1CQ" image="_8sMONniwEe2mVZn_WbX1CQ"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_8sMOPHiwEe2mVZn_WbX1CQ" name="Rhs">
+      <nodes xmi:id="_8sMOPXiwEe2mVZn_WbX1CQ" name="child" outgoing="_8sMOP3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sMOPniwEe2mVZn_WbX1CQ" name="parent" incoming="_8sMOP3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <edges xmi:id="_8sMOP3iwEe2mVZn_WbX1CQ" source="_8sMOPXiwEe2mVZn_WbX1CQ" target="_8sMOPniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/parent"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_8sMOQHiwEe2mVZn_WbX1CQ" origin="_8sMOJniwEe2mVZn_WbX1CQ" image="_8sMOPXiwEe2mVZn_WbX1CQ"/>
+    <mappings xmi:id="_8sMOQXiwEe2mVZn_WbX1CQ" origin="_8sMOJ3iwEe2mVZn_WbX1CQ" image="_8sMOPniwEe2mVZn_WbX1CQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_8sMOQniwEe2mVZn_WbX1CQ" name="singleToMulti">
+    <lhs xmi:id="_8sMOQ3iwEe2mVZn_WbX1CQ" name="Lhs">
+      <nodes xmi:id="_8sMORHiwEe2mVZn_WbX1CQ" name="child" outgoing="_8sMORniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sMORXiwEe2mVZn_WbX1CQ" name="parent" incoming="_8sMORniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <edges xmi:id="_8sMORniwEe2mVZn_WbX1CQ" source="_8sMORHiwEe2mVZn_WbX1CQ" target="_8sMORXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/parent"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_8sMOR3iwEe2mVZn_WbX1CQ" name="Rhs">
+      <nodes xmi:id="_8sMOSHiwEe2mVZn_WbX1CQ" name="child" outgoing="_8sMOSniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sMOSXiwEe2mVZn_WbX1CQ" name="parent" incoming="_8sMOSniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <edges xmi:id="_8sMOSniwEe2mVZn_WbX1CQ" source="_8sMOSHiwEe2mVZn_WbX1CQ" target="_8sMOSXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/parents"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_8sMOS3iwEe2mVZn_WbX1CQ" origin="_8sMORHiwEe2mVZn_WbX1CQ" image="_8sMOSHiwEe2mVZn_WbX1CQ"/>
+    <mappings xmi:id="_8sMOTHiwEe2mVZn_WbX1CQ" origin="_8sMORXiwEe2mVZn_WbX1CQ" image="_8sMOSXiwEe2mVZn_WbX1CQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_8sMOTXiwEe2mVZn_WbX1CQ" name="oppositeRoles2Assoc">
+    <lhs xmi:id="_8sMOTniwEe2mVZn_WbX1CQ" name="Lhs">
+      <nodes xmi:id="_8sMOT3iwEe2mVZn_WbX1CQ" name="a" incoming="_8sMOV3iwEe2mVZn_WbX1CQ _8sMOWHiwEe2mVZn_WbX1CQ" outgoing="_8sMOVHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sMOUHiwEe2mVZn_WbX1CQ" name="b" incoming="_8sMOVniwEe2mVZn_WbX1CQ _8sMOWXiwEe2mVZn_WbX1CQ" outgoing="_8sMOVXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sMOUXiwEe2mVZn_WbX1CQ" name="a2b" incoming="_8sMOVHiwEe2mVZn_WbX1CQ" outgoing="_8sMOVniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+      </nodes>
+      <nodes xmi:id="_8sMOUniwEe2mVZn_WbX1CQ" name="b2a" incoming="_8sMOVXiwEe2mVZn_WbX1CQ" outgoing="_8sMOV3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+      </nodes>
+      <nodes xmi:id="_8sMOU3iwEe2mVZn_WbX1CQ" name="cd" outgoing="_8sMOWHiwEe2mVZn_WbX1CQ _8sMOWXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <edges xmi:id="_8sMOVHiwEe2mVZn_WbX1CQ" source="_8sMOT3iwEe2mVZn_WbX1CQ" target="_8sMOUXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/references"/>
+      </edges>
+      <edges xmi:id="_8sMOVXiwEe2mVZn_WbX1CQ" source="_8sMOUHiwEe2mVZn_WbX1CQ" target="_8sMOUniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/references"/>
+      </edges>
+      <edges xmi:id="_8sMOVniwEe2mVZn_WbX1CQ" source="_8sMOUXiwEe2mVZn_WbX1CQ" target="_8sMOUHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_8sMOV3iwEe2mVZn_WbX1CQ" source="_8sMOUniwEe2mVZn_WbX1CQ" target="_8sMOT3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_8sMOWHiwEe2mVZn_WbX1CQ" source="_8sMOU3iwEe2mVZn_WbX1CQ" target="_8sMOT3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_8sMOWXiwEe2mVZn_WbX1CQ" source="_8sMOU3iwEe2mVZn_WbX1CQ" target="_8sMOUHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_8sMOWniwEe2mVZn_WbX1CQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_8sMOW3iwEe2mVZn_WbX1CQ">
+          <conclusion xmi:id="_8sMOXHiwEe2mVZn_WbX1CQ">
+            <nodes xmi:id="_8sMOXXiwEe2mVZn_WbX1CQ" name="a" incoming="_8sV_AXiwEe2mVZn_WbX1CQ _8sV_AniwEe2mVZn_WbX1CQ" outgoing="_8sV_A3iwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <nodes xmi:id="_8sMOXniwEe2mVZn_WbX1CQ" name="b2a" incoming="_8sV_BniwEe2mVZn_WbX1CQ _8sV_B3iwEe2mVZn_WbX1CQ" outgoing="_8sV_AXiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+            </nodes>
+            <nodes xmi:id="_8sMOX3iwEe2mVZn_WbX1CQ" name="cd" outgoing="_8sV_AniwEe2mVZn_WbX1CQ _8sV_BXiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+            </nodes>
+            <nodes xmi:id="_8sMOYHiwEe2mVZn_WbX1CQ" name="a2b" incoming="_8sV_A3iwEe2mVZn_WbX1CQ _8sV_CHiwEe2mVZn_WbX1CQ" outgoing="_8sV_BHiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+            </nodes>
+            <nodes xmi:id="_8sMOYXiwEe2mVZn_WbX1CQ" name="b" incoming="_8sV_BHiwEe2mVZn_WbX1CQ _8sV_BXiwEe2mVZn_WbX1CQ" outgoing="_8sV_BniwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <nodes xmi:id="_8sV_AHiwEe2mVZn_WbX1CQ" name="assoc" outgoing="_8sV_B3iwEe2mVZn_WbX1CQ _8sV_CHiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Association"/>
+            </nodes>
+            <edges xmi:id="_8sV_AXiwEe2mVZn_WbX1CQ" source="_8sMOXniwEe2mVZn_WbX1CQ" target="_8sMOXXiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+            </edges>
+            <edges xmi:id="_8sV_AniwEe2mVZn_WbX1CQ" source="_8sMOX3iwEe2mVZn_WbX1CQ" target="_8sMOXXiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+            </edges>
+            <edges xmi:id="_8sV_A3iwEe2mVZn_WbX1CQ" source="_8sMOXXiwEe2mVZn_WbX1CQ" target="_8sMOYHiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/references"/>
+            </edges>
+            <edges xmi:id="_8sV_BHiwEe2mVZn_WbX1CQ" source="_8sMOYHiwEe2mVZn_WbX1CQ" target="_8sMOYXiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+            </edges>
+            <edges xmi:id="_8sV_BXiwEe2mVZn_WbX1CQ" source="_8sMOX3iwEe2mVZn_WbX1CQ" target="_8sMOYXiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+            </edges>
+            <edges xmi:id="_8sV_BniwEe2mVZn_WbX1CQ" source="_8sMOYXiwEe2mVZn_WbX1CQ" target="_8sMOXniwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/references"/>
+            </edges>
+            <edges xmi:id="_8sV_B3iwEe2mVZn_WbX1CQ" source="_8sV_AHiwEe2mVZn_WbX1CQ" target="_8sMOXniwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+            </edges>
+            <edges xmi:id="_8sV_CHiwEe2mVZn_WbX1CQ" source="_8sV_AHiwEe2mVZn_WbX1CQ" target="_8sMOYHiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_8sV_CXiwEe2mVZn_WbX1CQ" origin="_8sMOT3iwEe2mVZn_WbX1CQ" image="_8sMOXXiwEe2mVZn_WbX1CQ"/>
+          <mappings xmi:id="_8sV_CniwEe2mVZn_WbX1CQ" origin="_8sMOUniwEe2mVZn_WbX1CQ" image="_8sMOXniwEe2mVZn_WbX1CQ"/>
+          <mappings xmi:id="_8sV_C3iwEe2mVZn_WbX1CQ" origin="_8sMOU3iwEe2mVZn_WbX1CQ" image="_8sMOX3iwEe2mVZn_WbX1CQ"/>
+          <mappings xmi:id="_8sV_DHiwEe2mVZn_WbX1CQ" origin="_8sMOUXiwEe2mVZn_WbX1CQ" image="_8sMOYHiwEe2mVZn_WbX1CQ"/>
+          <mappings xmi:id="_8sV_DXiwEe2mVZn_WbX1CQ" origin="_8sMOUHiwEe2mVZn_WbX1CQ" image="_8sMOYXiwEe2mVZn_WbX1CQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_8sV_DniwEe2mVZn_WbX1CQ" name="Rhs">
+      <nodes xmi:id="_8sV_D3iwEe2mVZn_WbX1CQ" name="a" incoming="_8sV_FXiwEe2mVZn_WbX1CQ _8sV_G3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sV_EHiwEe2mVZn_WbX1CQ" name="b" incoming="_8sV_FniwEe2mVZn_WbX1CQ _8sV_GniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sV_EXiwEe2mVZn_WbX1CQ" name="a2b" incoming="_8sV_GHiwEe2mVZn_WbX1CQ" outgoing="_8sV_GniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+      </nodes>
+      <nodes xmi:id="_8sV_EniwEe2mVZn_WbX1CQ" name="b2a" incoming="_8sV_GXiwEe2mVZn_WbX1CQ" outgoing="_8sV_G3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+      </nodes>
+      <nodes xmi:id="_8sV_E3iwEe2mVZn_WbX1CQ" name="cd" outgoing="_8sV_FXiwEe2mVZn_WbX1CQ _8sV_FniwEe2mVZn_WbX1CQ _8sV_F3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <nodes xmi:id="_8sV_FHiwEe2mVZn_WbX1CQ" name="asc" incoming="_8sV_F3iwEe2mVZn_WbX1CQ" outgoing="_8sV_GHiwEe2mVZn_WbX1CQ _8sV_GXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association"/>
+      </nodes>
+      <edges xmi:id="_8sV_FXiwEe2mVZn_WbX1CQ" source="_8sV_E3iwEe2mVZn_WbX1CQ" target="_8sV_D3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_8sV_FniwEe2mVZn_WbX1CQ" source="_8sV_E3iwEe2mVZn_WbX1CQ" target="_8sV_EHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_8sV_F3iwEe2mVZn_WbX1CQ" source="_8sV_E3iwEe2mVZn_WbX1CQ" target="_8sV_FHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/assocs"/>
+      </edges>
+      <edges xmi:id="_8sV_GHiwEe2mVZn_WbX1CQ" source="_8sV_FHiwEe2mVZn_WbX1CQ" target="_8sV_EXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_8sV_GXiwEe2mVZn_WbX1CQ" source="_8sV_FHiwEe2mVZn_WbX1CQ" target="_8sV_EniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_8sV_GniwEe2mVZn_WbX1CQ" source="_8sV_EXiwEe2mVZn_WbX1CQ" target="_8sV_EHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_8sV_G3iwEe2mVZn_WbX1CQ" source="_8sV_EniwEe2mVZn_WbX1CQ" target="_8sV_D3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_8sV_HHiwEe2mVZn_WbX1CQ" origin="_8sMOT3iwEe2mVZn_WbX1CQ" image="_8sV_D3iwEe2mVZn_WbX1CQ"/>
+    <mappings xmi:id="_8sV_HXiwEe2mVZn_WbX1CQ" origin="_8sMOUHiwEe2mVZn_WbX1CQ" image="_8sV_EHiwEe2mVZn_WbX1CQ"/>
+    <mappings xmi:id="_8sV_HniwEe2mVZn_WbX1CQ" origin="_8sMOUXiwEe2mVZn_WbX1CQ" image="_8sV_EXiwEe2mVZn_WbX1CQ"/>
+    <mappings xmi:id="_8sV_H3iwEe2mVZn_WbX1CQ" origin="_8sMOUniwEe2mVZn_WbX1CQ" image="_8sV_EniwEe2mVZn_WbX1CQ"/>
+    <mappings xmi:id="_8sV_IHiwEe2mVZn_WbX1CQ" origin="_8sMOU3iwEe2mVZn_WbX1CQ" image="_8sV_E3iwEe2mVZn_WbX1CQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_8sV_IXiwEe2mVZn_WbX1CQ" name="singleRole2Assoc">
+    <lhs xmi:id="_8sV_IniwEe2mVZn_WbX1CQ" name="Lhs">
+      <nodes xmi:id="_8sV_I3iwEe2mVZn_WbX1CQ" name="cd" outgoing="_8sV_KXiwEe2mVZn_WbX1CQ _8sV_KniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <nodes xmi:id="_8sV_JHiwEe2mVZn_WbX1CQ" name="a" incoming="_8sV_KXiwEe2mVZn_WbX1CQ" outgoing="_8sV_J3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sV_JXiwEe2mVZn_WbX1CQ" name="b" incoming="_8sV_KHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sV_JniwEe2mVZn_WbX1CQ" name="a2b" incoming="_8sV_J3iwEe2mVZn_WbX1CQ _8sV_KniwEe2mVZn_WbX1CQ" outgoing="_8sV_KHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+      </nodes>
+      <edges xmi:id="_8sV_J3iwEe2mVZn_WbX1CQ" source="_8sV_JHiwEe2mVZn_WbX1CQ" target="_8sV_JniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/references"/>
+      </edges>
+      <edges xmi:id="_8sV_KHiwEe2mVZn_WbX1CQ" source="_8sV_JniwEe2mVZn_WbX1CQ" target="_8sV_JXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_8sV_KXiwEe2mVZn_WbX1CQ" source="_8sV_I3iwEe2mVZn_WbX1CQ" target="_8sV_JHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_8sV_KniwEe2mVZn_WbX1CQ" source="_8sV_I3iwEe2mVZn_WbX1CQ" target="_8sV_JniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/roles"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_8sV_K3iwEe2mVZn_WbX1CQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_8sV_LHiwEe2mVZn_WbX1CQ">
+          <conclusion xmi:id="_8sV_LXiwEe2mVZn_WbX1CQ" name="1">
+            <nodes xmi:id="_8sV_LniwEe2mVZn_WbX1CQ" name="cd" outgoing="_8sV_N3iwEe2mVZn_WbX1CQ _8sV_OHiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+            </nodes>
+            <nodes xmi:id="_8sV_L3iwEe2mVZn_WbX1CQ" name="a" incoming="_8sV_NniwEe2mVZn_WbX1CQ _8sV_N3iwEe2mVZn_WbX1CQ" outgoing="_8sV_M3iwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <nodes xmi:id="_8sV_MHiwEe2mVZn_WbX1CQ" name="b2a" incoming="_8sV_NXiwEe2mVZn_WbX1CQ" outgoing="_8sV_NniwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+            </nodes>
+            <nodes xmi:id="_8sV_MXiwEe2mVZn_WbX1CQ" name="a2b" incoming="_8sV_M3iwEe2mVZn_WbX1CQ _8sV_OHiwEe2mVZn_WbX1CQ" outgoing="_8sV_NHiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+            </nodes>
+            <nodes xmi:id="_8sV_MniwEe2mVZn_WbX1CQ" name="b" incoming="_8sV_NHiwEe2mVZn_WbX1CQ" outgoing="_8sV_NXiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <edges xmi:id="_8sV_M3iwEe2mVZn_WbX1CQ" source="_8sV_L3iwEe2mVZn_WbX1CQ" target="_8sV_MXiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/references"/>
+            </edges>
+            <edges xmi:id="_8sV_NHiwEe2mVZn_WbX1CQ" source="_8sV_MXiwEe2mVZn_WbX1CQ" target="_8sV_MniwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+            </edges>
+            <edges xmi:id="_8sV_NXiwEe2mVZn_WbX1CQ" source="_8sV_MniwEe2mVZn_WbX1CQ" target="_8sV_MHiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/references"/>
+            </edges>
+            <edges xmi:id="_8sV_NniwEe2mVZn_WbX1CQ" source="_8sV_MHiwEe2mVZn_WbX1CQ" target="_8sV_L3iwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+            </edges>
+            <edges xmi:id="_8sV_N3iwEe2mVZn_WbX1CQ" source="_8sV_LniwEe2mVZn_WbX1CQ" target="_8sV_L3iwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+            </edges>
+            <edges xmi:id="_8sV_OHiwEe2mVZn_WbX1CQ" source="_8sV_LniwEe2mVZn_WbX1CQ" target="_8sV_MXiwEe2mVZn_WbX1CQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/roles"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_8sV_OXiwEe2mVZn_WbX1CQ" origin="_8sV_I3iwEe2mVZn_WbX1CQ" image="_8sV_LniwEe2mVZn_WbX1CQ"/>
+          <mappings xmi:id="_8sV_OniwEe2mVZn_WbX1CQ" origin="_8sV_JHiwEe2mVZn_WbX1CQ" image="_8sV_L3iwEe2mVZn_WbX1CQ"/>
+          <mappings xmi:id="_8sV_O3iwEe2mVZn_WbX1CQ" origin="_8sV_JniwEe2mVZn_WbX1CQ" image="_8sV_MXiwEe2mVZn_WbX1CQ"/>
+          <mappings xmi:id="_8sV_PHiwEe2mVZn_WbX1CQ" origin="_8sV_JXiwEe2mVZn_WbX1CQ" image="_8sV_MniwEe2mVZn_WbX1CQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_8sV_PXiwEe2mVZn_WbX1CQ" name="Rhs">
+      <nodes xmi:id="_8sV_PniwEe2mVZn_WbX1CQ" name="cd" outgoing="_8sV_RXiwEe2mVZn_WbX1CQ _8sV_RniwEe2mVZn_WbX1CQ _8sV_R3iwEe2mVZn_WbX1CQ _8sV_S3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <nodes xmi:id="_8sV_P3iwEe2mVZn_WbX1CQ" name="a" incoming="_8sV_RXiwEe2mVZn_WbX1CQ _8sV_SniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sV_QHiwEe2mVZn_WbX1CQ" name="b" incoming="_8sV_RHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_8sV_QXiwEe2mVZn_WbX1CQ" name="a2b" incoming="_8sV_RniwEe2mVZn_WbX1CQ _8sV_SHiwEe2mVZn_WbX1CQ" outgoing="_8sV_RHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+      </nodes>
+      <nodes xmi:id="_8sV_QniwEe2mVZn_WbX1CQ" name="asc" incoming="_8sV_R3iwEe2mVZn_WbX1CQ" outgoing="_8sV_SHiwEe2mVZn_WbX1CQ _8sV_SXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association"/>
+      </nodes>
+      <nodes xmi:id="_8sV_Q3iwEe2mVZn_WbX1CQ" name="role" incoming="_8sV_SXiwEe2mVZn_WbX1CQ _8sV_S3iwEe2mVZn_WbX1CQ" outgoing="_8sV_SniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+      </nodes>
+      <edges xmi:id="_8sV_RHiwEe2mVZn_WbX1CQ" source="_8sV_QXiwEe2mVZn_WbX1CQ" target="_8sV_QHiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_8sV_RXiwEe2mVZn_WbX1CQ" source="_8sV_PniwEe2mVZn_WbX1CQ" target="_8sV_P3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_8sV_RniwEe2mVZn_WbX1CQ" source="_8sV_PniwEe2mVZn_WbX1CQ" target="_8sV_QXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/roles"/>
+      </edges>
+      <edges xmi:id="_8sV_R3iwEe2mVZn_WbX1CQ" source="_8sV_PniwEe2mVZn_WbX1CQ" target="_8sV_QniwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/assocs"/>
+      </edges>
+      <edges xmi:id="_8sV_SHiwEe2mVZn_WbX1CQ" source="_8sV_QniwEe2mVZn_WbX1CQ" target="_8sV_QXiwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_8sV_SXiwEe2mVZn_WbX1CQ" source="_8sV_QniwEe2mVZn_WbX1CQ" target="_8sV_Q3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Association/roles"/>
+      </edges>
+      <edges xmi:id="_8sV_SniwEe2mVZn_WbX1CQ" source="_8sV_Q3iwEe2mVZn_WbX1CQ" target="_8sV_P3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_8sV_S3iwEe2mVZn_WbX1CQ" source="_8sV_PniwEe2mVZn_WbX1CQ" target="_8sV_Q3iwEe2mVZn_WbX1CQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/roles"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_8sV_THiwEe2mVZn_WbX1CQ" origin="_8sV_I3iwEe2mVZn_WbX1CQ" image="_8sV_PniwEe2mVZn_WbX1CQ"/>
+    <mappings xmi:id="_8sV_TXiwEe2mVZn_WbX1CQ" origin="_8sV_JHiwEe2mVZn_WbX1CQ" image="_8sV_P3iwEe2mVZn_WbX1CQ"/>
+    <mappings xmi:id="_8sV_TniwEe2mVZn_WbX1CQ" origin="_8sV_JXiwEe2mVZn_WbX1CQ" image="_8sV_QHiwEe2mVZn_WbX1CQ"/>
+    <mappings xmi:id="_8sV_T3iwEe2mVZn_WbX1CQ" origin="_8sV_JniwEe2mVZn_WbX1CQ" image="_8sV_QXiwEe2mVZn_WbX1CQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_2nkiMHn6Ee2ZK85yGG-IBw" name="interfaceByAbstractClass">
+    <parameters xmi:id="_DQ-5wHn7Ee2ZK85yGG-IBw" name="N">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_2npasHn6Ee2ZK85yGG-IBw" name="Lhs">
+      <nodes xmi:id="_7Og4IHn6Ee2ZK85yGG-IBw" name="i" incoming="_-Q98gHn6Ee2ZK85yGG-IBw _Y3u2UXrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Interface"/>
+        <attributes xmi:id="_BFvxQHn7Ee2ZK85yGG-IBw" value="N">
+          <type href="../AdaptiveClassDiagrams.ecore#//Interface/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_8skKgHn6Ee2ZK85yGG-IBw" name="c" incoming="_Y3u2UnrYEe2Z85IHveeRfQ" outgoing="_-Q98gHn6Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_Y3u2UHrYEe2Z85IHveeRfQ" name="cd" outgoing="_Y3u2UXrYEe2Z85IHveeRfQ _Y3u2UnrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <edges xmi:id="_-Q98gHn6Ee2ZK85yGG-IBw" source="_8skKgHn6Ee2ZK85yGG-IBw" target="_7Og4IHn6Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+      </edges>
+      <edges xmi:id="_Y3u2UXrYEe2Z85IHveeRfQ" source="_Y3u2UHrYEe2Z85IHveeRfQ" target="_7Og4IHn6Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/interfaces"/>
+      </edges>
+      <edges xmi:id="_Y3u2UnrYEe2Z85IHveeRfQ" source="_Y3u2UHrYEe2Z85IHveeRfQ" target="_8skKgHn6Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_i-B6UHn7Ee2ZK85yGG-IBw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_i-B6UXn7Ee2ZK85yGG-IBw">
+          <conclusion xmi:id="_i-B6Unn7Ee2ZK85yGG-IBw">
+            <nodes xmi:id="_i-ChYHn7Ee2ZK85yGG-IBw" name="i" incoming="_i-ChZXn7Ee2ZK85yGG-IBw _Y3u2VHrYEe2Z85IHveeRfQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Interface"/>
+              <attributes xmi:id="_i-ChYXn7Ee2ZK85yGG-IBw" value="N">
+                <type href="../AdaptiveClassDiagrams.ecore#//Interface/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_i-ChY3n7Ee2ZK85yGG-IBw" name="c" incoming="_Y3u2VXrYEe2Z85IHveeRfQ" outgoing="_i-ChZXn7Ee2ZK85yGG-IBw _kADYAHn7Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <nodes xmi:id="_e1glwHn7Ee2ZK85yGG-IBw" name="nci" incoming="_kADYAHn7Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+              <attributes xmi:id="_gd0AUHn7Ee2ZK85yGG-IBw" value="N">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+              </attributes>
+              <attributes xmi:id="_g_1IQHn7Ee2ZK85yGG-IBw" value="true">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class/isAbstract"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_Y3u2U3rYEe2Z85IHveeRfQ" outgoing="_Y3u2VHrYEe2Z85IHveeRfQ _Y3u2VXrYEe2Z85IHveeRfQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+            </nodes>
+            <edges xmi:id="_i-ChZXn7Ee2ZK85yGG-IBw" source="_i-ChY3n7Ee2ZK85yGG-IBw" target="_i-ChYHn7Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+            </edges>
+            <edges xmi:id="_kADYAHn7Ee2ZK85yGG-IBw" source="_i-ChY3n7Ee2ZK85yGG-IBw" target="_e1glwHn7Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/parents"/>
+            </edges>
+            <edges xmi:id="_Y3u2VHrYEe2Z85IHveeRfQ" source="_Y3u2U3rYEe2Z85IHveeRfQ" target="_i-ChYHn7Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/interfaces"/>
+            </edges>
+            <edges xmi:id="_Y3u2VXrYEe2Z85IHveeRfQ" source="_Y3u2U3rYEe2Z85IHveeRfQ" target="_i-ChY3n7Ee2ZK85yGG-IBw">
+              <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_i-ChYnn7Ee2ZK85yGG-IBw" origin="_7Og4IHn6Ee2ZK85yGG-IBw" image="_i-ChYHn7Ee2ZK85yGG-IBw"/>
+          <mappings xmi:id="_i-ChZHn7Ee2ZK85yGG-IBw" origin="_8skKgHn6Ee2ZK85yGG-IBw" image="_i-ChY3n7Ee2ZK85yGG-IBw"/>
+          <mappings xmi:id="_Y3u2VnrYEe2Z85IHveeRfQ" origin="_Y3u2UHrYEe2Z85IHveeRfQ" image="_Y3u2U3rYEe2Z85IHveeRfQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_2npasXn6Ee2ZK85yGG-IBw" name="Rhs">
+      <nodes xmi:id="_7Og4IXn6Ee2ZK85yGG-IBw" name="i" incoming="_-Q98gXn6Ee2ZK85yGG-IBw _Y3u2WXrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Interface"/>
+        <attributes xmi:id="_BFxmcHn7Ee2ZK85yGG-IBw" value="N">
+          <type href="../AdaptiveClassDiagrams.ecore#//Interface/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_8skKgXn6Ee2ZK85yGG-IBw" name="c" incoming="_Y3u2WnrYEe2Z85IHveeRfQ" outgoing="_-Q98gXn6Ee2ZK85yGG-IBw _PtDY4Hn7Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_KC880Hn7Ee2ZK85yGG-IBw" name="ci" incoming="_PtDY4Hn7Ee2ZK85yGG-IBw _Y3u2WHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+        <attributes xmi:id="_SLlQ0Hn7Ee2ZK85yGG-IBw" value="N">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+        </attributes>
+        <attributes xmi:id="_TfAAgHn7Ee2ZK85yGG-IBw" value="true">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/isAbstract"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Y3u2V3rYEe2Z85IHveeRfQ" name="cd" outgoing="_Y3u2WHrYEe2Z85IHveeRfQ _Y3u2WXrYEe2Z85IHveeRfQ _Y3u2WnrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <edges xmi:id="_-Q98gXn6Ee2ZK85yGG-IBw" source="_8skKgXn6Ee2ZK85yGG-IBw" target="_7Og4IXn6Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+      </edges>
+      <edges xmi:id="_PtDY4Hn7Ee2ZK85yGG-IBw" source="_8skKgXn6Ee2ZK85yGG-IBw" target="_KC880Hn7Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/parents"/>
+      </edges>
+      <edges xmi:id="_Y3u2WHrYEe2Z85IHveeRfQ" source="_Y3u2V3rYEe2Z85IHveeRfQ" target="_KC880Hn7Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_Y3u2WXrYEe2Z85IHveeRfQ" source="_Y3u2V3rYEe2Z85IHveeRfQ" target="_7Og4IXn6Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/interfaces"/>
+      </edges>
+      <edges xmi:id="_Y3u2WnrYEe2Z85IHveeRfQ" source="_Y3u2V3rYEe2Z85IHveeRfQ" target="_8skKgXn6Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_7Og4Inn6Ee2ZK85yGG-IBw" origin="_7Og4IHn6Ee2ZK85yGG-IBw" image="_7Og4IXn6Ee2ZK85yGG-IBw"/>
+    <mappings xmi:id="_8skKgnn6Ee2ZK85yGG-IBw" origin="_8skKgHn6Ee2ZK85yGG-IBw" image="_8skKgXn6Ee2ZK85yGG-IBw"/>
+    <mappings xmi:id="_Y3u2W3rYEe2Z85IHveeRfQ" origin="_Y3u2UHrYEe2Z85IHveeRfQ" image="_Y3u2V3rYEe2Z85IHveeRfQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_qBbroHn7Ee2ZK85yGG-IBw" name="copyInterfaceMethods">
+    <parameters xmi:id="_17m-oHn7Ee2ZK85yGG-IBw" name="N">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Y3u2XHrYEe2Z85IHveeRfQ" name="M">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_qBhyRHn7Ee2ZK85yGG-IBw" name="Lhs">
+      <nodes xmi:id="_t1bhsHn7Ee2ZK85yGG-IBw" name="c" outgoing="_3Sy0AHn7Ee2ZK85yGG-IBw _JCUJwHn8Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_uYxfUHn7Ee2ZK85yGG-IBw" name="ci" incoming="_JCUJwHn8Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+        <attributes xmi:id="_xMT98Hn7Ee2ZK85yGG-IBw" value="N">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+        </attributes>
+        <attributes xmi:id="_yFvgUHn7Ee2ZK85yGG-IBw" value="true">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/isAbstract"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_vWGqQHn7Ee2ZK85yGG-IBw" name="i" incoming="_3Sy0AHn7Ee2ZK85yGG-IBw" outgoing="_Y3x5onrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Interface"/>
+        <attributes xmi:id="_wLDVQHn7Ee2ZK85yGG-IBw" value="N">
+          <type href="../AdaptiveClassDiagrams.ecore#//Interface/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Y3x5oHrYEe2Z85IHveeRfQ" name="m" incoming="_Y3x5onrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Method"/>
+        <attributes xmi:id="_Y3x5oXrYEe2Z85IHveeRfQ" value="M">
+          <type href="../AdaptiveClassDiagrams.ecore#//Method/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_3Sy0AHn7Ee2ZK85yGG-IBw" source="_t1bhsHn7Ee2ZK85yGG-IBw" target="_vWGqQHn7Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+      </edges>
+      <edges xmi:id="_JCUJwHn8Ee2ZK85yGG-IBw" source="_t1bhsHn7Ee2ZK85yGG-IBw" target="_uYxfUHn7Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/parents"/>
+      </edges>
+      <edges xmi:id="_Y3x5onrYEe2Z85IHveeRfQ" source="_vWGqQHn7Ee2ZK85yGG-IBw" target="_Y3x5oHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Interface/methods"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_Y3x5o3rYEe2Z85IHveeRfQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_Y3x5pHrYEe2Z85IHveeRfQ">
+          <conclusion xmi:id="_Y3x5pXrYEe2Z85IHveeRfQ">
+            <nodes xmi:id="_Y3x5pnrYEe2Z85IHveeRfQ" name="c" outgoing="_Y3x5sHrYEe2Z85IHveeRfQ _Y3x5sXrYEe2Z85IHveeRfQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+            </nodes>
+            <nodes xmi:id="_Y3x5p3rYEe2Z85IHveeRfQ" name="i" incoming="_Y3x5sHrYEe2Z85IHveeRfQ" outgoing="_Y3x5snrYEe2Z85IHveeRfQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Interface"/>
+              <attributes xmi:id="_Y3x5qHrYEe2Z85IHveeRfQ" value="N">
+                <type href="../AdaptiveClassDiagrams.ecore#//Interface/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_Y3x5qXrYEe2Z85IHveeRfQ" name="ci" incoming="_Y3x5sXrYEe2Z85IHveeRfQ" outgoing="_Y3x5s3rYEe2Z85IHveeRfQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+              <attributes xmi:id="_Y3x5qnrYEe2Z85IHveeRfQ" value="N">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+              </attributes>
+              <attributes xmi:id="_Y3x5q3rYEe2Z85IHveeRfQ" value="true">
+                <type href="../AdaptiveClassDiagrams.ecore#//Class/isAbstract"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_Y3x5rHrYEe2Z85IHveeRfQ" name="m" incoming="_Y3x5snrYEe2Z85IHveeRfQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Method"/>
+              <attributes xmi:id="_Y3x5rXrYEe2Z85IHveeRfQ" value="M">
+                <type href="../AdaptiveClassDiagrams.ecore#//Method/name"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_Y3x5rnrYEe2Z85IHveeRfQ" name="ecm" incoming="_Y3x5s3rYEe2Z85IHveeRfQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Method"/>
+              <attributes xmi:id="_Y3x5r3rYEe2Z85IHveeRfQ" value="M">
+                <type href="../AdaptiveClassDiagrams.ecore#//Method/name"/>
+              </attributes>
+            </nodes>
+            <edges xmi:id="_Y3x5sHrYEe2Z85IHveeRfQ" source="_Y3x5pnrYEe2Z85IHveeRfQ" target="_Y3x5p3rYEe2Z85IHveeRfQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+            </edges>
+            <edges xmi:id="_Y3x5sXrYEe2Z85IHveeRfQ" source="_Y3x5pnrYEe2Z85IHveeRfQ" target="_Y3x5qXrYEe2Z85IHveeRfQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/parents"/>
+            </edges>
+            <edges xmi:id="_Y3x5snrYEe2Z85IHveeRfQ" source="_Y3x5p3rYEe2Z85IHveeRfQ" target="_Y3x5rHrYEe2Z85IHveeRfQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Interface/methods"/>
+            </edges>
+            <edges xmi:id="_Y3x5s3rYEe2Z85IHveeRfQ" source="_Y3x5qXrYEe2Z85IHveeRfQ" target="_Y3x5rnrYEe2Z85IHveeRfQ">
+              <type href="../AdaptiveClassDiagrams.ecore#//Class/methods"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_Y3x5tHrYEe2Z85IHveeRfQ" origin="_t1bhsHn7Ee2ZK85yGG-IBw" image="_Y3x5pnrYEe2Z85IHveeRfQ"/>
+          <mappings xmi:id="_Y3x5tXrYEe2Z85IHveeRfQ" origin="_vWGqQHn7Ee2ZK85yGG-IBw" image="_Y3x5p3rYEe2Z85IHveeRfQ"/>
+          <mappings xmi:id="_Y3x5tnrYEe2Z85IHveeRfQ" origin="_uYxfUHn7Ee2ZK85yGG-IBw" image="_Y3x5qXrYEe2Z85IHveeRfQ"/>
+          <mappings xmi:id="_Y3x5t3rYEe2Z85IHveeRfQ" origin="_Y3x5oHrYEe2Z85IHveeRfQ" image="_Y3x5rHrYEe2Z85IHveeRfQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_qBhyRXn7Ee2ZK85yGG-IBw" name="Rhs">
+      <nodes xmi:id="_t1cv0Hn7Ee2ZK85yGG-IBw" name="c" outgoing="_3Sy0AXn7Ee2ZK85yGG-IBw _JCUJwXn8Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+      </nodes>
+      <nodes xmi:id="_uYxfUXn7Ee2ZK85yGG-IBw" name="ci" incoming="_JCUJwXn8Ee2ZK85yGG-IBw" outgoing="_Y3x5vXrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+        <attributes xmi:id="_xMT98Xn7Ee2ZK85yGG-IBw" value="N">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+        </attributes>
+        <attributes xmi:id="_yFvgUXn7Ee2ZK85yGG-IBw" value="true">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/isAbstract"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_vWGqQXn7Ee2ZK85yGG-IBw" name="i" incoming="_3Sy0AXn7Ee2ZK85yGG-IBw" outgoing="_Y3x5vHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Interface"/>
+        <attributes xmi:id="_wLDVQXn7Ee2ZK85yGG-IBw" value="N">
+          <type href="../AdaptiveClassDiagrams.ecore#//Interface/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Y3x5uHrYEe2Z85IHveeRfQ" name="m" incoming="_Y3x5vHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Method"/>
+        <attributes xmi:id="_Y3x5uXrYEe2Z85IHveeRfQ" value="M">
+          <type href="../AdaptiveClassDiagrams.ecore#//Method/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Y3x5unrYEe2Z85IHveeRfQ" name="cm" incoming="_Y3x5vXrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Method"/>
+        <attributes xmi:id="_Y3x5u3rYEe2Z85IHveeRfQ" value="M">
+          <type href="../AdaptiveClassDiagrams.ecore#//Method/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_3Sy0AXn7Ee2ZK85yGG-IBw" source="_t1cv0Hn7Ee2ZK85yGG-IBw" target="_vWGqQXn7Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/realizes"/>
+      </edges>
+      <edges xmi:id="_JCUJwXn8Ee2ZK85yGG-IBw" source="_t1cv0Hn7Ee2ZK85yGG-IBw" target="_uYxfUXn7Ee2ZK85yGG-IBw">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/parents"/>
+      </edges>
+      <edges xmi:id="_Y3x5vHrYEe2Z85IHveeRfQ" source="_vWGqQXn7Ee2ZK85yGG-IBw" target="_Y3x5uHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Interface/methods"/>
+      </edges>
+      <edges xmi:id="_Y3x5vXrYEe2Z85IHveeRfQ" source="_uYxfUXn7Ee2ZK85yGG-IBw" target="_Y3x5unrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/methods"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_t1cv0Xn7Ee2ZK85yGG-IBw" origin="_t1bhsHn7Ee2ZK85yGG-IBw" image="_t1cv0Hn7Ee2ZK85yGG-IBw"/>
+    <mappings xmi:id="_uYxfUnn7Ee2ZK85yGG-IBw" origin="_uYxfUHn7Ee2ZK85yGG-IBw" image="_uYxfUXn7Ee2ZK85yGG-IBw"/>
+    <mappings xmi:id="_vWGqQnn7Ee2ZK85yGG-IBw" origin="_vWGqQHn7Ee2ZK85yGG-IBw" image="_vWGqQXn7Ee2ZK85yGG-IBw"/>
+    <mappings xmi:id="_Y30V4HrYEe2Z85IHveeRfQ" origin="_Y3x5oHrYEe2Z85IHveeRfQ" image="_Y3x5uHrYEe2Z85IHveeRfQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_fnpq8HrYEe2Z85IHveeRfQ" name="SingleToNo">
+    <parameters xmi:id="_R9cvUHrZEe2Z85IHveeRfQ" name="A">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_R9cvUXrZEe2Z85IHveeRfQ" name="B">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_fn7-1HrYEe2Z85IHveeRfQ" name="Lhs">
+      <nodes xmi:id="_kkFIsHrYEe2Z85IHveeRfQ" name="parent" incoming="_mpNCIHrYEe2Z85IHveeRfQ _tofvgHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+        <attributes xmi:id="_PM7vgHrZEe2Z85IHveeRfQ" value="B">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_lTkr8HrYEe2Z85IHveeRfQ" name="child" incoming="_uQrw4HrYEe2Z85IHveeRfQ" outgoing="_mpNCIHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+        <attributes xmi:id="_MLh0AHrZEe2Z85IHveeRfQ" value="A">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_s5X_sHrYEe2Z85IHveeRfQ" name="cd" outgoing="_tofvgHrYEe2Z85IHveeRfQ _uQrw4HrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <edges xmi:id="_mpNCIHrYEe2Z85IHveeRfQ" source="_lTkr8HrYEe2Z85IHveeRfQ" target="_kkFIsHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/parent"/>
+      </edges>
+      <edges xmi:id="_tofvgHrYEe2Z85IHveeRfQ" source="_s5X_sHrYEe2Z85IHveeRfQ" target="_kkFIsHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_uQrw4HrYEe2Z85IHveeRfQ" source="_s5X_sHrYEe2Z85IHveeRfQ" target="_lTkr8HrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_fn7-1XrYEe2Z85IHveeRfQ" name="Rhs">
+      <nodes xmi:id="_kkFIsXrYEe2Z85IHveeRfQ" name="parent" incoming="_tofvgXrYEe2Z85IHveeRfQ _Akam8HrZEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+        <attributes xmi:id="_PM7vgXrZEe2Z85IHveeRfQ" value="B">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_lTkr8XrYEe2Z85IHveeRfQ" name="child" incoming="_uQrw4XrYEe2Z85IHveeRfQ" outgoing="_9uKykHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class"/>
+        <attributes xmi:id="_MLh0AXrZEe2Z85IHveeRfQ" value="A">
+          <type href="../AdaptiveClassDiagrams.ecore#//Class/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_s5X_sXrYEe2Z85IHveeRfQ" name="cd" outgoing="_tofvgXrYEe2Z85IHveeRfQ _uQrw4XrYEe2Z85IHveeRfQ _CCyCYHrZEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram"/>
+      </nodes>
+      <nodes xmi:id="_6nCCgHrYEe2Z85IHveeRfQ" name="r" incoming="_9uKykHrYEe2Z85IHveeRfQ _CCyCYHrZEe2Z85IHveeRfQ" outgoing="_Akam8HrZEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role"/>
+        <attributes xmi:id="_FqNcEHrZEe2Z85IHveeRfQ" value="A.concat(B)">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/name"/>
+        </attributes>
+        <attributes xmi:id="_Zr8FAHrZEe2Z85IHveeRfQ" value="true">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/isComp"/>
+        </attributes>
+        <attributes xmi:id="_dFKDkHrZEe2Z85IHveeRfQ" value="1">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/min"/>
+        </attributes>
+        <attributes xmi:id="_oliWgHrZEe2Z85IHveeRfQ" value="1">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/max"/>
+        </attributes>
+        <attributes xmi:id="_pqMRcHrZEe2Z85IHveeRfQ" value="true">
+          <type href="../AdaptiveClassDiagrams.ecore#//Role/navig"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_tofvgXrYEe2Z85IHveeRfQ" source="_s5X_sXrYEe2Z85IHveeRfQ" target="_kkFIsXrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_uQrw4XrYEe2Z85IHveeRfQ" source="_s5X_sXrYEe2Z85IHveeRfQ" target="_lTkr8XrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/classes"/>
+      </edges>
+      <edges xmi:id="_9uKykHrYEe2Z85IHveeRfQ" source="_lTkr8XrYEe2Z85IHveeRfQ" target="_6nCCgHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Class/references"/>
+      </edges>
+      <edges xmi:id="_Akam8HrZEe2Z85IHveeRfQ" source="_6nCCgHrYEe2Z85IHveeRfQ" target="_kkFIsXrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//Role/playedBy"/>
+      </edges>
+      <edges xmi:id="_CCyCYHrZEe2Z85IHveeRfQ" source="_s5X_sXrYEe2Z85IHveeRfQ" target="_6nCCgHrYEe2Z85IHveeRfQ">
+        <type href="../AdaptiveClassDiagrams.ecore#//ClassDiagram/roles"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_kkFIsnrYEe2Z85IHveeRfQ" origin="_kkFIsHrYEe2Z85IHveeRfQ" image="_kkFIsXrYEe2Z85IHveeRfQ"/>
+    <mappings xmi:id="_lTkr8nrYEe2Z85IHveeRfQ" origin="_lTkr8HrYEe2Z85IHveeRfQ" image="_lTkr8XrYEe2Z85IHveeRfQ"/>
+    <mappings xmi:id="_s5X_snrYEe2Z85IHveeRfQ" origin="_s5X_sHrYEe2Z85IHveeRfQ" image="_s5X_sXrYEe2Z85IHveeRfQ"/>
+  </units>
+</henshin:Module>

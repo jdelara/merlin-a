@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metamodelling:ModellingSystem
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:metamodelling="http://metamodelling/amml"
+    name="test">
+  <models name="m1">
+    <clabjects
+        instances="//@models.1/@clabjects.0"
+        name="C1">
+      <potency/>
+    </clabjects>
+    <clabjects
+        instances="//@models.1/@clabjects.0"
+        name="C2">
+      <potency/>
+    </clabjects>
+  </models>
+  <models name="m2">
+    <clabjects
+        conformsTo="//@models.0/@clabjects.0 //@models.0/@clabjects.1"
+        name="C3">
+      <potency
+          potency="0"/>
+    </clabjects>
+  </models>
+</metamodelling:ModellingSystem>

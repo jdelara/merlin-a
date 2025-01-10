@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="vertical"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="4"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="AdaptiveClassDiagrams">
+			<and mandatory="true" name="Classes">
+				<feature name="Methods"/>
+				<alt mandatory="true" name="Inheritance">
+					<feature name="Single"/>
+					<feature name="Multi"/>
+					<feature name="No"/>
+				</alt>
+			</and>
+			<feature name="Interfaces"/>
+			<and mandatory="true" name="Associations">
+				<alt mandatory="true" name="Style">
+					<feature name="Ref"/>
+					<feature name="FullAssoc"/>
+				</alt>
+				<or name="Decorations">
+					<feature name="Comp"/>
+					<feature name="Aggr"/>
+					<feature name="Navig"/>
+					<feature name="Card"/>
+				</or>
+			</and>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Interfaces</var>
+				<var>Methods</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

@@ -1,0 +1,25 @@
+language AdaptiveStateMachines on 
+'StateMachinePL.ecore'
+transformation 'trafos/AdaptiveStateMachines.henshin'
+adapters { 
+	DeselectExitActions = ( delta(+-{ExitAction}, -+{}),
+							context(++{Actions}, --{}),
+							rules{moveExitActions}),
+	DeselectEntryActions = ( delta(+-{EntryAction}, -+{}),
+							context(++{Actions}, --{}),
+							rules{moveEntryActions}),
+	ImmediateByTimed = 	( 	delta(+-{Immediate}, -+{}),
+							context(++{Timed}, --{}),
+							rules{ImmediateToTimed}),
+	ImmediateByEvent = ( 	delta(+-{Immediate}, -+{}),
+							context(++{Events}, --{Timed}),
+							rules{ImmediateToTimed}),
+	DeactivateCondition =( 	delta(+-{Condition}, -+{}),
+							context(++{Events}, --{}),
+							rules{concatEventCondition,removeConditionSrcAdjacentTransitions,removeConditionTarAdjancentTransitions}),
+	DeactivateHierarchy =( 	delta(+-{Hierarchical}, -+{}),
+							context(++{Events}, --{}),
+							rules{ConnectOutputHierarchy,ConnectInputHierarchy,checkTransitionProcessed,
+								  removeHierarchicalInitialState,moveHierarchicalStateTop,deleteOrthogonalRegion 
+							})							
+}

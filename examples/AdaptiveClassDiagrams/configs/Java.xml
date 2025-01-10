@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="AdaptiveClassDiagrams"/>
+	<feature automatic="selected" name="Classes"/>
+	<feature automatic="selected" manual="selected" name="Methods"/>
+	<feature automatic="selected" name="Inheritance"/>
+	<feature manual="selected" name="Single"/>
+	<feature automatic="unselected" name="Multi"/>
+	<feature automatic="unselected" name="No"/>
+	<feature manual="selected" name="Interfaces"/>
+	<feature automatic="selected" name="Associations"/>
+	<feature automatic="selected" name="Style"/>
+	<feature manual="selected" name="Ref"/>
+	<feature automatic="unselected" name="FullAssoc"/>
+	<feature automatic="selected" manual="selected" name="Decorations"/>
+	<feature manual="selected" name="Comp"/>
+	<feature manual="selected" name="Aggr"/>
+	<feature manual="selected" name="Navig"/>
+	<feature manual="selected" name="Card"/>
+</configuration>

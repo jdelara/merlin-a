@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_AjNoEIwnEe2Cj-UntmNFZg">
+  <imports href="../StateMachinePL.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_BKMIgIwnEe2Cj-UntmNFZg" name="moveExitActions">
+    <parameters xmi:id="_C7BM8IwnEe2Cj-UntmNFZg" name="A">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_aN9vAIwnEe2Cj-UntmNFZg" name="EA">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_BKRBAIwnEe2Cj-UntmNFZg" name="Lhs">
+      <nodes xmi:id="_DtyGoIwnEe2Cj-UntmNFZg" name="s" incoming="//@units.0/@lhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//State"/>
+        <attributes xmi:id="_EnANoIwnEe2Cj-UntmNFZg" value="A">
+          <type href="../StateMachinePL.ecore#//State/exitAction"/>
+        </attributes>
+      </nodes>
+      <nodes name="at" outgoing="//@units.0/@lhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//AbstractTransition"/>
+        <attributes value="EA">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+      </nodes>
+      <edges source="//@units.0/@lhs/@nodes.1" target="_DtyGoIwnEe2Cj-UntmNFZg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_BKRBAYwnEe2Cj-UntmNFZg" name="Rhs">
+      <nodes xmi:id="_DtyGoYwnEe2Cj-UntmNFZg" name="s" incoming="//@units.0/@rhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//State"/>
+        <attributes xmi:id="_EnA0sIwnEe2Cj-UntmNFZg" value="null">
+          <type href="../StateMachinePL.ecore#//State/exitAction"/>
+        </attributes>
+      </nodes>
+      <nodes name="at" outgoing="//@units.0/@rhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//AbstractTransition"/>
+        <attributes value="EA.concat(&quot;;&quot;).concat(A)">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+      </nodes>
+      <edges source="//@units.0/@rhs/@nodes.1" target="_DtyGoYwnEe2Cj-UntmNFZg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_V3_0UIwnEe2Cj-UntmNFZg" name="notNullAction" conditionText="A!=null"/>
+    <mappings xmi:id="_DtzUwIwnEe2Cj-UntmNFZg" origin="_DtyGoIwnEe2Cj-UntmNFZg" image="_DtyGoYwnEe2Cj-UntmNFZg"/>
+    <mappings origin="//@units.0/@lhs/@nodes.1" image="//@units.0/@rhs/@nodes.1"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_BiAWIIwoEe2U48dKrfFAHg" name="moveEntryActions">
+    <parameters xmi:id="_F3BOkIwoEe2U48dKrfFAHg" name="A">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_F3BOkYwoEe2U48dKrfFAHg" name="EA">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_BiQ00IwoEe2U48dKrfFAHg" name="Lhs">
+      <nodes xmi:id="_JBAeUIwoEe2U48dKrfFAHg" name="s" incoming="//@units.1/@lhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//State"/>
+        <attributes xmi:id="_J3XekIwoEe2U48dKrfFAHg" value="A">
+          <type href="../StateMachinePL.ecore#//State/entryAction"/>
+        </attributes>
+      </nodes>
+      <nodes name="at" outgoing="//@units.1/@lhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//AbstractTransition"/>
+        <attributes value="EA">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+      </nodes>
+      <edges source="//@units.1/@lhs/@nodes.1" target="_JBAeUIwoEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_BiQ00YwoEe2U48dKrfFAHg" name="Rhs">
+      <nodes xmi:id="_JBDhoIwoEe2U48dKrfFAHg" name="s" incoming="//@units.1/@rhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//State"/>
+        <attributes xmi:id="_J3YFoIwoEe2U48dKrfFAHg" value="null">
+          <type href="../StateMachinePL.ecore#//State/entryAction"/>
+        </attributes>
+      </nodes>
+      <nodes name="at" outgoing="//@units.1/@rhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//AbstractTransition"/>
+        <attributes value="EA.concat(&quot;;&quot;).concat(A)">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+      </nodes>
+      <edges source="//@units.1/@rhs/@nodes.1" target="_JBDhoIwoEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_WQD5kIwoEe2U48dKrfFAHg" name="notNullAction" conditionText="A!=null"/>
+    <mappings xmi:id="_JBDhoYwoEe2U48dKrfFAHg" origin="_JBAeUIwoEe2U48dKrfFAHg" image="_JBDhoIwoEe2U48dKrfFAHg"/>
+    <mappings origin="//@units.1/@lhs/@nodes.1" image="//@units.1/@rhs/@nodes.1"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_53dP0IwoEe2U48dKrfFAHg" name="ImmediateToTimed">
+    <parameters xmi:id="_B_9oAIwpEe2U48dKrfFAHg" name="A">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_B_-2IIwpEe2U48dKrfFAHg" name="G">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_53iIUIwoEe2U48dKrfFAHg" name="Lhs">
+      <nodes xmi:id="_8i6JcIwoEe2U48dKrfFAHg" name="it" incoming="_FGmo0IwpEe2U48dKrfFAHg" outgoing="_KrBToIwpEe2U48dKrfFAHg _MuK3IIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//ImmediateTransition"/>
+        <attributes xmi:id="_-wEkkIwoEe2U48dKrfFAHg" value="A">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+        <attributes xmi:id="__mUQEIwoEe2U48dKrfFAHg" value="G">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/guard"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_EOn38IwpEe2U48dKrfFAHg" name="sm" outgoing="_FGmo0IwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <nodes xmi:id="_Gk7A8IwpEe2U48dKrfFAHg" name="src" incoming="_KrBToIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes xmi:id="_JkWmgIwpEe2U48dKrfFAHg" name="tar" incoming="_MuK3IIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <edges xmi:id="_FGmo0IwpEe2U48dKrfFAHg" source="_EOn38IwpEe2U48dKrfFAHg" target="_8i6JcIwoEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <edges xmi:id="_KrBToIwpEe2U48dKrfFAHg" source="_8i6JcIwoEe2U48dKrfFAHg" target="_Gk7A8IwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges xmi:id="_MuK3IIwpEe2U48dKrfFAHg" source="_8i6JcIwoEe2U48dKrfFAHg" target="_JkWmgIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_53iIUYwoEe2U48dKrfFAHg" name="Rhs">
+      <nodes xmi:id="_EOpGEIwpEe2U48dKrfFAHg" name="sm" outgoing="_S8bwMIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <nodes xmi:id="_Gk7A8YwpEe2U48dKrfFAHg" name="src" incoming="_WPTPIIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes xmi:id="_JkWmgYwpEe2U48dKrfFAHg" name="tar" incoming="_UgN3IIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes xmi:id="_QuzbAIwpEe2U48dKrfFAHg" name="tt" incoming="_S8bwMIwpEe2U48dKrfFAHg" outgoing="_UgN3IIwpEe2U48dKrfFAHg _WPTPIIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//TimedTransition"/>
+        <attributes xmi:id="_YUCuEIwpEe2U48dKrfFAHg" value="0.0">
+          <type href="../StateMachinePL.ecore#//TimedTransition/afterTime"/>
+        </attributes>
+        <attributes xmi:id="_b6EZkIwpEe2U48dKrfFAHg" value="A">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+        <attributes xmi:id="_cXlcAIwpEe2U48dKrfFAHg" value="G">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/guard"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_S8bwMIwpEe2U48dKrfFAHg" source="_EOpGEIwpEe2U48dKrfFAHg" target="_QuzbAIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <edges xmi:id="_UgN3IIwpEe2U48dKrfFAHg" source="_QuzbAIwpEe2U48dKrfFAHg" target="_JkWmgYwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges xmi:id="_WPTPIIwpEe2U48dKrfFAHg" source="_QuzbAIwpEe2U48dKrfFAHg" target="_Gk7A8YwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_EOpGEYwpEe2U48dKrfFAHg" origin="_EOn38IwpEe2U48dKrfFAHg" image="_EOpGEIwpEe2U48dKrfFAHg"/>
+    <mappings xmi:id="_GlBHkIwpEe2U48dKrfFAHg" origin="_Gk7A8IwpEe2U48dKrfFAHg" image="_Gk7A8YwpEe2U48dKrfFAHg"/>
+    <mappings xmi:id="_JkWmgowpEe2U48dKrfFAHg" origin="_JkWmgIwpEe2U48dKrfFAHg" image="_JkWmgYwpEe2U48dKrfFAHg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_rN0QcIwpEe2U48dKrfFAHg" name="ImmediateToEmptyEvent">
+    <parameters xmi:id="_vOpBkIwpEe2U48dKrfFAHg" name="A">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_vOpBkYwpEe2U48dKrfFAHg" name="G">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_rN3TwowpEe2U48dKrfFAHg" name="Lhs">
+      <nodes xmi:id="_yWJlEIwpEe2U48dKrfFAHg" name="src" incoming="_6VQJoIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes xmi:id="_y7SScIwpEe2U48dKrfFAHg" name="tar" incoming="_8EtVEIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes xmi:id="_1C3C8IwpEe2U48dKrfFAHg" name="sm" outgoing="_9v5EgIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <nodes xmi:id="_2Y2lgIwpEe2U48dKrfFAHg" name="it" incoming="_9v5EgIwpEe2U48dKrfFAHg" outgoing="_6VQJoIwpEe2U48dKrfFAHg _8EtVEIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//ImmediateTransition"/>
+        <attributes xmi:id="_4DwBEIwpEe2U48dKrfFAHg" value="A">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+        <attributes xmi:id="_4b2YAIwpEe2U48dKrfFAHg" value="G">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/guard"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_6VQJoIwpEe2U48dKrfFAHg" source="_2Y2lgIwpEe2U48dKrfFAHg" target="_yWJlEIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges xmi:id="_8EtVEIwpEe2U48dKrfFAHg" source="_2Y2lgIwpEe2U48dKrfFAHg" target="_y7SScIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges xmi:id="_9v5EgIwpEe2U48dKrfFAHg" source="_1C3C8IwpEe2U48dKrfFAHg" target="_2Y2lgIwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_rN3Tw4wpEe2U48dKrfFAHg" name="Rhs">
+      <nodes xmi:id="_yWJlEYwpEe2U48dKrfFAHg" name="src" incoming="_JSvcoIwqEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes xmi:id="_y7SScYwpEe2U48dKrfFAHg" name="tar" incoming="_NwEjkIwqEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes xmi:id="_1C3C8YwpEe2U48dKrfFAHg" name="sm" outgoing="_HevvcIwqEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <nodes xmi:id="_BegrUIwqEe2U48dKrfFAHg" name="et" incoming="_HevvcIwqEe2U48dKrfFAHg" outgoing="_JSvcoIwqEe2U48dKrfFAHg _NwEjkIwqEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes xmi:id="_DrsUkIwqEe2U48dKrfFAHg" value="&quot;&quot;">
+          <type href="../StateMachinePL.ecore#//EventTransition/event"/>
+        </attributes>
+        <attributes xmi:id="_EoSfsIwqEe2U48dKrfFAHg" value="A">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+        <attributes xmi:id="_FAFUoIwqEe2U48dKrfFAHg" value="G">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/guard"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_HevvcIwqEe2U48dKrfFAHg" source="_1C3C8YwpEe2U48dKrfFAHg" target="_BegrUIwqEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <edges xmi:id="_JSvcoIwqEe2U48dKrfFAHg" source="_BegrUIwqEe2U48dKrfFAHg" target="_yWJlEYwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges xmi:id="_NwEjkIwqEe2U48dKrfFAHg" source="_BegrUIwqEe2U48dKrfFAHg" target="_y7SScYwpEe2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_yWJlEowpEe2U48dKrfFAHg" origin="_yWJlEIwpEe2U48dKrfFAHg" image="_yWJlEYwpEe2U48dKrfFAHg"/>
+    <mappings xmi:id="_y7SScowpEe2U48dKrfFAHg" origin="_y7SScIwpEe2U48dKrfFAHg" image="_y7SScYwpEe2U48dKrfFAHg"/>
+    <mappings xmi:id="_1C3C8owpEe2U48dKrfFAHg" origin="_1C3C8IwpEe2U48dKrfFAHg" image="_1C3C8YwpEe2U48dKrfFAHg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_kTwnYIw0Ee2U48dKrfFAHg" name="concatEventCondition">
+    <parameters xmi:id="_4zeXYIw1Ee2U48dKrfFAHg" name="A1">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_4zeXYYw1Ee2U48dKrfFAHg" name="E1">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_4zeXYow1Ee2U48dKrfFAHg" name="G1">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_4zeXY4w1Ee2U48dKrfFAHg" name="A2">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_4zeXZIw1Ee2U48dKrfFAHg" name="E2">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_4zeXZYw1Ee2U48dKrfFAHg" name="G2">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_f0H2gIw4Ee2U48dKrfFAHg" name="P1">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </parameters>
+    <parameters xmi:id="_f0IdkIw4Ee2U48dKrfFAHg" name="P2">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </parameters>
+    <lhs xmi:id="_kT2uBIw0Ee2U48dKrfFAHg" name="Lhs">
+      <nodes xmi:id="_zMGUoIw0Ee2U48dKrfFAHg" name="cn" incoming="_L9MPsIw1Ee2U48dKrfFAHg _MQoJEIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//ConditionNode"/>
+      </nodes>
+      <nodes xmi:id="_AjfMgIw1Ee2U48dKrfFAHg" name="et" incoming="_EU4agIw1Ee2U48dKrfFAHg" outgoing="_Lfj4gIw1Ee2U48dKrfFAHg _L9MPsIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes xmi:id="_uNFngIw1Ee2U48dKrfFAHg" value="A1">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+        <attributes xmi:id="_vOy8IIw1Ee2U48dKrfFAHg" value="E1">
+          <type href="../StateMachinePL.ecore#//EventTransition/event"/>
+        </attributes>
+        <attributes xmi:id="_wEPWYIw1Ee2U48dKrfFAHg" value="G1">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/guard"/>
+        </attributes>
+        <attributes xmi:id="_Td8kAIw4Ee2U48dKrfFAHg" value="P1">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_BF9AYIw1Ee2U48dKrfFAHg" name="et2" incoming="_D86mcIw1Ee2U48dKrfFAHg" outgoing="_MQoJEIw1Ee2U48dKrfFAHg _MiNBQIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes xmi:id="_xLSeAIw1Ee2U48dKrfFAHg" value="A2">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+        <attributes xmi:id="_yV-vgIw1Ee2U48dKrfFAHg" value="E2">
+          <type href="../StateMachinePL.ecore#//EventTransition/event"/>
+        </attributes>
+        <attributes xmi:id="_zPLoYIw1Ee2U48dKrfFAHg" value="G2">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/guard"/>
+        </attributes>
+        <attributes xmi:id="_bFFUgIw4Ee2U48dKrfFAHg" value="P2">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_CKip4Iw1Ee2U48dKrfFAHg" name="sm" outgoing="_D86mcIw1Ee2U48dKrfFAHg _EU4agIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <nodes xmi:id="_FzaOAIw1Ee2U48dKrfFAHg" name="as" incoming="_MiNBQIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes xmi:id="_H6Rz4Iw1Ee2U48dKrfFAHg" name="as1" incoming="_Lfj4gIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <edges xmi:id="_D86mcIw1Ee2U48dKrfFAHg" source="_CKip4Iw1Ee2U48dKrfFAHg" target="_BF9AYIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <edges xmi:id="_EU4agIw1Ee2U48dKrfFAHg" source="_CKip4Iw1Ee2U48dKrfFAHg" target="_AjfMgIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <edges xmi:id="_Lfj4gIw1Ee2U48dKrfFAHg" source="_AjfMgIw1Ee2U48dKrfFAHg" target="_H6Rz4Iw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges xmi:id="_L9MPsIw1Ee2U48dKrfFAHg" source="_AjfMgIw1Ee2U48dKrfFAHg" target="_zMGUoIw0Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges xmi:id="_MQoJEIw1Ee2U48dKrfFAHg" source="_BF9AYIw1Ee2U48dKrfFAHg" target="_zMGUoIw0Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges xmi:id="_MiNBQIw1Ee2U48dKrfFAHg" source="_BF9AYIw1Ee2U48dKrfFAHg" target="_FzaOAIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_kT2uBYw0Ee2U48dKrfFAHg" name="Rhs">
+      <nodes xmi:id="_zMGUoYw0Ee2U48dKrfFAHg" name="cn" incoming="_lqkz44w1Ee2U48dKrfFAHg _mzb5ZIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//ConditionNode"/>
+      </nodes>
+      <nodes xmi:id="_CKjQ8Iw1Ee2U48dKrfFAHg" name="sm" outgoing="_UbzawIw1Ee2U48dKrfFAHg _lqkz4ow1Ee2U48dKrfFAHg _mzb5Yow1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <nodes xmi:id="_FzaOAYw1Ee2U48dKrfFAHg" name="as" incoming="_lqkz5Iw1Ee2U48dKrfFAHg _pErjQIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes xmi:id="_H6Rz4Yw1Ee2U48dKrfFAHg" name="as1" incoming="_mzb5Y4w1Ee2U48dKrfFAHg _osAkkIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes xmi:id="_RUhgwIw1Ee2U48dKrfFAHg" name="net" incoming="_UbzawIw1Ee2U48dKrfFAHg" outgoing="_osAkkIw1Ee2U48dKrfFAHg _pErjQIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes xmi:id="_83-uoIw1Ee2U48dKrfFAHg" value="A1.concat(A2)">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+        <attributes xmi:id="_-z0JMIw1Ee2U48dKrfFAHg" value="E1.concat(E2)">
+          <type href="../StateMachinePL.ecore#//EventTransition/event"/>
+        </attributes>
+        <attributes xmi:id="_AZ2S4Iw2Ee2U48dKrfFAHg" value="G1.concat(&quot; and &quot;).concat(G2)">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/guard"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_lqkz4Iw1Ee2U48dKrfFAHg" name="et2" incoming="_lqkz4ow1Ee2U48dKrfFAHg" outgoing="_lqkz44w1Ee2U48dKrfFAHg _lqkz5Iw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes xmi:id="_xLTFEIw1Ee2U48dKrfFAHg" value="A2">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+        <attributes xmi:id="_yV_WkIw1Ee2U48dKrfFAHg" value="E2">
+          <type href="../StateMachinePL.ecore#//EventTransition/event"/>
+        </attributes>
+        <attributes xmi:id="_zPLoYYw1Ee2U48dKrfFAHg" value="G2">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/guard"/>
+        </attributes>
+        <attributes xmi:id="_bFFUgYw4Ee2U48dKrfFAHg" value="true">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_mzb5YIw1Ee2U48dKrfFAHg" name="et" incoming="_mzb5Yow1Ee2U48dKrfFAHg" outgoing="_mzb5Y4w1Ee2U48dKrfFAHg _mzb5ZIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes xmi:id="_uNHcsIw1Ee2U48dKrfFAHg" value="A1">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/actions"/>
+        </attributes>
+        <attributes xmi:id="_vOy8IYw1Ee2U48dKrfFAHg" value="E1">
+          <type href="../StateMachinePL.ecore#//EventTransition/event"/>
+        </attributes>
+        <attributes xmi:id="_wEPWYYw1Ee2U48dKrfFAHg" value="G1">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/guard"/>
+        </attributes>
+        <attributes xmi:id="_Td8kAYw4Ee2U48dKrfFAHg" value="true">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_UbzawIw1Ee2U48dKrfFAHg" source="_CKjQ8Iw1Ee2U48dKrfFAHg" target="_RUhgwIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <edges xmi:id="_lqkz4ow1Ee2U48dKrfFAHg" source="_CKjQ8Iw1Ee2U48dKrfFAHg" target="_lqkz4Iw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <edges xmi:id="_lqkz44w1Ee2U48dKrfFAHg" source="_lqkz4Iw1Ee2U48dKrfFAHg" target="_zMGUoYw0Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges xmi:id="_lqkz5Iw1Ee2U48dKrfFAHg" source="_lqkz4Iw1Ee2U48dKrfFAHg" target="_FzaOAYw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges xmi:id="_mzb5Yow1Ee2U48dKrfFAHg" source="_CKjQ8Iw1Ee2U48dKrfFAHg" target="_mzb5YIw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <edges xmi:id="_mzb5Y4w1Ee2U48dKrfFAHg" source="_mzb5YIw1Ee2U48dKrfFAHg" target="_H6Rz4Yw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges xmi:id="_mzb5ZIw1Ee2U48dKrfFAHg" source="_mzb5YIw1Ee2U48dKrfFAHg" target="_zMGUoYw0Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges xmi:id="_osAkkIw1Ee2U48dKrfFAHg" source="_RUhgwIw1Ee2U48dKrfFAHg" target="_H6Rz4Yw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges xmi:id="_pErjQIw1Ee2U48dKrfFAHg" source="_RUhgwIw1Ee2U48dKrfFAHg" target="_FzaOAYw1Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_g2CmgIw4Ee2U48dKrfFAHg" name="notProc" conditionText="!P1 || !P2"/>
+    <mappings xmi:id="_zMGUoow0Ee2U48dKrfFAHg" origin="_zMGUoIw0Ee2U48dKrfFAHg" image="_zMGUoYw0Ee2U48dKrfFAHg"/>
+    <mappings xmi:id="_CKjQ8Yw1Ee2U48dKrfFAHg" origin="_CKip4Iw1Ee2U48dKrfFAHg" image="_CKjQ8Iw1Ee2U48dKrfFAHg"/>
+    <mappings xmi:id="_FzaOAow1Ee2U48dKrfFAHg" origin="_FzaOAIw1Ee2U48dKrfFAHg" image="_FzaOAYw1Ee2U48dKrfFAHg"/>
+    <mappings xmi:id="_H6Rz4ow1Ee2U48dKrfFAHg" origin="_H6Rz4Iw1Ee2U48dKrfFAHg" image="_H6Rz4Yw1Ee2U48dKrfFAHg"/>
+    <mappings xmi:id="_lqkz4Yw1Ee2U48dKrfFAHg" origin="_BF9AYIw1Ee2U48dKrfFAHg" image="_lqkz4Iw1Ee2U48dKrfFAHg"/>
+    <mappings xmi:id="_mzb5YYw1Ee2U48dKrfFAHg" origin="_AjfMgIw1Ee2U48dKrfFAHg" image="_mzb5YIw1Ee2U48dKrfFAHg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_476FMIw2Ee2U48dKrfFAHg" name="removeConditionSrcAdjacentTransitions">
+    <lhs xmi:id="_48AL1Iw2Ee2U48dKrfFAHg" name="Lhs">
+      <nodes xmi:id="_A0fLAIw3Ee2U48dKrfFAHg" name="cn" incoming="_DfUZkIw3Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//ConditionNode"/>
+      </nodes>
+      <nodes xmi:id="_B3Sr0Iw3Ee2U48dKrfFAHg" name="src" incoming="//@units.5/@lhs/@edges.2" outgoing="_DfUZkIw3Ee2U48dKrfFAHg _1zTDkIw4Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes xmi:id="_mrf-AIw4Ee2U48dKrfFAHg" value="true">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_0VZiMIw4Ee2U48dKrfFAHg" name="nsrc" incoming="_1zTDkIw4Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="sm" outgoing="//@units.5/@lhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <edges xmi:id="_DfUZkIw3Ee2U48dKrfFAHg" source="_B3Sr0Iw3Ee2U48dKrfFAHg" target="_A0fLAIw3Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges xmi:id="_1zTDkIw4Ee2U48dKrfFAHg" source="_B3Sr0Iw3Ee2U48dKrfFAHg" target="_0VZiMIw4Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges source="//@units.5/@lhs/@nodes.3" target="_B3Sr0Iw3Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_tiBJ4Iw4Ee2U48dKrfFAHg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_tiBJ4Yw4Ee2U48dKrfFAHg">
+          <conclusion xmi:id="_tiBJ4ow4Ee2U48dKrfFAHg">
+            <nodes xmi:id="_tiBJ44w4Ee2U48dKrfFAHg" name="cn" incoming="_tiBJ6Iw4Ee2U48dKrfFAHg _sSZ8IIw4Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//ConditionNode"/>
+            </nodes>
+            <nodes xmi:id="_tiBJ5Yw4Ee2U48dKrfFAHg" name="src" outgoing="_tiBJ6Iw4Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//EventTransition"/>
+              <attributes xmi:id="_tiBJ5ow4Ee2U48dKrfFAHg" value="true">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_oe7qgIw4Ee2U48dKrfFAHg" name="other" outgoing="_sSZ8IIw4Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//EventTransition"/>
+              <attributes xmi:id="_vLQ_oIw4Ee2U48dKrfFAHg" value="false">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_0Vdzoow4Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//AbstractState"/>
+            </nodes>
+            <nodes>
+              <type href="../StateMachinePL.ecore#//StateMachine"/>
+            </nodes>
+            <edges xmi:id="_tiBJ6Iw4Ee2U48dKrfFAHg" source="_tiBJ5Yw4Ee2U48dKrfFAHg" target="_tiBJ44w4Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+            </edges>
+            <edges xmi:id="_sSZ8IIw4Ee2U48dKrfFAHg" source="_oe7qgIw4Ee2U48dKrfFAHg" target="_tiBJ44w4Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_tiBJ5Iw4Ee2U48dKrfFAHg" origin="_A0fLAIw3Ee2U48dKrfFAHg" image="_tiBJ44w4Ee2U48dKrfFAHg"/>
+          <mappings xmi:id="_tiBJ54w4Ee2U48dKrfFAHg" origin="_B3Sr0Iw3Ee2U48dKrfFAHg" image="_tiBJ5Yw4Ee2U48dKrfFAHg"/>
+          <mappings xmi:id="_0Vdzo4w4Ee2U48dKrfFAHg" origin="_0VZiMIw4Ee2U48dKrfFAHg" image="_0Vdzoow4Ee2U48dKrfFAHg"/>
+          <mappings origin="//@units.5/@lhs/@nodes.3" image="//@units.5/@lhs/@formula/@child/@conclusion/@nodes.4"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_48AL1Yw2Ee2U48dKrfFAHg" name="Rhs">
+      <nodes xmi:id="_A0fLAYw3Ee2U48dKrfFAHg" name="cn">
+        <type href="../StateMachinePL.ecore#//ConditionNode"/>
+      </nodes>
+      <nodes xmi:id="_0VdzoIw4Ee2U48dKrfFAHg" name="nsrc">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="sm">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_A0fLAow3Ee2U48dKrfFAHg" origin="_A0fLAIw3Ee2U48dKrfFAHg" image="_A0fLAYw3Ee2U48dKrfFAHg"/>
+    <mappings xmi:id="_0VdzoYw4Ee2U48dKrfFAHg" origin="_0VZiMIw4Ee2U48dKrfFAHg" image="_0VdzoIw4Ee2U48dKrfFAHg"/>
+    <mappings origin="//@units.5/@lhs/@nodes.3" image="//@units.5/@rhs/@nodes.2"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_9-394Iw4Ee2U48dKrfFAHg" name="removeConditionTarAdjancentTransitions">
+    <lhs xmi:id="_9-7BMIw4Ee2U48dKrfFAHg" name="Lhs">
+      <nodes xmi:id="_BuoNIIw5Ee2U48dKrfFAHg" name="tar" incoming="//@units.6/@lhs/@edges.2" outgoing="_KG0AEIw5Ee2U48dKrfFAHg _Z71_EIw5Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes xmi:id="_c8fFkIw5Ee2U48dKrfFAHg" value="true">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_CrO_UIw5Ee2U48dKrfFAHg" name="cn" incoming="_KG0AEIw5Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//ConditionNode"/>
+      </nodes>
+      <nodes xmi:id="_Y3T_8Iw5Ee2U48dKrfFAHg" name="as" incoming="_Z71_EIw5Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="sm" outgoing="//@units.6/@lhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <edges xmi:id="_KG0AEIw5Ee2U48dKrfFAHg" source="_BuoNIIw5Ee2U48dKrfFAHg" target="_CrO_UIw5Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges xmi:id="_Z71_EIw5Ee2U48dKrfFAHg" source="_BuoNIIw5Ee2U48dKrfFAHg" target="_Y3T_8Iw5Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges source="//@units.6/@lhs/@nodes.3" target="_BuoNIIw5Ee2U48dKrfFAHg">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_Wtl6YIw5Ee2U48dKrfFAHg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_Wtl6YYw5Ee2U48dKrfFAHg">
+          <conclusion xmi:id="_Wtl6Yow5Ee2U48dKrfFAHg">
+            <nodes xmi:id="_Wtl6Y4w5Ee2U48dKrfFAHg" name="tar" outgoing="_Wtl6Z4w5Ee2U48dKrfFAHg _Z71_Eow5Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//EventTransition"/>
+              <attributes xmi:id="_c8gTsIw5Ee2U48dKrfFAHg" value="true">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_Wtl6ZYw5Ee2U48dKrfFAHg" name="cn" incoming="_Wtl6Z4w5Ee2U48dKrfFAHg _HhfjoIw5Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//ConditionNode"/>
+            </nodes>
+            <nodes xmi:id="_GeSaMIw5Ee2U48dKrfFAHg" name="other" outgoing="_HhfjoIw5Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//EventTransition"/>
+              <attributes xmi:id="_iCadkIw5Ee2U48dKrfFAHg" value="false">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+              </attributes>
+            </nodes>
+            <nodes xmi:id="_Y3T_84w5Ee2U48dKrfFAHg" incoming="_Z71_Eow5Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//AbstractState"/>
+            </nodes>
+            <nodes>
+              <type href="../StateMachinePL.ecore#//StateMachine"/>
+            </nodes>
+            <edges xmi:id="_Wtl6Z4w5Ee2U48dKrfFAHg" source="_Wtl6Y4w5Ee2U48dKrfFAHg" target="_Wtl6ZYw5Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+            </edges>
+            <edges xmi:id="_HhfjoIw5Ee2U48dKrfFAHg" source="_GeSaMIw5Ee2U48dKrfFAHg" target="_Wtl6ZYw5Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+            </edges>
+            <edges xmi:id="_Z71_Eow5Ee2U48dKrfFAHg" source="_Wtl6Y4w5Ee2U48dKrfFAHg" target="_Y3T_84w5Ee2U48dKrfFAHg">
+              <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_Wtl6ZIw5Ee2U48dKrfFAHg" origin="_BuoNIIw5Ee2U48dKrfFAHg" image="_Wtl6Y4w5Ee2U48dKrfFAHg"/>
+          <mappings xmi:id="_Wtl6Zow5Ee2U48dKrfFAHg" origin="_CrO_UIw5Ee2U48dKrfFAHg" image="_Wtl6ZYw5Ee2U48dKrfFAHg"/>
+          <mappings xmi:id="_Y3T_9Iw5Ee2U48dKrfFAHg" origin="_Y3T_8Iw5Ee2U48dKrfFAHg" image="_Y3T_84w5Ee2U48dKrfFAHg"/>
+          <mappings origin="//@units.6/@lhs/@nodes.3" image="//@units.6/@lhs/@formula/@child/@conclusion/@nodes.4"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_9-7BMYw4Ee2U48dKrfFAHg" name="Rhs">
+      <nodes xmi:id="_CrO_UYw5Ee2U48dKrfFAHg" name="cn">
+        <type href="../StateMachinePL.ecore#//ConditionNode"/>
+      </nodes>
+      <nodes xmi:id="_Y3T_8Yw5Ee2U48dKrfFAHg" name="as">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="sm">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_CrO_Uow5Ee2U48dKrfFAHg" origin="_CrO_UIw5Ee2U48dKrfFAHg" image="_CrO_UYw5Ee2U48dKrfFAHg"/>
+    <mappings xmi:id="_Y3T_8ow5Ee2U48dKrfFAHg" origin="_Y3T_8Iw5Ee2U48dKrfFAHg" image="_Y3T_8Yw5Ee2U48dKrfFAHg"/>
+    <mappings origin="//@units.6/@lhs/@nodes.3" image="//@units.6/@rhs/@nodes.2"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="ConnectOutputHierarchy">
+    <lhs name="Lhs">
+      <nodes name="s" incoming="//@units.7/@lhs/@edges.5" outgoing="//@units.7/@lhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="or" incoming="//@units.7/@lhs/@edges.2" outgoing="//@units.7/@lhs/@edges.3 //@units.7/@lhs/@edges.4">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+      </nodes>
+      <nodes name="i" incoming="//@units.7/@lhs/@edges.0 //@units.7/@lhs/@edges.4">
+        <type href="../StateMachinePL.ecore#//Initial"/>
+      </nodes>
+      <nodes name="as" incoming="//@units.7/@lhs/@edges.1 //@units.7/@lhs/@edges.3">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="at" outgoing="//@units.7/@lhs/@edges.0 //@units.7/@lhs/@edges.1">
+        <type href="../StateMachinePL.ecore#//AbstractTransition"/>
+      </nodes>
+      <nodes name="t" outgoing="//@units.7/@lhs/@edges.5">
+        <type href="../StateMachinePL.ecore#//AbstractTransition"/>
+      </nodes>
+      <edges source="//@units.7/@lhs/@nodes.4" target="//@units.7/@lhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges source="//@units.7/@lhs/@nodes.4" target="//@units.7/@lhs/@nodes.3">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges source="//@units.7/@lhs/@nodes.0" target="//@units.7/@lhs/@nodes.1">
+        <type href="../StateMachinePL.ecore#//State/nested"/>
+      </edges>
+      <edges source="//@units.7/@lhs/@nodes.1" target="//@units.7/@lhs/@nodes.3">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+      </edges>
+      <edges source="//@units.7/@lhs/@nodes.1" target="//@units.7/@lhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+      </edges>
+      <edges source="//@units.7/@lhs/@nodes.5" target="//@units.7/@lhs/@nodes.0">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="s" outgoing="//@units.7/@rhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="or" incoming="//@units.7/@rhs/@edges.2" outgoing="//@units.7/@rhs/@edges.3 //@units.7/@rhs/@edges.4">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+      </nodes>
+      <nodes name="i" incoming="//@units.7/@rhs/@edges.0 //@units.7/@rhs/@edges.4">
+        <type href="../StateMachinePL.ecore#//Initial"/>
+      </nodes>
+      <nodes name="as" incoming="//@units.7/@rhs/@edges.1 //@units.7/@rhs/@edges.3 //@units.7/@rhs/@edges.5">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="at" outgoing="//@units.7/@rhs/@edges.0 //@units.7/@rhs/@edges.1">
+        <type href="../StateMachinePL.ecore#//AbstractTransition"/>
+      </nodes>
+      <nodes name="t" outgoing="//@units.7/@rhs/@edges.5">
+        <type href="../StateMachinePL.ecore#//AbstractTransition"/>
+      </nodes>
+      <edges source="//@units.7/@rhs/@nodes.4" target="//@units.7/@rhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges source="//@units.7/@rhs/@nodes.4" target="//@units.7/@rhs/@nodes.3">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges source="//@units.7/@rhs/@nodes.0" target="//@units.7/@rhs/@nodes.1">
+        <type href="../StateMachinePL.ecore#//State/nested"/>
+      </edges>
+      <edges source="//@units.7/@rhs/@nodes.1" target="//@units.7/@rhs/@nodes.3">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+      </edges>
+      <edges source="//@units.7/@rhs/@nodes.1" target="//@units.7/@rhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+      </edges>
+      <edges source="//@units.7/@rhs/@nodes.5" target="//@units.7/@rhs/@nodes.3">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.7/@lhs/@nodes.0" image="//@units.7/@rhs/@nodes.0"/>
+    <mappings origin="//@units.7/@lhs/@nodes.1" image="//@units.7/@rhs/@nodes.1"/>
+    <mappings origin="//@units.7/@lhs/@nodes.2" image="//@units.7/@rhs/@nodes.2"/>
+    <mappings origin="//@units.7/@lhs/@nodes.3" image="//@units.7/@rhs/@nodes.3"/>
+    <mappings origin="//@units.7/@lhs/@nodes.4" image="//@units.7/@rhs/@nodes.4"/>
+    <mappings origin="//@units.7/@lhs/@nodes.5" image="//@units.7/@rhs/@nodes.5"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="ConnectInputHierarchy">
+    <parameters name="E">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs name="Lhs">
+      <nodes name="s" incoming="//@units.8/@lhs/@edges.1" outgoing="//@units.8/@lhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="or" incoming="//@units.8/@lhs/@edges.0" outgoing="//@units.8/@lhs/@edges.3">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+      </nodes>
+      <nodes name="et" incoming="//@units.8/@lhs/@edges.4" outgoing="//@units.8/@lhs/@edges.1 //@units.8/@lhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes value="E">
+          <type href="../StateMachinePL.ecore#//EventTransition/event"/>
+        </attributes>
+      </nodes>
+      <nodes name="as" incoming="//@units.8/@lhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="is" incoming="//@units.8/@lhs/@edges.3">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="sm" outgoing="//@units.8/@lhs/@edges.4">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <edges source="//@units.8/@lhs/@nodes.0" target="//@units.8/@lhs/@nodes.1">
+        <type href="../StateMachinePL.ecore#//State/nested"/>
+      </edges>
+      <edges source="//@units.8/@lhs/@nodes.2" target="//@units.8/@lhs/@nodes.0">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges source="//@units.8/@lhs/@nodes.2" target="//@units.8/@lhs/@nodes.3">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges source="//@units.8/@lhs/@nodes.1" target="//@units.8/@lhs/@nodes.4">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+      </edges>
+      <edges source="//@units.8/@lhs/@nodes.5" target="//@units.8/@lhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <formula xsi:type="henshin:Not">
+        <child xsi:type="henshin:NestedCondition">
+          <conclusion>
+            <nodes name="s" incoming="//@units.8/@lhs/@formula/@child/@conclusion/@edges.0" outgoing="//@units.8/@lhs/@formula/@child/@conclusion/@edges.1">
+              <type href="../StateMachinePL.ecore#//State"/>
+            </nodes>
+            <nodes name="et" incoming="//@units.8/@lhs/@formula/@child/@conclusion/@edges.3" outgoing="//@units.8/@lhs/@formula/@child/@conclusion/@edges.0 //@units.8/@lhs/@formula/@child/@conclusion/@edges.4">
+              <type href="../StateMachinePL.ecore#//EventTransition"/>
+              <attributes value="E">
+                <type href="../StateMachinePL.ecore#//EventTransition/event"/>
+              </attributes>
+            </nodes>
+            <nodes name="or" incoming="//@units.8/@lhs/@formula/@child/@conclusion/@edges.1" outgoing="//@units.8/@lhs/@formula/@child/@conclusion/@edges.2">
+              <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+            </nodes>
+            <nodes name="is" incoming="//@units.8/@lhs/@formula/@child/@conclusion/@edges.2 //@units.8/@lhs/@formula/@child/@conclusion/@edges.5">
+              <type href="../StateMachinePL.ecore#//State"/>
+            </nodes>
+            <nodes name="sm" outgoing="//@units.8/@lhs/@formula/@child/@conclusion/@edges.3">
+              <type href="../StateMachinePL.ecore#//StateMachine"/>
+            </nodes>
+            <nodes name="as" incoming="//@units.8/@lhs/@formula/@child/@conclusion/@edges.4 //@units.8/@lhs/@formula/@child/@conclusion/@edges.6">
+              <type href="../StateMachinePL.ecore#//AbstractState"/>
+            </nodes>
+            <nodes name="n" outgoing="//@units.8/@lhs/@formula/@child/@conclusion/@edges.5 //@units.8/@lhs/@formula/@child/@conclusion/@edges.6">
+              <type href="../StateMachinePL.ecore#//EventTransition"/>
+            </nodes>
+            <edges source="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.1" target="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.0">
+              <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+            </edges>
+            <edges source="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.0" target="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.2">
+              <type href="../StateMachinePL.ecore#//State/nested"/>
+            </edges>
+            <edges source="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.2" target="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.3">
+              <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+            </edges>
+            <edges source="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.4" target="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.1">
+              <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+            </edges>
+            <edges source="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.1" target="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.5">
+              <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+            </edges>
+            <edges source="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.6" target="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.3">
+              <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+            </edges>
+            <edges source="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.6" target="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.5">
+              <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+            </edges>
+          </conclusion>
+          <mappings origin="//@units.8/@lhs/@nodes.0" image="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.0"/>
+          <mappings origin="//@units.8/@lhs/@nodes.2" image="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.1"/>
+          <mappings origin="//@units.8/@lhs/@nodes.1" image="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.2"/>
+          <mappings origin="//@units.8/@lhs/@nodes.4" image="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.3"/>
+          <mappings origin="//@units.8/@lhs/@nodes.5" image="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.4"/>
+          <mappings origin="//@units.8/@lhs/@nodes.3" image="//@units.8/@lhs/@formula/@child/@conclusion/@nodes.5"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="s" incoming="//@units.8/@rhs/@edges.1" outgoing="//@units.8/@rhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="or" incoming="//@units.8/@rhs/@edges.0" outgoing="//@units.8/@rhs/@edges.3">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+      </nodes>
+      <nodes name="et" incoming="//@units.8/@rhs/@edges.4" outgoing="//@units.8/@rhs/@edges.1 //@units.8/@rhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes value="E">
+          <type href="../StateMachinePL.ecore#//EventTransition/event"/>
+        </attributes>
+      </nodes>
+      <nodes name="as" incoming="//@units.8/@rhs/@edges.2 //@units.8/@rhs/@edges.7">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="is" incoming="//@units.8/@rhs/@edges.3 //@units.8/@rhs/@edges.6">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="net" incoming="//@units.8/@rhs/@edges.5" outgoing="//@units.8/@rhs/@edges.6 //@units.8/@rhs/@edges.7">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes value="E">
+          <type href="../StateMachinePL.ecore#//EventTransition/event"/>
+        </attributes>
+      </nodes>
+      <nodes name="sm" outgoing="//@units.8/@rhs/@edges.4 //@units.8/@rhs/@edges.5">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <edges source="//@units.8/@rhs/@nodes.0" target="//@units.8/@rhs/@nodes.1">
+        <type href="../StateMachinePL.ecore#//State/nested"/>
+      </edges>
+      <edges source="//@units.8/@rhs/@nodes.2" target="//@units.8/@rhs/@nodes.0">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges source="//@units.8/@rhs/@nodes.2" target="//@units.8/@rhs/@nodes.3">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges source="//@units.8/@rhs/@nodes.1" target="//@units.8/@rhs/@nodes.4">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+      </edges>
+      <edges source="//@units.8/@rhs/@nodes.6" target="//@units.8/@rhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <edges source="//@units.8/@rhs/@nodes.6" target="//@units.8/@rhs/@nodes.5">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <edges source="//@units.8/@rhs/@nodes.5" target="//@units.8/@rhs/@nodes.4">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges source="//@units.8/@rhs/@nodes.5" target="//@units.8/@rhs/@nodes.3">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.8/@lhs/@nodes.0" image="//@units.8/@rhs/@nodes.0"/>
+    <mappings origin="//@units.8/@lhs/@nodes.1" image="//@units.8/@rhs/@nodes.1"/>
+    <mappings origin="//@units.8/@lhs/@nodes.2" image="//@units.8/@rhs/@nodes.2"/>
+    <mappings origin="//@units.8/@lhs/@nodes.3" image="//@units.8/@rhs/@nodes.3"/>
+    <mappings origin="//@units.8/@lhs/@nodes.4" image="//@units.8/@rhs/@nodes.4"/>
+    <mappings origin="//@units.8/@lhs/@nodes.5" image="//@units.8/@rhs/@nodes.6"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="checkTransitionProcessed">
+    <lhs name="Lhs">
+      <nodes name="et" outgoing="//@units.9/@lhs/@edges.0 //@units.9/@lhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes value="false">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+        </attributes>
+      </nodes>
+      <nodes name="s" incoming="//@units.9/@lhs/@edges.0" outgoing="//@units.9/@lhs/@edges.1">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="or" incoming="//@units.9/@lhs/@edges.1" outgoing="//@units.9/@lhs/@edges.3">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+      </nodes>
+      <nodes name="as" incoming="//@units.9/@lhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="is" incoming="//@units.9/@lhs/@edges.3">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <edges source="//@units.9/@lhs/@nodes.0" target="//@units.9/@lhs/@nodes.1">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges source="//@units.9/@lhs/@nodes.1" target="//@units.9/@lhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//State/nested"/>
+      </edges>
+      <edges source="//@units.9/@lhs/@nodes.0" target="//@units.9/@lhs/@nodes.3">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges source="//@units.9/@lhs/@nodes.2" target="//@units.9/@lhs/@nodes.4">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+      </edges>
+      <formula xsi:type="henshin:And">
+        <left xsi:type="henshin:Not">
+          <child xsi:type="henshin:NestedCondition">
+            <conclusion name="1">
+              <nodes name="et" outgoing="//@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.0 //@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.1">
+                <type href="../StateMachinePL.ecore#//EventTransition"/>
+                <attributes value="false">
+                  <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+                </attributes>
+              </nodes>
+              <nodes name="s" incoming="//@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.0" outgoing="//@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.2">
+                <type href="../StateMachinePL.ecore#//State"/>
+              </nodes>
+              <nodes name="as" incoming="//@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.1 //@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.5">
+                <type href="../StateMachinePL.ecore#//AbstractState"/>
+              </nodes>
+              <nodes name="or" incoming="//@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.2" outgoing="//@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.3">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+              </nodes>
+              <nodes name="is" incoming="//@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.3 //@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.4">
+                <type href="../StateMachinePL.ecore#//State"/>
+              </nodes>
+              <nodes outgoing="//@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.4 //@units.9/@lhs/@formula/@left/@child/@conclusion/@edges.5">
+                <type href="../StateMachinePL.ecore#//EventTransition"/>
+              </nodes>
+              <edges source="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.0" target="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.1">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+              </edges>
+              <edges source="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.0" target="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.2">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+              </edges>
+              <edges source="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.1" target="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.3">
+                <type href="../StateMachinePL.ecore#//State/nested"/>
+              </edges>
+              <edges source="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.3" target="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.4">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+              </edges>
+              <edges source="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.5" target="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.4">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+              </edges>
+              <edges source="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.5" target="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.2">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+              </edges>
+            </conclusion>
+            <mappings origin="//@units.9/@lhs/@nodes.0" image="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.0"/>
+            <mappings origin="//@units.9/@lhs/@nodes.1" image="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.1"/>
+            <mappings origin="//@units.9/@lhs/@nodes.3" image="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.2"/>
+            <mappings origin="//@units.9/@lhs/@nodes.2" image="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.3"/>
+            <mappings origin="//@units.9/@lhs/@nodes.4" image="//@units.9/@lhs/@formula/@left/@child/@conclusion/@nodes.4"/>
+          </child>
+        </left>
+        <right xsi:type="henshin:Not">
+          <child xsi:type="henshin:NestedCondition">
+            <conclusion name="2">
+              <nodes name="et" outgoing="//@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.0 //@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.1">
+                <type href="../StateMachinePL.ecore#//EventTransition"/>
+                <attributes value="false">
+                  <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+                </attributes>
+              </nodes>
+              <nodes name="s" incoming="//@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.0" outgoing="//@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.2">
+                <type href="../StateMachinePL.ecore#//State"/>
+              </nodes>
+              <nodes name="as" incoming="//@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.1">
+                <type href="../StateMachinePL.ecore#//AbstractState"/>
+              </nodes>
+              <nodes name="or" incoming="//@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.2" outgoing="//@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.3 //@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.4">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+              </nodes>
+              <nodes name="is" incoming="//@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.3">
+                <type href="../StateMachinePL.ecore#//State"/>
+              </nodes>
+              <nodes name="hs" incoming="//@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.4" outgoing="//@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.5">
+                <type href="../StateMachinePL.ecore#//State"/>
+              </nodes>
+              <nodes incoming="//@units.9/@lhs/@formula/@right/@child/@conclusion/@edges.5">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+              </nodes>
+              <edges source="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.0" target="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.1">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+              </edges>
+              <edges source="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.0" target="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.2">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+              </edges>
+              <edges source="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.1" target="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.3">
+                <type href="../StateMachinePL.ecore#//State/nested"/>
+              </edges>
+              <edges source="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.3" target="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.4">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+              </edges>
+              <edges source="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.3" target="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.5">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+              </edges>
+              <edges source="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.5" target="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.6">
+                <type href="../StateMachinePL.ecore#//State/nested"/>
+              </edges>
+            </conclusion>
+            <mappings origin="//@units.9/@lhs/@nodes.0" image="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.0"/>
+            <mappings origin="//@units.9/@lhs/@nodes.1" image="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.1"/>
+            <mappings origin="//@units.9/@lhs/@nodes.3" image="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.2"/>
+            <mappings origin="//@units.9/@lhs/@nodes.2" image="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.3"/>
+            <mappings origin="//@units.9/@lhs/@nodes.4" image="//@units.9/@lhs/@formula/@right/@child/@conclusion/@nodes.4"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="et" outgoing="//@units.9/@rhs/@edges.1">
+        <type href="../StateMachinePL.ecore#//EventTransition"/>
+        <attributes value="true">
+          <type href="../StateMachinePL.ecore#//AbstractTransition/beenProcessed"/>
+        </attributes>
+      </nodes>
+      <nodes name="s" outgoing="//@units.9/@rhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="or" incoming="//@units.9/@rhs/@edges.0" outgoing="//@units.9/@rhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+      </nodes>
+      <nodes name="as" incoming="//@units.9/@rhs/@edges.1">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="is" incoming="//@units.9/@rhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <edges source="//@units.9/@rhs/@nodes.1" target="//@units.9/@rhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//State/nested"/>
+      </edges>
+      <edges source="//@units.9/@rhs/@nodes.0" target="//@units.9/@rhs/@nodes.3">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges source="//@units.9/@rhs/@nodes.2" target="//@units.9/@rhs/@nodes.4">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.9/@lhs/@nodes.0" image="//@units.9/@rhs/@nodes.0"/>
+    <mappings origin="//@units.9/@lhs/@nodes.1" image="//@units.9/@rhs/@nodes.1"/>
+    <mappings origin="//@units.9/@lhs/@nodes.2" image="//@units.9/@rhs/@nodes.2"/>
+    <mappings origin="//@units.9/@lhs/@nodes.3" image="//@units.9/@rhs/@nodes.3"/>
+    <mappings origin="//@units.9/@lhs/@nodes.4" image="//@units.9/@rhs/@nodes.4"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="removeHierarchicalInitialState">
+    <lhs name="Lhs">
+      <nodes name="s" outgoing="//@units.10/@lhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="or" incoming="//@units.10/@lhs/@edges.0" outgoing="//@units.10/@lhs/@edges.1">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+      </nodes>
+      <nodes name="i" incoming="//@units.10/@lhs/@edges.1 //@units.10/@lhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//Initial"/>
+      </nodes>
+      <nodes incoming="//@units.10/@lhs/@edges.4" outgoing="//@units.10/@lhs/@edges.2 //@units.10/@lhs/@edges.3">
+        <type href="../StateMachinePL.ecore#//AbstractTransition"/>
+      </nodes>
+      <nodes name="a" incoming="//@units.10/@lhs/@edges.3">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes outgoing="//@units.10/@lhs/@edges.4">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <edges source="//@units.10/@lhs/@nodes.0" target="//@units.10/@lhs/@nodes.1">
+        <type href="../StateMachinePL.ecore#//State/nested"/>
+      </edges>
+      <edges source="//@units.10/@lhs/@nodes.1" target="//@units.10/@lhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+      </edges>
+      <edges source="//@units.10/@lhs/@nodes.3" target="//@units.10/@lhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+      </edges>
+      <edges source="//@units.10/@lhs/@nodes.3" target="//@units.10/@lhs/@nodes.4">
+        <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+      </edges>
+      <edges source="//@units.10/@lhs/@nodes.5" target="//@units.10/@lhs/@nodes.3">
+        <type href="../StateMachinePL.ecore#//StateMachine/transitions"/>
+      </edges>
+      <formula xsi:type="henshin:And">
+        <left xsi:type="henshin:Not">
+          <child xsi:type="henshin:NestedCondition">
+            <conclusion name="1">
+              <nodes name="s" incoming="//@units.10/@lhs/@formula/@left/@child/@conclusion/@edges.2" outgoing="//@units.10/@lhs/@formula/@left/@child/@conclusion/@edges.0">
+                <type href="../StateMachinePL.ecore#//State"/>
+              </nodes>
+              <nodes name="or" incoming="//@units.10/@lhs/@formula/@left/@child/@conclusion/@edges.0" outgoing="//@units.10/@lhs/@formula/@left/@child/@conclusion/@edges.1">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+              </nodes>
+              <nodes name="i" incoming="//@units.10/@lhs/@formula/@left/@child/@conclusion/@edges.1">
+                <type href="../StateMachinePL.ecore#//Initial"/>
+              </nodes>
+              <nodes name="t1" outgoing="//@units.10/@lhs/@formula/@left/@child/@conclusion/@edges.2">
+                <type href="../StateMachinePL.ecore#//EventTransition"/>
+              </nodes>
+              <nodes>
+                <type href="../StateMachinePL.ecore#//AbstractTransition"/>
+              </nodes>
+              <nodes>
+                <type href="../StateMachinePL.ecore#//AbstractState"/>
+              </nodes>
+              <nodes>
+                <type href="../StateMachinePL.ecore#//StateMachine"/>
+              </nodes>
+              <edges source="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.0" target="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.1">
+                <type href="../StateMachinePL.ecore#//State/nested"/>
+              </edges>
+              <edges source="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.1" target="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.2">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+              </edges>
+              <edges source="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.3" target="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.0">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+              </edges>
+            </conclusion>
+            <mappings origin="//@units.10/@lhs/@nodes.0" image="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.0"/>
+            <mappings origin="//@units.10/@lhs/@nodes.1" image="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.1"/>
+            <mappings origin="//@units.10/@lhs/@nodes.2" image="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.2"/>
+            <mappings origin="//@units.10/@lhs/@nodes.3" image="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.4"/>
+            <mappings origin="//@units.10/@lhs/@nodes.4" image="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.5"/>
+            <mappings origin="//@units.10/@lhs/@nodes.5" image="//@units.10/@lhs/@formula/@left/@child/@conclusion/@nodes.6"/>
+          </child>
+        </left>
+        <right xsi:type="henshin:Not">
+          <child xsi:type="henshin:NestedCondition">
+            <conclusion name="2">
+              <nodes name="s" incoming="//@units.10/@lhs/@formula/@right/@child/@conclusion/@edges.2" outgoing="//@units.10/@lhs/@formula/@right/@child/@conclusion/@edges.0">
+                <type href="../StateMachinePL.ecore#//State"/>
+              </nodes>
+              <nodes name="or" incoming="//@units.10/@lhs/@formula/@right/@child/@conclusion/@edges.0" outgoing="//@units.10/@lhs/@formula/@right/@child/@conclusion/@edges.1">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+              </nodes>
+              <nodes name="i" incoming="//@units.10/@lhs/@formula/@right/@child/@conclusion/@edges.1">
+                <type href="../StateMachinePL.ecore#//Initial"/>
+              </nodes>
+              <nodes outgoing="//@units.10/@lhs/@formula/@right/@child/@conclusion/@edges.2">
+                <type href="../StateMachinePL.ecore#//EventTransition"/>
+              </nodes>
+              <nodes>
+                <type href="../StateMachinePL.ecore#//AbstractTransition"/>
+              </nodes>
+              <nodes>
+                <type href="../StateMachinePL.ecore#//AbstractState"/>
+              </nodes>
+              <nodes>
+                <type href="../StateMachinePL.ecore#//StateMachine"/>
+              </nodes>
+              <edges source="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.0" target="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.1">
+                <type href="../StateMachinePL.ecore#//State/nested"/>
+              </edges>
+              <edges source="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.1" target="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.2">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+              </edges>
+              <edges source="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.3" target="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.0">
+                <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+              </edges>
+            </conclusion>
+            <mappings origin="//@units.10/@lhs/@nodes.0" image="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.0"/>
+            <mappings origin="//@units.10/@lhs/@nodes.1" image="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.1"/>
+            <mappings origin="//@units.10/@lhs/@nodes.2" image="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.2"/>
+            <mappings origin="//@units.10/@lhs/@nodes.3" image="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.4"/>
+            <mappings origin="//@units.10/@lhs/@nodes.4" image="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.5"/>
+            <mappings origin="//@units.10/@lhs/@nodes.5" image="//@units.10/@lhs/@formula/@right/@child/@conclusion/@nodes.6"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="s" outgoing="//@units.10/@rhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="or" incoming="//@units.10/@rhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+      </nodes>
+      <nodes name="a">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes>
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <edges source="//@units.10/@rhs/@nodes.0" target="//@units.10/@rhs/@nodes.1">
+        <type href="../StateMachinePL.ecore#//State/nested"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.10/@lhs/@nodes.0" image="//@units.10/@rhs/@nodes.0"/>
+    <mappings origin="//@units.10/@lhs/@nodes.1" image="//@units.10/@rhs/@nodes.1"/>
+    <mappings origin="//@units.10/@lhs/@nodes.4" image="//@units.10/@rhs/@nodes.2"/>
+    <mappings origin="//@units.10/@lhs/@nodes.5" image="//@units.10/@rhs/@nodes.3"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="moveHierarchicalStateTop">
+    <lhs name="Lhs">
+      <nodes name="s" incoming="//@units.11/@lhs/@edges.0" outgoing="//@units.11/@lhs/@edges.1">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="or" incoming="//@units.11/@lhs/@edges.1" outgoing="//@units.11/@lhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+      </nodes>
+      <nodes name="as" incoming="//@units.11/@lhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="sm" outgoing="//@units.11/@lhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <edges source="//@units.11/@lhs/@nodes.3" target="//@units.11/@lhs/@nodes.0">
+        <type href="../StateMachinePL.ecore#//StateMachine/states"/>
+      </edges>
+      <edges source="//@units.11/@lhs/@nodes.0" target="//@units.11/@lhs/@nodes.1">
+        <type href="../StateMachinePL.ecore#//State/nested"/>
+      </edges>
+      <edges source="//@units.11/@lhs/@nodes.1" target="//@units.11/@lhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+      </edges>
+      <formula xsi:type="henshin:And">
+        <left xsi:type="henshin:And">
+          <left xsi:type="henshin:And">
+            <left xsi:type="henshin:Not">
+              <child xsi:type="henshin:NestedCondition">
+                <conclusion name="2">
+                  <nodes name="s" incoming="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@edges.0 //@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@edges.3" outgoing="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@edges.1">
+                    <type href="../StateMachinePL.ecore#//State"/>
+                  </nodes>
+                  <nodes name="sm" outgoing="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@edges.0">
+                    <type href="../StateMachinePL.ecore#//StateMachine"/>
+                  </nodes>
+                  <nodes name="or" incoming="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@edges.1" outgoing="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@edges.2">
+                    <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+                  </nodes>
+                  <nodes name="as" incoming="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@edges.2">
+                    <type href="../StateMachinePL.ecore#//AbstractState"/>
+                  </nodes>
+                  <nodes name="t2" outgoing="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@edges.3">
+                    <type href="../StateMachinePL.ecore#//EventTransition"/>
+                  </nodes>
+                  <edges source="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.1" target="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.0">
+                    <type href="../StateMachinePL.ecore#//StateMachine/states"/>
+                  </edges>
+                  <edges source="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.0" target="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.2">
+                    <type href="../StateMachinePL.ecore#//State/nested"/>
+                  </edges>
+                  <edges source="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.2" target="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.3">
+                    <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+                  </edges>
+                  <edges source="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.4" target="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.0">
+                    <type href="../StateMachinePL.ecore#//AbstractTransition/src"/>
+                  </edges>
+                </conclusion>
+                <mappings origin="//@units.11/@lhs/@nodes.0" image="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.0"/>
+                <mappings origin="//@units.11/@lhs/@nodes.3" image="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.1"/>
+                <mappings origin="//@units.11/@lhs/@nodes.1" image="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.2"/>
+                <mappings origin="//@units.11/@lhs/@nodes.2" image="//@units.11/@lhs/@formula/@left/@left/@left/@child/@conclusion/@nodes.3"/>
+              </child>
+            </left>
+            <right xsi:type="henshin:Not">
+              <child xsi:type="henshin:NestedCondition">
+                <conclusion name="1">
+                  <nodes name="s" incoming="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@edges.0 //@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@edges.3" outgoing="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@edges.1">
+                    <type href="../StateMachinePL.ecore#//State"/>
+                  </nodes>
+                  <nodes name="sm" outgoing="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@edges.0">
+                    <type href="../StateMachinePL.ecore#//StateMachine"/>
+                  </nodes>
+                  <nodes name="or" incoming="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@edges.1" outgoing="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@edges.2">
+                    <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+                  </nodes>
+                  <nodes name="as" incoming="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@edges.2">
+                    <type href="../StateMachinePL.ecore#//AbstractState"/>
+                  </nodes>
+                  <nodes name="t1" outgoing="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@edges.3">
+                    <type href="../StateMachinePL.ecore#//EventTransition"/>
+                  </nodes>
+                  <edges source="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.1" target="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.0">
+                    <type href="../StateMachinePL.ecore#//StateMachine/states"/>
+                  </edges>
+                  <edges source="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.0" target="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.2">
+                    <type href="../StateMachinePL.ecore#//State/nested"/>
+                  </edges>
+                  <edges source="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.2" target="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.3">
+                    <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+                  </edges>
+                  <edges source="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.4" target="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.0">
+                    <type href="../StateMachinePL.ecore#//AbstractTransition/tar"/>
+                  </edges>
+                </conclusion>
+                <mappings origin="//@units.11/@lhs/@nodes.0" image="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.0"/>
+                <mappings origin="//@units.11/@lhs/@nodes.3" image="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.1"/>
+                <mappings origin="//@units.11/@lhs/@nodes.1" image="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.2"/>
+                <mappings origin="//@units.11/@lhs/@nodes.2" image="//@units.11/@lhs/@formula/@left/@left/@right/@child/@conclusion/@nodes.3"/>
+              </child>
+            </right>
+          </left>
+          <right xsi:type="henshin:Not">
+            <child xsi:type="henshin:NestedCondition">
+              <conclusion name="3">
+                <nodes name="s" incoming="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@edges.0" outgoing="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@edges.1">
+                  <type href="../StateMachinePL.ecore#//State"/>
+                </nodes>
+                <nodes name="sm" outgoing="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@edges.0">
+                  <type href="../StateMachinePL.ecore#//StateMachine"/>
+                </nodes>
+                <nodes name="or" incoming="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@edges.1" outgoing="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@edges.2 //@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@edges.3">
+                  <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+                </nodes>
+                <nodes name="as" incoming="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@edges.2">
+                  <type href="../StateMachinePL.ecore#//AbstractState"/>
+                </nodes>
+                <nodes incoming="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@edges.3">
+                  <type href="../StateMachinePL.ecore#//Final"/>
+                </nodes>
+                <edges source="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.1" target="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.0">
+                  <type href="../StateMachinePL.ecore#//StateMachine/states"/>
+                </edges>
+                <edges source="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.0" target="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.2">
+                  <type href="../StateMachinePL.ecore#//State/nested"/>
+                </edges>
+                <edges source="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.2" target="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.3">
+                  <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+                </edges>
+                <edges source="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.2" target="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.4">
+                  <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+                </edges>
+              </conclusion>
+              <mappings origin="//@units.11/@lhs/@nodes.0" image="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.0"/>
+              <mappings origin="//@units.11/@lhs/@nodes.3" image="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.1"/>
+              <mappings origin="//@units.11/@lhs/@nodes.1" image="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.2"/>
+              <mappings origin="//@units.11/@lhs/@nodes.2" image="//@units.11/@lhs/@formula/@left/@right/@child/@conclusion/@nodes.3"/>
+            </child>
+          </right>
+        </left>
+        <right xsi:type="henshin:Not">
+          <child xsi:type="henshin:NestedCondition">
+            <conclusion name="4">
+              <nodes name="s" incoming="//@units.11/@lhs/@formula/@right/@child/@conclusion/@edges.0" outgoing="//@units.11/@lhs/@formula/@right/@child/@conclusion/@edges.1">
+                <type href="../StateMachinePL.ecore#//State"/>
+              </nodes>
+              <nodes name="sm" outgoing="//@units.11/@lhs/@formula/@right/@child/@conclusion/@edges.0">
+                <type href="../StateMachinePL.ecore#//StateMachine"/>
+              </nodes>
+              <nodes name="or" incoming="//@units.11/@lhs/@formula/@right/@child/@conclusion/@edges.1" outgoing="//@units.11/@lhs/@formula/@right/@child/@conclusion/@edges.2 //@units.11/@lhs/@formula/@right/@child/@conclusion/@edges.3">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+              </nodes>
+              <nodes name="as" incoming="//@units.11/@lhs/@formula/@right/@child/@conclusion/@edges.2">
+                <type href="../StateMachinePL.ecore#//AbstractState"/>
+              </nodes>
+              <nodes incoming="//@units.11/@lhs/@formula/@right/@child/@conclusion/@edges.3">
+                <type href="../StateMachinePL.ecore#//Initial"/>
+              </nodes>
+              <edges source="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.1" target="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.0">
+                <type href="../StateMachinePL.ecore#//StateMachine/states"/>
+              </edges>
+              <edges source="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.0" target="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.2">
+                <type href="../StateMachinePL.ecore#//State/nested"/>
+              </edges>
+              <edges source="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.2" target="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.3">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+              </edges>
+              <edges source="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.2" target="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.4">
+                <type href="../StateMachinePL.ecore#//OrthogonalRegion/states"/>
+              </edges>
+            </conclusion>
+            <mappings origin="//@units.11/@lhs/@nodes.0" image="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.0"/>
+            <mappings origin="//@units.11/@lhs/@nodes.3" image="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.1"/>
+            <mappings origin="//@units.11/@lhs/@nodes.1" image="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.2"/>
+            <mappings origin="//@units.11/@lhs/@nodes.2" image="//@units.11/@lhs/@formula/@right/@child/@conclusion/@nodes.3"/>
+          </child>
+        </right>
+      </formula>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="s" incoming="//@units.11/@rhs/@edges.0" outgoing="//@units.11/@rhs/@edges.1">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="or" incoming="//@units.11/@rhs/@edges.1">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+      </nodes>
+      <nodes name="as" incoming="//@units.11/@rhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//AbstractState"/>
+      </nodes>
+      <nodes name="sm" outgoing="//@units.11/@rhs/@edges.0 //@units.11/@rhs/@edges.2">
+        <type href="../StateMachinePL.ecore#//StateMachine"/>
+      </nodes>
+      <edges source="//@units.11/@rhs/@nodes.3" target="//@units.11/@rhs/@nodes.0">
+        <type href="../StateMachinePL.ecore#//StateMachine/states"/>
+      </edges>
+      <edges source="//@units.11/@rhs/@nodes.0" target="//@units.11/@rhs/@nodes.1">
+        <type href="../StateMachinePL.ecore#//State/nested"/>
+      </edges>
+      <edges source="//@units.11/@rhs/@nodes.3" target="//@units.11/@rhs/@nodes.2">
+        <type href="../StateMachinePL.ecore#//StateMachine/states"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@units.11/@lhs/@nodes.0" image="//@units.11/@rhs/@nodes.0"/>
+    <mappings origin="//@units.11/@lhs/@nodes.1" image="//@units.11/@rhs/@nodes.1"/>
+    <mappings origin="//@units.11/@lhs/@nodes.2" image="//@units.11/@rhs/@nodes.2"/>
+    <mappings origin="//@units.11/@lhs/@nodes.3" image="//@units.11/@rhs/@nodes.3"/>
+  </units>
+  <units xsi:type="henshin:Rule" name="deleteOrthogonalRegion">
+    <lhs name="Lhs">
+      <nodes name="s" outgoing="//@units.12/@lhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+      <nodes name="o" incoming="//@units.12/@lhs/@edges.0">
+        <type href="../StateMachinePL.ecore#//OrthogonalRegion"/>
+      </nodes>
+      <edges source="//@units.12/@lhs/@nodes.0" target="//@units.12/@lhs/@nodes.1">
+        <type href="../StateMachinePL.ecore#//State/nested"/>
+      </edges>
+    </lhs>
+    <rhs name="Rhs">
+      <nodes name="s">
+        <type href="../StateMachinePL.ecore#//State"/>
+      </nodes>
+    </rhs>
+    <mappings origin="//@units.12/@lhs/@nodes.0" image="//@units.12/@rhs/@nodes.0"/>
+  </units>
+</henshin:Module>

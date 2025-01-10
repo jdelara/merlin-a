@@ -1,0 +1,82 @@
+@features(file="model.xml")
+@namespace(uri="http://ClassDiagrams/AML", prefix="classdiag")
+package classdiag;
+
+class ClassDiagram {
+	val Class[*] classes;
+
+	@presence(condition="FullAssoc")
+	val Association[*] assocs;
+
+	@presence(condition="Interfaces")
+	val Interface[*] interfaces;
+	val Role[*] roles;
+}
+
+class Class {
+	attr String name;
+	attr boolean isAbstract;
+
+	@presence(condition="Multi")
+	ref Class[*] parents;
+
+	@presence(condition="Single")
+	ref Class parent;
+
+	@presence(condition="false")
+	ref Class[*] iface;
+	val Attribute[*] attributes;
+
+	@presence(condition="Interfaces")
+	ref Interface[*] realizes;
+
+	@presence(condition="Methods")
+	val Method[*] methods;
+
+	@presence(condition="Ref")
+	ref Role[*] references;
+}
+
+class Attribute {
+	attr String name;
+	attr String type;
+}
+
+@presence(condition="Methods or Interfaces")
+class Method {
+	attr String name;
+}
+
+@presence(condition="Interfaces")
+class Interface {
+	attr String name;
+	val Method[*] methods;
+}
+
+@presence(condition="FullAssoc")
+class Association {
+	attr String name;
+	ref Role[2] roles;
+	val Method[*] methods;
+}
+
+class Role {
+	attr String name;
+
+	@presence(condition="Navig")
+	attr Boolean navig = "true";
+
+	@presence(condition="Comp")
+	attr Boolean isComp = "false";
+
+	@presence(condition="Aggr")
+	attr Boolean isAggr = "false";
+
+	@presence(condition="Card")
+	attr int min = 0;
+
+	@presence(condition="Card")
+	attr int max = -1;
+	ref Class playedBy;
+}
+

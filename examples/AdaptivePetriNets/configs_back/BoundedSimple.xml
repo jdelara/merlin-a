@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="PetriNets"/>
+	<feature automatic="selected" name="Tokens"/>
+	<feature manual="selected" name="Simple"/>
+	<feature automatic="unselected" name="Object"/>
+	<feature automatic="selected" name="Arcs"/>
+	<feature name="Weight"/>
+	<feature name="Inhibitor"/>
+	<feature name="Read"/>
+	<feature name="Reset"/>
+	<feature automatic="selected" name="Transitions"/>
+	<feature name="Priority"/>
+	<feature automatic="selected" name="Places"/>
+	<feature manual="selected" name="Bounded"/>
+	<feature name="Hierarchy"/>
+</configuration>

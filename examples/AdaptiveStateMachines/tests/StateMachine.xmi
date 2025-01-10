@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smpl:StateMachine
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:smpl="http://StateMachine.org/PL"
+    xsi:schemaLocation="http://StateMachine.org/PL /AdaptiveStateMachines/StateMachinePL.ecore"
+    name="test">
+  <states xsi:type="smpl:State"
+      name="s1"
+      exitAction="sjsjs"/>
+  <states xsi:type="smpl:State"
+      name="s2"/>
+  <states xsi:type="smpl:ConditionNode"
+      name="condition"/>
+  <transitions
+      xsi:type="smpl:EventTransition"
+      src="//@states.0"
+      tar="//@states.2"
+      guard="true"
+      actions=" "
+      event="e1"/>
+  <transitions
+      xsi:type="smpl:EventTransition"
+      src="//@states.2"
+      tar="//@states.1"
+      guard="true"
+      actions=" "
+      event="e2"/>
+</smpl:StateMachine>

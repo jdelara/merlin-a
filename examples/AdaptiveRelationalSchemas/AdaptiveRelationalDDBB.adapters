@@ -1,0 +1,23 @@
+language AdaptiveProcessModelling on 
+'AdaptiveRelationalDDBB.ecore'
+transformation 'trafos/AdaptiveRelationalDDBB.henshin'
+adapters {  
+	ClosedToSimpleType = ( 	delta(+-{Closed}, -+{OpenSimple}),
+							context(++{}, --{}),
+							rules{ClosedToOpenSimple}), 
+	SimpleToObjectType = ( 	delta(+-{OpenSimple}, -+{OpenObject}),
+							context(++{}, --{}),
+							rules{SimpleToObjectCreate,SimpleToObjectUpdate}),
+	ObjectToSimpleType = ( 	delta(+-{OpenObject}, -+{OpenSimple}),
+							context(++{}, --{}),
+							rules{ObjectToSimple}), 
+	SimpleToClosedType = ( 	delta(+-{OpenSimple}, -+{Closed}),
+							context(++{}, --{}),
+							rules{SimpleToClosedINT, SimpleToClosedBOOL, SimpleToClosedCHAR, SimpleToClosedREAL}),
+	NotNullSupport = ( 	delta(+-{}, -+{NotNullSupport}),
+							context(++{Content}, --{}),
+							rules{inferNull}),
+	IsUniqueSupport = ( 	delta(+-{}, -+{UniqueSupport}),
+							context(++{Content}, --{}),
+							rules{inferNotUnique, inferUnique})
+}

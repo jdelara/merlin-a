@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="AdaptiveMetamodelling">
+			<and mandatory="true" name="InconsistencyTolerance">
+				<feature name="Typing"/>
+				<feature name="InstancesNo"/>
+				<feature name="Cardinality"/>
+				<feature name="AbstractInstances"/>
+			</and>
+			<or name="InformationExtension">
+				<feature name="UntypedObjects"/>
+				<feature name="ObjectGeneralization"/>
+				<feature name="UntypedFields"/>
+				<feature name="UntypedAssociations"/>
+			</or>
+			<and mandatory="true" name="Classification">
+				<graphics key="collapsed" value="false"/>
+				<and name="MultiLevel">
+					<and name="Potency">
+						<feature name="Range"/>
+						<feature name="Leap"/>
+						<feature name="DualPotency"/>
+					</and>
+				</and>
+			</and>
+			<and mandatory="true" name="Classifiers">
+				<alt mandatory="true" name="ClassifierClassification">
+					<feature name="SingleC"/>
+					<feature name="MultipleC"/>
+				</alt>
+				<feature name="AbstractClassifiers"/>
+			</and>
+			<and mandatory="true" name="Fields">
+				<feature name="DualField"/>
+			</and>
+			<and mandatory="true" name="Models">
+				<feature name="Level"/>
+			</and>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>AbstractInstances</var>
+				<var>AbstractClassifiers</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Level</var>
+				<var>Potency</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

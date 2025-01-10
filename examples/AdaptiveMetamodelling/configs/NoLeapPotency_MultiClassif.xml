@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="AdaptiveMetamodelling"/>
+	<feature automatic="selected" name="InconsistencyTolerance"/>
+	<feature name="Typing"/>
+	<feature name="InstancesNo"/>
+	<feature name="Cardinality"/>
+	<feature name="AbstractInstances"/>
+	<feature name="InformationExtension"/>
+	<feature name="UntypedObjects"/>
+	<feature name="ObjectGeneralization"/>
+	<feature name="UntypedFields"/>
+	<feature name="UntypedAssociations"/>
+	<feature automatic="selected" name="Classification"/>
+	<feature automatic="selected" name="MultiLevel"/>
+	<feature manual="selected" name="Potency"/>
+	<feature name="Range"/>
+	<feature name="Leap"/>
+	<feature name="DualPotency"/>
+	<feature automatic="selected" name="Classifiers"/>
+	<feature automatic="selected" name="ClassifierClassification"/>
+	<feature automatic="unselected" name="SingleC"/>
+	<feature manual="selected" name="MultipleC"/>
+	<feature manual="selected" name="AbstractClassifiers"/>
+	<feature automatic="selected" name="Fields"/>
+	<feature name="DualField"/>
+	<feature automatic="selected" name="Models"/>
+	<feature name="Level"/>
+</configuration>

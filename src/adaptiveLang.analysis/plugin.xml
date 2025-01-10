@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="handlers.CoverageHandler"
+            commandId="adaptiveLang.commands.coverage">
+      </handler>
+      <handler
+            class="handlers.RuleCompatHandler"
+            commandId="adaptiveLang.commands.ruleCompatibility">
+      </handler>
+   </extension>
+	<extension point="org.eclipse.ui.menus">
+		<menuContribution 
+			allPopups="true" 
+			locationURI="popup:merlin.menus?after=merlin.menus.separator3">
+			<command
+				categoryId="merlin.commands.category" 
+				commandId="adaptiveLang.commands.coverage" 
+				id="adaptiveLang.commands.coverage"
+				label="Analyse coverage">
+               <visibleWhen
+                     checkEnabled="false">
+                  <iterate>
+                     <reference
+                           definitionId="merlin.isadapter">
+                     </reference>
+                  </iterate>
+               </visibleWhen>
+			</command>
+		</menuContribution>
+		<menuContribution 
+			allPopups="true" 
+			locationURI="popup:merlin.menus?after=merlin.menus.separator3">
+			<command
+				categoryId="merlin.commands.category" 
+				commandId="adaptiveLang.commands.ruleCompatibility" 
+				id="adaptiveLang.commands.rulecompat"
+				label="Rule compatibility">
+               <visibleWhen
+                     checkEnabled="false">
+                  <iterate>
+                     <reference
+                           definitionId="merlin.isadapter">
+                     </reference>
+                  </iterate>
+               </visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+ <extension
+       point="org.eclipse.ui.views">
+    <category
+          id="adaptiveLang.analysis.coverage"
+          name="Merlin">
+    </category>
+    <view
+          category="adaptiveLang.analysis.coverage"
+          class="views.CoverageView"
+          icon="icons/wand.png"
+          id="views.CoverageView"
+          inject="true"
+          name="Coverage view">
+    </view>
+ </extension>
+ <extension
+       point="org.eclipse.ui.perspectiveExtensions">
+    <perspectiveExtension
+          targetID="org.eclipse.jdt.ui.JavaPerspective">
+       <view
+             id="views.CoverageView"
+             ratio="0.5"
+             relationship="right"
+             relative="org.eclipse.ui.views.ProblemView">
+       </view>
+    </perspectiveExtension>
+ </extension>
+ <extension
+       point="org.eclipse.help.contexts">
+    <contexts
+          file="contexts.xml">
+    </contexts>
+ </extension>
+    <extension
+		id="merlin.adaptive.marker.ruleproblem"
+		name="Rule-adapter compatibility problem"
+		point="org.eclipse.core.resources.markers">
+		<super type="org.eclipse.core.resources.problemmarker"/>
+		<persistent value="true"/>
+   </extension>
+</plugin>

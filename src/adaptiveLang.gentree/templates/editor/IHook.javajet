@@ -1,0 +1,64 @@
+<%@ jet package="adaptiveLang.gentree.templates.editor" imports="org.eclipse.emf.codegen.ecore.genmodel.* adaptiveLang.gentree.generation.*" class="IHook"%>
+<%@ include file="../Header.javajetinc"%>
+<%GenLanguageVariants genclass = (GenLanguageVariants)argument;%>
+package <%=genclass.getRootPackageName()%>.hooks;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.ocl.pivot.ExpressionInOCL;
+import org.eclipse.ocl.pivot.utilities.OCL;
+import org.eclipse.ocl.pivot.utilities.Query;
+
+import <%=genclass.getRootPackageName()%>.variants.LanguageVariants;
+
+public interface IHook {
+	/**
+	 * This method returns the language variant that should be assigned to the received model.
+	 * @param currentLanguageVariant current language variant of the model
+	 * @param model model
+	 * @param context modified object
+	 * @param feature modified feature
+	 * @return new language variant of the model, null to keep the current one
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	LanguageVariants nextLanguageVariant (LanguageVariants currentLanguageVariant, Resource model, EObject context, EStructuralFeature feature);
+
+	/**
+	 * This method executes an OCL query on the model's root object. 
+	 * @param model
+	 * @param query
+	 * @return The result of executing the query.
+	 */
+	default Object executeOCLQuery (Resource model, String query) {
+		EList<EObject> contents = model.getContents();
+		if (contents.isEmpty()) {
+			return null;
+		}
+		else {
+			EObject context = (EObject)contents.get(0);
+			return executeOCLQuery(context, query);
+		}
+	}
+
+	/**
+	 * This method executes an OCL query on an object. 
+	 * @param context
+	 * @param query
+	 * @return The result of executing the query.
+	 */
+	default Object executeOCLQuery (EObject context, String query) {
+		Object result = null;
+		try {
+			OCL             ocl      = OCL.newInstance(OCL.CLASS_PATH);
+			ExpressionInOCL oclQuery = ocl.createQuery(context.eClass(), query);
+			Query           oclEval  = ocl.createQuery(oclQuery);
+			result = oclEval.evaluateEcore(context);
+		}
+		catch (Exception e) { e.printStackTrace(); }
+		return result;
+	}
+}

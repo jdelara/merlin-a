@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<metamodelling:ModellingSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metamodelling="http://metamodelling/amml" xsi:schemaLocation="http://metamodelling/amml ../AdaptiveMetamodelling.ecore" name="test">
+  <models name="m1">
+    <clabjects name="C1">
+      <potency/>
+    </clabjects>
+    <clabjects name="C2">
+      <potency/>
+    </clabjects>
+    <clabjects instances="//@models.1/@clabjects.0" name="New" parents="//@models.0/@clabjects.1 //@models.0/@clabjects.0"/>
+  </models>
+  <models name="m2">
+    <clabjects conformsTo="//@models.0/@clabjects.2" name="C3">
+      <potency potency="0"/>
+    </clabjects>
+  </models>
+</metamodelling:ModellingSystem>
