@@ -9,4 +9,4 @@ triggers, and recommenders of language variants.
 
 The tool website is at: https://miso.es/tools/merlin-adaptive/, and that website includes an update site, installation instructions and examples.
 
-Demonstration video: https://youtu.be/fy171c7Afzk
+Demonstration video: [![Demo video](http://img.youtube.com/vi/fy171c7Afzk/0.jpg)](http://www.youtube.com/watch?v=fy171c7Afzk "Video Title")
